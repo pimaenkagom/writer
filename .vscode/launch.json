@@ -39,6 +39,16 @@
 			"args": ["run", "${file}"],
 			"console": "integratedTerminal",
 			"internalConsoleOptions": "neverOpen"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Build and Deploy",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["run", "build"],
+			"console": "integratedTerminal",
+			"skipFiles": ["<node_internals>/**"],
+			"postDebugTask": "deploy to firebase"
 		}
 	]
 }
