@@ -2,7 +2,7 @@
 	let { children } = $props();
 </script>
 
-<span class="noto-sans-coptic-regular">
+<span class="is-size-5 noto-sans-coptic-regular athanasius">
 	{@render children?.()}
 </span>
 
@@ -16,5 +16,16 @@
 
 	.noto-sans-coptic-regular {
 		font-family: 'Noto Sans Coptic';
+	}
+
+	@font-face {
+		font-family: 'Athanasius';
+		font-style: normal;
+		font-weight: 400;
+		src: local('Athanasius'), url(/fonts/athanasius.ttf);
+	}
+
+	.athanasius {
+		font-family: 'Athanasius';
 	}
 </style>

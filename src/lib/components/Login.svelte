@@ -67,7 +67,7 @@
 	<div class="field">
 		<p class="control has-icons-left">
 			<span class="icon is-small is-left">
-				<i class="fas fa-envelope"></i>
+				<i class="fa-solid fa-envelope"></i>
 			</span>
 			<input class="input" type="email" placeholder="Email" required bind:value={email} />
 		</p>
@@ -75,7 +75,7 @@
 	<div class="field">
 		<p class="control has-icons-left">
 			<span class="icon is-small is-left">
-				<i class="fas fa-lock"></i>
+				<i class="fa-solid fa-lock"></i>
 			</span>
 			<input class="input" type="password" placeholder="Password" required bind:value={password} />
 		</p>
