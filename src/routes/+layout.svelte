@@ -4,61 +4,15 @@
 	import Notifications from '$lib/components/helpers/Notifications.svelte';
 	import { onMount } from 'svelte';
 
-	import { languages } from '$lib/states/contents/languages.svelte';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { statuses } from '$lib/states/contents/statuses.svelte';
-	import { loadSettingsIfNotLoaded, settings } from '$lib/states/helpers/settings.svelte';
-	import {
-		books,
-		chapters,
-		clauses,
-		collections,
-		libraries,
-		paragraphs,
-		parts,
-		sections
-	} from '$lib/states/nodes/nodes.svelte';
+	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
+	import { load, loader } from '$lib/states/helpers/loader.svelte';
+	import { settings } from '$lib/states/helpers/settings.svelte';
 	import '../app.css';
 
 	let { children } = $props();
 
-	let progressToDo = $state(100);
-
 	onMount(async () => {
-		loadSettingsIfNotLoaded();
-
-		await libraries.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await collections.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await books.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await parts.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await chapters.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await sections.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await paragraphs.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await clauses.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await multilingualTexts.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await languages.loadIfNotLoaded();
-		progressToDo /= 2;
-
-		await statuses.loadIfNotLoaded();
-		progressToDo = 0;
+		load();
 	});
 
 	$effect(() => {
@@ -67,12 +21,28 @@
 </script>
 
 <div class="is-flex is-flex-direction-column is-fullheight-custom">
-	{#if progressToDo > 0}
-		<section class="hero is-fullheight">
+	{#if loader.state !== 'ready'}
+		<section class="hero is-halfheight">
 			<div class="hero-body">
-				<div class="container">
-					<progress class="progress is-large" value={100 - progressToDo} max="100">80 %</progress>
+				<div class="container has-text-centered">
+					<img src="/favicon.png" alt="Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ" />
+					<h1 class="title">
+						<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
+					</h1>
+				</div>
+			</div>
+		</section>
+		<section class="hero is-halfheight">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<progress class="progress is-large" value={100 - loader.value} max="100"></progress>
 					<!-- <progress class="progress is-large"></progress> -->
+					<p class="subtitle">
+						The source code is licensed under
+						<a href="https://opensource.org/license/agpl-v3">
+							GNU Affero General Public License version 3
+						</a>.
+					</p>
 				</div>
 			</div>
 		</section>
