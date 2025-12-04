@@ -5,14 +5,14 @@
 	import { onMount } from 'svelte';
 
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
-	import { load, loader } from '$lib/states/helpers/loader.svelte';
+	import { loadData, loader } from '$lib/states/helpers/loader.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 	import '../app.css';
 
 	let { children } = $props();
 
 	onMount(async () => {
-		load();
+		await loadData();
 	});
 
 	$effect(() => {

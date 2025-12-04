@@ -20,7 +20,7 @@ export const loader = $state<State<number>>({
 	value: 100
 });
 
-export async function load() {
+export async function loadData() {
 	loader.state = 'loading';
 
 	loadSettingsIfNotLoaded();
