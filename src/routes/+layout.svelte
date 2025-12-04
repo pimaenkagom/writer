@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
-	import { loadData, loader } from '$lib/states/helpers/loader.svelte';
+	import { dataLoader, loadData } from '$lib/states/helpers/loader.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 	import '../app.css';
 
@@ -21,7 +21,7 @@
 </script>
 
 <div class="is-flex is-flex-direction-column is-fullheight-custom">
-	{#if loader.state !== 'ready'}
+	{#if dataLoader.state !== 'ready'}
 		<section class="hero is-halfheight">
 			<div class="hero-body">
 				<div class="container has-text-centered">
@@ -35,8 +35,18 @@
 		<section class="hero is-halfheight">
 			<div class="hero-body">
 				<div class="container has-text-centered">
-					<progress class="progress is-large" value={100 - loader.value} max="100"></progress>
-					<!-- <progress class="progress is-large"></progress> -->
+					{#if dataLoader.state === 'init'}
+						<progress class="progress is-large"></progress>
+					{/if}
+
+					{#if dataLoader.state === 'loading'}
+						<progress class="progress is-large" value={100 - dataLoader.value} max="100"></progress>
+					{/if}
+
+					{#if dataLoader.state === 'error'}
+						<progress class="progress is-danger is-large"></progress>
+					{/if}
+
 					<p class="subtitle">
 						The source code is licensed under
 						<a href="https://opensource.org/license/agpl-v3">

@@ -15,48 +15,48 @@ import {
 	sections
 } from '$lib/states/nodes/nodes.svelte';
 
-export const loader = $state<State<number>>({
+export const dataLoader = $state<State<number>>({
 	state: 'init',
 	value: 100
 });
 
 export async function loadData() {
-	loader.state = 'loading';
+	dataLoader.state = 'loading';
 
 	loadSettingsIfNotLoaded();
 
 	await libraries.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await collections.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await books.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await parts.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await chapters.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await sections.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await paragraphs.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await clauses.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await multilingualTexts.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await languages.loadIfNotLoaded();
-	loader.value /= 2;
+	dataLoader.value /= 2;
 
 	await statuses.loadIfNotLoaded();
-	loader.value = 0;
+	dataLoader.value = 0;
 
-	loader.state = 'ready';
+	dataLoader.state = 'ready';
 }
