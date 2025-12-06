@@ -17,46 +17,47 @@ import {
 
 export const dataLoader = $state<State<number>>({
 	state: 'init',
-	value: 100
+	value: 0
 });
 
 export async function loadData() {
 	dataLoader.state = 'loading';
+	const max = 100;
 
 	loadSettingsIfNotLoaded();
 
 	await libraries.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await collections.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await books.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await parts.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await chapters.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await sections.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await paragraphs.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await clauses.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await multilingualTexts.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await languages.loadIfNotLoaded();
-	dataLoader.value /= 2;
+	dataLoader.value = (max + dataLoader.value) / 2;
 
 	await statuses.loadIfNotLoaded();
-	dataLoader.value = 0;
+	dataLoader.value = max;
 
 	dataLoader.state = 'ready';
 }
