@@ -15,6 +15,10 @@
 	let errorMessage = $state('');
 
 	$effect(() => {
+		if (auth === undefined) {
+			return;
+		}
+
 		const unsubscribe = auth.onAuthStateChanged((userData) => {
 			user = userData;
 			loading = false;
@@ -24,6 +28,10 @@
 	});
 
 	async function handleSubmit() {
+		if (auth === undefined) {
+			return;
+		}
+
 		try {
 			errorMessage = '';
 			if (isRegistering) {
@@ -37,6 +45,14 @@
 			errorMessage = error.message;
 		}
 	}
+
+	async function logout() {
+		if (auth === undefined) {
+			return;
+		}
+
+		await signOut(auth);
+	}
 </script>
 
 {#if loading}
@@ -44,7 +60,7 @@
 {:else if user}
 	<div>
 		<p class="subtitle">Willkommen, {user.email}!</p>
-		<button class="button" onclick={() => signOut(auth)}>Ausloggen</button>
+		<button class="button" onclick={logout}>Ausloggen</button>
 	</div>
 {:else}
 	<form
