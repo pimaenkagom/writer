@@ -22,11 +22,53 @@ export const settings = $state<State<Record<string, Setting>>>({
 			availables: ['scroll', 'slides'],
 			default: 'scroll'
 		},
-		latest: {
-			key: 'latest',
-			current: '1/1/1/1/1/1/1/1',
+		library: {
+			key: 'library',
+			current: '0',
 			availables: [],
-			default: '1/1/1/1/1/1/1/1'
+			default: '0'
+		},
+		collection: {
+			key: 'collection',
+			current: '0',
+			availables: [],
+			default: '0'
+		},
+		book: {
+			key: 'book',
+			current: '0',
+			availables: [],
+			default: '0'
+		},
+		part: {
+			key: 'part',
+			current: '0',
+			availables: [],
+			default: '0'
+		},
+		chapter: {
+			key: 'chapter',
+			current: '0',
+			availables: [],
+			default: '0'
+		},
+		section: {
+			key: 'section',
+			current: '0',
+			availables: [],
+			default: '0'
+		},
+		paragraph: {
+			key: 'paragraph',
+			current: '0',
+			availables: [],
+			default: '0'
+		},
+		clause: {
+			key: 'clause',
+			current: '0',
+			availables: [],
+			default: '0'
 		}
 	}
 });
