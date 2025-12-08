@@ -40,7 +40,8 @@ service cloud.firestore {
 
     // Helper function to check if user can read
     function canRead() {
-      return isAuthenticated(); // All authenticated users can read
+      return true;
+      // return isAuthenticated(); // All authenticated users can read
     }
 
     // Users collection - for storing user roles
