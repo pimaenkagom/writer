@@ -8,5 +8,6 @@ export interface Basenode extends Identifiable {
 	shown: boolean;
 	tags: string[];
 	children: string[];
+	childrenTypes: string[];
 	// TODO Add image or icon field
 }
