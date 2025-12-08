@@ -1,11 +1,5 @@
+import type { Setting } from '$lib/models/helpers/setting.model';
 import type { State } from '$lib/models/helpers/state.model';
-
-export interface Setting {
-	key: string;
-	current: string;
-	availables: string[];
-	default: string;
-}
 
 export const settings = $state<State<Record<string, Setting>>>({
 	state: 'init',
@@ -14,61 +8,71 @@ export const settings = $state<State<Record<string, Setting>>>({
 			key: 'appearance',
 			current: 'auto',
 			availables: ['light', 'dark', 'auto'],
-			default: 'auto'
+			default: 'auto',
+			shown: true
 		},
 		mode: {
 			key: 'mode',
 			current: 'scroll',
 			availables: ['scroll', 'slides'],
-			default: 'scroll'
+			default: 'scroll',
+			shown: true
 		},
 		library: {
 			key: 'library',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		collection: {
 			key: 'collection',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		book: {
 			key: 'book',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		part: {
 			key: 'part',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		chapter: {
 			key: 'chapter',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		section: {
 			key: 'section',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		paragraph: {
 			key: 'paragraph',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		},
 		clause: {
 			key: 'clause',
 			current: '0',
 			availables: [],
-			default: '0'
+			default: '0',
+			shown: true
 		}
 	}
 });
