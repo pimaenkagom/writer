@@ -20,7 +20,8 @@
 					value: '938B9CA6-57CA-4201-9A6B-FD1E4BFC2B53',
 					shown: true,
 					tags: [],
-					children: []
+					children: [],
+					childrenTypes: []
 				}
 			: $state.snapshot(model)
 	);
