@@ -1,5 +1,7 @@
 <script lang="ts">
+	import Basenode from '$lib/components/nodes/BasenodeViewer.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
+	import { libraries } from '$lib/states/nodes/nodes.svelte';
 
 	const currentLibrary = $derived(settings.value.library.current);
 	const currentCollection = $derived(settings.value.collection.current);
@@ -27,5 +29,17 @@
 		This is clause {currentClause} of paragraph {currentParagraph} of section
 		{currentSection} of chapter {currentChapter} of part {currentPart} of book {currentBook} of collection
 		{currentCollection} of library {currentLibrary}.
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<section class="section">
+			<div class="container">
+				{#each libraries.values as lib}
+					<Basenode model={lib} />
+				{/each}
+			</div>
+		</section>
 	</div>
 </section>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Basenode from '$lib/components/nodes/Basenode.svelte';
+	import Basenode from '$lib/components/nodes/BasenodeViewer.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 	import { onMount } from 'svelte';
 
