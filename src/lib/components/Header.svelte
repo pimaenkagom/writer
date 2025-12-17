@@ -1,0 +1,48 @@
+<script>
+	import Coptic from './helpers/languages/Coptic.svelte';
+	import Login from './Login.svelte';
+
+	let isActive = $state(false);
+
+	function toggleIsActive() {
+		isActive = !isActive;
+	}
+</script>
+
+<nav class="navbar is-dark" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item" href="/"><Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic></a>
+		<a
+			onclick={toggleIsActive}
+			class:is-active={isActive}
+			class="navbar-burger"
+			href="/"
+			role="button"
+			aria-label="menu"
+			aria-expanded="false"
+		>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div>
+
+	<div class:is-active={isActive} class="navbar-menu">
+		<div class="navbar-start">
+			<a class="navbar-item" href="/arranger">Arranger</a>
+			<a class="navbar-item" href="/presenter">Presenter</a>
+			<a class="navbar-item" href="/writer">Writer</a>
+			<a class="navbar-item" href="/settings">Settings</a>
+		</div>
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<span class="navbar-link">More</span>
+
+				<div class="navbar-dropdown is-right">
+					<Login />
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
