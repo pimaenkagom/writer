@@ -15,49 +15,56 @@ import {
 	sections
 } from '$lib/states/nodes/nodes.svelte';
 
+export const dataLoaderMaxValue = 100;
+
 export const dataLoader = $state<State<number>>({
 	state: 'init',
 	value: 0
 });
 
+function increase() {
+	dataLoader.value = (dataLoaderMaxValue + dataLoader.value) / 2;
+}
+
 export async function loadData() {
 	dataLoader.state = 'loading';
-	const max = 100;
-
-	loadSettingsIfNotLoaded();
 
 	await libraries.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await collections.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await books.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await parts.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await chapters.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await sections.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await paragraphs.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await clauses.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await multilingualTexts.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await languages.loadIfNotLoaded();
-	dataLoader.value = (max + dataLoader.value) / 2;
+	increase();
 
 	await statuses.loadIfNotLoaded();
-	dataLoader.value = max;
+	increase();
 
+	loadSettingsIfNotLoaded();
+	increase();
+
+	dataLoader.value = dataLoaderMaxValue;
 	dataLoader.state = 'ready';
 }

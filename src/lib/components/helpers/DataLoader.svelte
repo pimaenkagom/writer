@@ -1,14 +1,15 @@
 <script>
-	import { dataLoader } from '$lib/states/helpers/loader.svelte';
+	import { dataLoader, dataLoaderMaxValue } from '$lib/states/helpers/loader.svelte';
 	import Coptic from './languages/Coptic.svelte';
 </script>
 
 <section class="hero is-halfheight">
 	<div class="hero-body">
 		<div class="container has-text-centered">
-			<img src="/favicon.png" alt="Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ" />
 			<h1 class="title">
-				<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
+				<span id="logo">
+					<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
+				</span>
 			</h1>
 		</div>
 	</div>
@@ -21,11 +22,16 @@
 			{/if}
 
 			{#if dataLoader.state === 'loading'}
-				<progress class="progress is-large" value={dataLoader.value} max="100"></progress>
+				<progress class="progress is-large" value={dataLoader.value} max={dataLoaderMaxValue}>
+				</progress>
 			{/if}
 
 			{#if dataLoader.state === 'error'}
-				<progress class="progress is-danger is-large" value="100" max="100"></progress>
+				<progress
+					class="progress is-danger is-large"
+					value={dataLoaderMaxValue}
+					max={dataLoaderMaxValue}
+				></progress>
 			{/if}
 
 			<p class="subtitle">
@@ -37,3 +43,9 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	#logo {
+		font-size: 6rem;
+	}
+</style>
