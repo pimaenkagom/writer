@@ -2,7 +2,7 @@
 	let { children } = $props();
 </script>
 
-<span class="is-size-5 noto-sans-coptic-regular athanasius">
+<span class="noto-sans-coptic-regular athanasius">
 	{@render children?.()}
 </span>
 
