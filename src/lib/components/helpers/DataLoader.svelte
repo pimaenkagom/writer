@@ -46,6 +46,6 @@
 
 <style>
 	#logo {
-		font-size: 6rem;
+		font-size: 8rem;
 	}
 </style>
