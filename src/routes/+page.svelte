@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Executer from '$lib/components/helpers/Executer.svelte';
 	import Basenode from '$lib/components/nodes/BasenodeViewer.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
@@ -30,14 +31,12 @@
 	</div>
 </section>
 
+<Executer />
+
 <section class="section">
 	<div class="container">
-		<section class="section">
-			<div class="container">
-				{#each libraries.values as lib}
-					<Basenode model={lib} />
-				{/each}
-			</div>
-		</section>
+		{#each libraries.values as lib}
+			<Basenode model={lib} />
+		{/each}
 	</div>
 </section>
