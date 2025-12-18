@@ -11,7 +11,11 @@
 
 <nav class="navbar is-dark" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item" href="/"><Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic></a>
+		<a class="navbar-item" href="/">
+			<span class="is-size-4">
+				<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
+			</span>
+		</a>
 		<a
 			onclick={toggleIsActive}
 			class:is-active={isActive}
