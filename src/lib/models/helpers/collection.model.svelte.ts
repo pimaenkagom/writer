@@ -61,7 +61,6 @@ export class Collection<T extends Identifiable> {
 			this.state = 'loading';
 			const snapshot = await getDocs(this.getCollectionReference());
 			snapshot.docs.forEach((doc) => (this.items[doc.id] = { ...doc.data(), id: doc.id } as T));
-			// this.items = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }) as T);
 			this.state = 'ready';
 		} catch (error) {
 			this.state = 'error';
