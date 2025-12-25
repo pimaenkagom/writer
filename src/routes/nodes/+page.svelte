@@ -1,7 +1,7 @@
 <script lang="ts">
 	import NodeReader from '$lib/components/nodes/NodeReader.svelte';
 	import NodeWriter from '$lib/components/nodes/NodeWriter.svelte';
-	import Modal from '$lib/components/helpers/Modal.svelte';
+	import Modal from '$lib/layout/Modal.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 	import { onMount } from 'svelte';
 

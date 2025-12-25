@@ -9,7 +9,7 @@
 	}
 </script>
 
-<nav class="navbar is-dark" aria-label="main navigation">
+<nav class="navbar" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
 			<span class="is-size-4">

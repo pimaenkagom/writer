@@ -7,4 +7,4 @@ import type { Paragraph } from './paragraph.model';
 import type { Part } from './part.model';
 import type { Section } from './section.model';
 
-type Anynode = Library | Collection | Book | Part | Chapter | Section | Paragraph | Clause;
+export type Anynode = Library | Collection | Book | Part | Chapter | Section | Paragraph | Clause;

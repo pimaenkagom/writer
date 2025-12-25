@@ -2,9 +2,9 @@
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
+	import Modal from '../../layout/Modal.svelte';
 	import Arabic from '../helpers/languages/Arabic.svelte';
 	import Coptic from '../helpers/languages/Coptic.svelte';
-	import Modal from '../helpers/Modal.svelte';
 	import NodeWriter from './NodeWriter.svelte';
 
 	let {

@@ -20,9 +20,9 @@ export const settings = $state<State<Record<string, Setting>>>({
 		},
 		languages: {
 			key: 'languages',
-			current: '[coptic, arabic, english, german]',
+			current: 'coptic,arabic,english,german',
 			availables: [],
-			default: '[coptic, arabic, english, german]',
+			default: 'coptic,arabic,english,german',
 			shown: true
 		},
 		library: {

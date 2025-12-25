@@ -1,27 +1,39 @@
 <script lang="ts">
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { collections } from '$lib/states/nodes/nodes.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import Modal from '../../layout/Modal.svelte';
-	import BasenodeEditor from './BasenodeEditor.svelte';
+	import Arabic from '../helpers/languages/Arabic.svelte';
+	import Coptic from '../helpers/languages/Coptic.svelte';
 	import BasenodeViewer from './BasenodeViewer.svelte';
 
 	let { model }: { model: Basenode } = $props();
 
-	let isEditing = $state(false);
-
-	function openEditor() {
-		isEditing = true;
-	}
-
 	const multilingualText = $derived(multilingualTexts.items[model.value]);
 	const values = $derived(multilingualText?.texts || {});
 	const hasValues = $derived(Object.keys(values).length > 0);
+
+	function select() {
+		console.log('Select basenode for editing:', model.id);
+	}
 </script>
 
 <section class="section">
 	<div class="container">
+		{#each getSelectedLanguages() as language}
+			<div class="column">
+				<h1 class="title">
+					{#if language == 'coptic'}
+						<Coptic>{multilingualText.texts[language].value}</Coptic>
+					{:else if language == 'arabic'}
+						<Arabic>{multilingualText.texts[language].value}</Arabic>
+					{:else}
+						<p>{multilingualText.texts[language].value}</p>
+					{/if}
+				</h1>
+			</div>
+		{/each}
 		{#if hasValues}
 			<div class="columns">
 				{#each Object.entries(values) as [language, text]}
@@ -31,7 +43,7 @@
 					</div>
 				{/each}
 				<div class="column is-narrow">
-					<button class="button" aria-label="Edit text" onclick={openEditor}>
+					<button class="button" aria-label="Edit text" onclick={select}>
 						<span class="icon is-small">
 							<i class="fa-solid fa-pen"></i>
 						</span>
@@ -48,8 +60,3 @@
 		{/if}
 	</div>
 </section>
-{#if isEditing}
-	<Modal title="Editor" bind:isActive={isEditing}>
-		<BasenodeEditor {model} bind:isSaved={isEditing} />
-	</Modal>
-{/if}

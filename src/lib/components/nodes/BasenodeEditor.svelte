@@ -1,8 +1,10 @@
 <script lang="ts">
+	import Modal from '$lib/layout/Modal.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
+	import MultilinualTextList from '../contents/mulltilinual-text/MultilinualTextList.svelte';
 
 	let {
 		model = null,
@@ -10,6 +12,8 @@
 	}: { model?: Basenode | null; isSaved?: boolean | null } = $props();
 
 	const isNew = model == null;
+
+	let isSelecting = $state(false);
 
 	let basenode = $state<Basenode>(
 		isNew
@@ -25,6 +29,10 @@
 				}
 			: $state.snapshot(model)
 	);
+
+	function edit() {
+		isSelecting = true;
+	}
 
 	function save() {
 		const snapshot = $state.snapshot(basenode);
@@ -49,6 +57,18 @@
 	<div class="column">
 		<div class="field is-grouped is-grouped-right">
 			<p class="control">
+				<button class="button is-primary" onclick={edit}>
+					<span class="icon">
+						<i class="fa-solid fa-pen"></i>
+					</span>
+					<span>Edit</span>
+				</button>
+			</p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="field is-grouped is-grouped-right">
+			<p class="control">
 				<button class="button is-primary" onclick={save}>
 					<span class="icon">
 						<i class="fa-solid fa-floppy-disk"></i>
@@ -59,3 +79,7 @@
 		</div>
 	</div>
 </div>
+
+<Modal title="Select Text" bind:isActive={isSelecting}>
+	<MultilinualTextList />
+</Modal>
