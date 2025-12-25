@@ -1,7 +1,7 @@
 <script lang="ts">
+	import Modal from '$lib/layout/Modal.svelte';
 	import { delimiter, getSelectedLanguages } from '$lib/states/contents/languages.svelte';
 	import { setSetting } from '$lib/states/helpers/settings.svelte';
-	import Modal from '../../layout/Modal.svelte';
 
 	let isActive = $state(false);
 

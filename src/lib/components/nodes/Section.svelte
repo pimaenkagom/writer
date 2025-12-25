@@ -36,6 +36,7 @@
 				</div>
 			</div>
 		{/if}
+		<!-- TODO Implement slideshow feature here -->
 		{#each model.children as nodeId}
 			<Detector {nodeId} />
 		{/each}

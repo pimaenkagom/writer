@@ -36,7 +36,6 @@
 		<div class="navbar-start">
 			<a class="navbar-item" href="/arranger">Arranger</a>
 			<a class="navbar-item" href="/presenter">Presenter</a>
-			<a class="navbar-item" href="/writer">Writer</a>
 			<a class="navbar-item" href="/settings">Settings</a>
 		</div>
 		<div class="navbar-end">

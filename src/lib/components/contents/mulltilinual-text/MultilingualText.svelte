@@ -1,4 +1,7 @@
 <script lang="ts">
+	import Arabic from '$lib/components/helpers/languages/Arabic.svelte';
+	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
+	import Modal from '$lib/layout/Modal.svelte';
 	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
 	import type { Status } from '$lib/models/contents/status.model';
 	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
@@ -6,9 +9,6 @@
 	import { statuses } from '$lib/states/contents/statuses.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
 	import { onMount } from 'svelte';
-	import Modal from '../../../layout/Modal.svelte';
-	import Arabic from '../../helpers/languages/Arabic.svelte';
-	import Coptic from '../../helpers/languages/Coptic.svelte';
 	import MultilingualTextEditor from './MultilingualTextEditor.svelte';
 
 	let { model }: { model: MultilingualText } = $props();

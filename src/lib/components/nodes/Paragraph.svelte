@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Arabic from '$lib/components/helpers/languages/Arabic.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
+	import Clause from '$lib/components/nodes/Clause.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
-	import Clause from '../../layout/Clause.svelte';
 
 	let { model }: { model: Basenode } = $props();
 </script>
