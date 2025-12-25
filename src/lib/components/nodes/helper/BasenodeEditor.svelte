@@ -1,10 +1,10 @@
 <script lang="ts">
+	import MultilinualTextList from '$lib/components/contents/mulltilinual-text/MultilinualTextList.svelte';
 	import Modal from '$lib/layout/Modal.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import MultilinualTextList from '../contents/mulltilinual-text/MultilinualTextList.svelte';
 
 	let {
 		model = null,

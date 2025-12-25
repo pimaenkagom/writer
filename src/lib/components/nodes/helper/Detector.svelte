@@ -3,7 +3,9 @@
 	import Selector from './Selector.svelte';
 
 	let { nodeId }: { nodeId: string } = $props();
-	let model = getModelById(nodeId);
+	let id = $derived(nodeId);
+	let idSnapshot = $state.snapshot(id);
+	let model = getModelById(idSnapshot);
 </script>
 
 <Selector {model} />
