@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Coptic from './helpers/languages/Coptic.svelte';
 	import Login from './Login.svelte';
 
@@ -34,9 +34,9 @@
 
 	<div class:is-active={isActive} class="navbar-menu">
 		<div class="navbar-start">
-			<a class="navbar-item" href="/arranger">Arranger</a>
 			<a class="navbar-item" href="/presenter">Presenter</a>
 			<a class="navbar-item" href="/settings">Settings</a>
+			<a class="navbar-item" href="/writer">Writer</a>
 		</div>
 		<div class="navbar-end">
 			<div class="navbar-item has-dropdown is-hoverable">
