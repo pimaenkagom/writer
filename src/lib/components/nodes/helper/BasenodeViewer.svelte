@@ -3,7 +3,7 @@
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { collections } from '$lib/states/nodes/nodes.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import Modal from '../../layout/Modal.svelte';
+	import Modal from '$lib/layout/Modal.svelte';
 	import BasenodeEditor from './BasenodeEditor.svelte';
 	import BasenodeViewer from './BasenodeViewer.svelte';
 

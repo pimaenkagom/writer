@@ -27,5 +27,6 @@
 
 	.athanasius {
 		font-family: 'Athanasius';
+		font-size: larger;
 	}
 </style>
