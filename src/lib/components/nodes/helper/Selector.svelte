@@ -26,8 +26,12 @@
 	<Section {model} />
 {:else if model.type === 'paragraph'}
 	<Paragraph {model} />
-{:else if model.type === 'clause' && language}
-	<Clause {model} {language} />
+{:else if model.type === 'clause'}
+	{#if language}
+		<Clause {model} {language} />
+	{:else}
+		<Paragraph {model} />
+	{/if}
 {:else}
 	<p>Unknown node type {model.type} or language is not set.</p>
 {/if}
