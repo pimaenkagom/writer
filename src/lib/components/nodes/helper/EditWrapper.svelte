@@ -20,7 +20,7 @@
 				<i class="fa-solid fa-pen"></i>
 			</span>
 		</button>
-		<Modal bind:isActive={isEditing}>
+		<Modal bind:isActive={isEditing} title="Edit Node">
 			<Editor {model} />
 		</Modal>
 	</div>
