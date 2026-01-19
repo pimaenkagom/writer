@@ -1,8 +1,6 @@
 <script lang="ts">
-	import Executer from '$lib/components/helpers/Executer.svelte';
-	import Languages from '$lib/components/helpers/Languages.svelte';
+	import Presenter from '$lib/components/layout/Presenter.svelte';
 	import Selector from '$lib/components/nodes/helper/Selector.svelte';
-	import Presenter from '$lib/layout/Presenter.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 
@@ -33,9 +31,6 @@
 	</div>
 </section>
 
-<Languages />
-
-<Executer />
 <Presenter isActive={settings.value.mode.current === 'slides'}>
 	<section class="section">
 		<div class="container">

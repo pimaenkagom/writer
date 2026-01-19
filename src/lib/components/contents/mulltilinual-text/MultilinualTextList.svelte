@@ -1,8 +1,8 @@
 <script lang="ts">
-	import MultilingualText from '$lib/components/contents/mulltilinual-text/MultilingualText.svelte';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { onMount } from 'svelte';
 	import AddNewButton from './AddNewButton.svelte';
+	import MultilingualTextViewer from './MultilingualTextViewer.svelte';
 
 	let filter = $state('');
 
@@ -58,7 +58,7 @@
 <section class="section">
 	<div class="container">
 		{#each filteredTexts as multilingualText}
-			<MultilingualText model={multilingualText} />
+			<MultilingualTextViewer model={multilingualText} />
 		{/each}
 	</div>
 </section>

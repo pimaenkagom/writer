@@ -1,7 +1,7 @@
 <script lang="ts">
+	import Clause from '$lib/components/nodes/Clause.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
-	import Clause from './Clause.svelte';
 
 	let { model, language }: { model: Basenode; language: string } = $props();
 </script>

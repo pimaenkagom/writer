@@ -83,3 +83,24 @@ export function getCollectionForType(type: string): Collection<Anynode> {
 			throw new Error(`No collection found for type: ${type}`);
 	}
 }
+
+export function subtypeOf(type: string): string {
+	switch (type) {
+		case 'library':
+			return 'collection';
+		case 'collection':
+			return 'book';
+		case 'book':
+			return 'part';
+		case 'part':
+			return 'chapter';
+		case 'chapter':
+			return 'section';
+		case 'section':
+			return 'paragraph';
+		case 'paragraph':
+			return 'clause';
+		default:
+			throw new Error(`No collection found for type: ${type}`);
+	}
+}

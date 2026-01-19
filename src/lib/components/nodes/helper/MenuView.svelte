@@ -1,11 +1,11 @@
 <script lang="ts">
+	import Arabic from '$lib/components/helpers/languages/Arabic.svelte';
+	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { collections } from '$lib/states/nodes/nodes.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import Arabic from '../helpers/languages/Arabic.svelte';
-	import Coptic from '../helpers/languages/Coptic.svelte';
 	import BasenodeViewer from './BasenodeViewer.svelte';
 
 	let { model }: { model: Basenode } = $props();

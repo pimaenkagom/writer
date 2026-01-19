@@ -3,9 +3,7 @@
 	import EditWrapper from './EditWrapper.svelte';
 
 	let { nodeId }: { nodeId: string } = $props();
-	let id = $derived(nodeId);
-	let idSnapshot = $state.snapshot(id);
-	let model = getModelById(idSnapshot);
+	const model = $derived(getModelById(nodeId));
 </script>
 
 <EditWrapper {model} />
