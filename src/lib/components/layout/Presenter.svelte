@@ -4,10 +4,14 @@
 	$effect(() => {
 		(async () => {
 			if (isActive) {
-				await document.documentElement.requestFullscreen();
+				if (!document.fullscreenElement) {
+					await document.documentElement.requestFullscreen();
+				}
 				console.log('entered fullscreen');
 			} else {
-				await document.exitFullscreen();
+				if (document.fullscreenElement) {
+					await document.exitFullscreen();
+				}
 				console.log('exited fullscreen');
 			}
 		})();

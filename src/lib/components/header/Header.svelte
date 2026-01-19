@@ -2,6 +2,7 @@
 	import Login from '$lib/components/header/Login.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import MultilinualTextList from '../contents/mulltilinual-text/MultilinualTextList.svelte';
+	import AuthGuard from '../helpers/AuthGuard.svelte';
 	import Executer from './Executer.svelte';
 	import Link from './helper/Link.svelte';
 	import Languages from './Languages.svelte';
@@ -44,22 +45,21 @@
 			<a class="navbar-item" href="/presenter">Presenter</a>
 		</div>
 		<div class="navbar-end">
-			<a class="navbar-item" href={null}>
-				<Executer />
-			</a>
-			<a class="navbar-item" href={null}>
-				<Link title="Writer" icon="fa-solid fa-pen" isWide={true}>
-					<MultilinualTextList />
-				</Link>
-			</a>
+			<AuthGuard roles={['writer']}>
+				<a class="navbar-item" href={null}>
+					<Executer />
+				</a>
+			</AuthGuard>
+			<AuthGuard roles={['writer']}>
+				<a class="navbar-item" href={null}>
+					<Link title="Writer" icon="fa-solid fa-pen" isWide={true}>
+						<MultilinualTextList />
+					</Link>
+				</a>
+			</AuthGuard>
 			<a class="navbar-item" href={null}>
 				<Link title="Languages" icon="fa-solid fa-globe">
 					<Languages />
-				</Link>
-			</a>
-			<a class="navbar-item" href={null}>
-				<Link title="User" icon="fa-solid fa-user">
-					<Login />
 				</Link>
 			</a>
 			<a class="navbar-item" href={null}>
@@ -67,7 +67,11 @@
 					<Settings />
 				</Link>
 			</a>
-			<a class="navbar-item" title="" href={null}></a>
+			<a class="navbar-item" href={null}>
+				<Link title="User" icon="fa-solid fa-user">
+					<Login />
+				</Link>
+			</a>
 		</div>
 	</div>
 </nav>
