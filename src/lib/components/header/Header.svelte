@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Login from '$lib/components/header/Login.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
+	import { Role } from '$lib/models/helpers/roles.model';
 	import MultilinualTextList from '../contents/mulltilinual-text/MultilinualTextList.svelte';
 	import AuthGuard from '../helpers/AuthGuard.svelte';
 	import Executer from './Executer.svelte';
@@ -45,12 +46,12 @@
 			<a class="navbar-item" href="/presenter">Presenter</a>
 		</div>
 		<div class="navbar-end">
-			<AuthGuard roles={['writer']}>
+			<AuthGuard roles={[Role.Writer]}>
 				<a class="navbar-item" href={null}>
 					<Executer />
 				</a>
 			</AuthGuard>
-			<AuthGuard roles={['writer']}>
+			<AuthGuard roles={[Role.Writer]}>
 				<a class="navbar-item" href={null}>
 					<Link title="Writer" icon="fa-solid fa-pen" isWide={true}>
 						<MultilinualTextList />

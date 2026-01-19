@@ -3,6 +3,7 @@
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import Selector from '$lib/components/nodes/helper/Selector.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import { Role } from '$lib/models/helpers/roles.model';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 	import Editor from './Editor.svelte';
 
@@ -23,7 +24,7 @@
 </script>
 
 <div class="columns">
-	<AuthGuard roles={['writer']}>
+	<AuthGuard roles={[Role.Writer]}>
 		<div class="column is-narrow">
 			<section class="section">
 				<div class="container">
