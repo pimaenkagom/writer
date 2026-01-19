@@ -28,6 +28,8 @@
 	"svelte.enable-ts-plugin": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"editor.rulers": [100],
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,

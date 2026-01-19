@@ -1,8 +1,8 @@
 <script lang="ts">
+	import Detector from '$lib/components/nodes/helper/Detector.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import Detector from './helper/Detector.svelte';
 
 	let { model }: { model: Basenode } = $props();
 

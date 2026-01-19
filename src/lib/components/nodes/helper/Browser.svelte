@@ -1,9 +1,9 @@
 <script lang="ts">
 	import AddNewButton from '$lib/components/contents/mulltilinual-text/AddNewButton.svelte';
+	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
-	import NodePreviewer from './NodePreviewer.svelte';
 
 	const {
 		node,

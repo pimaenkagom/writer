@@ -1,3 +1,3 @@
-import type { Basenode } from '../helpers/basenode.model';
+import type { Basenode } from '$lib/models/helpers/basenode.model';
 
 export interface Part extends Basenode {}

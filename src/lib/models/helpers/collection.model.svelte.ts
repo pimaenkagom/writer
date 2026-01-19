@@ -8,8 +8,8 @@ import {
 	updateDoc
 } from 'firebase/firestore';
 
+import type { Identifiable } from '$lib/models/helpers/identifiable.model';
 import { notify } from '$lib/states/helpers/notifications.svelte';
-import type { Identifiable } from './identifiable.model';
 
 export class Collection<T extends Identifiable> {
 	private _collectionName: string;

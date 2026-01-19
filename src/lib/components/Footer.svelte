@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Coptic from './helpers/languages/Coptic.svelte';
+	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 </script>
 
 <footer class="footer">

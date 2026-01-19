@@ -1,13 +1,13 @@
 <script lang="ts">
+	import MultilinualTextList from '$lib/components/contents/mulltilinual-text/MultilinualTextList.svelte';
+	import Executer from '$lib/components/header/Executer.svelte';
+	import Link from '$lib/components/header/helper/Link.svelte';
+	import Languages from '$lib/components/header/Languages.svelte';
 	import Login from '$lib/components/header/Login.svelte';
+	import Settings from '$lib/components/header/Settings.svelte';
+	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import { Role } from '$lib/models/helpers/roles.model';
-	import MultilinualTextList from '../contents/mulltilinual-text/MultilinualTextList.svelte';
-	import AuthGuard from '../helpers/AuthGuard.svelte';
-	import Executer from './Executer.svelte';
-	import Link from './helper/Link.svelte';
-	import Languages from './Languages.svelte';
-	import Settings from './Settings.svelte';
 
 	let isActive = $state(false);
 

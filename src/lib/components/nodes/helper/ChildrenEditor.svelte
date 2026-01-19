@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Modal from '$lib/components/layout/Modal.svelte';
+	import Browser from '$lib/components/nodes/helper/Browser.svelte';
+	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
-	import Browser from './Browser.svelte';
-	import NodePreviewer from './NodePreviewer.svelte';
 
 	const { model }: { model: Basenode } = $props();
 

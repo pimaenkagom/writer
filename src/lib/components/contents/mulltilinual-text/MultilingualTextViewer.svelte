@@ -1,12 +1,12 @@
 <script lang="ts">
+	import MultilingualTextViewer from '$lib/components/contents/mulltilinual-text/MultilingualText.svelte';
+	import MultilingualTextEditor from '$lib/components/contents/mulltilinual-text/MultilingualTextEditor.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
 	import type { Status } from '$lib/models/contents/status.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { statuses } from '$lib/states/contents/statuses.svelte';
 	import { onMount } from 'svelte';
-	import MultilingualTextViewer from './MultilingualText.svelte';
-	import MultilingualTextEditor from './MultilingualTextEditor.svelte';
 
 	let { model }: { model: MultilingualText } = $props();
 

@@ -1,13 +1,11 @@
 <script lang="ts">
+	import ChildrenEditor from '$lib/components/nodes/helper/ChildrenEditor.svelte';
+	import NodeEditor from '$lib/components/nodes/helper/NodeEditor.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
-	import ChildrenEditor from './ChildrenEditor.svelte';
-	import NodePreviewer from './NodePreviewer.svelte';
 
 	const { model }: { model: Basenode } = $props();
 </script>
 
-{model.id}
-
-<NodePreviewer id={model.id} />
+<NodeEditor {model} />
 
 <ChildrenEditor {model} />

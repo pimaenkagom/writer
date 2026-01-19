@@ -1,11 +1,11 @@
 <script lang="ts">
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
+	import Editor from '$lib/components/nodes/helper/Editor.svelte';
 	import Selector from '$lib/components/nodes/helper/Selector.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { Role } from '$lib/models/helpers/roles.model';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
-	import Editor from './Editor.svelte';
 
 	const { model, language }: { model: Basenode; language?: string | undefined } = $props();
 
