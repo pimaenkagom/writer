@@ -7,24 +7,24 @@
 	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
 
-	let { model }: { model: MultilingualText } = $props();
+	const { model, showLabel = false }: { model: MultilingualText; showLabel?: boolean } = $props();
 </script>
 
 <div class="columns">
 	{#each getSelectedLanguages() as language}
 		<div class="column">
-			<p>
-				<strong>{capitalize(language)}</strong>
-			</p>
-			<p>
-				{#if language == 'coptic'}
-					<Coptic><Text model={model.texts[language]} /></Coptic>
-				{:else if language == 'arabic'}
-					<Arabic><Text model={model.texts[language]} /></Arabic>
-				{:else}
-					<Latin>{model.texts[language].value}</Latin>
-				{/if}
-			</p>
+			{#if showLabel}
+				<p>
+					<strong>{capitalize(language)}</strong>
+				</p>
+			{/if}
+			{#if language == 'coptic'}
+				<p><Coptic><Text model={model.texts[language]} /></Coptic></p>
+			{:else if language == 'arabic'}
+				<p class="has-text-right"><Arabic><Text model={model.texts[language]} /></Arabic></p>
+			{:else}
+				<p><Latin>{model.texts[language].value}</Latin></p>
+			{/if}
 		</div>
 	{/each}
 </div>

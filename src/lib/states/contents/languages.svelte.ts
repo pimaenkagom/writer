@@ -12,9 +12,7 @@ export function getSelectedLanguages() {
 	return selectedLanguages;
 }
 
-const availableLanguanges = $derived(
-	languages.values.filter((lang) => !selectedLanguages.includes(lang.value))
-);
+const availableLanguanges = $derived(languages.values.map((lang) => lang.value));
 
 export function getAvailablesLanguages() {
 	return availableLanguanges;
