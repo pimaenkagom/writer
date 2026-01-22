@@ -42,9 +42,7 @@
 	</div>
 
 	<div class:is-active={isActive} class="navbar-menu">
-		<div class="navbar-start">
-			<a class="navbar-item" href="/presenter">Presenter</a>
-		</div>
+		<div class="navbar-start"></div>
 		<div class="navbar-end">
 			<AuthGuard roles={[Role.Writer]}>
 				<a class="navbar-item" href={null}>

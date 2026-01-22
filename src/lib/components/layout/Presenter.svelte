@@ -16,5 +16,4 @@
 	});
 </script>
 
-{isActive ? 'slides' : 'scroll'}
 {@render children?.()}
