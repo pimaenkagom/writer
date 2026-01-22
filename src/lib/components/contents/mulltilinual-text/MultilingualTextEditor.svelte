@@ -6,14 +6,16 @@
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { statuses } from '$lib/states/contents/statuses.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 
 	let {
 		model = null,
 		isNotSaved = $bindable(true)
 	}: { model?: MultilingualText | null; isNotSaved?: boolean | null } = $props();
 
-	const isNew = model == null;
+	const untrackedModel = $state.snapshot(untrack(() => model));
+
+	const isNew = untrackedModel === null;
 
 	let multilingualText = $state<MultilingualText>(
 		isNew
@@ -21,7 +23,7 @@
 					id: '',
 					texts: {}
 				}
-			: $state.snapshot(model)
+			: untrackedModel
 	);
 
 	let availableStatuses = $state<Status[]>([]);

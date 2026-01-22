@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
-	import Header from '$lib/components/Header.svelte';
+	import Header from '$lib/components/header/Header.svelte';
 	import Notifications from '$lib/components/helpers/Notifications.svelte';
 	import { onMount } from 'svelte';
 

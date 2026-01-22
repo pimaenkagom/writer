@@ -18,6 +18,13 @@ export const settings = $state<State<Record<string, Setting>>>({
 			default: 'scroll',
 			shown: true
 		},
+		languages: {
+			key: 'languages',
+			current: 'coptic,arabic,english,german',
+			availables: [],
+			default: 'coptic,arabic,english,german',
+			shown: true
+		},
 		library: {
 			key: 'library',
 			current: '0',

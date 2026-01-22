@@ -1,11 +1,8 @@
 <script lang="ts">
+	import Detector from '$lib/components/nodes/helper/Detector.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { collections } from '$lib/states/nodes/nodes.svelte';
 	import { capitalize } from '$lib/utilities/strings/capitalize';
-	import Modal from '../helpers/Modal.svelte';
-	import BasenodeEditor from './BasenodeEditor.svelte';
-	import BasenodeViewer from './BasenodeViewer.svelte';
 
 	let { model }: { model: Basenode } = $props();
 
@@ -39,17 +36,9 @@
 				</div>
 			</div>
 		{/if}
-		{#if model.children && model.children.length > 0}
-			{#each model.children as child}
-				{#if collections.items[child]}
-					<BasenodeViewer model={collections.items[child]} />
-				{/if}
-			{/each}
-		{/if}
+		<!-- TODO Implement slideshow feature here -->
+		{#each model.children as nodeId}
+			<Detector {nodeId} />
+		{/each}
 	</div>
 </section>
-{#if isEditing}
-	<Modal title="Editor" bind:isActive={isEditing}>
-		<BasenodeEditor {model} bind:isSaved={isEditing} />
-	</Modal>
-{/if}

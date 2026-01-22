@@ -22,10 +22,11 @@
 		font-family: 'Athanasius';
 		font-style: normal;
 		font-weight: 400;
-		src: local('Athanasius'), url(/fonts/athanasius.ttf);
+		src: local('Athanasius'), url(/fonts/athanasius2.ttf);
 	}
 
 	.athanasius {
 		font-family: 'Athanasius';
+		font-size: 1.3em;
 	}
 </style>

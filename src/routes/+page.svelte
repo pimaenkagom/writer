@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Basenode from '$lib/components/nodes/BasenodeViewer.svelte';
+	import Presenter from '$lib/components/layout/Presenter.svelte';
+	import Selector from '$lib/components/nodes/helper/Selector.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 
@@ -30,14 +31,12 @@
 	</div>
 </section>
 
-<section class="section">
-	<div class="container">
-		<section class="section">
-			<div class="container">
-				{#each libraries.values as lib}
-					<Basenode model={lib} />
-				{/each}
-			</div>
-		</section>
-	</div>
-</section>
+<Presenter isActive={settings.value.mode.current === 'slides'}>
+	<section class="section">
+		<div class="container">
+			{#each libraries.values as lib}
+				<Selector model={lib} />
+			{/each}
+		</div>
+	</section>
+</Presenter>

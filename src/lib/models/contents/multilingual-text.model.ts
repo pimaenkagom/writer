@@ -1,4 +1,4 @@
-import type { Text } from './text.model';
+import type { Text } from '$lib/models/contents/text.model';
 
 export interface MultilingualText {
 	readonly id: string;

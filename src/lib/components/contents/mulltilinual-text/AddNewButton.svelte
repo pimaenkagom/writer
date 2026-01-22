@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Modal from '$lib/components/helpers/Modal.svelte';
-	import MultilingualTextEditor from '../../lib/components/contents/MultilingualTextEditor.svelte';
+	import MultilingualTextEditor from '$lib/components/contents/mulltilinual-text/MultilingualTextEditor.svelte';
+	import Modal from '$lib/components/layout/Modal.svelte';
 
 	let openModal = $state(false);
 

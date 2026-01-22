@@ -15,7 +15,7 @@ service cloud.firestore {
 
     // Helper function to check user role
     function hasRole(role) {
-      return isAuthenticated() && getUserData().role == role;
+      return isAuthenticated() && role in getUserData().roles;
     }
 
     // Helper function to check if user is admin
@@ -52,10 +52,10 @@ service cloud.firestore {
       // Users can create their own profile
       allow create: if isAuthenticated() && request.auth.uid == userId;
 
-      // Users can update their own profile (but not their role)
+      // Users can update their own profile (but not their roles)
       allow update: if isAuthenticated() &&
                       request.auth.uid == userId &&
-                      request.resource.data.role == resource.data.role;
+                      request.resource.data.roles == resource.data.roles;
 
       // Only admins can update roles or delete users
       allow update: if isAdmin();
