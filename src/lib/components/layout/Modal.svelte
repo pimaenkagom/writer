@@ -1,11 +1,22 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+
 	let {
 		children,
 		isActive = $bindable(false),
 		title = '',
+		icon = '',
 		isWide = false,
 		saveFunc = () => {},
 		hasSaveFunc = false
+	}: {
+		children: Snippet;
+		isActive: boolean;
+		title: string;
+		icon?: string;
+		isWide?: boolean;
+		saveFunc?: () => void;
+		hasSaveFunc?: boolean;
 	} = $props();
 
 	function save() {
@@ -22,7 +33,12 @@
 	<div class="modal-background"></div>
 	<div class="modal-card" class:is-wide={isWide}>
 		<header class="modal-card-head">
-			<p class="modal-card-title">{title}</p>
+			<div class="modal-card-title">
+				<span class="icon">
+					<i class={icon}></i>
+				</span>
+				<span class="has-text-weight-semibold">{title}</span>
+			</div>
 			<button class="delete" aria-label="close" onclick={closeModal}></button>
 		</header>
 		<section class="modal-card-body">
@@ -46,8 +62,11 @@
 </div>
 
 <style>
+	.modal-card {
+		max-width: 90%;
+	}
+
 	.is-wide {
 		width: 1200px;
-		max-width: 90%;
 	}
 </style>

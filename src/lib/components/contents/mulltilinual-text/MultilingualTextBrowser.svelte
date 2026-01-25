@@ -1,24 +1,18 @@
 <script lang="ts">
 	import AddNewButton from '$lib/components/contents/mulltilinual-text/AddNewButton.svelte';
-	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import MultilingualTextHorizontal from '$lib/components/contents/mulltilinual-text/MultilingualTextHorizontal.svelte';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
 
-	const { node, isSelected }: { node: Basenode; isSelected: (id: string) => void } = $props();
+	const { isSelected }: { isSelected: (id: string) => void } = $props();
 
-	const nodes = $derived(getCollectionForType(subtypeOf(node.type)).values);
 	let filter = $state('');
 
 	const filtered = $derived(
-		nodes.filter((node) => {
+		multilingualTexts.values.filter((text) => {
 			const search = filter.toLowerCase();
 			return (
-				node.id.toLowerCase().includes(search) ||
-				node.value.toLowerCase().includes(search) ||
-				Object.values(multilingualTexts.items[node.value].texts).some((t) =>
-					t.value.toLowerCase().includes(search)
-				)
+				text.id.toLowerCase().includes(search) ||
+				Object.values(text.texts).some((t) => t.value.toLowerCase().includes(search))
 			);
 		})
 	);
@@ -57,12 +51,14 @@
 	</div>
 </section>
 
-{#each filtered as node}
+{#each filtered as item}
 	<article class="media is-align-items-center">
 		<div class="media-left"></div>
-		<div class="media-content"><NodePreviewer id={node.id} /></div>
+		<div class="media-content">
+			<MultilingualTextHorizontal model={item} />
+		</div>
 		<div class="media-right">
-			<button class="button" title="Select" onclick={() => isSelected(node.id)}>
+			<button class="button" title="Select" onclick={() => isSelected(item.id)}>
 				<span class="icon is-small">
 					<i class="fa-solid fa-arrow-right"></i>
 				</span>
