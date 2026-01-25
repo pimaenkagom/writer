@@ -11,66 +11,43 @@
 
 	let isActive = $state(false);
 
-	function toggleIsActive() {
-		isActive = !isActive;
-	}
-
 	document.documentElement.classList.add('has-navbar-fixed-top');
 </script>
 
 <nav class="navbar is-fixed-top" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
-			<span class="is-size-4">
+			<span class="is-size-5">
 				<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
 			</span>
 		</a>
-		<a
-			onclick={toggleIsActive}
-			class:is-active={isActive}
-			class="navbar-burger"
-			href="/"
-			role="button"
-			aria-label="menu"
-			aria-expanded="false"
-		>
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-		</a>
-	</div>
 
-	<div class:is-active={isActive} class="navbar-menu">
-		<div class="navbar-start"></div>
-		<div class="navbar-end">
-			<AuthGuard roles={[Role.Writer]}>
-				<a class="navbar-item" href={null}>
-					<Executer />
-				</a>
-			</AuthGuard>
-			<AuthGuard roles={[Role.Writer]}>
-				<a class="navbar-item" href={null}>
-					<Link title="Writer" icon="fa-solid fa-pen" isWide={true}>
-						<MultilinualTextList />
-					</Link>
-				</a>
-			</AuthGuard>
+		<AuthGuard roles={[Role.Admin]}>
 			<a class="navbar-item" href={null}>
-				<Link title="Languages" icon="fa-solid fa-globe">
-					<Languages />
+				<Executer />
+			</a>
+		</AuthGuard>
+		<AuthGuard roles={[Role.Writer]}>
+			<a class="navbar-item" href={null}>
+				<Link title="Writer" icon="fa-solid fa-pen" isWide={true}>
+					<MultilinualTextList />
 				</Link>
 			</a>
-			<a class="navbar-item" href={null}>
-				<Link title="Settings" icon="fa-solid fa-cog">
-					<Settings />
-				</Link>
-			</a>
-			<a class="navbar-item" href={null}>
-				<Link title="User" icon="fa-solid fa-user">
-					<Login />
-				</Link>
-			</a>
-		</div>
+		</AuthGuard>
+		<a class="navbar-item" href={null}>
+			<Link title="Languages" icon="fa-solid fa-globe">
+				<Languages />
+			</Link>
+		</a>
+		<a class="navbar-item" href={null}>
+			<Link title="Settings" icon="fa-solid fa-cog">
+				<Settings />
+			</Link>
+		</a>
+		<a class="navbar-item" href={null}>
+			<Link title="User" icon="fa-solid fa-user">
+				<Login />
+			</Link>
+		</a>
 	</div>
 </nav>

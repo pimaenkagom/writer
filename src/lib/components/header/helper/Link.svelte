@@ -15,6 +15,6 @@
 	</span>
 </button>
 
-<Modal {title} {isWide} bind:isActive>
+<Modal {title} {icon} {isWide} bind:isActive>
 	{@render children?.()}
 </Modal>

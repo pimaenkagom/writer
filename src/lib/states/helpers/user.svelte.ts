@@ -1,16 +1,20 @@
 import { auth, db } from '$lib/firebase';
+import { Role } from '$lib/models/helpers/roles.model';
 import type { State } from '$lib/models/helpers/state.model';
-import type { User } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
+import type { User } from '$lib/models/helpers/user.model';
+import {
+	createUserWithEmailAndPassword,
+	EmailAuthProvider,
+	reauthenticateWithCredential,
+	sendPasswordResetEmail,
+	signInWithEmailAndPassword,
+	signOut,
+	verifyBeforeUpdateEmail
+} from 'firebase/auth';
 
-// TODO Refactor
+import { deleteDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 
-interface UserData {
-	user: User | null;
-	roles: string[];
-}
-
-const state = $state<State<UserData>>({
+export const user = $state<State<User>>({
 	state: 'init',
 	value: {
 		user: null,
@@ -18,52 +22,96 @@ const state = $state<State<UserData>>({
 	}
 });
 
-// Initialize auth listener
-if (auth) {
-	state.state = 'loading';
+auth?.onAuthStateChanged(async (firebaseUser) => {
+	user.state = 'loading';
 
-	auth.onAuthStateChanged(async (firebaseUser) => {
-		state.value.user = firebaseUser;
-
-		if (firebaseUser && db) {
-			// Load user roles from Firestore
-			const userDoc = await getDoc(doc(db, 'users', firebaseUser.uid));
-			if (userDoc.exists()) {
-				state.value.roles = userDoc.data().roles ?? [];
-			} else {
-				state.value.roles = [];
-			}
+	user.value.user = firebaseUser;
+	if (firebaseUser && db) {
+		const userDoc = await getDoc(doc(db, 'users', firebaseUser.uid));
+		if (userDoc.exists()) {
+			user.value.roles = userDoc.data().roles ?? [];
 		} else {
-			state.value.roles = [];
+			user.value.roles = [];
 		}
+	} else {
+		user.value.roles = [];
+	}
 
-		state.state = 'ready';
+	user.state = 'ready';
+});
+
+export async function login(email: string, password: string) {
+	if (auth) {
+		await signInWithEmailAndPassword(auth, email, password);
+	}
+}
+
+export async function resetPassword(email: string) {
+	if (auth) {
+		await sendPasswordResetEmail(auth, email);
+	}
+}
+
+export async function resetEmail(email: string, password: string) {
+	if (user.value.user) {
+		await reauthenticateWithCredential(
+			user.value.user,
+			EmailAuthProvider.credential(user.value.user.email!, password)
+		);
+		await verifyBeforeUpdateEmail(user.value.user, email);
+	}
+}
+
+export async function signup(email: string, password: string) {
+	if (!auth) {
+		return;
+	}
+
+	await createUserWithEmailAndPassword(auth, email, password);
+
+	await setDoc(doc(db!, 'users', user.value.user!.uid), {
+		roles: [Role.Reader]
 	});
+	user.value.roles = [Role.Reader];
+}
+
+export async function logout() {
+	if (auth) {
+		await signOut(auth);
+	}
+}
+
+export async function deleteAccount(password: string) {
+	if (!db || !user.value.user) {
+		return;
+	}
+
+	await reauthenticateWithCredential(
+		user.value.user,
+		EmailAuthProvider.credential(user.value.user.email!, password)
+	);
+	const userRef = doc(db!, 'users', user.value.user.uid);
+	await deleteDoc(userRef);
+
+	await user.value.user.delete();
+}
+
+export function isAuthenticated() {
+	return user.value.user !== null;
 }
 
 export function hasRole(role: string): boolean {
-	return state.value.roles.includes(role);
+	return user.value.roles.includes(role);
+}
+
+export function isAdmin() {
+	return hasRole(Role.Admin);
 }
 
 export function hasAnyRole(roles: string[]): boolean {
-	return roles.some((role) => state.value.roles.includes(role));
+	return roles.some((role) => user.value.roles.includes(role));
 }
 
 export function hasAllRoles(roles: string[]): boolean {
-	return roles.every((role) => state.value.roles.includes(role));
+	return roles.every((role) => user.value.roles.includes(role));
 }
-
-export const userState = {
-	get state() {
-		return state.state;
-	},
-	get user() {
-		return state.value.user;
-	},
-	get roles() {
-		return state.value.roles;
-	},
-	get isAuthenticated() {
-		return state.value.user !== null;
-	}
-};

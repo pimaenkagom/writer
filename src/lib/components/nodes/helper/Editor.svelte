@@ -6,6 +6,8 @@
 	const { model }: { model: Basenode } = $props();
 </script>
 
-<NodeEditor {model} />
+<div class="box">
+	<NodeEditor {model} />
+</div>
 
 <ChildrenEditor {model} />
