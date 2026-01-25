@@ -11,10 +11,6 @@
 
 	let isActive = $state(false);
 
-	function toggleIsActive() {
-		isActive = !isActive;
-	}
-
 	document.documentElement.classList.add('has-navbar-fixed-top');
 </script>
 
