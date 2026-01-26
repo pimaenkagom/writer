@@ -20,7 +20,7 @@
 	<Book {model} />
 {:else if model.type === 'part'}
 	<Part {model} />
-{:else if model.type === 'chapters'}
+{:else if model.type === 'chapter'}
 	<Chapter {model} />
 {:else if model.type === 'section'}
 	<Section {model} />
