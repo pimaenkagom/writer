@@ -15,7 +15,7 @@ service cloud.firestore {
 
     // Helper function to check user role
     function hasRole(role) {
-      return isAuthenticated() && role in getUserData().roles;
+      return isAuthenticated() && getUserData().roles.hasAny([role]);
     }
 
     // Helper function to check if user is admin
