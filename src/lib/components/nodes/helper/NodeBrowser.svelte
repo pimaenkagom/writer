@@ -1,13 +1,12 @@
 <script lang="ts">
 	import AddNewNode from '$lib/components/nodes/helper/AddNewNode.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 
-	const { node, isSelected }: { node: Basenode; isSelected: (id: string) => void } = $props();
+	const { type, isSelected }: { type: string; isSelected: (id: string) => void } = $props();
 
-	const nodes = $derived(getCollectionForType(subtypeOf(node.type)).values);
+	const nodes = $derived(getCollectionForType(type).values);
 	let filter = $state('');
 
 	const filtered = $derived(
@@ -50,7 +49,7 @@
 			</div>
 			<div class="column is-narrow">
 				<div class="buttons is-right">
-					<AddNewNode />
+					<AddNewNode {type} />
 				</div>
 			</div>
 		</div>
@@ -60,7 +59,6 @@
 	<div class="container">
 		{#each filtered as node}
 			<div class="media is-align-items-center">
-				<div class="media-left"></div>
 				<div class="media-content"><NodePreviewer id={node.id} /></div>
 				<div class="media-right">
 					<button class="button" title="Select" onclick={() => isSelected(node.id)}>
