@@ -1,8 +1,8 @@
 <script lang="ts">
-	import BasenodeViewer from '$lib/components/nodes/helper/BasenodeViewer.svelte';
+	import Stage from '$lib/components/layout/Stage.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 
 	let { model }: { model: Basenode } = $props();
 </script>
 
-<BasenodeViewer {model} />
+<Stage {model} />

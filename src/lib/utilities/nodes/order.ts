@@ -1,3 +1,5 @@
+import type { Selection } from '$lib/models/helpers/selection.model';
+
 export const order = [
 	'library',
 	'collection',
@@ -7,4 +9,4 @@ export const order = [
 	'section',
 	'paragraph',
 	'clause'
-];
+] satisfies Array<keyof Selection>;
