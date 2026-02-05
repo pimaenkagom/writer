@@ -20,12 +20,11 @@
 {#if current === null}
 	<ChildrenMenu {model} />
 {:else}
-	{@const nodeId = model.children[current]}
-
+	<Back />
 	{#if model.children[current]}
-		<Back />
 		<Detector nodeId={model.children[current]} />
 	{:else}
+		{@const nodeId = model.children[current]}
 		<p style="color:red">ERROR: nodeId is {String(nodeId)} at index {current}</p>
 	{/if}
 {/if}

@@ -48,7 +48,7 @@ export const settings = $state<State<Record<string, Setting>>>({
 					current: String(null),
 					availables: [],
 					default: String(null),
-					shown: true
+					shown: false
 				}
 			])
 		)

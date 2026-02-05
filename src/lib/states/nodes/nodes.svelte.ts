@@ -87,6 +87,8 @@ export function getCollectionForType(type: string): Collection<Anynode> {
 
 export function subtypeOf(type: string): keyof Selection {
 	switch (type) {
+		case 'root':
+			return 'library';
 		case 'library':
 			return 'collection';
 		case 'collection':
