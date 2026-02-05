@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Stage from '$lib/components/layout/Stage.svelte';
+	import NesterNode from '$lib/components/nodes/helper/NesterNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 
 	let { model }: { model: Basenode } = $props();
 </script>
 
-<Stage {model} />
+<NesterNode {model} />

@@ -26,11 +26,18 @@ export const settings = $state<State<Record<string, Setting>>>({
 			default: 'coptic,arabic,english,german',
 			shown: true
 		},
+		systemLanguage: {
+			key: 'systemLanguage',
+			current: 'english',
+			availables: ['coptic', 'arabic', 'english', 'german'],
+			default: 'english',
+			shown: true
+		},
 		nesting: {
 			key: 'nesting',
-			current: '4',
+			current: '5',
 			availables: order.map((_, index) => String(index)),
-			default: '4',
+			default: '5',
 			shown: true
 		},
 		...Object.fromEntries(
@@ -103,4 +110,10 @@ export function setSetting(key: keyof typeof settings.value, value: string) {
 		settings.value[key].current = value;
 		localStorage.setItem(key, value);
 	}
+}
+
+export function resetSetting(key: keyof typeof settings.value) {
+	const defaultValue = settings.value[key].default;
+	settings.value[key].current = defaultValue;
+	localStorage.setItem(key, defaultValue);
 }

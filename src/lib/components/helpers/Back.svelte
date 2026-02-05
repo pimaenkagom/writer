@@ -1,16 +1,11 @@
 <script lang="ts">
-	import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
+	import { selection, unselect } from '$lib/states/helpers/selection.svelte';
 	import { order } from '$lib/utilities/nodes/order';
 
-	const isRoot = $derived(order.every((type) => +settings.value[type].current === 0));
+	const isRoot = $derived(order.every((type) => selection.value[type] === null));
 
 	function back() {
-		for (const type of order.toReversed()) {
-			if (+settings.value[type].current !== 0) {
-				setSetting(type, '0');
-				break;
-			}
-		}
+		unselect();
 	}
 </script>
 

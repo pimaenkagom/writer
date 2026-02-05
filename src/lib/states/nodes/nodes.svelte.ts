@@ -1,4 +1,5 @@
 import { Collection } from '$lib/models/helpers/collection.model.svelte';
+import type { Selection } from '$lib/models/helpers/selection.model';
 import type { Anynode } from '$lib/models/nodes/anynode.model';
 import type { Book } from '$lib/models/nodes/book.model';
 import type { Chapter } from '$lib/models/nodes/chapter.model';
@@ -84,7 +85,7 @@ export function getCollectionForType(type: string): Collection<Anynode> {
 	}
 }
 
-export function subtypeOf(type: string): string {
+export function subtypeOf(type: string): keyof Selection {
 	switch (type) {
 		case 'library':
 			return 'collection';
@@ -101,6 +102,6 @@ export function subtypeOf(type: string): string {
 		case 'paragraph':
 			return 'clause';
 		default:
-			throw new Error(`No collection found for type: ${type}`);
+			throw new Error(`No subtype found for type: ${type}`);
 	}
 }

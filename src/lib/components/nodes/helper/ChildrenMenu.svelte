@@ -1,14 +1,9 @@
 <script lang="ts">
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
-	import { setSetting } from '$lib/states/helpers/settings.svelte';
-	import { subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { select } from '$lib/states/helpers/selection.svelte';
 
 	let { model }: { model: Basenode; selected?: number } = $props();
-
-	function select(index: number) {
-		setSetting(subtypeOf(model.type), String(index + 1));
-	}
 </script>
 
 <section class="section">
