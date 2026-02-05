@@ -1,6 +1,7 @@
 <script lang="ts">
 	import MultilinualTextList from '$lib/components/contents/mulltilinual-text/MultilinualTextList.svelte';
 	import Executer from '$lib/components/header/Executer.svelte';
+	import Exporter from '$lib/components/header/Exporter.svelte';
 	import Link from '$lib/components/header/helper/Link.svelte';
 	import Languages from '$lib/components/header/Languages.svelte';
 	import Login from '$lib/components/header/Login.svelte';
@@ -25,6 +26,13 @@
 		<AuthGuard roles={[Role.Admin]}>
 			<a class="navbar-item" href={null}>
 				<Executer />
+			</a>
+		</AuthGuard>
+		<AuthGuard roles={[Role.Writer]}>
+			<a class="navbar-item" href={null}>
+				<Link title="Export" icon="fa-solid fa-download">
+					<Exporter />
+				</Link>
 			</a>
 		</AuthGuard>
 		<AuthGuard roles={[Role.Writer]}>

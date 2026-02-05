@@ -186,6 +186,7 @@
 				<ul>
 					<li class:is-active={!isSigningUp}>
 						<a
+							href={null}
 							onclick={() => {
 								isSigningUp = false;
 							}}
@@ -198,6 +199,7 @@
 					</li>
 					<li class:is-active={isSigningUp}>
 						<a
+							href={null}
 							onclick={() => {
 								isSigningUp = true;
 							}}

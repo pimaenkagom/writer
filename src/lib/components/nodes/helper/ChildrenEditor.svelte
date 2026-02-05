@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Modal from '$lib/components/layout/Modal.svelte';
-	import Browser from '$lib/components/nodes/helper/Browser.svelte';
+	import NodeBrowser from '$lib/components/nodes/helper/NodeBrowser.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import { subtypeOf } from '$lib/states/nodes/nodes.svelte';
 
 	const { model }: { model: Basenode } = $props();
 
@@ -41,6 +42,16 @@
 		model.children = model.children.toSpliced(index, 1).toSpliced(index + 1, 0, element);
 	}
 </script>
+
+<div class="media">
+	<div class="media-content is-flex is-justify-content-center">
+		<button class="" aria-label="Add" onclick={() => add(-1)}>
+			<span class="icon is-small">
+				<i class="fa-solid fa-plus"></i>
+			</span>
+		</button>
+	</div>
+</div>
 
 {#each model.children as id, index}
 	<div class="media is-align-items-center">
@@ -99,6 +110,6 @@
 	</div>
 {/each}
 
-<Modal bind:isActive={isSelecting} title="Select">
-	<Browser node={model} isSelected={insert} />
+<Modal bind:isActive={isSelecting} title="Select" isWide={true}>
+	<NodeBrowser type={subtypeOf(model.type)} isSelected={insert} />
 </Modal>

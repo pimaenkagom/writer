@@ -1,11 +1,8 @@
 <script lang="ts">
-	import Menu from '$lib/components/layout/GridMenu.svelte';
-	import BasenodeViewer from '$lib/components/nodes/helper/BasenodeViewer.svelte';
+	import NesterNode from '$lib/components/nodes/helper/NesterNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 
 	let { model }: { model: Basenode } = $props();
 </script>
 
-<BasenodeViewer {model} />
-
-<Menu {model} />
+<NesterNode {model} />

@@ -13,7 +13,6 @@
 	}
 
 	function swop(id: string) {
-		console.log(model.value, 'Swopped to', id);
 		model.value = id;
 		isSelecting = false;
 	}

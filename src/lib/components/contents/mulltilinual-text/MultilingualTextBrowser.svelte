@@ -51,18 +51,22 @@
 	</div>
 </section>
 
-{#each filtered as item}
-	<article class="media is-align-items-center">
-		<div class="media-left"></div>
-		<div class="media-content">
-			<MultilingualTextHorizontal model={item} />
-		</div>
-		<div class="media-right">
-			<button class="button" title="Select" onclick={() => isSelected(item.id)}>
-				<span class="icon is-small">
-					<i class="fa-solid fa-arrow-right"></i>
-				</span>
-			</button>
-		</div>
-	</article>
-{/each}
+<section class="section">
+	<div class="container">
+		{#each filtered as item}
+			<article class="media is-align-items-center">
+				<div class="media-left"></div>
+				<div class="media-content">
+					<MultilingualTextHorizontal model={item} />
+				</div>
+				<div class="media-right">
+					<button class="button" title="Select" onclick={() => isSelected(item.id)}>
+						<span class="icon is-small">
+							<i class="fa-solid fa-arrow-right"></i>
+						</span>
+					</button>
+				</div>
+			</article>
+		{/each}
+	</div>
+</section>

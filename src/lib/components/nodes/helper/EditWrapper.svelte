@@ -2,7 +2,7 @@
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import Editor from '$lib/components/nodes/helper/Editor.svelte';
-	import Selector from '$lib/components/nodes/helper/Selector.svelte';
+	import SelectorNode from '$lib/components/nodes/helper/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { Role } from '$lib/models/helpers/roles.model';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
@@ -47,6 +47,6 @@
 		</div>
 	</AuthGuard>
 	<div class="column">
-		<Selector {model} {language} />
+		<SelectorNode {model} {language} />
 	</div>
 </div>

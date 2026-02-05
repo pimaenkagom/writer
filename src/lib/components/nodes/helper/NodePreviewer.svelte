@@ -9,4 +9,5 @@
 </script>
 
 <MultilingualTextHorizontal model={multilingualText} />
+<p>{model.type}</p>
 <p>{id}</p>

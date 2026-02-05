@@ -3,6 +3,7 @@ import type { State } from '$lib/models/helpers/state.model';
 import { languages } from '$lib/states/contents/languages.svelte';
 import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 import { statuses } from '$lib/states/contents/statuses.svelte';
+import { loadSelectionFromSettings } from '$lib/states/helpers/selection.svelte';
 import { loadSettingsIfNotLoaded } from '$lib/states/helpers/settings.svelte';
 import {
 	books,
@@ -63,6 +64,9 @@ export async function loadData() {
 	increase();
 
 	loadSettingsIfNotLoaded();
+	increase();
+
+	loadSelectionFromSettings();
 	increase();
 
 	dataLoader.value = dataLoaderMaxValue;

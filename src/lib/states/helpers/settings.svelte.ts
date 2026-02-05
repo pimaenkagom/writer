@@ -1,5 +1,6 @@
 import type { Setting } from '$lib/models/helpers/setting.model';
 import type { State } from '$lib/models/helpers/state.model';
+import { order } from '$lib/utilities/nodes/order';
 
 export const settings = $state<State<Record<string, Setting>>>({
 	state: 'init',
@@ -25,62 +26,32 @@ export const settings = $state<State<Record<string, Setting>>>({
 			default: 'coptic,arabic,english,german',
 			shown: true
 		},
-		library: {
-			key: 'library',
-			current: '0',
-			availables: [],
-			default: '0',
+		systemLanguage: {
+			key: 'systemLanguage',
+			current: 'english',
+			availables: ['coptic', 'arabic', 'english', 'german'],
+			default: 'english',
 			shown: true
 		},
-		collection: {
-			key: 'collection',
-			current: '0',
-			availables: [],
-			default: '0',
+		nesting: {
+			key: 'nesting',
+			current: '5',
+			availables: order.map((_, index) => String(index)),
+			default: '5',
 			shown: true
 		},
-		book: {
-			key: 'book',
-			current: '0',
-			availables: [],
-			default: '0',
-			shown: true
-		},
-		part: {
-			key: 'part',
-			current: '0',
-			availables: [],
-			default: '0',
-			shown: true
-		},
-		chapter: {
-			key: 'chapter',
-			current: '0',
-			availables: [],
-			default: '0',
-			shown: true
-		},
-		section: {
-			key: 'section',
-			current: '0',
-			availables: [],
-			default: '0',
-			shown: true
-		},
-		paragraph: {
-			key: 'paragraph',
-			current: '0',
-			availables: [],
-			default: '0',
-			shown: true
-		},
-		clause: {
-			key: 'clause',
-			current: '0',
-			availables: [],
-			default: '0',
-			shown: true
-		}
+		...Object.fromEntries(
+			order.map((type) => [
+				type,
+				{
+					key: type,
+					current: String(null),
+					availables: [],
+					default: String(null),
+					shown: false
+				}
+			])
+		)
 	}
 });
 
@@ -139,4 +110,10 @@ export function setSetting(key: keyof typeof settings.value, value: string) {
 		settings.value[key].current = value;
 		localStorage.setItem(key, value);
 	}
+}
+
+export function resetSetting(key: keyof typeof settings.value) {
+	const defaultValue = settings.value[key].default;
+	settings.value[key].current = defaultValue;
+	localStorage.setItem(key, defaultValue);
 }

@@ -1,0 +1,51 @@
+import type { Selection } from '$lib/models/helpers/selection.model';
+import type { State } from '$lib/models/helpers/state.model';
+import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
+import { order } from '$lib/utilities/nodes/order';
+
+function getSettingsValue(type: keyof Selection) {
+	const value = Number(settings.value[type].current);
+	return isNaN(value) ? null : value;
+}
+
+export const selection = $state<State<Selection>>({
+	state: 'init',
+	value: {
+		library: null,
+		collection: null,
+		book: null,
+		part: null,
+		chapter: null,
+		section: null,
+		paragraph: null,
+		clause: null
+	}
+});
+
+export function loadSelectionFromSettings() {
+	selection.state = 'loading';
+	for (const type of order) {
+		selection.value[type] = getSettingsValue(type);
+	}
+	selection.state = 'ready';
+}
+
+export function select(index: number) {
+	for (const type of order) {
+		if (selection.value[type] === null) {
+			setSetting(type, String(index));
+			selection.value[type] = index;
+			break;
+		}
+	}
+}
+
+export function unselect() {
+	for (const type of order.toReversed()) {
+		if (selection.value[type] !== null) {
+			setSetting(type, String(null));
+			selection.value[type] = null;
+			break;
+		}
+	}
+}
