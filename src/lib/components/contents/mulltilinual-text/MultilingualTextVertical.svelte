@@ -12,7 +12,7 @@
 
 <div class="">
 	{#each getSelectedLanguages() as language}
-		<p>
+		<p class="has-text-left">
 			{#if showLabel}<strong>{capitalize(language)}</strong>{/if}
 			{#if language == 'coptic'}
 				<Coptic><Text model={model.texts[language]} /></Coptic>

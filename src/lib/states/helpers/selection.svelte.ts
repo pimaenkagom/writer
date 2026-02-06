@@ -1,6 +1,8 @@
+import type { Basenode } from '$lib/models/helpers/basenode.model';
 import type { Selection } from '$lib/models/helpers/selection.model';
 import type { State } from '$lib/models/helpers/state.model';
 import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
+import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
 function getSettingsValue(type: keyof Selection) {
@@ -28,6 +30,28 @@ export function loadSelectionFromSettings() {
 		selection.value[type] = getSettingsValue(type);
 	}
 	selection.state = 'ready';
+}
+
+export function getSelectedNodes() {
+	let result: Basenode[] = [];
+
+	for (const type of order) {
+		const selected = selection.value[type];
+
+		if (selected === null) {
+			break;
+		}
+
+		const isRoot = result.length === 0;
+		if (isRoot) {
+			result.push(getCollectionForType(type).values[selected]);
+		} else {
+			const nextNodeId = result[result.length - 1].children[selected];
+			result.push(getCollectionForType(type).items[nextNodeId]);
+		}
+	}
+
+	return result;
 }
 
 export function select(index: number) {

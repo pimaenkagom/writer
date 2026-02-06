@@ -8,16 +8,16 @@
 
 <section class="section">
 	<div class="container">
-		<div class="fixed-grid">
-			<div class="grid">
-				{#each model.children as nodeId, index}
-					<button type="button" class="cell" onclick={() => select(index)}>
-						<div class="box">
-							<NodePreviewer id={nodeId} />
-						</div>
+		{#each model.children as nodeId, index}
+			<div class="media">
+				<div class="media-left"></div>
+				<div class="media-content">
+					<button type="button" class="" onclick={() => select(index)}>
+						<NodePreviewer id={nodeId} />
 					</button>
-				{/each}
+				</div>
+				<div class="media-right"></div>
 			</div>
-		</div>
+		{/each}
 	</div>
 </section>
