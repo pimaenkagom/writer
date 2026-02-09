@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Text from '$lib/components/contents/mulltilinual-text/Text.svelte';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { getSelectedNodes } from '$lib/states/helpers/selection.svelte';
+	import { getSelectedNodes, unselectUntilType } from '$lib/states/helpers/selection.svelte';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 
 	const selectedNodes = $derived(getSelectedNodes());
@@ -16,11 +16,12 @@
 		<nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
 			<ul>
 				{#each selectedNodes as node}
-					<li><a href={null}><Text model={getTextInSystemLanguage(node.value)} /> </a></li>
+					<li>
+						<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.type)}>
+							<Text model={getTextInSystemLanguage(node.value)} />
+						</a>
+					</li>
 				{/each}
-				{#if selectedNodes.length === 0}
-					<li><a href={null}>No selection</a></li>
-				{/if}
 			</ul>
 		</nav>
 	</div>

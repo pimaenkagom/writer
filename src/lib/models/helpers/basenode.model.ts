@@ -1,9 +1,10 @@
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
+import type { Selection } from '$lib/models/helpers/selection.model';
 
 export interface Basenode extends Identifiable {
 	readonly id: string;
 	users: string[];
-	type: string;
+	type: keyof Selection;
 	value: string;
 	shown: boolean;
 	tags: string[];

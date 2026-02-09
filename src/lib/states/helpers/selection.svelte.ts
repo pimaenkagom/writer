@@ -73,3 +73,13 @@ export function unselect() {
 		}
 	}
 }
+
+export function unselectUntilType(type: keyof Selection) {
+	const startIndex = order.indexOf(type) + 1;
+
+	for (let i = startIndex; i < order.length; ++i) {
+		const currentType = order[i];
+		setSetting(currentType, String(null));
+		selection.value[currentType] = null;
+	}
+}
