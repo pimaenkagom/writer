@@ -2,3 +2,7 @@ import type { MultilingualText } from '$lib/models/contents/multilingual-text.mo
 import { Collection } from '$lib/models/helpers/collection.model.svelte';
 
 export const multilingualTexts = new Collection<MultilingualText>('multilingual_texts');
+
+export function getMultilingualText(id: string) {
+	return multilingualTexts.items[id];
+}

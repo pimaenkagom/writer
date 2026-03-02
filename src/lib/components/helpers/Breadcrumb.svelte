@@ -11,18 +11,14 @@
 	}
 </script>
 
-<section class="section">
-	<div class="container">
-		<nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
-			<ul>
-				{#each selectedNodes as node}
-					<li>
-						<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.type)}>
-							<Text model={getTextInSystemLanguage(node.value)} />
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-</section>
+<nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
+	<ul>
+		{#each selectedNodes as node}
+			<li>
+				<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.type)}>
+					<Text model={getTextInSystemLanguage(node.value)} />
+				</a>
+			</li>
+		{/each}
+	</ul>
+</nav>

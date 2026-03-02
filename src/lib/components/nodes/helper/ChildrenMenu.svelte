@@ -8,16 +8,15 @@
 
 <section class="section">
 	<div class="container">
-		{#each model.children as nodeId, index}
-			<div class="media">
-				<div class="media-left"></div>
-				<div class="media-content">
-					<button type="button" class="" onclick={() => select(index)}>
-						<NodePreviewer id={nodeId} />
-					</button>
-				</div>
-				<div class="media-right"></div>
-			</div>
-		{/each}
+		<nav class="panel">
+			{#each model.children as nodeId, index}
+				<a class="panel-block" href={null} onclick={() => select(index)}>
+					<span class="panel-icon">
+						<i class="fas fa-book" aria-hidden="true"></i>
+					</span>
+					<NodePreviewer id={nodeId} />
+				</a>
+			{/each}
+		</nav>
 	</div>
 </section>

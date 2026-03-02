@@ -1,9 +1,9 @@
 <script lang="ts">
-	import EditWrapper from '$lib/components/nodes/helper/EditWrapper.svelte';
+	import SelectorNode from '$lib/components/nodes/helper/SelectorNode.svelte';
 	import { getModelById } from '$lib/states/nodes/nodes.svelte';
 
 	let { nodeId }: { nodeId: string } = $props();
 	const model = $derived(getModelById(nodeId));
 </script>
 
-<EditWrapper {model} />
+<SelectorNode {model} />

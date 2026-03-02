@@ -1,2 +1,7 @@
 @import 'bulma/css/bulma.min.css';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+
+.panel-block:first-child {
+	border-start-end-radius: var(--bulma-panel-radius);
+	border-start-start-radius: var(--bulma-panel-radius);
+}

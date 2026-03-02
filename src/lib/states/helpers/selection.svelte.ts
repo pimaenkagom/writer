@@ -33,7 +33,7 @@ export function loadSelectionFromSettings() {
 }
 
 export function getSelectedNodes() {
-	let result: Basenode[] = [];
+	const result: Basenode[] = [];
 
 	for (const type of order) {
 		const selected = selection.value[type];

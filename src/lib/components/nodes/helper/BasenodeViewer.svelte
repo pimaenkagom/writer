@@ -1,6 +1,6 @@
 <script lang="ts">
 	import MultilingualTextHorizontal from '$lib/components/contents/mulltilinual-text/MultilingualTextHorizontal.svelte';
-	import Detector from '$lib/components/nodes/helper/Detector.svelte';
+	import DetectorNode from '$lib/components/nodes/helper/DetectorNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 
@@ -13,7 +13,7 @@
 	<div class="container">
 		<MultilingualTextHorizontal model={multilingualText} />
 		{#each model.children as nodeId}
-			<Detector {nodeId} />
+			<DetectorNode {nodeId} />
 		{/each}
 	</div>
 </section>

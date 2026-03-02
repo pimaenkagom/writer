@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Back from '$lib/components/helpers/Back.svelte';
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
-	import Detector from '$lib/components/nodes/helper/Detector.svelte';
-	import NodeContent from '$lib/components/nodes/helper/NodeContent.svelte';
+	import DetectorNode from '$lib/components/nodes/helper/DetectorNode.svelte';
+	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { selection } from '$lib/states/helpers/selection.svelte';
 	import { subtypeOf } from '$lib/states/nodes/nodes.svelte';
@@ -16,15 +15,12 @@
 	const childIsSelected = $derived(current !== null);
 </script>
 
-<NodeContent {model} />
 {#if current === null}
+	<NodeHead {model} />
 	<ChildrenMenu {model} />
+{:else if model.children[current]}
+	<DetectorNode nodeId={model.children[current]} />
 {:else}
-	<Back />
-	{#if model.children[current]}
-		<Detector nodeId={model.children[current]} />
-	{:else}
-		{@const nodeId = model.children[current]}
-		<p style="color:red">ERROR: nodeId is {String(nodeId)} at index {current}</p>
-	{/if}
+	{@const nodeId = model.children[current]}
+	<p style="color:red">ERROR: nodeId is {String(nodeId)} at index {current}</p>
 {/if}

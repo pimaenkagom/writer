@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Breadcrumb from '$lib/components/helpers/Breadcrumb.svelte';
+	import BreadcrumbBar from '$lib/components/helpers/BreadcrumbBar.svelte';
 	import Presenter from '$lib/components/layout/Presenter.svelte';
 	import NesterNode from '$lib/components/nodes/helper/NesterNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
@@ -18,12 +18,7 @@
 	};
 </script>
 
-<Breadcrumb />
-
 <Presenter isActive={settings.value.mode.current === 'slides'}>
-	<section class="section">
-		<div class="container">
-			<NesterNode model={root} />
-		</div>
-	</section>
+	<BreadcrumbBar />
+	<NesterNode model={root} />
 </Presenter>
