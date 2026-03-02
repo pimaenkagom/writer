@@ -1,0 +1,8 @@
+{
+	"Svelte Component": {
+		"scope": "svelte",
+		"prefix": "scomp",
+		"body": ["<script lang=\"ts\">", "\t$1", "</script>", "", "$2"],
+		"description": "Basic Svelte component"
+	}
+}

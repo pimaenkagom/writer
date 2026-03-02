@@ -6,22 +6,23 @@
 			"request": "launch",
 			"name": "Launch Dev Server",
 			"runtimeExecutable": "npm",
-			"runtimeArgs": ["run", "dev", "--", "--open"],
+			"runtimeArgs": ["run", "dev"],
 			"console": "integratedTerminal",
 			"skipFiles": ["<node_internals>/**"]
 		},
 		{
 			"type": "firefox",
 			"request": "launch",
-			"name": "Launch Firefox against localhost",
+			"name": "Debug in Firefox",
 			"url": "http://localhost:5173",
-			"webRoot": "${workspaceFolder}",
-			"pathMappings": [
-				{
-					"url": "webpack:///src",
-					"path": "${webRoot}/src"
-				}
-			]
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"type": "chrome",
+			"request": "launch",
+			"name": "Debug in Chrome",
+			"url": "http://localhost:5173",
+			"webRoot": "${workspaceFolder}"
 		},
 		{
 			"type": "node",
@@ -49,6 +50,18 @@
 			"console": "integratedTerminal",
 			"skipFiles": ["<node_internals>/**"],
 			"postDebugTask": "deploy to firebase"
+		}
+	],
+	"compounds": [
+		{
+			"name": "Dev Server + Firefox",
+			"configurations": ["Launch Dev Server", "Debug in Firefox"],
+			"stopAll": true
+		},
+		{
+			"name": "Dev Server + Chrome",
+			"configurations": ["Launch Dev Server", "Debug in Chrome"],
+			"stopAll": true
 		}
 	]
 }
