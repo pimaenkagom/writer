@@ -21,3 +21,9 @@ const availableLanguanges = $derived(
 export function getAvailablesLanguages() {
 	return availableLanguanges;
 }
+
+const systemLanguage = $derived(settings.value.systemLanguage.current);
+
+export function getSystemLanguage() {
+	return systemLanguage;
+}
