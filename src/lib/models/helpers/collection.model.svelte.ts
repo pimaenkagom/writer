@@ -84,12 +84,8 @@ export class Collection<T extends Identifiable> {
 			const id = crypto.randomUUID().toUpperCase();
 			const docRef = doc(this.getCollectionReference(), id);
 			const newItem = { ...item, id: docRef.id } as T;
-
 			await setDoc(docRef, newItem);
-
 			this.items[id] = newItem;
-			// this.items = [...this.items, newItem];
-
 			return newItem;
 		} catch (error) {
 			notify(error instanceof Error ? error.message : 'Unknown error while creating a document');
@@ -101,10 +97,7 @@ export class Collection<T extends Identifiable> {
 		try {
 			const docRef = this.getDocumentReference(id);
 			await updateDoc(docRef, updates);
-
 			this.items[id] = { ...this.items[id], ...updates } as T;
-			// this.items = this.items.map((item) => (item.id === id ? { ...item, ...updates } : item));
-
 			return true;
 		} catch (error) {
 			notify(error instanceof Error ? error.message : 'Unknown error while updating a document');
@@ -117,7 +110,6 @@ export class Collection<T extends Identifiable> {
 			const docRef = this.getDocumentReference(id);
 			await deleteDoc(docRef);
 			delete this.items[id];
-			// this.items = this.items.filter((item) => item.id !== id);
 			return true;
 		} catch (error) {
 			notify(error instanceof Error ? error.message : 'Unknown error while removing a document');

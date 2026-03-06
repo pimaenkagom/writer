@@ -1,12 +1,12 @@
-import type { Selection } from '$lib/models/helpers/selection.model';
+import { NodeType } from '$lib/models/helpers/node-types.model';
 
 export const order = [
-	'library',
-	'collection',
-	'book',
-	'part',
-	'chapter',
-	'section',
-	'paragraph',
-	'clause'
-] satisfies Array<keyof Selection>;
+	NodeType.Library,
+	NodeType.Collection,
+	NodeType.Book,
+	NodeType.Part,
+	NodeType.Chapter,
+	NodeType.Section,
+	NodeType.Paragraph,
+	NodeType.Clause
+] satisfies Array<NodeType>;

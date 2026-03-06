@@ -10,4 +10,6 @@
 	<NodeEditor {model} />
 </div>
 
-<ChildrenEditor {model} />
+{#if model.type !== 'clause'}
+	<ChildrenEditor {model} />
+{/if}

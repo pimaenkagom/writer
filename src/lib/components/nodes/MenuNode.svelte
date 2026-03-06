@@ -1,6 +1,6 @@
 <script lang="ts">
+	import DetectorNode from '$lib/components/nodes/DetectorNode.svelte';
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
-	import DetectorNode from '$lib/components/nodes/helper/DetectorNode.svelte';
 	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { selection } from '$lib/states/helpers/selection.svelte';

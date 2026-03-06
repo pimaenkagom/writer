@@ -3,6 +3,8 @@
 	import Arabic from '$lib/components/helpers/languages/Arabic.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import Latin from '$lib/components/helpers/languages/Latin.svelte';
+	import ChildNodes from '$lib/components/nodes/helper/ChildNodes.svelte';
+	import EditNodeButton from '$lib/components/nodes/helper/EditNodeButton.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
 	import { getMultilingualText } from '$lib/states/contents/multilingual-text.svelte';
@@ -15,14 +17,36 @@
 	{#each getSelectedLanguages() as language}
 		<div class="column">
 			{#if language == 'coptic'}
-				<p><Coptic><Text model={multilingualText.texts[language]} /></Coptic></p>
+				<p>
+					<Coptic>
+						<span class="has-text-weight-bold">
+							<Text model={multilingualText.texts[language]} />
+						</span>
+						<ChildNodes {model} {language} />
+					</Coptic>
+				</p>
 			{:else if language == 'arabic'}
 				<p class="has-text-right">
-					<Arabic><Text model={multilingualText.texts[language]} /></Arabic>
+					<Arabic>
+						<span class="has-text-weight-bold">
+							<Text model={multilingualText.texts[language]} />
+						</span>
+						<ChildNodes {model} {language} />
+					</Arabic>
 				</p>
 			{:else}
-				<p><Latin>{multilingualText.texts[language].value}</Latin></p>
+				<p>
+					<Latin>
+						<span class="has-text-weight-bold">
+							<Text model={multilingualText.texts[language]} />
+						</span>
+						<ChildNodes {model} {language} />
+					</Latin>
+				</p>
 			{/if}
 		</div>
 	{/each}
+	<div class="column is-narrow">
+		<EditNodeButton {model} />
+	</div>
 </div>

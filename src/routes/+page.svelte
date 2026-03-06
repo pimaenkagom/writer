@@ -1,7 +1,7 @@
 <script lang="ts">
 	import BreadcrumbBar from '$lib/components/helpers/BreadcrumbBar.svelte';
 	import Presenter from '$lib/components/layout/Presenter.svelte';
-	import NesterNode from '$lib/components/nodes/helper/NesterNode.svelte';
+	import NesterNode from '$lib/components/nodes/NesterNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { settings } from '$lib/states/helpers/settings.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
