@@ -28,8 +28,8 @@
 			}
 			email = '';
 			password = '';
-		} catch (error: any) {
-			message = error.message;
+		} catch (error) {
+			message = error instanceof Error ? error.message : String(error);
 		}
 	}
 
@@ -263,7 +263,7 @@
 			</div>
 			<div class="field">
 				<div class="control">
-					<p>&nbsp;{message}</p>
+					<p class="has-text-danger">&nbsp;{message}</p>
 				</div>
 			</div>
 			<div class="field is-grouped is-grouped-right">
