@@ -1,10 +1,11 @@
 <script lang="ts">
 	import AddNewNode from '$lib/components/nodes/helper/AddNewNode.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
+	import type { Type } from '$lib/models/helpers/type.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 
-	const { type, isSelected }: { type: string; isSelected: (id: string) => void } = $props();
+	const { type, isSelected }: { type: Type; isSelected: (id: string) => void } = $props();
 
 	const nodes = $derived(getCollectionForType(type).values);
 	let filter = $state('');

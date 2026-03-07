@@ -1,25 +1,18 @@
-import type { Selection } from '$lib/models/helpers/selection.model';
+import type { Basenode } from '$lib/models/helpers/basenode.model';
 import type { State } from '$lib/models/helpers/state.model';
+import type { Type } from '$lib/models/helpers/type.model';
 import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
+import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
-function getSettingsValue(type: keyof Selection) {
+function getSettingsValue(type: Type) {
 	const value = Number(settings.value[type].current);
 	return isNaN(value) ? null : value;
 }
 
-export const selection = $state<State<Selection>>({
+export const selection = $state<State<Record<Type, number | null>>>({
 	state: 'init',
-	value: {
-		library: null,
-		collection: null,
-		book: null,
-		part: null,
-		chapter: null,
-		section: null,
-		paragraph: null,
-		clause: null
-	}
+	value: Object.fromEntries(order.map((type) => [type, null])) as Record<Type, number | null>
 });
 
 export function loadSelectionFromSettings() {
@@ -28,6 +21,28 @@ export function loadSelectionFromSettings() {
 		selection.value[type] = getSettingsValue(type);
 	}
 	selection.state = 'ready';
+}
+
+export function getSelectedNodes() {
+	const result: Basenode[] = [];
+
+	for (const type of order) {
+		const selected = selection.value[type];
+
+		if (selected === null) {
+			break;
+		}
+
+		const isRoot = result.length === 0;
+		if (isRoot) {
+			result.push(getCollectionForType(type).values[selected]);
+		} else {
+			const nextNodeId = result[result.length - 1].children[selected];
+			result.push(getCollectionForType(type).items[nextNodeId]);
+		}
+	}
+
+	return result;
 }
 
 export function select(index: number) {
@@ -47,5 +62,15 @@ export function unselect() {
 			selection.value[type] = null;
 			break;
 		}
+	}
+}
+
+export function unselectUntilType(type: Type) {
+	const startIndex = order.indexOf(type) + 1;
+
+	for (let i = startIndex; i < order.length; ++i) {
+		const currentType = order[i];
+		setSetting(currentType, String(null));
+		selection.value[currentType] = null;
 	}
 }

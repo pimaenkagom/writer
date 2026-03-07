@@ -3,7 +3,7 @@
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { select } from '$lib/states/helpers/selection.svelte';
 
-	let { model }: { model: Basenode } = $props();
+	let { model }: { model: Basenode; selected?: number } = $props();
 </script>
 
 <section class="section">

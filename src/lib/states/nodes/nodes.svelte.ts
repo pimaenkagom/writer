@@ -1,5 +1,5 @@
 import { Collection } from '$lib/models/helpers/collection.model.svelte';
-import type { Selection } from '$lib/models/helpers/selection.model';
+import { Type } from '$lib/models/helpers/type.model';
 import type { Anynode } from '$lib/models/nodes/anynode.model';
 import type { Book } from '$lib/models/nodes/book.model';
 import type { Chapter } from '$lib/models/nodes/chapter.model';
@@ -9,6 +9,7 @@ import type { Library } from '$lib/models/nodes/library.model';
 import type { Paragraph } from '$lib/models/nodes/paragraph.model';
 import type { Part } from '$lib/models/nodes/part.model';
 import type { Section } from '$lib/models/nodes/section.model';
+import { order } from '$lib/utilities/nodes/order';
 
 export const libraries = new Collection<Library>('libraries');
 
@@ -28,28 +29,28 @@ export const clauses = new Collection<Clause>('clauses');
 
 export function getTypeFromId(id: string) {
 	if (Object.keys(libraries.items).includes(id)) {
-		return 'library';
+		return Type.Library;
 	}
 	if (Object.keys(collections.items).includes(id)) {
-		return 'collection';
+		return Type.Collection;
 	}
 	if (Object.keys(books.items).includes(id)) {
-		return 'book';
+		return Type.Book;
 	}
 	if (Object.keys(parts.items).includes(id)) {
-		return 'part';
+		return Type.Part;
 	}
 	if (Object.keys(chapters.items).includes(id)) {
-		return 'chapter';
+		return Type.Chapter;
 	}
 	if (Object.keys(sections.items).includes(id)) {
-		return 'section';
+		return Type.Section;
 	}
 	if (Object.keys(paragraphs.items).includes(id)) {
-		return 'paragraph';
+		return Type.Paragraph;
 	}
 	if (Object.keys(clauses.items).includes(id)) {
-		return 'clause';
+		return Type.Clause;
 	}
 	throw new Error(`No type found for id: ${id}`);
 }
@@ -62,48 +63,33 @@ export function getModelById(id: string): Anynode {
 	return model;
 }
 
-export function getCollectionForType(type: string): Collection<Anynode> {
+export function getCollectionForType(type: Type): Collection<Anynode> {
 	switch (type) {
-		case 'library':
+		case Type.Library:
 			return libraries;
-		case 'collection':
+		case Type.Collection:
 			return collections;
-		case 'book':
+		case Type.Book:
 			return books;
-		case 'part':
+		case Type.Part:
 			return parts;
-		case 'chapter':
+		case Type.Chapter:
 			return chapters;
-		case 'section':
+		case Type.Section:
 			return sections;
-		case 'paragraph':
+		case Type.Paragraph:
 			return paragraphs;
-		case 'clause':
+		case Type.Clause:
 			return clauses;
 		default:
 			throw new Error(`No collection found for type: ${type}`);
 	}
 }
 
-export function subtypeOf(type: string): keyof Selection {
-	switch (type) {
-		case 'root':
-			return 'library';
-		case 'library':
-			return 'collection';
-		case 'collection':
-			return 'book';
-		case 'book':
-			return 'part';
-		case 'part':
-			return 'chapter';
-		case 'chapter':
-			return 'section';
-		case 'section':
-			return 'paragraph';
-		case 'paragraph':
-			return 'clause';
-		default:
-			throw new Error(`No subtype found for type: ${type}`);
+export function subtypeOf(type: Type) {
+	const index = order.indexOf(type);
+	if (index === -1 || index > order.length) {
+		return order[0];
 	}
+	return order[index + 1];
 }

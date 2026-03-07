@@ -1,5 +1,5 @@
 <script lang="ts">
-	import MultilingualTextVertical from '$lib/components/contents/mulltilinual-text/MultilingualTextVertical.svelte';
+	import MultilingualTextHorizontal from '$lib/components/contents/mulltilinual-text/MultilingualTextHorizontal.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 
@@ -9,6 +9,6 @@
 
 <section class="section">
 	<div class="container">
-		<MultilingualTextVertical model={multilingualText} />
+		<MultilingualTextHorizontal model={multilingualText} />
 	</div>
 </section>
