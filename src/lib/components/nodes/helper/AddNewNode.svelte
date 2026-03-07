@@ -1,9 +1,10 @@
 <script lang="ts">
 	import MultilingualTextBrowser from '$lib/components/contents/mulltilinual-text/MultilingualTextBrowser.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
+	import type { Type } from '$lib/models/helpers/type.model';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 
-	const { type }: { type: string } = $props();
+	const { type }: { type: Type } = $props();
 
 	let isActive = $state(false);
 
