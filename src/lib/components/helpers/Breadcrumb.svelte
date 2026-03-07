@@ -13,12 +13,16 @@
 
 <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
 	<ul>
-		{#each selectedNodes as node}
-			<li>
-				<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.type)}>
-					<Text model={getTextInSystemLanguage(node.value)} />
-				</a>
-			</li>
+		{#each selectedNodes as node, index}
+			{#if index < selectedNodes.length}
+				{#if selectedNodes[index + 1]}
+					<li>
+						<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.type)}>
+							<Text model={getTextInSystemLanguage(node.value)} />
+						</a>
+					</li>
+				{/if}
+			{/if}
 		{/each}
 	</ul>
 </nav>

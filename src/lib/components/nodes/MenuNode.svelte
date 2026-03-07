@@ -1,26 +1,26 @@
 <script lang="ts">
-	import DetectorNode from '$lib/components/nodes/DetectorNode.svelte';
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
 	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
+	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
 	import { selection } from '$lib/states/helpers/selection.svelte';
-	import { subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
 
 	const { model }: { model: Basenode } = $props();
 
 	const subtype = $derived(subtypeOf(model.type));
+	const collection = $derived(getCollectionForType(subtype));
 
-	let current = $derived(selection.value[subtype]);
+	const selectedChildIndex = $derived(selection.value[subtype]);
+	const childIsSelected = $derived(selectedChildIndex !== null);
 
-	const childIsSelected = $derived(current !== null);
+	const selectedChildId = $derived(childIsSelected ? model.children[selectedChildIndex!] : null);
+	const selectedChild = $derived(childIsSelected ? collection.items[selectedChildId!] : null);
 </script>
 
-{#if current === null}
+{#if selectedChild}
+	<SelectorNode model={selectedChild} />
+{:else}
 	<NodeHead {model} />
 	<ChildrenMenu {model} />
-{:else if model.children[current]}
-	<DetectorNode nodeId={model.children[current]} />
-{:else}
-	{@const nodeId = model.children[current]}
-	<p style="color:red">ERROR: nodeId is {String(nodeId)} at index {current}</p>
 {/if}
