@@ -15,12 +15,14 @@
 
 <nav class="navbar is-fixed-top" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item" href="/">
-			<span class="is-size-5">
+		<div class="navbar-item">
+			<span class="is-size-5 is-unselectable">
 				<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
 			</span>
-		</a>
-
+		</div>
+	</div>
+	<div class="navbar-brand is-flex-grow-1"></div>
+	<div class="navbar-brand">
 		<AuthGuard roles={[Role.Admin]}>
 			<a class="navbar-item" href={null}>
 				<Executer />
