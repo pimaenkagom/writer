@@ -1,16 +1,14 @@
 <script lang="ts">
 	import MultilinualTextList from '$lib/components/contents/mulltilinual-text/MultilinualTextList.svelte';
 	import Executer from '$lib/components/header/Executer.svelte';
-	import Exporter from '$lib/components/header/Exporter.svelte';
 	import Link from '$lib/components/header/helper/Link.svelte';
-	import Languages from '$lib/components/header/Languages.svelte';
-	import Login from '$lib/components/header/Login.svelte';
-	import Settings from '$lib/components/header/Settings.svelte';
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import { Role } from '$lib/models/helpers/roles.model';
-
-	let isActive = $state(false);
+	import Exporter from '$lib/pages/Exporter.svelte';
+	import Languages from '$lib/pages/Languages.svelte';
+	import Login from '$lib/pages/Login.svelte';
+	import Settings from '$lib/pages/Settings.svelte';
 
 	document.documentElement.classList.add('has-navbar-fixed-top');
 </script>
