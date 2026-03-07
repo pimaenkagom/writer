@@ -4,25 +4,26 @@
 	import RecursiveNode from '$lib/components/nodes/RecursiveNode.svelte';
 	import ScrollNode from '$lib/components/nodes/ScrollNode.svelte';
 	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import { NodeType } from '$lib/models/helpers/node-types.model';
 
 	const { model, language }: { model: Basenode; language?: string } = $props();
 </script>
 
-{#if model.type === 'library'}
+{#if model.type === NodeType.Library}
 	<MenuNode {model} />
-{:else if model.type === 'collection'}
+{:else if model.type === NodeType.Collection}
 	<MenuNode {model} />
-{:else if model.type === 'book'}
+{:else if model.type === NodeType.Book}
 	<MenuNode {model} />
-{:else if model.type === 'part'}
+{:else if model.type === NodeType.Part}
 	<ScrollNode {model} />
-{:else if model.type === 'chapter'}
+{:else if model.type === NodeType.Chapter}
 	<ScrollNode {model} />
-{:else if model.type === 'section'}
+{:else if model.type === NodeType.Section}
 	<ScrollNode {model} />
-{:else if model.type === 'paragraph'}
+{:else if model.type === NodeType.Paragraph}
 	<ParagraphNode {model} />
-{:else if model.type === 'clause'}
+{:else if model.type === NodeType.Clause}
 	{#if language}
 		<RecursiveNode {model} {language} />
 	{:else}
