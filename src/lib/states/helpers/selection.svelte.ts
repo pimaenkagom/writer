@@ -1,18 +1,18 @@
 import type { Basenode } from '$lib/models/helpers/basenode.model';
-import type { NodeType } from '$lib/models/helpers/node-types.model';
 import type { State } from '$lib/models/helpers/state.model';
+import type { Type } from '$lib/models/helpers/type.model';
 import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
 import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
-function getSettingsValue(type: NodeType) {
+function getSettingsValue(type: Type) {
 	const value = Number(settings.value[type].current);
 	return isNaN(value) ? null : value;
 }
 
-export const selection = $state<State<Record<NodeType, number | null>>>({
+export const selection = $state<State<Record<Type, number | null>>>({
 	state: 'init',
-	value: Object.fromEntries(order.map((type) => [type, null])) as Record<NodeType, number | null>
+	value: Object.fromEntries(order.map((type) => [type, null])) as Record<Type, number | null>
 });
 
 export function loadSelectionFromSettings() {
@@ -65,7 +65,7 @@ export function unselect() {
 	}
 }
 
-export function unselectUntilType(type: NodeType) {
+export function unselectUntilType(type: Type) {
 	const startIndex = order.indexOf(type) + 1;
 
 	for (let i = startIndex; i < order.length; ++i) {

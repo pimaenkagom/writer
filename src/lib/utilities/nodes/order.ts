@@ -1,12 +1,12 @@
-import { NodeType } from '$lib/models/helpers/node-types.model';
+import { Type } from '$lib/models/helpers/type.model';
 
 export const order = [
-	NodeType.Library,
-	NodeType.Collection,
-	NodeType.Book,
-	NodeType.Part,
-	NodeType.Chapter,
-	NodeType.Section,
-	NodeType.Paragraph,
-	NodeType.Clause
-] satisfies Array<NodeType>;
+	Type.Library,
+	Type.Collection,
+	Type.Book,
+	Type.Part,
+	Type.Chapter,
+	Type.Section,
+	Type.Paragraph,
+	Type.Clause
+] satisfies Array<Type>;

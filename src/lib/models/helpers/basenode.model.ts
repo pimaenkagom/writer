@@ -1,10 +1,10 @@
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
-import type { NodeType } from '$lib/models/helpers/node-types.model';
+import type { Type } from '$lib/models/helpers/type.model';
 
 export interface Basenode extends Identifiable {
 	readonly id: string;
 	users: string[];
-	type: NodeType;
+	type: Type;
 	value: string;
 	shown: boolean;
 	tags: string[];
