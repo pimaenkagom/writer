@@ -46,6 +46,35 @@ export class Collection<T extends Identifiable> {
 		this._collectionName = collectionName;
 	}
 
+	private serialize(item: T): Record<string, unknown> {
+		const result: Record<string, unknown> = {};
+		for (const [key, value] of Object.entries(item)) {
+			if (Array.isArray(value) && value.some(Array.isArray)) {
+				result[key] = (value as unknown[][]).map((inner) => JSON.stringify(inner));
+			} else {
+				result[key] = value;
+			}
+		}
+		return result;
+	}
+
+	private deserialize(data: Record<string, unknown>): T {
+		const result: Record<string, unknown> = {};
+		for (const [key, value] of Object.entries(data)) {
+			if (Array.isArray(value) && value.every((item) => typeof item === 'string')) {
+				try {
+					const parsed = (value as string[]).map((item) => JSON.parse(item));
+					result[key] = parsed.every(Array.isArray) ? parsed : value;
+				} catch {
+					result[key] = value;
+				}
+			} else {
+				result[key] = value;
+			}
+		}
+		return result as T;
+	}
+
 	private getCollectionReference() {
 		const db = getFirestore();
 		return collection(db, this.collectionName);
@@ -60,7 +89,9 @@ export class Collection<T extends Identifiable> {
 		try {
 			this.state = 'loading';
 			const snapshot = await getDocs(this.getCollectionReference());
-			snapshot.docs.forEach((doc) => (this.items[doc.id] = { ...doc.data(), id: doc.id } as T));
+			snapshot.docs.forEach(
+				(doc) => (this.items[doc.id] = this.deserialize({ ...doc.data(), id: doc.id }))
+			);
 			this.state = 'ready';
 		} catch (error) {
 			this.state = 'error';
@@ -84,7 +115,7 @@ export class Collection<T extends Identifiable> {
 			const id = crypto.randomUUID().toUpperCase();
 			const docRef = doc(this.getCollectionReference(), id);
 			const newItem = { ...item, id: docRef.id } as T;
-			await setDoc(docRef, newItem);
+			await setDoc(docRef, this.serialize(newItem));
 			this.items[id] = newItem;
 			return newItem;
 		} catch (error) {
@@ -96,7 +127,7 @@ export class Collection<T extends Identifiable> {
 	async update(id: string, updates: Partial<Omit<T, 'id'>>): Promise<boolean> {
 		try {
 			const docRef = this.getDocumentReference(id);
-			await updateDoc(docRef, updates);
+			await updateDoc(docRef, this.serialize({ ...this.items[id], ...updates } as T));
 			this.items[id] = { ...this.items[id], ...updates } as T;
 			return true;
 		} catch (error) {
