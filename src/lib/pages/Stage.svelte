@@ -2,8 +2,8 @@
 	import BreadcrumbBar from '$lib/components/helpers/BreadcrumbBar.svelte';
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
-	import { Type } from '$lib/models/helpers/type.model';
+	import type { Basenode } from '$lib/models/basenode.model';
+	import { Type } from '$lib/models/type.model';
 	import { selection } from '$lib/states/helpers/selection.svelte';
 	import { libraries } from '$lib/states/nodes/nodes.svelte';
 

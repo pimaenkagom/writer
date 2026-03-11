@@ -2,7 +2,7 @@
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
 	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import type { Basenode } from '$lib/models/basenode.model';
 	import { selection } from '$lib/states/helpers/selection.svelte';
 	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
 

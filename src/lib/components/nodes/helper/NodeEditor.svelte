@@ -2,7 +2,7 @@
 	import MultilingualTextBrowser from '$lib/components/contents/mulltilinual-text/MultilingualTextBrowser.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import NodeViewer from '$lib/components/nodes/helper/NodeViewer.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import type { Basenode } from '$lib/models/basenode.model';
 
 	const { model }: { model: Basenode } = $props();
 

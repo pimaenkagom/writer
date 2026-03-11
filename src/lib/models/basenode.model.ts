@@ -1,5 +1,5 @@
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
-import type { Type } from '$lib/models/helpers/type.model';
+import type { Type } from '$lib/models/type.model';
 
 export interface Basenode extends Identifiable {
 	readonly id: string;

@@ -1,5 +1,5 @@
-import type { Setting } from '$lib/models/helpers/setting.model';
 import type { State } from '$lib/models/helpers/state.model';
+import type { Setting } from '$lib/models/setting.model';
 import { order } from '$lib/utilities/nodes/order';
 
 export const settings = $state<State<Record<string, Setting>>>({
