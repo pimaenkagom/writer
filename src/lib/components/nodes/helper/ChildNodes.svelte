@@ -6,9 +6,13 @@
 	const { model, language }: { model: Basenode; language?: string } = $props();
 	const childrenType = $derived(subtypeOf(model.type));
 	const collection = $derived(getCollectionForType(childrenType));
-	const children = $derived(model.children.map((id) => collection.items[id]));
+	const children = $derived(
+		model.children.map((alternatives) => alternatives.map((id) => collection.items[id]))
+	);
 </script>
 
-{#each children as child}
-	<VisibilityNode model={child} {language} />
+{#each children as alternatives}
+	{#each alternatives as child}
+		<VisibilityNode model={child} {language} />
+	{/each}
 {/each}

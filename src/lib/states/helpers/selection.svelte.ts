@@ -6,13 +6,15 @@ import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
 function getSettingsValue(type: Type) {
-	const value = Number(settings.value[type].current);
-	return isNaN(value) ? null : value;
+	return JSON.parse(settings.value[type].current) as [number, number] | null;
 }
 
-export const selection = $state<State<Record<Type, number | null>>>({
+export const selection = $state<State<Record<Type, [number, number] | null>>>({
 	state: 'init',
-	value: Object.fromEntries(order.map((type) => [type, null])) as Record<Type, number | null>
+	value: Object.fromEntries(order.map((type) => [type, null])) as Record<
+		Type,
+		[number, number] | null
+	>
 });
 
 export function loadSelectionFromSettings() {
@@ -35,9 +37,9 @@ export function getSelectedNodes() {
 
 		const isRoot = result.length === 0;
 		if (isRoot) {
-			result.push(getCollectionForType(type).values[selected]);
+			result.push(getCollectionForType(type).values[selected[0]]);
 		} else {
-			const nextNodeId = result[result.length - 1].children[selected];
+			const nextNodeId = result[result.length - 1].children[selected[0]][selected[1]];
 			result.push(getCollectionForType(type).items[nextNodeId]);
 		}
 	}
@@ -45,11 +47,11 @@ export function getSelectedNodes() {
 	return result;
 }
 
-export function select(index: number) {
+export function select(index: number, alternative: number = 0) {
 	for (const type of order) {
 		if (selection.value[type] === null) {
-			setSetting(type, String(index));
-			selection.value[type] = index;
+			setSetting(type, JSON.stringify([index, alternative]));
+			selection.value[type] = [index, alternative];
 			break;
 		}
 	}
@@ -58,7 +60,7 @@ export function select(index: number) {
 export function unselect() {
 	for (const type of order.toReversed()) {
 		if (selection.value[type] !== null) {
-			setSetting(type, String(null));
+			setSetting(type, JSON.stringify(null));
 			selection.value[type] = null;
 			break;
 		}
@@ -70,7 +72,7 @@ export function unselectUntilType(type: Type) {
 
 	for (let i = startIndex; i < order.length; ++i) {
 		const currentType = order[i];
-		setSetting(currentType, String(null));
+		setSetting(currentType, JSON.stringify(null));
 		selection.value[currentType] = null;
 	}
 }

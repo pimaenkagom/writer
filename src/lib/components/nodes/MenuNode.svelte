@@ -14,7 +14,9 @@
 	const selectedChildIndex = $derived(selection.value[subtype]);
 	const childIsSelected = $derived(selectedChildIndex !== null);
 
-	const selectedChildId = $derived(childIsSelected ? model.children[selectedChildIndex!] : null);
+	const selectedChildId = $derived(
+		childIsSelected ? model.children[selectedChildIndex![0]][selectedChildIndex![1]] : null
+	);
 	const selectedChild = $derived(childIsSelected ? collection.items[selectedChildId!] : null);
 </script>
 

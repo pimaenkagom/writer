@@ -33,13 +33,6 @@ export const settings = $state<State<Record<string, Setting>>>({
 			default: 'english',
 			shown: true
 		},
-		nesting: {
-			key: 'nesting',
-			current: '5',
-			availables: order.map((_, index) => String(index)),
-			default: '5',
-			shown: true
-		},
 		...Object.fromEntries(
 			order.map((type) => [
 				type,

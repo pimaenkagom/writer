@@ -20,8 +20,7 @@
 			value: id,
 			shown: true,
 			tags: [],
-			children: [],
-			childrenTypes: []
+			children: []
 		});
 
 		isActive = false;
