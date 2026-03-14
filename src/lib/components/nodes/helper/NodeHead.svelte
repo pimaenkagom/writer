@@ -2,7 +2,7 @@
 	import MultilingualTextNonsystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextNonsystemLanguage.svelte';
 	import MultilingualTextSystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextSystemLanguage.svelte';
 	import EditNodeButton from '$lib/components/nodes/helper/EditNodeButton.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import type { Basenode } from '$lib/models/basenode.model';
 	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
 
 	const { model }: { model: Basenode } = $props();
