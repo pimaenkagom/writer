@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resetSetting, setSetting, settings } from '$lib/states/helpers/settings.svelte';
-	import { capitalize } from '$lib/utilities/strings/capitalize';
+	import { capitalize } from '$lib/utilities/strings';
 </script>
 
 <section class="section">

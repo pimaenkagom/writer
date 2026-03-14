@@ -10,6 +10,7 @@ import {
 
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
 import { notify } from '$lib/states/helpers/notifications.svelte';
+import { generateId } from '$lib/utilities/generator/id';
 
 export class Collection<T extends Identifiable> {
 	private _collectionName: string;
@@ -112,7 +113,7 @@ export class Collection<T extends Identifiable> {
 
 	public async create(item: Omit<T, 'id'>): Promise<T | null> {
 		try {
-			const id = crypto.randomUUID().toUpperCase();
+			const id = generateId();
 			const docRef = doc(this.getCollectionReference(), id);
 			const newItem = { ...item, id: docRef.id } as T;
 			await setDoc(docRef, this.serialize(newItem));

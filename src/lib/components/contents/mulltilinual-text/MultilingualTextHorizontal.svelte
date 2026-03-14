@@ -5,7 +5,7 @@
 	import Latin from '$lib/components/helpers/languages/Latin.svelte';
 	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
 	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
-	import { capitalize } from '$lib/utilities/strings/capitalize';
+	import { capitalize } from '$lib/utilities/strings';
 
 	const { model, showLabel = false }: { model: MultilingualText; showLabel?: boolean } = $props();
 </script>

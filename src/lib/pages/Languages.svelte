@@ -5,7 +5,7 @@
 		getSelectedLanguages
 	} from '$lib/states/contents/languages.svelte';
 	import { setSetting } from '$lib/states/helpers/settings.svelte';
-	import { capitalize } from '$lib/utilities/strings/capitalize';
+	import { capitalize } from '$lib/utilities/strings';
 	import { flip } from 'svelte/animate';
 
 	let draggedIndex: number | null = $state(null);
