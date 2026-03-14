@@ -49,14 +49,14 @@ export function getTypeFromId(id: string) {
 
 export function getModelById(id: string) {
 	const type = getTypeFromId(id);
-	const collection = getCollectionForType(type);
+	const collection = getCollectionForNodeType(type);
 	const model = collection.items[id];
 
 	return model;
 }
 
-export function getCollectionForType(type: NodeType) {
-	switch (type) {
+export function getCollectionForNodeType(nodeType: NodeType) {
+	switch (nodeType) {
 		case NodeType.Library:
 			return libraries;
 		case NodeType.Collection:
@@ -74,12 +74,12 @@ export function getCollectionForType(type: NodeType) {
 		case NodeType.Clause:
 			return clauses;
 		default:
-			throw new Error(`No collection found for type: ${type}`);
+			throw new Error(`No collection found for type: ${nodeType}`);
 	}
 }
 
-export function subtypeOf(type: NodeType) {
-	const index = order.indexOf(type);
+export function subtypeOf(nodeType: NodeType) {
+	const index = order.indexOf(nodeType);
 	if (index === -1 || index > order.length) {
 		return order[0];
 	}

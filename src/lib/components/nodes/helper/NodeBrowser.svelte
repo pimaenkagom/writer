@@ -3,11 +3,12 @@
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { NodeType } from '$lib/models/node-type.model';
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
-	import { getCollectionForType } from '$lib/states/nodes.svelte';
+	import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 
-	const { type, isSelected }: { type: NodeType; isSelected: (id: string) => void } = $props();
+	const { nodeType, isSelected }: { nodeType: NodeType; isSelected: (id: string) => void } =
+		$props();
 
-	const nodes = $derived(getCollectionForType(type).values);
+	const nodes = $derived(getCollectionForNodeType(nodeType).values);
 	let filter = $state('');
 
 	const filtered = $derived(
@@ -15,8 +16,8 @@
 			const search = filter.toLowerCase();
 			return (
 				node.id.toLowerCase().includes(search) ||
-				node.value.toLowerCase().includes(search) ||
-				Object.values(multilingualTexts.items[node.value].texts).some((t) =>
+				node.content.toLowerCase().includes(search) ||
+				Object.values(multilingualTexts.items[node.content].texts).some((t) =>
 					t.value.toLowerCase().includes(search)
 				)
 			);
@@ -50,7 +51,7 @@
 			</div>
 			<div class="column is-narrow">
 				<div class="buttons is-right">
-					<AddNewNode {type} />
+					<AddNewNode {nodeType} />
 				</div>
 			</div>
 		</div>

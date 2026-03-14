@@ -1,16 +1,17 @@
+import { ContentType } from '$lib/models/contents/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
-import { getCollectionForType, subtypeOf } from '$lib/states/nodes.svelte';
+import { getCollectionForNodeType, subtypeOf } from '$lib/states/nodes.svelte';
 import { generateSentence, generateTitle } from '$lib/utilities/generator/multilingual-text';
 import { faker } from '@faker-js/faker';
 
-function getMinAndMax(type: NodeType) {
-	switch (type) {
+function getMinAndMax(nodeType: NodeType) {
+	switch (nodeType) {
 		case NodeType.Library:
 			return { min: 1, max: 1 };
 
 		case NodeType.Collection:
-			return { min: 1, max: 3 };
+			return { min: 1, max: 2 };
 
 		case NodeType.Book:
 			return { min: 1, max: 3 };
@@ -22,49 +23,50 @@ function getMinAndMax(type: NodeType) {
 			return { min: 1, max: 4 };
 
 		case NodeType.Section:
-			return { min: 1, max: 1 };
+			return { min: 1, max: 7 };
 
 		case NodeType.Paragraph:
-			return { min: 1, max: 1 };
+			return { min: 1, max: 7 };
 
 		case NodeType.Clause:
 			return { min: 0, max: 0 };
 	}
 }
 
-async function generateMultilingualTextAndGetId(type: NodeType) {
+async function generateMultilingualTextAndGetId(nodeType: NodeType) {
 	const value = await multilingualTexts.create(
-		type === NodeType.Clause ? generateSentence() : generateTitle()
+		nodeType === NodeType.Clause ? generateSentence() : generateTitle()
 	);
 
 	return value!.id;
 }
 
-async function generateChildrenAndGetIds(type: NodeType, users: string[] = []) {
+async function generateChildrenAndGetIds(nodeType: NodeType, users: string[] = []) {
 	const result = [];
 
-	const count = faker.number.int(getMinAndMax(type));
+	const count = faker.number.int(getMinAndMax(nodeType));
 	for (let i = 0; i < count; ++i) {
-		result.push([await generateNode(subtypeOf(type), users)]);
+		result.push([await generateNode(subtypeOf(nodeType), users)]);
 	}
 
 	return result;
 }
 
-async function generateNode(type: NodeType, users: string[] = []) {
-	const collection = getCollectionForType(type);
+async function generateNode(nodeType: NodeType, users: string[] = []) {
+	const collection = getCollectionForNodeType(nodeType);
 
 	const node = await collection.create({
 		users: users,
-		type: type,
-		value: await generateMultilingualTextAndGetId(type),
+		nodeType: nodeType,
+		content: await generateMultilingualTextAndGetId(nodeType),
+		contentType: ContentType.MultilingualText,
 		shown: true,
 		tags: [],
 		children: []
 	});
 
 	const id = node!.id;
-	await collection.update(id, { children: await generateChildrenAndGetIds(type, [id]) });
+	await collection.update(id, { children: await generateChildrenAndGetIds(nodeType, [id]) });
 
 	return id;
 }

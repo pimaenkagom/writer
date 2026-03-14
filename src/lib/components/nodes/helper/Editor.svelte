@@ -11,6 +11,6 @@
 	<NodeEditor {model} />
 </div>
 
-{#if model.type !== NodeType.Clause}
+{#if model.nodeType !== NodeType.Clause}
 	<ChildrenEditor {model} />
 {/if}

@@ -4,8 +4,8 @@
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 
 	const { model }: { model: Basenode } = $props();
-	const multilingualText = $derived(multilingualTexts.items[model.value]);
+	const multilingualText = $derived(multilingualTexts.items[model.content]);
 </script>
 
 <MultilingualTextHorizontal model={multilingualText} />
-<p>{model.type} {model.id}</p>
+<p>{model.nodeType} {model.id}</p>

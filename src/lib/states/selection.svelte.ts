@@ -1,17 +1,17 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import type { State } from '$lib/models/helpers/state.model';
 import type { NodeType } from '$lib/models/node-type.model';
-import { getCollectionForType } from '$lib/states/nodes.svelte';
+import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 import { setSetting, settings } from '$lib/states/settings.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
-function getSettingsValue(type: NodeType) {
-	return JSON.parse(settings.value[type].current) as [number, number] | null;
+function getSettingsValue(nodeType: NodeType) {
+	return JSON.parse(settings.value[nodeType].current) as [number, number] | null;
 }
 
 export const selection = $state<State<Record<NodeType, [number, number] | null>>>({
 	state: 'init',
-	value: Object.fromEntries(order.map((type) => [type, null])) as Record<
+	value: Object.fromEntries(order.map((nodeType) => [nodeType, null])) as Record<
 		NodeType,
 		[number, number] | null
 	>
@@ -19,8 +19,8 @@ export const selection = $state<State<Record<NodeType, [number, number] | null>>
 
 export function loadSelectionFromSettings() {
 	selection.state = 'loading';
-	for (const type of order) {
-		selection.value[type] = getSettingsValue(type);
+	for (const nodeType of order) {
+		selection.value[nodeType] = getSettingsValue(nodeType);
 	}
 	selection.state = 'ready';
 }
@@ -28,8 +28,8 @@ export function loadSelectionFromSettings() {
 export function getSelectedNodes() {
 	const result: Basenode[] = [];
 
-	for (const type of order) {
-		const selected = selection.value[type];
+	for (const nodeType of order) {
+		const selected = selection.value[nodeType];
 
 		if (selected === null) {
 			break;
@@ -37,10 +37,10 @@ export function getSelectedNodes() {
 
 		const isRoot = result.length === 0;
 		if (isRoot) {
-			result.push(getCollectionForType(type).values[selected[0]]);
+			result.push(getCollectionForNodeType(nodeType).values[selected[0]]);
 		} else {
 			const nextNodeId = result[result.length - 1].children[selected[0]][selected[1]];
-			result.push(getCollectionForType(type).items[nextNodeId]);
+			result.push(getCollectionForNodeType(nodeType).items[nextNodeId]);
 		}
 	}
 
@@ -48,27 +48,27 @@ export function getSelectedNodes() {
 }
 
 export function select(index: number, alternative: number = 0) {
-	for (const type of order) {
-		if (selection.value[type] === null) {
-			setSetting(type, JSON.stringify([index, alternative]));
-			selection.value[type] = [index, alternative];
+	for (const nodeType of order) {
+		if (selection.value[nodeType] === null) {
+			setSetting(nodeType, JSON.stringify([index, alternative]));
+			selection.value[nodeType] = [index, alternative];
 			break;
 		}
 	}
 }
 
 export function unselect() {
-	for (const type of order.toReversed()) {
-		if (selection.value[type] !== null) {
-			setSetting(type, JSON.stringify(null));
-			selection.value[type] = null;
+	for (const nodeType of order.toReversed()) {
+		if (selection.value[nodeType] !== null) {
+			setSetting(nodeType, JSON.stringify(null));
+			selection.value[nodeType] = null;
 			break;
 		}
 	}
 }
 
-export function unselectUntilType(type: NodeType) {
-	const startIndex = order.indexOf(type) + 1;
+export function unselectUntilType(nodeType: NodeType) {
+	const startIndex = order.indexOf(nodeType) + 1;
 
 	for (let i = startIndex; i < order.length; ++i) {
 		const currentType = order[i];

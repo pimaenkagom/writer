@@ -24,7 +24,7 @@ function generateMultilingualText(min: number, max: number, isTitlized: boolean 
 							: capitalize(generateWords(wordCount)) + '.',
 						strongWordsIndices: [],
 						emphasizedWordsIndices: [],
-						status: 'Generated'
+						status: '2FFFCC71-17F9-4D8B-958E-D99BE2366F6B'
 					}
 				])
 			)
