@@ -1,4 +1,4 @@
-import { NodeType } from '$lib/models/type.model';
+import { NodeType } from '$lib/models/node-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForType, subtypeOf } from '$lib/states/nodes.svelte';
 import { generateSentence, generateTitle } from '$lib/utilities/generator/multilingual-text';

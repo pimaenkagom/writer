@@ -1,7 +1,7 @@
 <script lang="ts">
 	import AddNewNode from '$lib/components/nodes/helper/AddNewNode.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
-	import type { NodeType } from '$lib/models/type.model';
+	import type { NodeType } from '$lib/models/node-type.model';
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 	import { getCollectionForType } from '$lib/states/nodes.svelte';
 

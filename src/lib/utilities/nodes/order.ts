@@ -1,4 +1,4 @@
-import { NodeType } from '$lib/models/type.model';
+import { NodeType } from '$lib/models/node-type.model';
 
 export const order = [
 	NodeType.Library,
