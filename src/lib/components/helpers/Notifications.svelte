@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { clearNotification, notifications } from '$lib/states/helpers/notifications.svelte';
+	import { clearNotification, notifications } from '$lib/states/notifications.svelte';
 </script>
 
 {#if notifications.value.length !== 0}

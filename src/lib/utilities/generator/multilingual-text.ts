@@ -1,5 +1,5 @@
 import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
-import { languages } from '$lib/states/contents/languages.svelte';
+import { languages } from '$lib/states/languages.svelte';
 import { delta } from '$lib/utilities/generator/delta';
 import { generateId } from '$lib/utilities/generator/id';
 import { capitalize, titleize } from '$lib/utilities/strings';

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
-	import { libraries } from '$lib/states/nodes/nodes.svelte';
+	import { libraries } from '$lib/states/nodes.svelte';
 </script>
 
 <section class="section">

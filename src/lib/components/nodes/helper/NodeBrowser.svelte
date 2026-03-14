@@ -2,8 +2,8 @@
 	import AddNewNode from '$lib/components/nodes/helper/AddNewNode.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Type } from '$lib/models/type.model';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
+	import { getCollectionForType } from '$lib/states/nodes.svelte';
 
 	const { type, isSelected }: { type: Type; isSelected: (id: string) => void } = $props();
 

@@ -4,8 +4,8 @@
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { Type } from '$lib/models/type.model';
-	import { selection } from '$lib/states/helpers/selection.svelte';
-	import { libraries } from '$lib/states/nodes/nodes.svelte';
+	import { libraries } from '$lib/states/nodes.svelte';
+	import { selection } from '$lib/states/selection.svelte';
 
 	const root: Basenode = {
 		id: '7047EB00-02DF-11F1-B558-0800200C9A66',

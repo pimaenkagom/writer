@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
+	import { setSetting, settings } from '$lib/states/settings.svelte';
 
 	import { onMount } from 'svelte';
 

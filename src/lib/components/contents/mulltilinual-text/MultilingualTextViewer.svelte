@@ -4,8 +4,8 @@
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
 	import type { Status } from '$lib/models/contents/status.model';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { statuses } from '$lib/states/contents/statuses.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
+	import { statuses } from '$lib/states/statuses.svelte';
 	import { onMount } from 'svelte';
 
 	let { model }: { model: MultilingualText } = $props();

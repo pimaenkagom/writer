@@ -4,7 +4,7 @@
 	import Editor from '$lib/components/nodes/helper/Editor.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { Role } from '$lib/models/roles.model';
-	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForType } from '$lib/states/nodes.svelte';
 
 	const { model }: { model: Basenode } = $props();
 

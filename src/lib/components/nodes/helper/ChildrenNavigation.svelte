@@ -1,7 +1,7 @@
 <script lang="ts">
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { select } from '$lib/states/helpers/selection.svelte';
+	import { select } from '$lib/states/selection.svelte';
 
 	let { model }: { model: Basenode; selected?: number } = $props();
 </script>

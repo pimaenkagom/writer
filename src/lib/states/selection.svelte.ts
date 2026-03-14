@@ -1,8 +1,8 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import type { State } from '$lib/models/helpers/state.model';
 import type { Type } from '$lib/models/type.model';
-import { setSetting, settings } from '$lib/states/helpers/settings.svelte';
-import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
+import { getCollectionForType } from '$lib/states/nodes.svelte';
+import { setSetting, settings } from '$lib/states/settings.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
 function getSettingsValue(type: Type) {

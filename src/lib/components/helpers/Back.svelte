@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { selection, unselect } from '$lib/states/helpers/selection.svelte';
+	import { selection, unselect } from '$lib/states/selection.svelte';
 	import { order } from '$lib/utilities/nodes/order';
 
 	const { isButton = false }: { isButton?: boolean } = $props();

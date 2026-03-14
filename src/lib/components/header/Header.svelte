@@ -1,11 +1,11 @@
 <script lang="ts">
 	import MultilinualTextList from '$lib/components/contents/mulltilinual-text/MultilinualTextList.svelte';
 	import Executer from '$lib/components/header/Executer.svelte';
+	import Exporter from '$lib/components/header/Exporter.svelte';
 	import Link from '$lib/components/header/helper/Link.svelte';
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import { Role } from '$lib/models/roles.model';
-	import Exporter from '$lib/pages/Exporter.svelte';
 	import Languages from '$lib/pages/Languages.svelte';
 	import Login from '$lib/pages/Login.svelte';
 	import Settings from '$lib/pages/Settings.svelte';
@@ -27,9 +27,9 @@
 			</div>
 		</AuthGuard>
 		<AuthGuard roles={[Role.Writer]}>
-			<Link class="navbar-item" title="Export" icon="fa-solid fa-download">
+			<div class="navbar-item">
 				<Exporter />
-			</Link>
+			</div>
 		</AuthGuard>
 		<AuthGuard roles={[Role.Writer]}>
 			<Link class="navbar-item" title="Writer" icon="fa-solid fa-pen" isWide={true}>

@@ -9,18 +9,18 @@ import {
 } from 'firebase/firestore';
 
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
-import { notify } from '$lib/states/helpers/notifications.svelte';
+import { notify } from '$lib/states/notifications.svelte';
 import { generateId } from '$lib/utilities/generator/id';
 
 export class Collection<T extends Identifiable> {
-	private _collectionName: string;
+	private _name: string;
 
 	private _items: Record<string, T> = $state({});
 
 	private _state: 'init' | 'loading' | 'ready' | 'error' = $state('init');
 
-	private get collectionName() {
-		return this._collectionName;
+	public get name() {
+		return this._name;
 	}
 
 	public get items() {
@@ -44,7 +44,7 @@ export class Collection<T extends Identifiable> {
 	}
 
 	constructor(collectionName: string) {
-		this._collectionName = collectionName;
+		this._name = collectionName;
 	}
 
 	private serialize(item: T): Record<string, unknown> {
@@ -78,12 +78,12 @@ export class Collection<T extends Identifiable> {
 
 	private getCollectionReference() {
 		const db = getFirestore();
-		return collection(db, this.collectionName);
+		return collection(db, this.name);
 	}
 
 	private getDocumentReference(id: string) {
 		const db = getFirestore();
-		return doc(db, this.collectionName, id);
+		return doc(db, this.name, id);
 	}
 
 	public async load(): Promise<void> {
@@ -125,7 +125,7 @@ export class Collection<T extends Identifiable> {
 		}
 	}
 
-	async update(id: string, updates: Partial<Omit<T, 'id'>>): Promise<boolean> {
+	public async update(id: string, updates: Partial<Omit<T, 'id'>>): Promise<boolean> {
 		try {
 			const docRef = this.getDocumentReference(id);
 			await updateDoc(docRef, this.serialize({ ...this.items[id], ...updates } as T));
@@ -137,7 +137,7 @@ export class Collection<T extends Identifiable> {
 		}
 	}
 
-	async remove(id: string): Promise<boolean> {
+	public async remove(id: string): Promise<boolean> {
 		try {
 			const docRef = this.getDocumentReference(id);
 			await deleteDoc(docRef);
