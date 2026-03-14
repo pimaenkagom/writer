@@ -5,7 +5,7 @@
 	import RecursiveNode from '$lib/components/nodes/RecursiveNode.svelte';
 	import ScrollNode from '$lib/components/nodes/ScrollNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { NodeType } from '$lib/models/type.model';
+	import { NodeType } from '$lib/models/node-type.model';
 
 	const { model, language }: { model: Basenode; language?: string } = $props();
 </script>

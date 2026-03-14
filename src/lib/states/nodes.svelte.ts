@@ -1,6 +1,6 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { Collection } from '$lib/models/collection.model.svelte';
-import { NodeType } from '$lib/models/type.model';
+import { NodeType } from '$lib/models/node-type.model';
 import { order } from '$lib/utilities/nodes/order';
 
 export const libraries = new Collection<Basenode>('libraries');
