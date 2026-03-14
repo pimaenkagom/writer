@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Modal from '$lib/components/layout/Modal.svelte';
 
-	let { children, title, icon, isWide = false } = $props();
+	let { class: className = '', children, title, icon, isWide = false } = $props();
 	let isActive = $state(false);
 
 	function openModal() {
@@ -9,11 +9,11 @@
 	}
 </script>
 
-<button {title} onclick={openModal}>
+<a class={[className]} href={null} {title} onclick={openModal}>
 	<span class="icon">
 		<i class={icon}></i>
 	</span>
-</button>
+</a>
 
 <Modal {title} {icon} {isWide} bind:isActive>
 	{@render children?.()}

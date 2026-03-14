@@ -22,39 +22,29 @@
 		</div>
 		<div class="is-flex-grow-1"></div>
 		<AuthGuard roles={[Role.Admin]}>
-			<a class="navbar-item" href={null}>
+			<div class="navbar-item">
 				<Executer />
-			</a>
+			</div>
 		</AuthGuard>
 		<AuthGuard roles={[Role.Writer]}>
-			<a class="navbar-item" href={null}>
-				<Link title="Export" icon="fa-solid fa-download">
-					<Exporter />
-				</Link>
-			</a>
+			<Link class="navbar-item" title="Export" icon="fa-solid fa-download">
+				<Exporter />
+			</Link>
 		</AuthGuard>
 		<AuthGuard roles={[Role.Writer]}>
-			<a class="navbar-item" href={null}>
-				<Link title="Writer" icon="fa-solid fa-pen" isWide={true}>
-					<MultilinualTextList />
-				</Link>
-			</a>
+			<Link class="navbar-item" title="Writer" icon="fa-solid fa-pen" isWide={true}>
+				<MultilinualTextList />
+			</Link>
 		</AuthGuard>
-		<a class="navbar-item" href={null}>
-			<Link title="Languages" icon="fa-solid fa-globe">
-				<Languages />
-			</Link>
-		</a>
-		<a class="navbar-item" href={null}>
-			<Link title="Settings" icon="fa-solid fa-cog">
-				<Settings />
-			</Link>
-		</a>
-		<a class="navbar-item" href={null}>
-			<Link title="User" icon="fa-solid fa-user">
-				<Login />
-			</Link>
-		</a>
+		<Link class="navbar-item" title="Languages" icon="fa-solid fa-globe">
+			<Languages />
+		</Link>
+		<Link class="navbar-item" title="Settings" icon="fa-solid fa-cog">
+			<Settings />
+		</Link>
+		<Link class="navbar-item" title="User" icon="fa-solid fa-user">
+			<Login />
+		</Link>
 	</div>
 </nav>
 
