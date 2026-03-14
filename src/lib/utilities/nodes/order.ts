@@ -1,4 +1,4 @@
-import { Type } from '$lib/models/helpers/type.model';
+import { Type } from '$lib/models/type.model';
 
 export const order = [
 	Type.Library,

@@ -2,7 +2,7 @@
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import NodeBrowser from '$lib/components/nodes/helper/NodeBrowser.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
+	import type { Basenode } from '$lib/models/basenode.model';
 	import { subtypeOf } from '$lib/states/nodes/nodes.svelte';
 
 	const { model }: { model: Basenode } = $props();
@@ -16,7 +16,7 @@
 	}
 
 	function insert(id: string) {
-		model.children = model.children.toSpliced(insertAtIndex + 1, 0, id);
+		model.children = model.children.toSpliced(insertAtIndex + 1, 0, [id]);
 		isSelecting = false;
 	}
 
@@ -53,61 +53,63 @@
 	</div>
 </div>
 
-{#each model.children as id, index}
-	<div class="media is-align-items-center">
-		<div class="media-left">
-			<p class="buttons is-centered">
-				<button
-					class="button"
-					aria-label="Delete"
-					onclick={() => remove(model.children.indexOf(id))}
-				>
-					<span class="icon is-small">
-						<i class="fa-solid fa-times"></i>
-					</span>
-				</button>
-			</p>
+{#each model.children as alternatives, index}
+	{#each alternatives as id}
+		<div class="media is-align-items-center">
+			<div class="media-left">
+				<p class="buttons is-centered">
+					<button
+						class="button"
+						aria-label="Delete"
+						onclick={() => remove(model.children.indexOf([id]))}
+					>
+						<span class="icon is-small">
+							<i class="fa-solid fa-times"></i>
+						</span>
+					</button>
+				</p>
+			</div>
+			<div class="media-content">
+				<NodePreviewer {id} />
+			</div>
+			<div class="media-right">
+				<p class="buttons is-centered">
+					<button
+						class="button"
+						aria-label="Move up"
+						onclick={() => moveUp(index)}
+						disabled={index === 0}
+					>
+						<span class="icon is-small">
+							<i class="fa-solid fa-arrow-up"></i>
+						</span>
+					</button>
+				</p>
+				<p class="buttons is-centered">
+					<button
+						class="button"
+						aria-label="Move down"
+						onclick={() => moveDown(index)}
+						disabled={index === model.children.length - 1}
+					>
+						<span class="icon is-small">
+							<i class="fa-solid fa-arrow-down"></i>
+						</span>
+					</button>
+				</p>
+			</div>
 		</div>
-		<div class="media-content">
-			<NodePreviewer {id} />
-		</div>
-		<div class="media-right">
-			<p class="buttons is-centered">
-				<button
-					class="button"
-					aria-label="Move up"
-					onclick={() => moveUp(index)}
-					disabled={index === 0}
-				>
-					<span class="icon is-small">
-						<i class="fa-solid fa-arrow-up"></i>
-					</span>
-				</button>
-			</p>
-			<p class="buttons is-centered">
-				<button
-					class="button"
-					aria-label="Move down"
-					onclick={() => moveDown(index)}
-					disabled={index === model.children.length - 1}
-				>
-					<span class="icon is-small">
-						<i class="fa-solid fa-arrow-down"></i>
-					</span>
-				</button>
-			</p>
-		</div>
-	</div>
 
-	<div class="media">
-		<div class="media-content is-flex is-justify-content-center">
-			<button class="" aria-label="Add" onclick={() => add(index)}>
-				<span class="icon is-small">
-					<i class="fa-solid fa-plus"></i>
-				</span>
-			</button>
+		<div class="media">
+			<div class="media-content is-flex is-justify-content-center">
+				<button class="" aria-label="Add" onclick={() => add(index)}>
+					<span class="icon is-small">
+						<i class="fa-solid fa-plus"></i>
+					</span>
+				</button>
+			</div>
 		</div>
-	</div>
+	{/each}
 {/each}
 
 <Modal bind:isActive={isSelecting} title="Select" isWide={true}>

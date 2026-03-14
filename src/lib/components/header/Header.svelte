@@ -4,7 +4,7 @@
 	import Link from '$lib/components/header/helper/Link.svelte';
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
-	import { Role } from '$lib/models/helpers/roles.model';
+	import { Role } from '$lib/models/roles.model';
 	import Exporter from '$lib/pages/Exporter.svelte';
 	import Languages from '$lib/pages/Languages.svelte';
 	import Login from '$lib/pages/Login.svelte';
@@ -14,15 +14,13 @@
 </script>
 
 <nav class="navbar is-fixed-top" aria-label="main navigation">
-	<div class="navbar-brand">
+	<div class="navbar-brand is-fullwidth-custom">
 		<div class="navbar-item">
 			<span class="is-size-5 is-unselectable">
 				<Coptic>Ⲡⲓⲙⲁⲛ̀ⲕⲁϫⲱⲙ</Coptic>
 			</span>
 		</div>
-	</div>
-	<div class="navbar-brand is-flex-grow-1"></div>
-	<div class="navbar-brand">
+		<div class="is-flex-grow-1"></div>
 		<AuthGuard roles={[Role.Admin]}>
 			<a class="navbar-item" href={null}>
 				<Executer />
@@ -59,3 +57,9 @@
 		</a>
 	</div>
 </nav>
+
+<style>
+	.is-fullwidth-custom {
+		min-width: 100vw;
+	}
+</style>

@@ -1,31 +1,23 @@
-import { Collection } from '$lib/models/helpers/collection.model.svelte';
-import { Type } from '$lib/models/helpers/type.model';
-import type { Anynode } from '$lib/models/nodes/anynode.model';
-import type { Book } from '$lib/models/nodes/book.model';
-import type { Chapter } from '$lib/models/nodes/chapter.model';
-import type { Clause } from '$lib/models/nodes/clause.model';
-import type { Collection as NodeCollection } from '$lib/models/nodes/collection.model';
-import type { Library } from '$lib/models/nodes/library.model';
-import type { Paragraph } from '$lib/models/nodes/paragraph.model';
-import type { Part } from '$lib/models/nodes/part.model';
-import type { Section } from '$lib/models/nodes/section.model';
+import type { Basenode } from '$lib/models/basenode.model';
+import { Collection } from '$lib/models/collection.model.svelte';
+import { Type } from '$lib/models/type.model';
 import { order } from '$lib/utilities/nodes/order';
 
-export const libraries = new Collection<Library>('libraries');
+export const libraries = new Collection<Basenode>('libraries');
 
-export const collections = new Collection<NodeCollection>('collections');
+export const collections = new Collection<Basenode>('collections');
 
-export const books = new Collection<Book>('books');
+export const books = new Collection<Basenode>('books');
 
-export const parts = new Collection<Part>('parts');
+export const parts = new Collection<Basenode>('parts');
 
-export const chapters = new Collection<Chapter>('chapters');
+export const chapters = new Collection<Basenode>('chapters');
 
-export const sections = new Collection<Section>('sections');
+export const sections = new Collection<Basenode>('sections');
 
-export const paragraphs = new Collection<Paragraph>('paragraphs');
+export const paragraphs = new Collection<Basenode>('paragraphs');
 
-export const clauses = new Collection<Clause>('clauses');
+export const clauses = new Collection<Basenode>('clauses');
 
 export function getTypeFromId(id: string) {
 	if (Object.keys(libraries.items).includes(id)) {
@@ -55,7 +47,7 @@ export function getTypeFromId(id: string) {
 	throw new Error(`No type found for id: ${id}`);
 }
 
-export function getModelById(id: string): Anynode {
+export function getModelById(id: string) {
 	const type = getTypeFromId(id);
 	const collection = getCollectionForType(type);
 	const model = collection.items[id];
@@ -63,7 +55,7 @@ export function getModelById(id: string): Anynode {
 	return model;
 }
 
-export function getCollectionForType(type: Type): Collection<Anynode> {
+export function getCollectionForType(type: Type) {
 	switch (type) {
 		case Type.Library:
 			return libraries;

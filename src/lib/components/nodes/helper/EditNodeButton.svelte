@@ -2,8 +2,8 @@
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import Editor from '$lib/components/nodes/helper/Editor.svelte';
-	import type { Basenode } from '$lib/models/helpers/basenode.model';
-	import { Role } from '$lib/models/helpers/roles.model';
+	import type { Basenode } from '$lib/models/basenode.model';
+	import { Role } from '$lib/models/roles.model';
 	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
 
 	const { model }: { model: Basenode } = $props();
