@@ -6,7 +6,7 @@ import fileSaver from 'file-saver';
 export async function download() {
 	const files = await Promise.all(
 		order.map(async (type) => ({
-			name: `${getCollectionForType(type).name}.json`,
+			name: `structure/${getCollectionForType(type).name}.json`,
 			lastModified: new Date(),
 			input: new Response(JSON.stringify(await getCollectionForType(type).getAll(), null, 2))
 		}))

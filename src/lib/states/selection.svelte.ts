@@ -1,18 +1,18 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import type { State } from '$lib/models/helpers/state.model';
-import type { Type } from '$lib/models/type.model';
+import type { NodeType } from '$lib/models/type.model';
 import { getCollectionForType } from '$lib/states/nodes.svelte';
 import { setSetting, settings } from '$lib/states/settings.svelte';
 import { order } from '$lib/utilities/nodes/order';
 
-function getSettingsValue(type: Type) {
+function getSettingsValue(type: NodeType) {
 	return JSON.parse(settings.value[type].current) as [number, number] | null;
 }
 
-export const selection = $state<State<Record<Type, [number, number] | null>>>({
+export const selection = $state<State<Record<NodeType, [number, number] | null>>>({
 	state: 'init',
 	value: Object.fromEntries(order.map((type) => [type, null])) as Record<
-		Type,
+		NodeType,
 		[number, number] | null
 	>
 });
@@ -67,7 +67,7 @@ export function unselect() {
 	}
 }
 
-export function unselectUntilType(type: Type) {
+export function unselectUntilType(type: NodeType) {
 	const startIndex = order.indexOf(type) + 1;
 
 	for (let i = startIndex; i < order.length; ++i) {

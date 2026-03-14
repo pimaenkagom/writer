@@ -1,4 +1,4 @@
-export enum Type {
+export enum NodeType {
 	Library = 'library',
 	Collection = 'collection',
 	Book = 'book',

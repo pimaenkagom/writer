@@ -1,46 +1,46 @@
-import { Type } from '$lib/models/type.model';
+import { NodeType } from '$lib/models/type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForType, subtypeOf } from '$lib/states/nodes.svelte';
 import { generateSentence, generateTitle } from '$lib/utilities/generator/multilingual-text';
 import { faker } from '@faker-js/faker';
 
-function getMinAndMax(type: Type) {
+function getMinAndMax(type: NodeType) {
 	switch (type) {
-		case Type.Library:
+		case NodeType.Library:
 			return { min: 1, max: 1 };
 
-		case Type.Collection:
+		case NodeType.Collection:
 			return { min: 1, max: 3 };
 
-		case Type.Book:
+		case NodeType.Book:
 			return { min: 1, max: 3 };
 
-		case Type.Part:
+		case NodeType.Part:
 			return { min: 1, max: 3 };
 
-		case Type.Chapter:
+		case NodeType.Chapter:
 			return { min: 1, max: 4 };
 
-		case Type.Section:
+		case NodeType.Section:
 			return { min: 1, max: 1 };
 
-		case Type.Paragraph:
+		case NodeType.Paragraph:
 			return { min: 1, max: 1 };
 
-		case Type.Clause:
+		case NodeType.Clause:
 			return { min: 0, max: 0 };
 	}
 }
 
-async function generateMultilingualTextAndGetId(type: Type) {
+async function generateMultilingualTextAndGetId(type: NodeType) {
 	const value = await multilingualTexts.create(
-		type === Type.Clause ? generateSentence() : generateTitle()
+		type === NodeType.Clause ? generateSentence() : generateTitle()
 	);
 
 	return value!.id;
 }
 
-async function generateChildrenAndGetIds(type: Type, users: string[] = []) {
+async function generateChildrenAndGetIds(type: NodeType, users: string[] = []) {
 	const result = [];
 
 	const count = faker.number.int(getMinAndMax(type));
@@ -51,7 +51,7 @@ async function generateChildrenAndGetIds(type: Type, users: string[] = []) {
 	return result;
 }
 
-async function generateNode(type: Type, users: string[] = []) {
+async function generateNode(type: NodeType, users: string[] = []) {
 	const collection = getCollectionForType(type);
 
 	const node = await collection.create({
@@ -70,5 +70,5 @@ async function generateNode(type: Type, users: string[] = []) {
 }
 
 export async function generateLibrary() {
-	await generateNode(Type.Library);
+	await generateNode(NodeType.Library);
 }
