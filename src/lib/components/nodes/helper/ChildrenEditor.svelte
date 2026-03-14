@@ -113,5 +113,5 @@
 {/each}
 
 <Modal bind:isActive={isSelecting} title="Select" isWide={true}>
-	<NodeBrowser type={subtypeOf(model.type)} isSelected={insert} />
+	<NodeBrowser nodeType={subtypeOf(model.nodeType)} isSelected={insert} />
 </Modal>

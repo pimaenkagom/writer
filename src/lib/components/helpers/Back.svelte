@@ -4,7 +4,7 @@
 
 	const { isButton = false }: { isButton?: boolean } = $props();
 
-	const isRoot = $derived(order.every((type) => selection.value[type] === null));
+	const isRoot = $derived(order.every((nodeType) => selection.value[nodeType] === null));
 
 	function back() {
 		unselect();

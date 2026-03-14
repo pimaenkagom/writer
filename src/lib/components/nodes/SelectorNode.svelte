@@ -10,26 +10,26 @@
 	const { model, language }: { model: Basenode; language?: string } = $props();
 </script>
 
-{#if model.type === NodeType.Library}
+{#if model.nodeType === NodeType.Library}
 	<MenuNode {model} />
-{:else if model.type === NodeType.Collection}
+{:else if model.nodeType === NodeType.Collection}
 	<MenuNode {model} />
-{:else if model.type === NodeType.Book}
+{:else if model.nodeType === NodeType.Book}
 	<MenuNode {model} />
-{:else if model.type === NodeType.Part}
+{:else if model.nodeType === NodeType.Part}
 	<ScrollNode {model} />
-{:else if model.type === NodeType.Chapter}
+{:else if model.nodeType === NodeType.Chapter}
 	<NavigatedScrollNode {model} />
-{:else if model.type === NodeType.Section}
+{:else if model.nodeType === NodeType.Section}
 	<ScrollNode {model} />
-{:else if model.type === NodeType.Paragraph}
+{:else if model.nodeType === NodeType.Paragraph}
 	<ParagraphNode {model} />
-{:else if model.type === NodeType.Clause}
+{:else if model.nodeType === NodeType.Clause}
 	{#if language}
 		<RecursiveNode {model} {language} />
 	{:else}
 		<ParagraphNode {model} />
 	{/if}
 {:else}
-	<p>Unknown node type {model.type} or language is not set.</p>
+	<p>Unknown node type {model.nodeType} or language is not set.</p>
 {/if}

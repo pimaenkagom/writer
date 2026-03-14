@@ -10,7 +10,7 @@
 	import { getMultilingualText } from '$lib/states/multilingual-text.svelte';
 
 	const { model }: { model: Basenode } = $props();
-	const multilingualText = $derived(getMultilingualText(model.value));
+	const multilingualText = $derived(getMultilingualText(model.content));
 </script>
 
 <div class="columns">

@@ -5,7 +5,7 @@
 
 	const { id }: { id: string } = $props();
 	const model = $derived(getModelById(id));
-	const multilingualText = $derived(multilingualTexts.items[model.value]);
+	const multilingualText = $derived(multilingualTexts.items[model.content]);
 </script>
 
 <MultilingualTextVertical model={multilingualText} />

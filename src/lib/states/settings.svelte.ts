@@ -34,10 +34,10 @@ export const settings = $state<State<Record<string, Setting>>>({
 			shown: true
 		},
 		...Object.fromEntries(
-			order.map((type) => [
-				type,
+			order.map((nodeType) => [
+				nodeType,
 				{
-					key: type,
+					key: nodeType,
 					current: String(null),
 					availables: [],
 					default: String(null),

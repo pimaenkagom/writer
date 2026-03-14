@@ -17,8 +17,8 @@
 			{#if index < selectedNodes.length}
 				{#if selectedNodes[index + 1]}
 					<li>
-						<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.type)}>
-							<Text model={getTextInSystemLanguage(node.value)} />
+						<a class="has-text-grey" href={null} onclick={() => unselectUntilType(node.nodeType)}>
+							<Text model={getTextInSystemLanguage(node.content)} />
 						</a>
 					</li>
 				{/if}

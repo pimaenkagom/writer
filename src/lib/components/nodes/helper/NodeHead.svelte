@@ -7,7 +7,7 @@
 
 	const { model }: { model: Basenode } = $props();
 
-	const multilingualText = $derived(multilingualTexts.items[model.value]);
+	const multilingualText = $derived(multilingualTexts.items[model.content]);
 </script>
 
 <section class="section">
