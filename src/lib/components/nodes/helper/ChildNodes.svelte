@@ -1,7 +1,7 @@
 <script lang="ts">
 	import VisibilityNode from '$lib/components/nodes/VisibilityNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForType, subtypeOf } from '$lib/states/nodes.svelte';
 
 	const { model, language }: { model: Basenode; language?: string } = $props();
 	const childrenType = $derived(subtypeOf(model.type));

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import AddNewButton from '$lib/components/contents/mulltilinual-text/AddNewButton.svelte';
 	import MultilingualTextViewer from '$lib/components/contents/mulltilinual-text/MultilingualTextViewer.svelte';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 	import { onMount } from 'svelte';
 
 	let filter = $state('');

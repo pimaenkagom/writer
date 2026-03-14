@@ -3,8 +3,8 @@
 	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { selection } from '$lib/states/helpers/selection.svelte';
-	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForType, subtypeOf } from '$lib/states/nodes.svelte';
+	import { selection } from '$lib/states/selection.svelte';
 
 	const { model }: { model: Basenode } = $props();
 

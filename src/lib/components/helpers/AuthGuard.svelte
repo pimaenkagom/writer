@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { hasAnyRole, isAdmin, isAuthenticated } from '$lib/states/helpers/user.svelte';
+	import { hasAnyRole, isAdmin, isAuthenticated } from '$lib/states/user.svelte';
 	import type { Snippet } from 'svelte';
 
 	let { children, roles }: { children: Snippet; roles: string[] } = $props();

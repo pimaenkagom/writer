@@ -3,7 +3,7 @@
 	import NodeBrowser from '$lib/components/nodes/helper/NodeBrowser.svelte';
 	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { subtypeOf } from '$lib/states/nodes.svelte';
 
 	const { model }: { model: Basenode } = $props();
 

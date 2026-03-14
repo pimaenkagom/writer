@@ -3,7 +3,7 @@
 	import MultilingualTextSystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextSystemLanguage.svelte';
 	import EditNodeButton from '$lib/components/nodes/helper/EditNodeButton.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 
 	const { model }: { model: Basenode } = $props();
 

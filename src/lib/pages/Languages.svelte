@@ -3,8 +3,8 @@
 		delimiter,
 		getAvailablesLanguages,
 		getSelectedLanguages
-	} from '$lib/states/contents/languages.svelte';
-	import { setSetting } from '$lib/states/helpers/settings.svelte';
+	} from '$lib/states/languages.svelte';
+	import { setSetting } from '$lib/states/settings.svelte';
 	import { capitalize } from '$lib/utilities/strings';
 	import { flip } from 'svelte/animate';
 

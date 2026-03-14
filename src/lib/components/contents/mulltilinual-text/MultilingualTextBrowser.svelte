@@ -1,7 +1,7 @@
 <script lang="ts">
 	import AddNewButton from '$lib/components/contents/mulltilinual-text/AddNewButton.svelte';
 	import MultilingualTextHorizontal from '$lib/components/contents/mulltilinual-text/MultilingualTextHorizontal.svelte';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 
 	const { isSelected }: { isSelected: (id: string) => void } = $props();
 

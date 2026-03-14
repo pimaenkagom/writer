@@ -5,7 +5,7 @@
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { Role } from '$lib/models/roles.model';
-	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForType } from '$lib/states/nodes.svelte';
 
 	const { model, language }: { model: Basenode; language?: string | undefined } = $props();
 

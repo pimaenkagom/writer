@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Text from '$lib/components/contents/mulltilinual-text/Text.svelte';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { getSelectedNodes, unselectUntilType } from '$lib/states/helpers/selection.svelte';
-	import { settings } from '$lib/states/helpers/settings.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
+	import { getSelectedNodes, unselectUntilType } from '$lib/states/selection.svelte';
+	import { settings } from '$lib/states/settings.svelte';
 
 	const selectedNodes = $derived(getSelectedNodes());
 

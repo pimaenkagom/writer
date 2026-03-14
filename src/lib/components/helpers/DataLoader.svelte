@@ -1,6 +1,6 @@
 <script>
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
-	import { dataLoader, dataLoaderMaxValue } from '$lib/states/helpers/loader.svelte';
+	import { dataLoader, dataLoaderMaxValue } from '$lib/states/loader.svelte';
 </script>
 
 <section class="hero is-halfheight">

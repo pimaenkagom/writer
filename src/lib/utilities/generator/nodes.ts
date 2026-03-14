@@ -1,6 +1,6 @@
 import { Type } from '$lib/models/type.model';
-import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
+import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
+import { getCollectionForType, subtypeOf } from '$lib/states/nodes.svelte';
 import { generateSentence, generateTitle } from '$lib/utilities/generator/multilingual-text';
 import { faker } from '@faker-js/faker';
 

@@ -5,8 +5,8 @@
 	import { onMount } from 'svelte';
 
 	import DataLoader from '$lib/components/helpers/DataLoader.svelte';
-	import { dataLoader, loadData } from '$lib/states/helpers/loader.svelte';
-	import { settings } from '$lib/states/helpers/settings.svelte';
+	import { dataLoader, loadData } from '$lib/states/loader.svelte';
+	import { settings } from '$lib/states/settings.svelte';
 	import '../app.css';
 
 	let { children } = $props();
