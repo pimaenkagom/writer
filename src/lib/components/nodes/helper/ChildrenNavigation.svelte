@@ -1,24 +1,29 @@
 <script lang="ts">
-	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
+	import MultilingualTextSystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextSystemLanguage.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { select } from '$lib/states/selection.svelte';
+	import { getChildnodes } from '$lib/utilities/nodes/children';
+	import { getMultilingualText } from '$lib/utilities/nodes/multilingual-texts';
 
-	let { model }: { model: Basenode; selected?: number } = $props();
+	const { model }: { model: Basenode } = $props();
+	const children = $derived(getChildnodes(model));
 </script>
 
 <section class="section">
 	<div class="container">
-		<nav class="panel">
-			{#each model.children as alternatives, index}
-				{#each alternatives as nodeId}
-					<a class="panel-block" href={null} onclick={() => select(index)}>
-						<span class="panel-icon">
-							<i class="fas fa-book" aria-hidden="true"></i>
-						</span>
-						<NodePreviewer id={nodeId} />
-					</a>
+		<aside class="menu">
+			<p class="menu-label">Content</p>
+			<ul class="menu-list">
+				{#each children as alternatives, index}
+					{#each alternatives as child}
+						<li>
+							<a href="#{child.id}" onclick={() => select(index)}>
+								<MultilingualTextSystemLanguage model={getMultilingualText(child)} />
+							</a>
+						</li>
+					{/each}
 				{/each}
-			{/each}
-		</nav>
+			</ul>
+		</aside>
 	</div>
 </section>
