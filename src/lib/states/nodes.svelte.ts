@@ -1,6 +1,6 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { Collection } from '$lib/models/collection.model.svelte';
-import { Type } from '$lib/models/type.model';
+import { NodeType } from '$lib/models/node-type.model';
 import { order } from '$lib/utilities/nodes/order';
 
 export const libraries = new Collection<Basenode>('libraries');
@@ -21,65 +21,65 @@ export const clauses = new Collection<Basenode>('clauses');
 
 export function getTypeFromId(id: string) {
 	if (Object.keys(libraries.items).includes(id)) {
-		return Type.Library;
+		return NodeType.Library;
 	}
 	if (Object.keys(collections.items).includes(id)) {
-		return Type.Collection;
+		return NodeType.Collection;
 	}
 	if (Object.keys(books.items).includes(id)) {
-		return Type.Book;
+		return NodeType.Book;
 	}
 	if (Object.keys(parts.items).includes(id)) {
-		return Type.Part;
+		return NodeType.Part;
 	}
 	if (Object.keys(chapters.items).includes(id)) {
-		return Type.Chapter;
+		return NodeType.Chapter;
 	}
 	if (Object.keys(sections.items).includes(id)) {
-		return Type.Section;
+		return NodeType.Section;
 	}
 	if (Object.keys(paragraphs.items).includes(id)) {
-		return Type.Paragraph;
+		return NodeType.Paragraph;
 	}
 	if (Object.keys(clauses.items).includes(id)) {
-		return Type.Clause;
+		return NodeType.Clause;
 	}
 	throw new Error(`No type found for id: ${id}`);
 }
 
 export function getModelById(id: string) {
 	const type = getTypeFromId(id);
-	const collection = getCollectionForType(type);
+	const collection = getCollectionForNodeType(type);
 	const model = collection.items[id];
 
 	return model;
 }
 
-export function getCollectionForType(type: Type) {
-	switch (type) {
-		case Type.Library:
+export function getCollectionForNodeType(nodeType: NodeType) {
+	switch (nodeType) {
+		case NodeType.Library:
 			return libraries;
-		case Type.Collection:
+		case NodeType.Collection:
 			return collections;
-		case Type.Book:
+		case NodeType.Book:
 			return books;
-		case Type.Part:
+		case NodeType.Part:
 			return parts;
-		case Type.Chapter:
+		case NodeType.Chapter:
 			return chapters;
-		case Type.Section:
+		case NodeType.Section:
 			return sections;
-		case Type.Paragraph:
+		case NodeType.Paragraph:
 			return paragraphs;
-		case Type.Clause:
+		case NodeType.Clause:
 			return clauses;
 		default:
-			throw new Error(`No collection found for type: ${type}`);
+			throw new Error(`No collection found for type: ${nodeType}`);
 	}
 }
 
-export function subtypeOf(type: Type) {
-	const index = order.indexOf(type);
+export function subtypeOf(nodeType: NodeType) {
+	const index = order.indexOf(nodeType);
 	if (index === -1 || index > order.length) {
 		return order[0];
 	}

@@ -2,7 +2,7 @@
 	import ChildrenEditor from '$lib/components/nodes/helper/ChildrenEditor.svelte';
 	import NodeEditor from '$lib/components/nodes/helper/NodeEditor.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { Type } from '$lib/models/type.model';
+	import { NodeType } from '$lib/models/node-type.model';
 
 	const { model }: { model: Basenode } = $props();
 </script>
@@ -11,6 +11,6 @@
 	<NodeEditor {model} />
 </div>
 
-{#if model.type !== Type.Clause}
+{#if model.nodeType !== NodeType.Clause}
 	<ChildrenEditor {model} />
 {/if}

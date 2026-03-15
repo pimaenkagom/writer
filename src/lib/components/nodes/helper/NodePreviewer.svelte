@@ -1,11 +1,11 @@
 <script lang="ts">
 	import MultilingualTextVertical from '$lib/components/contents/mulltilinual-text/MultilingualTextVertical.svelte';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { getModelById } from '$lib/states/nodes/nodes.svelte';
+	import { getModelById } from '$lib/states/nodes.svelte';
+	import { getMultilingualText } from '$lib/utilities/nodes/multilingual-texts';
 
 	const { id }: { id: string } = $props();
 	const model = $derived(getModelById(id));
-	const multilingualText = $derived(multilingualTexts.items[model.value]);
+	const multilingualText = $derived(getMultilingualText(model));
 </script>
 
 <MultilingualTextVertical model={multilingualText} />

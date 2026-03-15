@@ -2,9 +2,9 @@
 	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
 	import type { Status } from '$lib/models/contents/status.model';
 	import type { Text } from '$lib/models/contents/text.model';
-	import { languages } from '$lib/states/contents/languages.svelte';
-	import { multilingualTexts } from '$lib/states/contents/multilingual-text.svelte';
-	import { statuses } from '$lib/states/contents/statuses.svelte';
+	import { languages } from '$lib/states/languages.svelte';
+	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
+	import { statuses } from '$lib/states/statuses.svelte';
 	import { capitalize } from '$lib/utilities/strings';
 	import { onMount, untrack } from 'svelte';
 

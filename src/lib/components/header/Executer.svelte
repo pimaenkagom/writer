@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { notify } from '$lib/states/helpers/notifications.svelte';
+	import { notify } from '$lib/states/notifications.svelte';
 	import { generateLibrary } from '$lib/utilities/generator/nodes';
 
 	async function execute() {

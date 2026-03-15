@@ -4,7 +4,7 @@
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import Latin from '$lib/components/helpers/languages/Latin.svelte';
 	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
-	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
+	import { getSelectedLanguages } from '$lib/states/languages.svelte';
 	import { capitalize } from '$lib/utilities/strings';
 
 	let { model, showLabel = false }: { model: MultilingualText; showLabel?: boolean } = $props();

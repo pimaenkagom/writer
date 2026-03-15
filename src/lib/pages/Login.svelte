@@ -1,12 +1,5 @@
 <script lang="ts">
-	import {
-		login,
-		logout,
-		resetEmail,
-		resetPassword,
-		signup,
-		user
-	} from '$lib/states/helpers/user.svelte';
+	import { login, logout, resetEmail, resetPassword, signup, user } from '$lib/states/user.svelte';
 
 	let isSigningUp = $state(false);
 	let showPassword = $state(false);

@@ -1,10 +1,11 @@
 <script lang="ts">
 	import MultilingualTextBrowser from '$lib/components/contents/mulltilinual-text/MultilingualTextBrowser.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
-	import type { Type } from '$lib/models/type.model';
-	import { getCollectionForType } from '$lib/states/nodes/nodes.svelte';
+	import { ContentType } from '$lib/models/contents/content-type.model';
+	import type { NodeType } from '$lib/models/node-type.model';
+	import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 
-	const { type }: { type: Type } = $props();
+	const { nodeType }: { nodeType: NodeType } = $props();
 
 	let isActive = $state(false);
 
@@ -13,11 +14,12 @@
 	}
 
 	function select(id: string) {
-		const collections = getCollectionForType(type);
+		const collections = getCollectionForNodeType(nodeType);
 		collections.create({
 			users: [],
-			type: type,
-			value: id,
+			nodeType: nodeType,
+			content: id,
+			contentType: ContentType.MultilingualText,
 			shown: true,
 			tags: [],
 			children: []

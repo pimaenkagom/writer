@@ -6,11 +6,11 @@
 	import ChildNodes from '$lib/components/nodes/helper/ChildNodes.svelte';
 	import EditNodeButton from '$lib/components/nodes/helper/EditNodeButton.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { getSelectedLanguages } from '$lib/states/contents/languages.svelte';
-	import { getMultilingualText } from '$lib/states/contents/multilingual-text.svelte';
+	import { getSelectedLanguages } from '$lib/states/languages.svelte';
+	import { getMultilingualText } from '$lib/utilities/nodes/multilingual-texts';
 
 	const { model }: { model: Basenode } = $props();
-	const multilingualText = $derived(getMultilingualText(model.value));
+	const multilingualText = $derived(getMultilingualText(model));
 </script>
 
 <div class="columns">

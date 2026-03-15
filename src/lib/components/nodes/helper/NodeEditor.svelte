@@ -13,7 +13,7 @@
 	}
 
 	function swop(id: string) {
-		model.value = id;
+		model.content = id;
 		isSelecting = false;
 	}
 </script>

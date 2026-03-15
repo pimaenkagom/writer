@@ -1,5 +1,5 @@
 import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
-import { languages } from '$lib/states/contents/languages.svelte';
+import { languages } from '$lib/states/languages.svelte';
 import { delta } from '$lib/utilities/generator/delta';
 import { generateId } from '$lib/utilities/generator/id';
 import { capitalize, titleize } from '$lib/utilities/strings';
@@ -24,7 +24,7 @@ function generateMultilingualText(min: number, max: number, isTitlized: boolean 
 							: capitalize(generateWords(wordCount)) + '.',
 						strongWordsIndices: [],
 						emphasizedWordsIndices: [],
-						status: 'Generated'
+						status: '2FFFCC71-17F9-4D8B-958E-D99BE2366F6B'
 					}
 				])
 			)

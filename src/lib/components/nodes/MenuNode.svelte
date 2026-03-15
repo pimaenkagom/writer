@@ -1,15 +1,15 @@
 <script lang="ts">
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
-	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
+	import MenuNodeHead from '$lib/components/nodes/helper/MenuNodeHead.svelte';
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { selection } from '$lib/states/helpers/selection.svelte';
-	import { getCollectionForType, subtypeOf } from '$lib/states/nodes/nodes.svelte';
+	import { getCollectionForNodeType, subtypeOf } from '$lib/states/nodes.svelte';
+	import { selection } from '$lib/states/selection.svelte';
 
 	const { model }: { model: Basenode } = $props();
 
-	const subtype = $derived(subtypeOf(model.type));
-	const collection = $derived(getCollectionForType(subtype));
+	const subtype = $derived(subtypeOf(model.nodeType));
+	const collection = $derived(getCollectionForNodeType(subtype));
 
 	const selectedChildIndex = $derived(selection.value[subtype]);
 	const childIsSelected = $derived(selectedChildIndex !== null);
@@ -23,6 +23,6 @@
 {#if selectedChild}
 	<SelectorNode model={selectedChild} />
 {:else}
-	<NodeHead {model} />
+	<MenuNodeHead {model} />
 	<ChildrenMenu {model} />
 {/if}
