@@ -1,3 +1,4 @@
+import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 import { order } from '$lib/utilities/nodes/order';
 import { downloadZip } from 'client-zip';
@@ -15,6 +16,12 @@ export async function download() {
 			)
 		}))
 	);
+
+	files.push({
+		name: `contents/${multilingualTexts.name}.json`,
+		lastModified: date,
+		input: new Response(JSON.stringify(await multilingualTexts.getAll(), null, 2))
+	});
 
 	const blob = await downloadZip(files).blob();
 	const timestamp = date.toISOString().slice(0, 19).replace(/[:T]/g, '-');
