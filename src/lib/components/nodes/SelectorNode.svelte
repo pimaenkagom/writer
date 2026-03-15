@@ -17,7 +17,7 @@
 {:else if model.nodeType === NodeType.Book}
 	<MenuNode {model} />
 {:else if model.nodeType === NodeType.Part}
-	<ScrollNode {model} />
+	<MenuNode {model} />
 {:else if model.nodeType === NodeType.Chapter}
 	<NavigatedScrollNode {model} />
 {:else if model.nodeType === NodeType.Section}

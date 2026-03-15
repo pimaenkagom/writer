@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
-	import NodeHead from '$lib/components/nodes/helper/NodeHead.svelte';
+	import MenuNodeHead from '$lib/components/nodes/helper/MenuNodeHead.svelte';
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { getCollectionForNodeType, subtypeOf } from '$lib/states/nodes.svelte';
@@ -23,6 +23,6 @@
 {#if selectedChild}
 	<SelectorNode model={selectedChild} />
 {:else}
-	<NodeHead {model} />
+	<MenuNodeHead {model} />
 	<ChildrenMenu {model} />
 {/if}

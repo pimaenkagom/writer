@@ -1,5 +1,4 @@
 <script lang="ts">
-	import BreadcrumbBar from '$lib/components/helpers/BreadcrumbBar.svelte';
 	import ChildrenMenu from '$lib/components/nodes/helper/ChildrenMenu.svelte';
 	import SelectorNode from '$lib/components/nodes/SelectorNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
@@ -23,6 +22,5 @@
 {#if selection.value.library === null}
 	<ChildrenMenu model={root} />
 {:else}
-	<BreadcrumbBar />
 	<SelectorNode model={libraries.values[selection.value.library[0]]} />
 {/if}
