@@ -7,10 +7,10 @@
 	import EditNodeButton from '$lib/components/nodes/helper/EditNodeButton.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { getSelectedLanguages } from '$lib/states/languages.svelte';
-	import { getMultilingualText } from '$lib/states/multilingual-text.svelte';
+	import { getMultilingualText } from '$lib/utilities/nodes/multilingual-texts';
 
 	const { model }: { model: Basenode } = $props();
-	const multilingualText = $derived(getMultilingualText(model.content));
+	const multilingualText = $derived(getMultilingualText(model));
 </script>
 
 <div class="columns">
