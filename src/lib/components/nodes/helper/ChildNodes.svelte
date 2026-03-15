@@ -1,14 +1,10 @@
 <script lang="ts">
 	import VisibilityNode from '$lib/components/nodes/VisibilityNode.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { getCollectionForNodeType, subtypeOf } from '$lib/states/nodes.svelte';
+	import { getChildnodes } from '$lib/utilities/nodes/children';
 
 	const { model, language }: { model: Basenode; language?: string } = $props();
-	const childrenType = $derived(subtypeOf(model.nodeType));
-	const collection = $derived(getCollectionForNodeType(childrenType));
-	const children = $derived(
-		model.children.map((alternatives) => alternatives.map((id) => collection.items[id]))
-	);
+	const children = $derived(getChildnodes(model));
 </script>
 
 {#each children as alternatives}
