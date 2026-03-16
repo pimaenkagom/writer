@@ -1,21 +1,23 @@
 <script lang="ts">
-	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
+	import NodeViewer from '$lib/components/nodes/helper/NodeViewer.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { select } from '$lib/states/selection.svelte';
+	import { getChildnodes } from '$lib/utilities/nodes/children';
 
-	let { model }: { model: Basenode } = $props();
+	const { model }: { model: Basenode } = $props();
+	const children = $derived(getChildnodes(model));
 </script>
 
 <section class="section">
 	<div class="container">
 		<nav class="panel">
-			{#each model.children as alternatives, index}
-				{#each alternatives as nodeId}
+			{#each children as alternatives, index}
+				{#each alternatives as child}
 					<a class="panel-block" href={null} onclick={() => select(index)}>
 						<span class="panel-icon">
 							<i class="fas fa-book" aria-hidden="true"></i>
 						</span>
-						<NodePreviewer id={nodeId} />
+						<NodeViewer model={child} />
 					</a>
 				{/each}
 			{/each}
