@@ -16,7 +16,6 @@
 	"svelte.enable-ts-plugin": true,
 	"js/ts.updateImportsOnFileMove.enabled": "always",
 	"js/ts.preferences.importModuleSpecifier": "non-relative",
-	"editor.rulers": [100],
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true
