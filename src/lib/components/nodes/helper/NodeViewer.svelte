@@ -8,4 +8,4 @@
 </script>
 
 <MultilingualTextHorizontal model={multilingualText} />
-<p>{model.nodeType} {model.id}</p>
+<p>{model.type} {model.id}</p>

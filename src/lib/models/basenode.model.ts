@@ -5,7 +5,7 @@ import type { NodeType } from '$lib/models/node-type.model';
 export interface Basenode extends Identifiable {
 	readonly id: string;
 	users: string[];
-	nodeType: NodeType;
+	type: NodeType;
 	content: string;
 	contentType: ContentType;
 	shown: boolean;

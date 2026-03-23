@@ -57,7 +57,7 @@ async function generateNode(nodeType: NodeType, users: string[] = []) {
 
 	const node = await collection.create({
 		users: users,
-		nodeType: nodeType,
+		type: nodeType,
 		content: await generateMultilingualTextAndGetId(nodeType),
 		contentType: ContentType.MultilingualText,
 		shown: true,

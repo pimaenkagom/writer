@@ -17,7 +17,7 @@
 		const collections = getCollectionForNodeType(nodeType);
 		collections.create({
 			users: [],
-			nodeType: nodeType,
+			type: nodeType,
 			content: id,
 			contentType: ContentType.MultilingualText,
 			shown: true,

@@ -4,9 +4,7 @@ import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 
 export function getMultilingualText(node: Basenode) {
 	if (node.contentType !== ContentType.MultilingualText) {
-		throw Error(
-			`The content type if node ${node.id} (${node.nodeType}) is not a multilingual text.`
-		);
+		throw Error(`The content type if node ${node.id} (${node.type}) is not a multilingual text.`);
 	}
 
 	return multilingualTexts.items[node.content];
