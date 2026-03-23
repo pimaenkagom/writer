@@ -3,7 +3,7 @@ import { ContentType } from '$lib/models/content-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 
 export function getMultilingualText(node: Basenode) {
-	if (node.contentType !== ContentType.MultilingualText) {
+	if (node.valueType !== ContentType.MultilingualText) {
 		throw Error(`The content type if node ${node.id} (${node.type}) is not a multilingual text.`);
 	}
 

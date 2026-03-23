@@ -13,9 +13,7 @@
 		children: libraries.values.map((lib) => [lib.id]),
 		users: [],
 		value: '938B9CA6-57CA-4201-9A6B-FD1E4BFC2B53',
-		contentType: ContentType.MultilingualText,
-		shown: false,
-		tags: []
+		valueType: ContentType.MultilingualText
 	};
 </script>
 

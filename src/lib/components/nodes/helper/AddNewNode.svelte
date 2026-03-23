@@ -19,9 +19,7 @@
 			users: [],
 			type: nodeType,
 			value: id,
-			contentType: ContentType.MultilingualText,
-			shown: true,
-			tags: [],
+			valueType: ContentType.MultilingualText,
 			children: []
 		});
 

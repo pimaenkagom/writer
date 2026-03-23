@@ -14,16 +14,16 @@ function getMinAndMax(nodeType: NodeType) {
 			return { min: 1, max: 2 };
 
 		case NodeType.Book:
-			return { min: 1, max: 3 };
+			return { min: 2, max: 3 };
 
 		case NodeType.Part:
 			return { min: 1, max: 3 };
 
 		case NodeType.Chapter:
-			return { min: 1, max: 4 };
+			return { min: 2, max: 4 };
 
 		case NodeType.Section:
-			return { min: 1, max: 7 };
+			return { min: 3, max: 7 };
 
 		case NodeType.Paragraph:
 			return { min: 1, max: 7 };
@@ -59,9 +59,7 @@ async function generateNode(nodeType: NodeType, users: string[] = []) {
 		users: users,
 		type: nodeType,
 		value: await generateMultilingualTextAndGetId(nodeType),
-		contentType: ContentType.MultilingualText,
-		shown: true,
-		tags: [],
+		valueType: ContentType.MultilingualText,
 		children: []
 	});
 

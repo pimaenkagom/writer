@@ -1,4 +1,4 @@
-import type { Content } from '$lib/models/content.model';
+import type { ContentType } from '$lib/models/content-type.model';
 import type { id } from '$lib/models/helpers/id.model';
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
 import type { MetaData } from '$lib/models/meta-data.model';
@@ -8,8 +8,9 @@ export interface Basenode extends Identifiable {
 	readonly id: id;
 	users: id[];
 	type: NodeType;
-	value: Content;
+	value: id;
+	valueType: ContentType;
 	children: id[][];
-	meta: MetaData;
+	meta?: MetaData;
 	// TODO Add level, specific types, footnote and meta data
 }

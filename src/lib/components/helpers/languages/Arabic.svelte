@@ -16,5 +16,6 @@
 
 	.scheherazade-new-regular {
 		font-family: 'Scheherazade New Regular';
+		font-size: 1.2em;
 	}
 </style>
