@@ -12,5 +12,4 @@ export interface Basenode extends Identifiable {
 	children: id[][];
 	meta: MetaData;
 	// TODO Add level, specific types, footnote and meta data
-	// TODO Add field an image or icon.
 }
