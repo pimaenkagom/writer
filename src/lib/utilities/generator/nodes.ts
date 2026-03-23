@@ -1,4 +1,4 @@
-import { ContentType } from '$lib/models/contents/content-type.model';
+import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType, subtypeOf } from '$lib/states/nodes.svelte';
@@ -14,16 +14,16 @@ function getMinAndMax(nodeType: NodeType) {
 			return { min: 1, max: 2 };
 
 		case NodeType.Book:
-			return { min: 1, max: 3 };
+			return { min: 2, max: 3 };
 
 		case NodeType.Part:
 			return { min: 1, max: 3 };
 
 		case NodeType.Chapter:
-			return { min: 1, max: 4 };
+			return { min: 2, max: 4 };
 
 		case NodeType.Section:
-			return { min: 1, max: 7 };
+			return { min: 3, max: 7 };
 
 		case NodeType.Paragraph:
 			return { min: 1, max: 7 };
@@ -57,11 +57,9 @@ async function generateNode(nodeType: NodeType, users: string[] = []) {
 
 	const node = await collection.create({
 		users: users,
-		nodeType: nodeType,
-		content: await generateMultilingualTextAndGetId(nodeType),
-		contentType: ContentType.MultilingualText,
-		shown: true,
-		tags: [],
+		type: nodeType,
+		value: await generateMultilingualTextAndGetId(nodeType),
+		valueType: ContentType.MultilingualText,
 		children: []
 	});
 

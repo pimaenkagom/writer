@@ -1,11 +1,13 @@
 <script lang="ts">
 	import Modal from '$lib/components/layout/Modal.svelte';
 	import NodeBrowser from '$lib/components/nodes/helper/NodeBrowser.svelte';
-	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
+	import NodeViewer from '$lib/components/nodes/helper/NodeViewer.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { subtypeOf } from '$lib/states/nodes.svelte';
+	import { getChildnodes } from '$lib/utilities/nodes/children';
 
 	const { model }: { model: Basenode } = $props();
+	const children = $derived(getChildnodes(model));
 
 	let isSelecting = $state(false);
 	let insertAtIndex = $state(0);
@@ -53,15 +55,15 @@
 	</div>
 </div>
 
-{#each model.children as alternatives, index}
-	{#each alternatives as id}
+{#each children as alternatives, index}
+	{#each alternatives as child}
 		<div class="media is-align-items-center">
 			<div class="media-left">
 				<p class="buttons is-centered">
 					<button
 						class="button"
 						aria-label="Delete"
-						onclick={() => remove(model.children.indexOf([id]))}
+						onclick={() => remove(model.children.indexOf([child.id]))}
 					>
 						<span class="icon is-small">
 							<i class="fa-solid fa-times"></i>
@@ -70,7 +72,7 @@
 				</p>
 			</div>
 			<div class="media-content">
-				<NodePreviewer {id} />
+				<NodeViewer model={child} />
 			</div>
 			<div class="media-right">
 				<p class="buttons is-centered">
@@ -113,5 +115,5 @@
 {/each}
 
 <Modal bind:isActive={isSelecting} title="Select" isWide={true}>
-	<NodeBrowser nodeType={subtypeOf(model.nodeType)} isSelected={insert} />
+	<NodeBrowser nodeType={subtypeOf(model.type)} isSelected={insert} />
 </Modal>

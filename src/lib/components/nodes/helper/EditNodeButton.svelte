@@ -18,7 +18,7 @@
 	}
 
 	function save() {
-		getCollectionForNodeType(model.nodeType).update(snapshot.id, snapshot);
+		getCollectionForNodeType(model.type).update(snapshot.id, snapshot);
 	}
 </script>
 

@@ -1,5 +1,5 @@
 import { Collection } from '$lib/models/collection.model.svelte';
-import type { Language } from '$lib/models/contents/language.model';
+import type { Language } from '$lib/models/language.model';
 import { settings } from '$lib/states/settings.svelte';
 
 export const languages = new Collection<Language>('languages');

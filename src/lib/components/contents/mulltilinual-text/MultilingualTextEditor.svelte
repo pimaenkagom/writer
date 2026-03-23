@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
-	import type { Status } from '$lib/models/contents/status.model';
-	import type { Text } from '$lib/models/contents/text.model';
+	import type { MultilingualText } from '$lib/models/multilingual-text.model';
+	import type { Status } from '$lib/models/status.model';
+	import type { Text } from '$lib/models/text.model';
 	import { languages } from '$lib/states/languages.svelte';
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 	import { statuses } from '$lib/states/statuses.svelte';

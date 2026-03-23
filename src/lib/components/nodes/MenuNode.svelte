@@ -8,7 +8,7 @@
 
 	const { model }: { model: Basenode } = $props();
 
-	const subtype = $derived(subtypeOf(model.nodeType));
+	const subtype = $derived(subtypeOf(model.type));
 	const collection = $derived(getCollectionForNodeType(subtype));
 
 	const selectedChildIndex = $derived(selection.value[subtype]);

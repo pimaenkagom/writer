@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AddNewNode from '$lib/components/nodes/helper/AddNewNode.svelte';
-	import NodePreviewer from '$lib/components/nodes/helper/NodePreviewer.svelte';
+	import NodeViewer from '$lib/components/nodes/helper/NodeViewer.svelte';
 	import type { NodeType } from '$lib/models/node-type.model';
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 	import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
@@ -16,8 +16,8 @@
 			const search = filter.toLowerCase();
 			return (
 				node.id.toLowerCase().includes(search) ||
-				node.content.toLowerCase().includes(search) ||
-				Object.values(multilingualTexts.items[node.content].texts).some((t) =>
+				node.value.toLowerCase().includes(search) ||
+				Object.values(multilingualTexts.items[node.value].texts).some((t) =>
 					t.value.toLowerCase().includes(search)
 				)
 			);
@@ -61,7 +61,7 @@
 	<div class="container">
 		{#each filtered as node}
 			<div class="media is-align-items-center">
-				<div class="media-content"><NodePreviewer id={node.id} /></div>
+				<div class="media-content"><NodeViewer model={node} /></div>
 				<div class="media-right">
 					<button class="button" title="Select" onclick={() => isSelected(node.id)}>
 						<span class="icon is-small">

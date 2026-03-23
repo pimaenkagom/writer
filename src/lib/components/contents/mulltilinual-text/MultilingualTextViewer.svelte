@@ -2,8 +2,8 @@
 	import MultilingualTextEditor from '$lib/components/contents/mulltilinual-text/MultilingualTextEditor.svelte';
 	import MultilingualTextHorizontal from '$lib/components/contents/mulltilinual-text/MultilingualTextHorizontal.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
-	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
-	import type { Status } from '$lib/models/contents/status.model';
+	import type { MultilingualText } from '$lib/models/multilingual-text.model';
+	import type { Status } from '$lib/models/status.model';
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 	import { statuses } from '$lib/states/statuses.svelte';
 	import { onMount } from 'svelte';

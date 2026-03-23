@@ -19,42 +19,6 @@ export const paragraphs = new Collection<Basenode>('paragraphs');
 
 export const clauses = new Collection<Basenode>('clauses');
 
-export function getTypeFromId(id: string) {
-	if (Object.keys(libraries.items).includes(id)) {
-		return NodeType.Library;
-	}
-	if (Object.keys(collections.items).includes(id)) {
-		return NodeType.Collection;
-	}
-	if (Object.keys(books.items).includes(id)) {
-		return NodeType.Book;
-	}
-	if (Object.keys(parts.items).includes(id)) {
-		return NodeType.Part;
-	}
-	if (Object.keys(chapters.items).includes(id)) {
-		return NodeType.Chapter;
-	}
-	if (Object.keys(sections.items).includes(id)) {
-		return NodeType.Section;
-	}
-	if (Object.keys(paragraphs.items).includes(id)) {
-		return NodeType.Paragraph;
-	}
-	if (Object.keys(clauses.items).includes(id)) {
-		return NodeType.Clause;
-	}
-	throw new Error(`No type found for id: ${id}`);
-}
-
-export function getModelById(id: string) {
-	const type = getTypeFromId(id);
-	const collection = getCollectionForNodeType(type);
-	const model = collection.items[id];
-
-	return model;
-}
-
 export function getCollectionForNodeType(nodeType: NodeType) {
 	switch (nodeType) {
 		case NodeType.Library:
@@ -80,7 +44,8 @@ export function getCollectionForNodeType(nodeType: NodeType) {
 
 export function subtypeOf(nodeType: NodeType) {
 	const index = order.indexOf(nodeType);
-	if (index === -1 || index > order.length) {
+	if (index === -1 || index > order.length - 2) {
+		console.log('Aye', order[0]);
 		return order[0];
 	}
 	return order[index + 1];
