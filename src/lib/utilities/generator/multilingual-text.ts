@@ -1,4 +1,4 @@
-import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
+import type { MultilingualText } from '$lib/models/multilingual-text.model';
 import { languages } from '$lib/states/languages.svelte';
 import { delta } from '$lib/utilities/generator/delta';
 import { generateId } from '$lib/utilities/generator/id';

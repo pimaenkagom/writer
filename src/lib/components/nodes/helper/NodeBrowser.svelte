@@ -16,8 +16,8 @@
 			const search = filter.toLowerCase();
 			return (
 				node.id.toLowerCase().includes(search) ||
-				node.content.toLowerCase().includes(search) ||
-				Object.values(multilingualTexts.items[node.content].texts).some((t) =>
+				node.value.toLowerCase().includes(search) ||
+				Object.values(multilingualTexts.items[node.value].texts).some((t) =>
 					t.value.toLowerCase().includes(search)
 				)
 			);

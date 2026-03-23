@@ -3,7 +3,7 @@
 	import Arabic from '$lib/components/helpers/languages/Arabic.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
 	import Latin from '$lib/components/helpers/languages/Latin.svelte';
-	import type { MultilingualText } from '$lib/models/contents/multilingual-text.model';
+	import type { MultilingualText } from '$lib/models/multilingual-text.model';
 	import { getSystemLanguage } from '$lib/states/languages.svelte';
 
 	const { model }: { model: MultilingualText } = $props();

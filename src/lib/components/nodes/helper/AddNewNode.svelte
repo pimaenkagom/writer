@@ -1,7 +1,7 @@
 <script lang="ts">
 	import MultilingualTextBrowser from '$lib/components/contents/mulltilinual-text/MultilingualTextBrowser.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
-	import { ContentType } from '$lib/models/contents/content-type.model';
+	import { ContentType } from '$lib/models/content-type.model';
 	import type { NodeType } from '$lib/models/node-type.model';
 	import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 
@@ -18,7 +18,7 @@
 		collections.create({
 			users: [],
 			type: nodeType,
-			content: id,
+			value: id,
 			contentType: ContentType.MultilingualText,
 			shown: true,
 			tags: [],

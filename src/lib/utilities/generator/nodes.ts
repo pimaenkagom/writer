@@ -1,4 +1,4 @@
-import { ContentType } from '$lib/models/contents/content-type.model';
+import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType, subtypeOf } from '$lib/states/nodes.svelte';
@@ -58,7 +58,7 @@ async function generateNode(nodeType: NodeType, users: string[] = []) {
 	const node = await collection.create({
 		users: users,
 		type: nodeType,
-		content: await generateMultilingualTextAndGetId(nodeType),
+		value: await generateMultilingualTextAndGetId(nodeType),
 		contentType: ContentType.MultilingualText,
 		shown: true,
 		tags: [],
