@@ -45,7 +45,6 @@ export function getCollectionForNodeType(nodeType: NodeType) {
 export function subtypeOf(nodeType: NodeType) {
 	const index = order.indexOf(nodeType);
 	if (index === -1 || index > order.length - 2) {
-		console.log('Aye', order[0]);
 		return order[0];
 	}
 	return order[index + 1];
