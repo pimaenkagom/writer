@@ -10,10 +10,10 @@
 	import Login from '$lib/pages/Login.svelte';
 	import Settings from '$lib/pages/Settings.svelte';
 
-	document.documentElement.classList.add('has-navbar-fixed-top');
+	document.documentElement.classList.add('has-navbar-fixed-topp');
 </script>
 
-<nav class="navbar is-fixed-top" aria-label="main navigation">
+<nav class="navbar is-fixed-topp" aria-label="main navigation">
 	<div class="navbar-brand is-fullwidth-custom">
 		<div class="navbar-item">
 			<span class="is-size-5 is-unselectable">
