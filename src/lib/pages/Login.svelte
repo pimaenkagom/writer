@@ -262,7 +262,7 @@
 			<div class="field is-grouped is-grouped-right">
 				{#if isSigningUp}
 					<div class="control">
-						<button class="button is-link" type="button">
+						<button class="button is-link" type="submit">
 							<span class="icon">
 								<i class="fa-solid fa-user-plus"></i>
 							</span>
