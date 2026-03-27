@@ -106,8 +106,6 @@ export function next(jump: number = 1) {
 		jump = 1;
 	}
 
-	console.log(steps);
-
 	steps = jump;
 	for (const nodeType of order.toReversed()) {
 		const nodeIndex = selection.value[nodeType];
