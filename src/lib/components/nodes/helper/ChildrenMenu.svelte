@@ -1,8 +1,8 @@
 <script lang="ts">
-	import NodeViewer from '$lib/components/nodes/helper/NodeViewer.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { select } from '$lib/states/selection.svelte';
 	import { getChildnodes } from '$lib/utilities/nodes/children';
+	import NodeTitle from './NodeTitle.svelte';
 
 	const { model }: { model: Basenode } = $props();
 	const children = $derived(getChildnodes(model));
@@ -17,7 +17,7 @@
 						<span class="panel-icon">
 							<i class="fas fa-book" aria-hidden="true"></i>
 						</span>
-						<NodeViewer model={child} />
+						<NodeTitle model={child} />
 					</a>
 				{/each}
 			{/each}

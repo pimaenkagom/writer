@@ -5,7 +5,6 @@
 
 <section class="section">
 	<div class="container">
-		<h1 class="title">Settings</h1>
 		{#each Object.values(settings.value) as setting}
 			{#if setting.shown}
 				<label class="label" for={setting.key}>{capitalize(setting.key)}</label>

@@ -49,3 +49,11 @@ export function subtypeOf(nodeType: NodeType) {
 	}
 	return order[index + 1];
 }
+
+export function supertypeOf(nodeType: NodeType) {
+	const index = order.indexOf(nodeType);
+	if (index < 1) {
+		return order[0];
+	}
+	return order[index - 1];
+}
