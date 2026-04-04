@@ -1,8 +1,7 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { State, Stated } from '$lib/models/helpers/state.model.svelte';
 import type { NodeType } from '$lib/models/node-type.model';
-import { getCollectionForNodeType, supertypeOf } from '$lib/states/nodes.svelte';
-import { notify } from '$lib/states/notifications.svelte';
+import { getCollectionForNodeType, subtypeOf, supertypeOf } from '$lib/states/nodes.svelte';
 import { setSetting, settings } from '$lib/states/settings.svelte';
 import { order } from '$lib/utilities/nodes/order';
 import { untrack } from 'svelte';
@@ -158,28 +157,20 @@ export class Selection extends Stated {
 	}
 
 	public select(index: number, alternative: number = 0) {
-		if (this.isOutOfRange(index, alternative)) {
-			notify(
-				`Cannot select child at index ${index} and alternative ${alternative} because it is out of range.`,
-				'error'
-			);
-		}
+		const parentNode = this.node;
 
 		this.state = State.Loading;
-		const nodeType = this.selectedNodeType ?? order[0];
 
-		// set settings
-		setSetting(nodeType, JSON.stringify([index, alternative]));
+		const subtype = this.selectedNodeType === null ? order[0] : subtypeOf(this.selectedNodeType);
 
-		// set indices
-		this._indices[nodeType] = [index, alternative];
+		setSetting(subtype, JSON.stringify([index, alternative]));
+		this._indices[subtype] = [index, alternative];
 
-		// set node
-		if (this.node === null) {
-			this._nodes[nodeType] = getCollectionForNodeType(nodeType).values[0];
+		if (parentNode === null) {
+			this._nodes[subtype] = getCollectionForNodeType(subtype).values[index];
 		} else {
-			const newNodeId = this.node.children[index][alternative];
-			this._nodes[nodeType] = getCollectionForNodeType(nodeType).items[newNodeId];
+			const newNodeId = parentNode.children[index][alternative];
+			this._nodes[subtype] = getCollectionForNodeType(subtype).items[newNodeId];
 		}
 
 		this.state = State.Ready;
