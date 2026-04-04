@@ -1,6 +1,6 @@
 import { auth, db } from '$lib/firebase';
 import type { State } from '$lib/models/helpers/state.model';
-import { Role } from '$lib/models/roles.model';
+import { Role } from '$lib/models/role.model';
 import type { User } from '$lib/models/user.model';
 import {
 	createUserWithEmailAndPassword,

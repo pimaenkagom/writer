@@ -5,7 +5,7 @@
 	import Link from '$lib/components/header/helper/Link.svelte';
 	import AuthGuard from '$lib/components/helpers/AuthGuard.svelte';
 	import Coptic from '$lib/components/helpers/languages/Coptic.svelte';
-	import { Role } from '$lib/models/roles.model';
+	import { Role } from '$lib/models/role.model';
 	import Languages from '$lib/pages/Languages.svelte';
 	import Login from '$lib/pages/Login.svelte';
 	import Settings from '$lib/pages/Settings.svelte';

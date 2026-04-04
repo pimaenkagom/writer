@@ -1,7 +1,7 @@
 <script lang="ts">
 	import MultilingualTextSystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextSystemLanguage.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { select } from '$lib/states/selection.svelte';
+	import { selection } from '$lib/states/selection.svelte';
 	import { getChildnodes } from '$lib/utilities/nodes/children';
 	import { getMultilingualText } from '$lib/utilities/nodes/multilingual-texts';
 
@@ -17,7 +17,7 @@
 				{#each children as alternatives, index}
 					{#each alternatives as child}
 						<li>
-							<a href="#{child.id}" onclick={() => select(index)}>
+							<a href="#{child.id}" onclick={() => selection.select(index)}>
 								<MultilingualTextSystemLanguage model={getMultilingualText(child)} />
 							</a>
 						</li>

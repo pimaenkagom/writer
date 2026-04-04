@@ -15,10 +15,12 @@
 		value: '938B9CA6-57CA-4201-9A6B-FD1E4BFC2B53',
 		valueType: ContentType.MultilingualText
 	};
+
+	const library = $derived(selection.nodes.library);
 </script>
 
-{#if selection.value.library === null}
+{#if library === null}
 	<ChildrenMenu model={root} />
 {:else}
-	<SelectorNode model={libraries.values[selection.value.library[0]]} />
+	<SelectorNode model={library} />
 {/if}

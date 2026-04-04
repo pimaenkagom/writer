@@ -11,7 +11,7 @@
 	const subtype = $derived(subtypeOf(model.type));
 	const collection = $derived(getCollectionForNodeType(subtype));
 
-	const selectedChildIndex = $derived(selection.value[subtype]);
+	const selectedChildIndex = $derived(selection.indices[subtype]);
 	const childIsSelected = $derived(selectedChildIndex !== null);
 
 	const selectedChildId = $derived(

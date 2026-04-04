@@ -5,19 +5,13 @@
 	import Latin from '$lib/components/helpers/languages/Latin.svelte';
 	import type { MultilingualText } from '$lib/models/multilingual-text.model';
 	import { getSelectedLanguages } from '$lib/states/languages.svelte';
-	import { capitalize } from '$lib/utilities/strings';
 
-	const { model, showLabel = false }: { model: MultilingualText; showLabel?: boolean } = $props();
+	const { model }: { model: MultilingualText } = $props();
 </script>
 
 <div class="columns">
 	{#each getSelectedLanguages() as language}
 		<div class="column">
-			{#if showLabel}
-				<p>
-					<strong>{capitalize(language)}</strong>
-				</p>
-			{/if}
 			{#if language == 'coptic'}
 				<p><Coptic><Text model={model.texts[language]} /></Coptic></p>
 			{:else if language == 'arabic'}

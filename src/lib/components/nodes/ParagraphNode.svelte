@@ -17,7 +17,7 @@
 	{#each getSelectedLanguages() as language}
 		<div class="column">
 			{#if language == 'coptic'}
-				<p>
+				<p class="has-text-justified">
 					<Coptic>
 						<span class="has-text-weight-bold">
 							<Text model={multilingualText.texts[language]} />
@@ -26,7 +26,7 @@
 					</Coptic>
 				</p>
 			{:else if language == 'arabic'}
-				<p class="has-text-right">
+				<p class="has-text-justified has-direction-ltr">
 					<Arabic>
 						<span class="has-text-weight-bold">
 							<Text model={multilingualText.texts[language]} />
@@ -35,7 +35,7 @@
 					</Arabic>
 				</p>
 			{:else}
-				<p>
+				<p class="has-text-justified">
 					<Latin>
 						<span class="has-text-weight-bold">
 							<Text model={multilingualText.texts[language]} />
@@ -50,3 +50,9 @@
 		<EditNodeButton {model} />
 	</div>
 </div>
+
+<style>
+	.has-direction-ltr {
+		direction: rtl;
+	}
+</style>

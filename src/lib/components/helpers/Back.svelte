@@ -1,17 +1,14 @@
 <script lang="ts">
-	import { selection, unselect } from '$lib/states/selection.svelte';
-	import { order } from '$lib/utilities/nodes/order';
+	import { selection } from '$lib/states/selection.svelte';
 
 	const { isButton = false }: { isButton?: boolean } = $props();
 
-	const isRoot = $derived(order.every((nodeType) => selection.value[nodeType] === null));
-
 	function back() {
-		unselect();
+		selection.unselect();
 	}
 </script>
 
-{#if !isRoot}
+{#if !selection.isRoot}
 	<button class:button={isButton} title="Back" onclick={back}>
 		<span class="icon">
 			<i class="fa-solid fa-arrow-left"></i>
