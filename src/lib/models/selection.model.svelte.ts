@@ -58,7 +58,6 @@ export class Selection extends Stated {
 	}
 
 	public get indices() {
-		console.log('Aye', 'Accessing indices', this._indices);
 		if (untrack(() => this.state !== State.Ready)) {
 			Promise.resolve().then(() => {
 				if (this.state !== State.Ready) this.loadSelectionFromSettings();
@@ -69,7 +68,6 @@ export class Selection extends Stated {
 	}
 
 	public get nodes() {
-		console.log('Bye', 'Accessing nodes', this._nodes);
 		if (untrack(() => this.state !== State.Ready)) {
 			Promise.resolve().then(() => {
 				if (this.state !== State.Ready) this.loadSelectionFromSettings();
@@ -159,21 +157,20 @@ export class Selection extends Stated {
 	}
 
 	public select(index: number, alternative: number = 0) {
-		const parentNode = this.node;
-
 		this.state = State.Loading;
 
 		const subtype = this.selectedNodeType === null ? order[0] : subtypeOf(this.selectedNodeType);
 
 		setSetting(subtype, JSON.stringify([index, alternative]));
-		this._indices[subtype] = [index, alternative];
 
-		if (parentNode === null) {
+		if (this.node === null) {
 			this._nodes[subtype] = getCollectionForNodeType(subtype).values[index];
 		} else {
-			const newNodeId = parentNode.children[index][alternative];
+			const newNodeId = this.node.children[index][alternative];
 			this._nodes[subtype] = getCollectionForNodeType(subtype).items[newNodeId];
 		}
+
+		this._indices[subtype] = [index, alternative];
 
 		this.state = State.Ready;
 	}

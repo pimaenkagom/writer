@@ -8,7 +8,7 @@
 	const selectedNodes = $derived(Object.values(selection.nodes).filter((node) => node !== null));
 
 	function getTextInSystemLanguage(node: Basenode) {
-		return multilingualTexts.items[node.id].texts[settings.value.systemLanguage.current];
+		return multilingualTexts.items[node.value].texts[settings.value.systemLanguage.current];
 	}
 </script>
 
