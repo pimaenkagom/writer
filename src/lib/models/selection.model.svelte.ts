@@ -196,9 +196,11 @@ export class Selection extends Stated {
 			return;
 		}
 
-		setSetting(this.selectedNodeType, JSON.stringify(null));
-		this._indices[this.selectedNodeType] = null;
-		this._nodes[this.selectedNodeType] = null;
+		const typeSnapshotBeforeMutation = this.selectedNodeType;
+
+		setSetting(typeSnapshotBeforeMutation, JSON.stringify(null));
+		this._indices[typeSnapshotBeforeMutation] = null;
+		this._nodes[typeSnapshotBeforeMutation] = null;
 	}
 
 	public unselectUntilType(nodeType: NodeType) {
@@ -208,12 +210,11 @@ export class Selection extends Stated {
 	}
 
 	private move(steps: number) {
-		const nodeType = this.selectedNodeType;
-		if (nodeType === null) {
+		if (this.selectedNodeType === null) {
 			return;
 		}
 
-		const nodeIndex = this.indices[nodeType];
+		const nodeIndex = this.indices[this.selectedNodeType];
 		if (nodeIndex === null) {
 			return;
 		}
