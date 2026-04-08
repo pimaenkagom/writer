@@ -58,6 +58,7 @@ export class Selection extends Stated {
 	}
 
 	public get indices() {
+		console.log('Aye', 'Accessing indices', this._indices);
 		if (untrack(() => this.state !== State.Ready)) {
 			Promise.resolve().then(() => {
 				if (this.state !== State.Ready) this.loadSelectionFromSettings();
@@ -68,6 +69,7 @@ export class Selection extends Stated {
 	}
 
 	public get nodes() {
+		console.log('Bye', 'Accessing nodes', this._nodes);
 		if (untrack(() => this.state !== State.Ready)) {
 			Promise.resolve().then(() => {
 				if (this.state !== State.Ready) this.loadSelectionFromSettings();
