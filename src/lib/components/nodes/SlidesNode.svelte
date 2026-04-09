@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { subtypeOf } from '$lib/states/nodes.svelte';
 	import { selection } from '$lib/states/selection.svelte';
 	import { getChildnodes } from '$lib/utilities/nodes/children';
 	import SlidesNodeHead from './helper/SlidesNodeHead.svelte';
@@ -9,43 +8,56 @@
 	const { model }: { model: Basenode } = $props();
 
 	const children = $derived(getChildnodes(model));
-	const subtype = $derived(subtypeOf(model.type));
-	const selectedChildIndex = $derived(selection.indices[subtype]);
 
-	let visibleCount = $state(0);
+	const indexOfFirstChild = $derived(0);
+	const indexOfLastChild = $derived(model.children.length - 1);
+
+	let indexOfFirstVisibleChild = $state(0);
+	let indexOfLastVisibleChild = $state(0);
+
 	let clientHeight = $state(0);
 
-	let start = $derived(selectedChildIndex?.[0] ?? 0);
-	let end = $state(0);
-
 	function forward() {
-		throw new Error('Function not implemented.');
+		if (indexOfLastVisibleChild === indexOfLastChild) {
+			selection.next();
+		} else {
+			indexOfFirstVisibleChild = indexOfLastVisibleChild + 1;
+			indexOfLastVisibleChild = indexOfFirstVisibleChild;
+		}
 	}
 
 	function backward() {
-		throw new Error('Function not implemented.');
+		if (indexOfFirstVisibleChild === indexOfFirstChild) {
+			selection.previous();
+		} else {
+			indexOfFirstVisibleChild = indexOfLastVisibleChild - 1;
+			indexOfLastVisibleChild = indexOfFirstVisibleChild;
+		}
 	}
 </script>
 
-<button class="button" title="Previous" onclick={forward}>
-	<span class="icon">
-		<i class="fa-solid fa-arrow-left"></i>
-	</span>
-</button>
-
-<button class="button" title="Next" onclick={backward}>
-	<span class="icon">
-		<i class="fa-solid fa-arrow-right"></i>
-	</span>
-</button>
-
 <div bind:clientHeight>
 	<SlidesNodeHead {model} />
-	{start},{end}
+	<section>
+		<div class="container is-flex">
+			<button class="button" title="Previous" onclick={backward}>
+				<span class="icon">
+					<i class="fa-solid fa-arrow-left"></i>
+				</span>
+			</button>
+
+			<div class="is-flex-grow-1"></div>
+			<button class="button" title="Next" onclick={forward}>
+				<span class="icon">
+					<i class="fa-solid fa-arrow-right"></i>
+				</span>
+			</button>
+		</div>
+	</section>
 	<section class="section">
 		<div class="container">
 			{#each children as alternatives, index}
-				{#if index < start || index > end}
+				{#if index >= indexOfFirstVisibleChild && index <= indexOfLastVisibleChild}
 					{#each alternatives as child}
 						<VisibilityNode model={child} />
 					{/each}
