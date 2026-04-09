@@ -12,7 +12,6 @@ import {
 	parts,
 	sections
 } from '$lib/states/nodes.svelte';
-import { loadSelectionFromSettings } from '$lib/states/selection.svelte';
 import { loadSettingsIfNotLoaded } from '$lib/states/settings.svelte';
 import { statuses } from '$lib/states/statuses.svelte';
 
@@ -64,9 +63,6 @@ export async function loadData() {
 	increase();
 
 	loadSettingsIfNotLoaded();
-	increase();
-
-	loadSelectionFromSettings();
 	increase();
 
 	dataLoader.value = dataLoaderMaxValue;

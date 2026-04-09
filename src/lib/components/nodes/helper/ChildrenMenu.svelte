@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Basenode } from '$lib/models/basenode.model';
-	import { select } from '$lib/states/selection.svelte';
+	import { selection } from '$lib/states/selection.svelte';
 	import { getChildnodes } from '$lib/utilities/nodes/children';
 	import NodeTitle from './NodeTitle.svelte';
 
@@ -13,7 +13,7 @@
 		<nav class="panel">
 			{#each children as alternatives, index}
 				{#each alternatives as child}
-					<a class="panel-block" href={null} onclick={() => select(index)}>
+					<a class="panel-block" href={null} onclick={() => selection.select(index)}>
 						<span class="panel-icon">
 							<i class="fas fa-book" aria-hidden="true"></i>
 						</span>
