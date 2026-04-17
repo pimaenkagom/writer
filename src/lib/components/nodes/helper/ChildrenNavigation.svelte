@@ -12,7 +12,6 @@
 <section class="section">
 	<div class="container">
 		<aside class="menu">
-			<p class="menu-label">Content</p>
 			<ul class="menu-list">
 				{#each children as alternatives, index}
 					{#each alternatives as child}

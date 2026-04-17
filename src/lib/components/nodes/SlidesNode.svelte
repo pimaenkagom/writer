@@ -2,6 +2,7 @@
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { selection } from '$lib/states/selection.svelte';
 	import { getChildnodes } from '$lib/utilities/nodes/children';
+	import { onMount, tick } from 'svelte';
 	import SlidesNodeHead from './helper/SlidesNodeHead.svelte';
 	import VisibilityNode from './VisibilityNode.svelte';
 
@@ -15,26 +16,78 @@
 	let indexOfFirstVisibleChild = $state(0);
 	let indexOfLastVisibleChild = $state(0);
 
+	let windowHeight = $state(0);
 	let clientHeight = $state(0);
 
-	function forward() {
+	async function waitForRerender() {
+		await tick();
+		await new Promise((r) => requestAnimationFrame(r));
+	}
+
+	async function forward() {
 		if (indexOfLastVisibleChild === indexOfLastChild) {
 			selection.next();
+			indexOfFirstVisibleChild = indexOfFirstChild;
+			indexOfLastVisibleChild = indexOfFirstChild;
 		} else {
 			indexOfFirstVisibleChild = indexOfLastVisibleChild + 1;
 			indexOfLastVisibleChild = indexOfFirstVisibleChild;
 		}
+		await expandForward();
 	}
 
-	function backward() {
+	async function backward() {
 		if (indexOfFirstVisibleChild === indexOfFirstChild) {
 			selection.previous();
+			indexOfFirstVisibleChild = indexOfLastChild;
+			indexOfLastVisibleChild = indexOfLastChild;
 		} else {
-			indexOfFirstVisibleChild = indexOfLastVisibleChild - 1;
-			indexOfLastVisibleChild = indexOfFirstVisibleChild;
+			indexOfLastVisibleChild = indexOfFirstVisibleChild - 1;
+			indexOfFirstVisibleChild = indexOfLastVisibleChild;
+		}
+		await expandBackward();
+	}
+
+	async function expandForward() {
+		while (indexOfLastVisibleChild < indexOfLastChild) {
+			indexOfLastVisibleChild += 1;
+			await waitForRerender();
+
+			if (clientHeight < windowHeight) {
+				break;
+			}
+		}
+
+		// Correct forward expansion.
+		await waitForRerender();
+		if (clientHeight > windowHeight) {
+			indexOfLastVisibleChild -= 1;
 		}
 	}
+
+	async function expandBackward() {
+		while (indexOfFirstVisibleChild > indexOfFirstChild) {
+			indexOfFirstVisibleChild -= 1;
+			await waitForRerender();
+
+			if (clientHeight < windowHeight) {
+				break;
+			}
+		}
+
+		// Correct backward expansion.
+		await waitForRerender();
+		if (clientHeight > windowHeight) {
+			indexOfFirstVisibleChild += 1;
+		}
+	}
+
+	onMount(() => {
+		expandForward();
+	});
 </script>
+
+<svelte:window bind:innerHeight={windowHeight} />
 
 <div bind:clientHeight>
 	<SlidesNodeHead {model} />
@@ -45,7 +98,6 @@
 					<i class="fa-solid fa-arrow-left"></i>
 				</span>
 			</button>
-
 			<div class="is-flex-grow-1"></div>
 			<button class="button" title="Next" onclick={forward}>
 				<span class="icon">
