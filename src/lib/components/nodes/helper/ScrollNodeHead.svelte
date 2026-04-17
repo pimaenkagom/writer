@@ -1,12 +1,10 @@
 <script lang="ts">
-	import MultilingualTextNonsystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextNonsystemLanguage.svelte';
 	import MultilingualTextSystemLanguage from '$lib/components/contents/mulltilinual-text/MultilingualTextSystemLanguage.svelte';
 	import EditNodeButton from '$lib/components/nodes/helper/EditNodeButton.svelte';
 	import type { Basenode } from '$lib/models/basenode.model';
 	import { getMultilingualText } from '$lib/utilities/nodes/multilingual-texts';
 
 	const { model }: { model: Basenode } = $props();
-
 	const multilingualText = $derived(getMultilingualText(model));
 </script>
 
@@ -17,9 +15,6 @@
 				<h1 class="title is-5">
 					<MultilingualTextSystemLanguage model={multilingualText} />
 				</h1>
-				<h2 class="subbtitle is-5">
-					<MultilingualTextNonsystemLanguage model={multilingualText} />
-				</h2>
 			</div>
 			<div class="column is-narrow">
 				<EditNodeButton {model} />
