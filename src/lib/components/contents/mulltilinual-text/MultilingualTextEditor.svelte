@@ -5,6 +5,7 @@
 	import { languages } from '$lib/states/languages.svelte';
 	import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 	import { statuses } from '$lib/states/statuses.svelte';
+	import { generateId } from '$lib/utilities/generator/id';
 	import { capitalize } from '$lib/utilities/strings';
 	import { onMount, untrack } from 'svelte';
 
@@ -34,6 +35,8 @@
 		const newTexts: Record<string, Text> = {};
 		for (const language of availableLanguages) {
 			const text: Text = {
+				id: generateId(),
+				language: language.value,
 				value: '',
 				status: '',
 				strongWordsIndices: [],
