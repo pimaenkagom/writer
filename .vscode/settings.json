@@ -18,5 +18,6 @@
 	"js/ts.preferences.importModuleSpecifier": "non-relative",
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true
+	"files.trimFinalNewlines": true,
+	"cSpell.words": ["titlize", "Titlized"]
 }

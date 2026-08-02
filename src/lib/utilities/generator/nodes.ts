@@ -11,22 +11,22 @@ function getMinAndMax(nodeType: NodeType) {
 			return { min: 1, max: 1 };
 
 		case NodeType.Collection:
-			return { min: 1, max: 2 };
+			return { min: 1, max: 1 };
 
 		case NodeType.Book:
-			return { min: 2, max: 3 };
+			return { min: 1, max: 1 };
 
 		case NodeType.Part:
-			return { min: 1, max: 3 };
+			return { min: 1, max: 1 };
 
 		case NodeType.Chapter:
-			return { min: 2, max: 4 };
+			return { min: 1, max: 1 };
 
 		case NodeType.Section:
-			return { min: 3, max: 7 };
+			return { min: 1, max: 1 };
 
 		case NodeType.Paragraph:
-			return { min: 1, max: 7 };
+			return { min: 1, max: 1 };
 
 		case NodeType.Clause:
 			return { min: 0, max: 0 };

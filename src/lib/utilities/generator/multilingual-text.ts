@@ -1,8 +1,9 @@
 import type { MultilingualText } from '$lib/models/multilingual-text.model';
+import type { Text } from '$lib/models/text.model';
 import { languages } from '$lib/states/languages.svelte';
 import { delta } from '$lib/utilities/generator/delta';
 import { generateId } from '$lib/utilities/generator/id';
-import { capitalize, titleize } from '$lib/utilities/strings';
+import { capitalize, titlize } from '$lib/utilities/strings';
 import { faker } from '@faker-js/faker';
 
 function toCoptic(text: string) {
@@ -98,7 +99,7 @@ function toArabic(text: string) {
 	return text
 		.toLowerCase()
 		.split('')
-		.map((ch) => map[ch] ?? ch)
+		.map((char) => map[char] ?? char)
 		.join('');
 }
 
@@ -115,13 +116,15 @@ function generateMultilingualText(min: number, max: number, isTitlized: boolean 
 			...Object.fromEntries(
 				languages.values.map((language) => {
 					const text = {
+						id: generateId(),
+						language: language.value,
 						value: isTitlized
-							? titleize(generateWords(wordCount))
+							? titlize(generateWords(wordCount))
 							: capitalize(generateWords(wordCount)) + '.',
 						strongWordsIndices: [],
 						emphasizedWordsIndices: [],
 						status: '2FFFCC71-17F9-4D8B-958E-D99BE2366F6B'
-					};
+					} satisfies Text;
 
 					if (language.value == 'coptic') {
 						text.value = toCoptic(text.value);
@@ -135,7 +138,7 @@ function generateMultilingualText(min: number, max: number, isTitlized: boolean 
 				})
 			)
 		}
-	} as MultilingualText;
+	} satisfies MultilingualText;
 }
 
 export function generateTitle() {
