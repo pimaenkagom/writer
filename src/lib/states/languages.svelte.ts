@@ -12,14 +12,14 @@ export function getSelectedLanguages() {
 	return selectedLanguages;
 }
 
-const availableLanguanges = $derived(
+const availableLanguages = $derived(
 	languages.values
 		.filter((lang) => !selectedLanguages.includes(lang.value))
 		.map((lang) => lang.value)
 );
 
-export function getAvailablesLanguages() {
-	return availableLanguanges;
+export function getAvailableLanguages() {
+	return availableLanguages;
 }
 
 const systemLanguage = $derived(settings.value.systemLanguage.current);

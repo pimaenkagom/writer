@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {
 		delimiter,
-		getAvailablesLanguages,
+		getAvailableLanguages,
 		getSelectedLanguages
 	} from '$lib/states/languages.svelte';
 	import { setSetting } from '$lib/states/settings.svelte';
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 	{/each}
-	{#each getAvailablesLanguages() as language (language)}
+	{#each getAvailableLanguages() as language (language)}
 		<div class="box">
 			<div class="media">
 				<div class="media-content">
