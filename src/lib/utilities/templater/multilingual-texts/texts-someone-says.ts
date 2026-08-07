@@ -650,7 +650,7 @@ export const textTheMonkToBeSays: MultilingualText = {
 		ancient_greek: {
 			id: '6324FFCD-3C9A-46AF-9A4E-76A020D0B3EA',
 			language: 'ancient_greek',
-			value: '',
+			value: 'Ὁ μέλλων μοναχὸς λέγει· ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -658,7 +658,7 @@ export const textTheMonkToBeSays: MultilingualText = {
 		coptic: {
 			id: 'FA26CF22-1AD2-4B36-BFFD-37FBBFFF66C8',
 			language: 'coptic',
-			value: '',
+			value: 'Ⲡⲓⲥⲟⲛ ⲉⲧⲉⲣⲁⲓⲧⲓⲛ ⲉⲣⲙⲟⲛⲁⲭⲟⲥ ⲉϥϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -666,7 +666,7 @@ export const textTheMonkToBeSays: MultilingualText = {
 		arabic: {
 			id: 'B6DF21D9-B039-4C1F-ABA5-8FB0B2F05B91',
 			language: 'arabic',
-			value: '',
+			value: 'يَقُولُ الطَّالِبُ الرَّهْبَنَةَ:',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -696,7 +696,7 @@ export const textTheNunToBeSays: MultilingualText = {
 		ancient_greek: {
 			id: '565407F7-3D1A-46C8-8EE0-84CBD56C1DC4',
 			language: 'ancient_greek',
-			value: '',
+			value: 'Ἡ μέλλουσα μοναχὴ λέγει·',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -704,7 +704,7 @@ export const textTheNunToBeSays: MultilingualText = {
 		coptic: {
 			id: '9468AEE0-7445-4ABB-8D65-09524D8E7E95',
 			language: 'coptic',
-			value: '',
+			value: 'ϯⲥⲱⲛⲓ ⲉⲧⲉⲣⲁⲓⲧⲓⲛ ⲉⲣⲙⲟⲛⲁⲭⲏ ⲉⲥϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -712,7 +712,7 @@ export const textTheNunToBeSays: MultilingualText = {
 		arabic: {
 			id: '5CE44AEE-B14A-4E8C-A1E6-F4642F701413',
 			language: 'arabic',
-			value: '',
+			value: 'تَقُولُ الطَّالِبَةُ الرَّهْبَنَةَ:',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
