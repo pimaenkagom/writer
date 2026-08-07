@@ -125,6 +125,41 @@ export class Collection<T extends Identifiable> {
 		}
 	}
 
+	public async createOrReplace(item: T): Promise<T | null> {
+		try {
+			const docRef = this.getDocumentReference(item.id);
+			await setDoc(docRef, this.serialize(item));
+			this.items[item.id] = item;
+			return item;
+		} catch (error) {
+			notify(
+				error instanceof Error
+					? error.message
+					: 'Unknown error while creating or replacing a document'
+			);
+			return null;
+		}
+	}
+
+	public async createIfNotExists(item: T): Promise<T | null> {
+		if (this.items[item.id]) {
+			return this.items[item.id];
+		}
+		try {
+			const docRef = this.getDocumentReference(item.id);
+			await setDoc(docRef, this.serialize(item));
+			this.items[item.id] = item;
+			return item;
+		} catch (error) {
+			notify(
+				error instanceof Error
+					? error.message
+					: 'Unknown error while creating a document if not exists'
+			);
+			return null;
+		}
+	}
+
 	public async update(id: string, updates: Partial<Omit<T, 'id'>>): Promise<boolean> {
 		try {
 			const docRef = this.getDocumentReference(id);

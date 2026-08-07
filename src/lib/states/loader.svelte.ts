@@ -1,4 +1,5 @@
 import type { State } from '$lib/models/helpers/state.model';
+import { initialize } from '$lib/states/initializer.svelte';
 
 import { languages } from '$lib/states/languages.svelte';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
@@ -63,6 +64,9 @@ export async function loadData() {
 	increase();
 
 	loadSettingsIfNotLoaded();
+	increase();
+
+	await initialize();
 	increase();
 
 	dataLoader.value = dataLoaderMaxValue;
