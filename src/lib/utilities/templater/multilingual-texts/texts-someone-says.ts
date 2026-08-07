@@ -14,7 +14,7 @@ export const textThePatriarchSays: MultilingualText = {
 		coptic: {
 			id: '894F8CC1-8842-4BF0-BC8B-DB66B8E097EA',
 			language: 'coptic',
-			value: 'Ⲡⲓⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -60,7 +60,7 @@ export const textTheMetropolitanSays: MultilingualText = {
 		coptic: {
 			id: 'D79F9AEE-470E-4C76-8C46-0F6D967403EE',
 			language: 'coptic',
-			value: 'Ⲡⲓⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -106,7 +106,7 @@ export const textTheBishopSays: MultilingualText = {
 		coptic: {
 			id: '3FD144AA-9506-47A3-B616-786D12A53CC8',
 			language: 'coptic',
-			value: 'Ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -152,7 +152,7 @@ export const textTheHegumenSays: MultilingualText = {
 		coptic: {
 			id: '218A83C0-8083-4472-A0B1-B93A2ECCAA34',
 			language: 'coptic',
-			value: 'Ⲡⲓϩⲏⲅⲟⲩⲙⲉⲛⲟⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓϩⲏⲅⲟⲩⲙⲉⲛⲟⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -198,7 +198,7 @@ export const textThePresbyterSays: MultilingualText = {
 		coptic: {
 			id: 'BC58CCC9-E952-4ABB-87DD-2EA9E222E877',
 			language: 'coptic',
-			value: 'Ⲡⲓⲡ̀ⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲡ̀ⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -244,7 +244,7 @@ export const textTheHighestPriestlyOrderPresentSays: MultilingualText = {
 		coptic: {
 			id: '930EA073-15EB-41F6-8CC4-240EF48F3C3C',
 			language: 'coptic',
-			value: 'Ⲡⲓⲛⲓϣϯ ⲛ̀ⲟⲩⲏⲃ ⲉⲧⲭⲏ ϧⲉⲛ ⲡⲓⲙⲁ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲛⲓϣϯ ⲛ̀ⲟⲩⲏⲃ ⲉⲧⲭⲏ ϧⲉⲛ ⲡⲓⲙⲁ ⲉϥϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -290,7 +290,7 @@ export const textThePriestSays: MultilingualText = {
 		coptic: {
 			id: '54E4CEB5-5DB5-4466-BD83-A404AA3E8FF6',
 			language: 'coptic',
-			value: 'Ⲡⲓⲟⲩⲏⲃ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲟⲩⲏⲃ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -336,7 +336,7 @@ export const textTheArchdeaconSays: MultilingualText = {
 		coptic: {
 			id: '42139157-BCBF-4B91-81B4-3B86F1207EE6',
 			language: 'coptic',
-			value: 'Ⲡⲓⲁⲣⲭⲓⲇⲓⲁⲕⲱⲛ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲁⲣⲭⲓⲇⲓⲁⲕⲱⲛ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -382,7 +382,7 @@ export const textTheDeaconSays: MultilingualText = {
 		coptic: {
 			id: 'CAC8E6D3-3E13-48E1-B396-F192B2B30CA3',
 			language: 'coptic',
-			value: 'Ⲡⲓⲇⲓⲁⲕⲱⲛ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲇⲓⲁⲕⲱⲛ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -428,7 +428,7 @@ export const textTheHypodeaconSays: MultilingualText = {
 		coptic: {
 			id: '86F9E693-C2D1-475E-96D6-7DC7D4656503',
 			language: 'coptic',
-			value: 'Ⲡⲓϩⲩⲡⲟⲇⲓⲁⲕⲱⲛ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓϩⲩⲡⲟⲇⲓⲁⲕⲱⲛ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -474,7 +474,7 @@ export const textTheAnagnostistSays: MultilingualText = {
 		coptic: {
 			id: '0F756B43-300E-4A0A-A305-C81B30C35185',
 			language: 'coptic',
-			value: 'Ⲡⲓⲁ̀ⲛⲁⲅⲛⲱⲥⲧⲏⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲁ̀ⲛⲁⲅⲛⲱⲥⲧⲏⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -520,7 +520,7 @@ export const textThePsaltistSays: MultilingualText = {
 		coptic: {
 			id: '9DF1916F-E502-467F-B951-BC644C172B85',
 			language: 'coptic',
-			value: 'Ⲡⲓⲯⲁⲗⲧⲏⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲯⲁⲗⲧⲏⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -566,7 +566,7 @@ export const textThePeopleSays: MultilingualText = {
 		coptic: {
 			id: '38F7DB19-61E5-44B6-BA7F-8E6047A9578E',
 			language: 'coptic',
-			value: 'Ⲡⲓⲗⲁⲟⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓⲗⲁⲟⲥ ϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -604,7 +604,7 @@ export const textTheAbbotSays: MultilingualText = {
 		ancient_greek: {
 			id: '4C08C42F-9CFA-43A3-B21E-DE124F52904F',
 			language: 'ancient_greek',
-			value: 'Ὁ ἡγούμενος λέγει·',
+			value: 'Ὁ ἡγούμενος τῆς μονῆς λέγει· ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -612,7 +612,7 @@ export const textTheAbbotSays: MultilingualText = {
 		coptic: {
 			id: '648A97FC-4257-4C8E-A41C-E857CCC94EC4',
 			language: 'coptic',
-			value: 'Ⲡⲓⲁⲃⲃⲁ ϫⲱ ⲙⲙⲟⲥ ϫⲉ',
+			value: 'Ⲡⲓϩⲏⲅⲟⲩⲙⲉⲛⲟⲥ ⲛ̀ⲧⲉ ⲡⲓⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉϥϫⲱ ⲙ̀ⲙⲟⲥ ϫⲉ',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
@@ -620,7 +620,7 @@ export const textTheAbbotSays: MultilingualText = {
 		arabic: {
 			id: 'D64E56CC-F302-4E4E-A1D2-E49C984F1A29',
 			language: 'arabic',
-			value: '',
+			value: 'يَقُولُ رَئِيسُ الدَّيْرِ:',
 			strongWordsIndices: [],
 			emphasizedWordsIndices: [],
 			status: 'FAC8DA02-072C-45A1-A1C9-2435D797A3B5'
