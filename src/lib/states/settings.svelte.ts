@@ -21,16 +21,16 @@ export const settings = $state<State<Record<string, Setting>>>({
 		},
 		languages: {
 			key: 'languages',
-			current: 'coptic,arabic,english,german',
+			current: 'ancient_greek,coptic,arabic,english,german',
 			availables: [],
 			default: 'coptic,arabic,english,german',
 			shown: true
 		},
 		systemLanguage: {
 			key: 'systemLanguage',
-			current: 'english',
+			current: 'german',
 			availables: ['coptic', 'arabic', 'english', 'german'],
-			default: 'english',
+			default: 'german',
 			shown: true
 		},
 		...Object.fromEntries(

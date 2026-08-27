@@ -18,6 +18,7 @@
 	}
 
 	function insert(id: string) {
+		// An dieser Stelle wird der user nicht gepflegt
 		model.children = model.children.toSpliced(insertAtIndex + 1, 0, [id]);
 		isSelecting = false;
 	}

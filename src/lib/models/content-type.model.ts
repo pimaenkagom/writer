@@ -1,4 +1,5 @@
 export enum ContentType {
+	Nothing = 'nothing',
 	MultilingualText = 'multilingualText',
 	Image = 'image',
 	Table = 'table',

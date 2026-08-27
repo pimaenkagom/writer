@@ -5,7 +5,8 @@ import {
 	getDocs,
 	getFirestore,
 	setDoc,
-	updateDoc
+	updateDoc,
+	writeBatch
 } from 'firebase/firestore';
 
 import type { Identifiable } from '$lib/models/helpers/identifiable.model';
@@ -180,6 +181,28 @@ export class Collection<T extends Identifiable> {
 			return true;
 		} catch (error) {
 			notify(error instanceof Error ? error.message : 'Unknown error while removing a document');
+			return false;
+		}
+	}
+
+	public async clear(): Promise<boolean> {
+		const FIRESTORE_BATCH_LIMIT = 500;
+		try {
+			const snapshot = await getDocs(this.getCollectionReference());
+			const db = getFirestore();
+			for (let i = 0; i < snapshot.docs.length; i += FIRESTORE_BATCH_LIMIT) {
+				const batch = writeBatch(db);
+				for (const doc of snapshot.docs.slice(i, i + FIRESTORE_BATCH_LIMIT)) {
+					batch.delete(doc.ref);
+				}
+				await batch.commit();
+			}
+			this.items = {};
+			return true;
+		} catch (error) {
+			notify(
+				error instanceof Error ? error.message : 'Unknown error while clearing the collection'
+			);
 			return false;
 		}
 	}
