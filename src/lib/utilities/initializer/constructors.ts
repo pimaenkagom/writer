@@ -5,6 +5,7 @@ import type { NodeType } from '$lib/models/node-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 import { generateId } from '$lib/utilities/generator/id';
+import { registerText } from '$lib/utilities/initializer/registry';
 
 export async function makeMultilingualTextWithId(
 	id: string,
@@ -65,7 +66,7 @@ export async function makeMultilingualTextWithId(
 		}
 	};
 
-	return multilingualText;
+	return registerText(multilingualText);
 }
 
 export async function makeMultilingualTextWithIdWithoutGreek(
@@ -117,7 +118,7 @@ export async function makeMultilingualTextWithIdWithoutGreek(
 		}
 	};
 
-	return multilingualText;
+	return registerText(multilingualText);
 }
 
 export async function makeMultilingualText(

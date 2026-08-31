@@ -2,16 +2,17 @@ import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import { registerNode } from '$lib/utilities/initializer/registry';
 
 function makeClause(id: string, textId: string): Basenode {
-	return {
+	return registerNode<Basenode>({
 		id: id,
 		users: [],
 		type: NodeType.Clause,
 		value: textId,
 		valueType: ContentType.MultilingualText,
 		children: []
-	};
+	});
 }
 
 export const textThePatriarchSays = await makeMultilingualTextWithId(

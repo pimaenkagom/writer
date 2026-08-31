@@ -2,6 +2,7 @@ import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import { registerNode } from '$lib/utilities/initializer/registry';
 
 export const textTheCallToPrayer = await makeMultilingualTextWithId(
 	'36C2A70F-8125-4452-88F2-EA4C1914C6B5',
@@ -17,11 +18,11 @@ export const textTheCallToPrayer = await makeMultilingualTextWithId(
 	'Der Aufruf zum Gebet'
 );
 
-export const sectionTheCallToPrayer: Basenode = {
+export const sectionTheCallToPrayer = registerNode<Basenode>({
 	id: 'CCB6C1FC-9A77-4018-98A9-FF45C0DC3D9B',
 	users: [],
 	type: NodeType.Section,
 	value: textTheCallToPrayer.id,
 	valueType: ContentType.MultilingualText,
 	children: []
-};
+});
