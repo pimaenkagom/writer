@@ -1263,8 +1263,776 @@ export const sectionTheCommemorationOfTheDesertFathers = registerNode<Basenode>(
 	children: []
 });
 
+export const textTheConclusionOfTheCommemorationOfThePatriarchsAndDesertFathers =
+	await makeMultilingualTextWithId(
+		'64910746-D6F0-4F59-9DB0-9F8998D33DB6',
+		'AAE3BF81-8EBC-45C9-99DA-3ECE1534770E',
+		'Ἡ Λῆξις τῆς Μνήμης τῶν Πατριαρχῶν καὶ τῶν Πατέρων τῆς Ἐρήμου',
+		'0E2A1AE2-235D-4174-978A-D8AB2C225966',
+		'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲡⲓⲉⲣⲫⲙⲉⲩⲓ ⲛ̀ⲧⲉ ⲛⲓⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲛⲉⲙ ⲛⲓⲓⲟϯ ⲛ̀ⲧⲉ ϯⲉⲣⲏⲙⲟⲥ',
+		'A7B7A971-9B81-4E88-92AA-73D5C378FF1F',
+		'خِتَامُ تَذْكَارِ الْبَطَارِكَةِ وَآبَاءِ الْبَرِّيَّةِ',
+		'1D90BB16-3E8A-4EDD-9608-3778203C649F',
+		'The Conclusion of the Commemoration of the Patriarchs and Desert Fathers',
+		'A8442EF7-A6AF-40AA-99CA-701BC7E6BA1C',
+		'Der Abschluss des Gedächtnisses der Patriarchen und der Wüstenväter'
+	);
+
+export const sectionTheConclusionOfTheCommemorationOfThePatriarchsAndDesertFathers =
+	registerNode<Basenode>({
+		id: '092D0B50-793F-4347-A869-1B5443175934',
+		users: [chapterTheCommemorationOfTheSaints.id],
+		type: NodeType.Section,
+		value: textTheConclusionOfTheCommemorationOfThePatriarchsAndDesertFathers.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheCommemorationOfTheDepartedPriestsAndLaypeople =
+	await makeMultilingualTextWithId(
+		'48C64269-CBF9-4981-9621-6CB1732C800B',
+		'B18A6D87-3975-4126-9605-6BED72678F72',
+		'Ἡ Μνήμη τῶν Κεκοιμημένων Ἱερέων καὶ Λαϊκῶν',
+		'D440B938-0BAA-4879-B9C1-C4DABC5336EF',
+		'Ⲡⲓⲉⲣⲫⲙⲉⲩⲓ ⲛ̀ⲧⲉ ⲛⲓⲟⲩⲏⲃ ⲛⲉⲙ ⲛⲓⲗⲁⲟⲥ ⲉ̀ⲁⲩⲉⲛⲕⲟⲧ',
+		'F6DD5F76-2287-4CB0-AB08-6302A73E5722',
+		'تَذْكَارُ الْكَهَنَةِ وَالْعَلْمَانِيِّينَ الْمُتَنَيِّحِينَ',
+		'F09A72BB-3862-4126-A14F-97D280FF14AD',
+		'The Commemoration of the Departed Priests and Laypeople',
+		'637485D1-E9CD-4B47-8AEB-975DB252328E',
+		'Das Gedächtnis der entschlafenen Priester und Laien'
+	);
+
+export const sectionTheCommemorationOfTheDepartedPriestsAndLaypeople = registerNode<Basenode>({
+	id: '1ADEAB1C-5DAF-4FFE-B89F-02048C948663',
+	users: [chapterTheCommemorationOfTheSaints.id],
+	type: NodeType.Section,
+	value: textTheCommemorationOfTheDepartedPriestsAndLaypeople.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheCommemorationOfADepartedPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'03866866-A6DB-43C2-976F-5FA738537054',
+		'CF16750C-4F0C-4548-8DE5-6CD680BDBE7E',
+		'Ἡ Μνήμη Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου Κεκοιμημένου',
+		'667A8A55-4D65-46BA-B642-E17E01DB1DC2',
+		'Ⲡⲓⲉⲣⲫⲙⲉⲩⲓ ⲛ̀ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉ̀ⲁϥⲉⲛⲕⲟⲧ',
+		'F148F7DA-CEA1-4311-9EB9-797FC5C40EE7',
+		'تَذْكَارُ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ مُتَنَيِّحٍ',
+		'F3A87CA9-5A42-4D39-9067-D46432F91DA3',
+		'The Commemoration of a Departed Patriarch, Metropolitan, or Bishop',
+		'9762B498-428B-4B0A-BB6A-B9193F4D5440',
+		'Das Gedächtnis eines entschlafenen Patriarchen, Metropoliten oder Bischofs'
+	);
+
+export const sectionTheCommemorationOfADepartedPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: '00D5905B-6B6E-4EE9-8469-AE79C1446AB9',
+		users: [chapterTheCommemorationOfTheSaints.id],
+		type: NodeType.Section,
+		value: textTheCommemorationOfADepartedPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheCommemorationOfTheDeparted = await makeMultilingualTextWithId(
+	'F163B59D-1367-48CF-8746-105635ABFE71',
+	'29F3FE7A-3C3D-4A34-820E-83106755A061',
+	'Ἡ Μνήμη τῶν Κεκοιμημένων',
+	'3707AB6B-3A08-4A86-A246-15C98DFD2E8A',
+	'Ⲡⲓⲉⲣⲫⲙⲉⲩⲓ ⲛ̀ⲧⲉ ⲛⲏ ⲉⲧⲁⲩⲉⲛⲕⲟⲧ',
+	'63EDCAA9-F27E-418A-B97B-FCB60D3A8798',
+	'تَذْكَارُ الرَّاقِدِينَ',
+	'2258E64C-40C1-4D06-9B96-518AFF48DE2D',
+	'The Commemoration of the Departed',
+	'FED0F09E-86CC-4EA4-B99B-EE277A6ACB7E',
+	'Das Gedächtnis der Entschlafenen'
+);
+
+export const sectionTheCommemorationOfTheDeparted = registerNode<Basenode>({
+	id: 'A4B27C15-B177-41EC-B24D-82F13915C3CB',
+	users: [chapterTheCommemorationOfTheSaints.id],
+	type: NodeType.Section,
+	value: textTheCommemorationOfTheDeparted.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheShortBlessing = await makeMultilingualTextWithId(
+	'346D4783-1AE4-4F81-B46F-D6DABE4301B2',
+	'C3F5B55E-C593-4DD8-BC89-37EC22742CF3',
+	'Ἡ Σύντομος Εὐλογία',
+	'13887E16-140B-4D5F-9637-9258A2B7DF5D',
+	'Ⲡⲓⲥⲙⲟⲩ ⲛ̀ⲕⲟⲩϫⲓ',
+	'A50F19E2-AFC4-4085-9437-AC0381DF7123',
+	'الْبَرَكَةُ الْقَصِيرَةُ',
+	'DBD60216-5E0D-4796-ABEE-6D30131FA622',
+	'The Short Blessing',
+	'1D5B9C22-96F1-4B8A-B002-C2A6C0D6B9E3',
+	'Der kurze Segen'
+);
+
+export const sectionTheShortBlessing = registerNode<Basenode>({
+	id: 'A25A4067-0DBA-47DC-93E5-6EE99A09F294',
+	users: [chapterTheCommemorationOfTheSaints.id],
+	type: NodeType.Section,
+	value: textTheShortBlessing.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerForTheForgivenessOfSinsAndForTheRestOfTheDeparted =
+	await makeMultilingualTextWithId(
+		'71110E3A-1E68-485F-8A7F-3838AE269A52',
+		'A793AB36-EE68-43E4-85A3-9D91A6A24B87',
+		'Ἡ Εὐχὴ ὑπὲρ τῆς Ἀφέσεως τῶν Ἁμαρτιῶν καὶ ὑπὲρ τῆς Ἀναπαύσεως τῶν Κεκοιμημένων',
+		'5CDB6BEF-3677-4262-81B6-0CCBE16A36FB',
+		'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲛ̀ⲧⲉ ⲛⲓⲛⲟⲃⲓ ⲛⲉⲙ ⲡⲓⲙ̀ⲧⲟⲛ ⲛ̀ⲧⲉ ⲛⲏ ⲉⲧⲁⲩⲉⲛⲕⲟⲧ',
+		'739C62F8-1AF4-4993-A20F-E098B4FDB2E3',
+		'أُوشِيَةُ غُفْرَانِ الْخَطَايَا وَنِيَاحَةِ الرَّاقِدِينَ',
+		'03C3A0B7-7985-4F67-A1A5-B66FEBBFB35C',
+		'The Prayer for the Forgiveness of Sins and for the Rest of the Departed',
+		'1A27B1A4-4138-4F3F-AA30-F094D49276ED',
+		'Das Gebet für die Vergebung der Sünden und für die Ruhe der Entschlafenen'
+	);
+
+export const sectionThePrayerForTheForgivenessOfSinsAndForTheRestOfTheDeparted =
+	registerNode<Basenode>({
+		id: 'F7A9B4E1-3753-4BAF-A3C5-A2A9FAB8CDE3',
+		users: [chapterTheCommemorationOfTheSaints.id],
+		type: NodeType.Section,
+		value: textThePrayerForTheForgivenessOfSinsAndForTheRestOfTheDeparted.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheResponseOfTheCommemoration = await makeMultilingualTextWithId(
+	'D7F7466E-B9A5-4D6B-A250-81F20B99CB7E',
+	'0109428A-4501-4520-AE3B-6E92177348C5',
+	'Ἡ Ἀπόκρισις τῆς Μνήμης',
+	'128C0150-9307-4E9F-BD27-151F72B77FA9',
+	'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲉⲣⲫⲙⲉⲩⲓ',
+	'F355BB6A-469B-467A-9FA7-F31312865F10',
+	'مَرَدُّ التَّذْكَارِ',
+	'4070A819-452A-4C04-B68F-7B5BAB8BC976',
+	'The Response of the Commemoration',
+	'B08BBE72-F014-49CD-9449-AF83C9E832DB',
+	'Die Erwiderung des Gedächtnisses'
+);
+
+export const sectionTheResponseOfTheCommemoration = registerNode<Basenode>({
+	id: '06CFDA61-247F-49BB-90DE-45A7EFA41A6F',
+	users: [chapterTheCommemorationOfTheSaints.id],
+	type: NodeType.Section,
+	value: textTheResponseOfTheCommemoration.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerForTheLiving = await makeMultilingualTextWithId(
+	'DCD7DA70-AC3A-4404-B3E4-86A6C1D03026',
+	'720AB6AF-86FC-4390-B4FB-55BD5ADA2164',
+	'Ἡ Εὐχὴ ὑπὲρ τῶν Ζώντων',
+	'14C25A05-B353-4E07-87FC-3E4968024A06',
+	'Ⲡⲓⲧⲱⲃϩ ⲛ̀ⲧⲉ ⲛⲏ ⲉⲧⲟⲛϧ',
+	'EEEFB3BE-38B5-4904-9AB2-69A6BE6403CD',
+	'طَلْبَةٌ لِلْأَحْيَاءِ',
+	'2F063BB6-6E7A-4D5A-809B-FAE643F4877B',
+	'The Prayer for the Living',
+	'B3004765-8381-49A8-9284-7C4490499D33',
+	'Das Gebet für die noch Lebenden'
+);
+
+export const sectionThePrayerForTheLiving = registerNode<Basenode>({
+	id: 'C3C55C54-715F-475B-BB6E-6344F07C2575',
+	users: [chapterTheCommemorationOfTheSaints.id],
+	type: NodeType.Section,
+	value: textThePrayerForTheLiving.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 chapterTheCommemorationOfTheSaints.children = [
 	[sectionTheCommemorationOfTheSaints.id],
 	[sectionTheCommemorationOfThePatriarchs.id],
-	[sectionTheCommemorationOfTheDesertFathers.id]
+	[sectionTheCommemorationOfTheDesertFathers.id],
+	[sectionTheConclusionOfTheCommemorationOfThePatriarchsAndDesertFathers.id],
+	[sectionTheCommemorationOfTheDepartedPriestsAndLaypeople.id],
+	[sectionTheCommemorationOfADepartedPatriarchMetropolitanOrBishop.id],
+	[sectionTheCommemorationOfTheDeparted.id],
+	[sectionTheShortBlessing.id],
+	[sectionThePrayerForTheForgivenessOfSinsAndForTheRestOfTheDeparted.id],
+	[sectionTheResponseOfTheCommemoration.id],
+	[sectionThePrayerForTheLiving.id]
+];
+
+export const textTheBreakingOfTheBread = await makeMultilingualTextWithId(
+	'927F50F7-D3DF-40AC-85FF-1AC6296E8498',
+	'B5F0F86E-7A9E-4AE9-A901-448C6213AD05',
+	'Ὁ Κλασμὸς τοῦ Ἄρτου',
+	'7B397A7A-5B5D-42D2-A42D-A95507A6CD4A',
+	'Ⲡⲓⲫⲱϣ ⲛ̀ⲧⲉ ⲡⲓⲱⲓⲕ',
+	'143C9642-4643-45BB-9A0D-565C0BF31CFF',
+	'الْقَسْمَةُ',
+	'FB99046B-2D9B-44C9-AEC4-ECEEBC65FEE8',
+	'The Breaking of the Bread',
+	'44236651-A47F-4C50-93EB-86A12288A5C5',
+	'Das Brechen des Brotes'
+);
+
+export const chapterTheBreakingOfTheBread = registerNode<Basenode>({
+	id: '546D237B-152E-4696-86BA-FFDC2401B8B2',
+	users: [partLiturgyOfTheFaithful.id],
+	type: NodeType.Chapter,
+	value: textTheBreakingOfTheBread.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToTheBreakingOfTheBread = await makeMultilingualTextWithId(
+	'61EB4709-1F42-4582-9A0E-2CEC4DCAC152',
+	'1A7DD67E-3A31-4305-849F-142535F78AA5',
+	'Ἡ Εἰσαγωγὴ τοῦ Κλασμοῦ τοῦ Ἄρτου',
+	'C95A0327-0E19-4D23-A390-0206FB622F47',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ⲡⲓⲫⲱϣ ⲛ̀ⲧⲉ ⲡⲓⲱⲓⲕ',
+	'36D6A194-59BD-4221-8380-EAE14C0C7670',
+	'مُقَدِّمَةُ الْقَسْمَةِ',
+	'0D4DEEFE-C059-4D9E-BBB1-ED6F01AF7B97',
+	'The Introduction to the Breaking of the Bread',
+	'007662D4-44CD-47A4-B2E9-A7D91C8723D6',
+	'Die Einleitung zum Brechen des Brotes'
+);
+
+export const sectionTheIntroductionToTheBreakingOfTheBread = registerNode<Basenode>({
+	id: '9C43D121-5D8E-4AA9-AE9F-55A594884CB9',
+	users: [chapterTheBreakingOfTheBread.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToTheBreakingOfTheBread.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfTheFraction = await makeMultilingualTextWithId(
+	'2EF3101B-E018-4129-9F70-2F3F47C4E876',
+	'94DFF2AF-3FB6-4B67-B6F5-1A1BD15FF761',
+	'Ἡ Εὐχὴ τοῦ Κλασμοῦ',
+	'419EC3C2-065C-42CB-BA9B-E78DC8DD25F9',
+	'Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲫⲱϣ',
+	'A2D68465-A397-4278-9BD7-2FD728DF9171',
+	'صَلاَةُ الْقَسْمَةِ',
+	'DA252BCE-1988-4E36-9FC7-81815707D44A',
+	'The Prayer of the Fraction',
+	'3F3E4C70-B5D9-49FF-8619-F0D1CECD31DE',
+	'Das Gebet zum Brechen des Brotes'
+);
+
+export const sectionThePrayerOfTheFraction = registerNode<Basenode>({
+	id: '3D64E6D6-B8F5-4CF2-A4CA-D06320654658',
+	users: [chapterTheBreakingOfTheBread.id],
+	type: NodeType.Section,
+	value: textThePrayerOfTheFraction.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheBreakingOfTheBread.children = [
+	[sectionTheIntroductionToTheBreakingOfTheBread.id],
+	[sectionThePrayerOfTheFraction.id]
+];
+
+partLiturgyOfTheFaithful.children = [
+	[chapterTheReconciliation.id],
+	[chapterTheAnaphora.id],
+	[chapterAgios.id],
+	[chapterTheInstitutionPrayers.id],
+	[chapterTheLitanies.id],
+	[chapterTheCommemorationOfTheSaints.id],
+	[chapterTheBreakingOfTheBread.id]
+];
+
+export const textTheConfession = await makeMultilingualTextWithId(
+	'28D372FD-E8BB-4E0A-8C59-F53942109B81',
+	'F28B3BF0-2992-4FF0-AEA5-6DBCB73B9DD5',
+	'Ἡ Ὁμολογία',
+	'61381B50-1B21-4538-9AD9-EF12FA4B0F46',
+	'Ϯⲟⲙⲟⲗⲟⲅⲓⲁ',
+	'4AC0A231-1DC7-45B3-849C-1F3DF0A2771B',
+	'الاِعْتِرَافُ',
+	'46879386-7BBE-4D80-B212-0F4913E98DF2',
+	'The Confession',
+	'E17EC9FA-3619-48E1-A3C8-37D1E0F44080',
+	'Das Bekenntnis'
+);
+
+export const chapterTheConfession = registerNode<Basenode>({
+	id: 'D8F0BAAD-6760-4B29-9088-832CC7EB706F',
+	users: [partLiturgyOfTheFaithful.id],
+	type: NodeType.Chapter,
+	value: textTheConfession.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+partLiturgyOfTheFaithful.children = [
+	[chapterTheReconciliation.id],
+	[chapterTheAnaphora.id],
+	[chapterAgios.id],
+	[chapterTheInstitutionPrayers.id],
+	[chapterTheLitanies.id],
+	[chapterTheCommemorationOfTheSaints.id],
+	[chapterTheBreakingOfTheBread.id],
+	[chapterTheConfession.id]
+];
+
+export const textTheLordsPrayer = await makeMultilingualTextWithId(
+	'E1FEC3CB-62A5-478C-A796-C19A72A174C3',
+	'610B4427-AB79-4CEA-830F-789159EC0D94',
+	'Ἡ Κυριακὴ Προσευχή',
+	'2B06E038-BFB5-4B10-86C3-9ECF46979FB0',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡ̀ϭⲟⲓⲥ',
+	'4A978666-794A-4826-9A9F-85B47673522E',
+	'صَلاَةُ الرَّبِّ',
+	'F0A6698F-03D9-4A8F-9AFC-46DE6547C3EB',
+	"The Lord's Prayer",
+	'3BBF2349-6313-4FF6-9A0E-506DC6F2952E',
+	'Das Gebet des Herrn'
+);
+
+export const sectionTheLordsPrayer = registerNode<Basenode>({
+	id: '3F369F36-CC76-4D30-BABA-96F64A85D7EF',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textTheLordsPrayer.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerForPreservationFromSinAndTemptation = await makeMultilingualTextWithId(
+	'B73F70F1-06FB-4E54-9EE5-01030138EC97',
+	'8B5F9B77-BF78-4065-8656-3D47D2BA13B7',
+	'Ἡ Εὐχὴ τῆς φυλακῆς ἀπὸ τῆς ἁμαρτίας καὶ τοῦ πειρασμοῦ',
+	'34E2A482-5592-4551-932F-E4BB7C5769E0',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲁ̀ⲣⲉϩ ⲉ̀ⲃⲟⲗϩⲁ ⲫ̀ⲛⲟⲃⲓ ⲛⲉⲙ ⲡⲓⲡⲓⲣⲁⲥⲙⲟⲥ',
+	'AEDFF534-BEAF-4A1D-9E34-D10CEBA3E2F0',
+	'صَلاَةُ الْحِفْظِ مِنَ الْخَطِيَّةِ وَالتَّجْرِبَةِ',
+	'F78A0FC4-90A3-43CF-B12B-32830BB18A8A',
+	'The Prayer for Preservation from Sin and Temptation',
+	'CD84D08A-B781-4A0E-98AA-554A3F2C351B',
+	'Das Gebet für die Bewahrung vor der Sünde und der Versuchung'
+);
+
+export const sectionThePrayerForPreservationFromSinAndTemptation = registerNode<Basenode>({
+	id: '27A9A6AE-21AA-423A-BF29-F74CC447FB4F',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textThePrayerForPreservationFromSinAndTemptation.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfSubmission = await makeMultilingualTextWithId(
+	'F690C327-3114-4C7E-8A37-CE7DE22EED40',
+	'E50766AA-7068-4C2C-9E00-4B8CC8AB96D4',
+	'Ἡ Εὐχὴ τῆς Ὑποταγῆς',
+	'2C6E0664-3E40-41E5-B2B4-40E8D61A64AC',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓϩⲱⲟⲩⲧ',
+	'C1D46ED5-E1B0-4508-B86B-6CEB44BEF28D',
+	'صَلاَةُ الْخُضُوعِ',
+	'3DC41379-D306-479B-8796-B16A5C212148',
+	'The Prayer of Submission',
+	'09F73440-0537-40C7-A1B8-6EE787A4B121',
+	'Das Gebet der Hingabe'
+);
+
+export const sectionThePrayerOfSubmission = registerNode<Basenode>({
+	id: 'DF28B664-8D12-48E7-A5E2-6C8998777A5C',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textThePrayerOfSubmission.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfAbsolution = await makeMultilingualTextWithId(
+	'BAF86F1E-E3C7-4BC8-B2A4-87EE3F5C622A',
+	'B3A233D6-5BCB-461B-B93D-E42C9A8E91EC',
+	'Ἡ Εὐχὴ τῆς Ἀπολύσεως',
+	'C329C594-ECB5-4280-BE23-321E4CBB5854',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ',
+	'6D1622BD-265D-483D-BAD1-D1DECEDA8F66',
+	'صَلاَةُ الْحَلِّ',
+	'FA0CD121-5951-492A-8A71-B0FBDD66CB89',
+	'The Prayer of Absolution',
+	'B641809D-542E-4305-9946-B01980767BD8',
+	'Das Gebet des Losspruches'
+);
+
+export const sectionThePrayerOfAbsolution = registerNode<Basenode>({
+	id: 'B2D943B8-163F-4081-AA45-C1365A7DC2B4',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textThePrayerOfAbsolution.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
+	await makeMultilingualTextWithId(
+		'7F630295-26C9-4F0C-A381-D4ED10FE1104',
+		'6BF3C9BE-D056-4FF4-A2F7-1F8ADE6401A7',
+		'Ἡ Σύντομος Εὐχὴ ὑπὲρ τῆς εἰρήνης τῆς Ἐκκλησίας, τοῦ Πατριάρχου, τοῦ Μητροπολίτου ἢ τοῦ Ἐπισκόπου, καὶ τῶν Συνάξεων',
+		'42E63DB2-1902-4588-B7E1-5684618B69AC',
+		'Ϯⲉⲩⲭⲏ ⲛ̀ⲕⲟⲩϫⲓ ⲛ̀ⲧⲉ ϯϩⲓⲣⲏⲛⲏ ⲛ̀ⲧⲉ ϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲉⲙ ⲡⲓⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲛⲉⲙ ⲡⲓⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲉⲙ ⲛⲓⲑⲱⲟⲩϯ',
+		'F6CC379B-1B05-4EA8-ABAF-F2D725DBA97C',
+		'أُوشِيَةُ سَلاَمِ الْكَنِيسَةِ وَالْبَطْرِيَرْكِ وَالْمُطْرَانِ أَوِ الْأُسْقُفِ وَالاِجْتِمَاعَاتِ الْقَصِيرَةُ',
+		'BF3CDD64-D9A7-466B-B5D1-50935969C555',
+		'The Short Prayer for the Peace of the Church, the Patriarch, the Metropolitan or Bishop, and the Congregations',
+		'E316F60D-ABA2-4C91-ABBE-F2A345BD6FBD',
+		'Das kurze Gebet für den Frieden der Kirche, für den Patriarchen sowie den Metropoliten oder Bischof und für die Versammlungen'
+	);
+
+export const sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
+	registerNode<Basenode>({
+		id: '1B13A9F5-100B-45BE-8B78-4AC2854D1EBE',
+		users: [chapterTheConfession.id],
+		type: NodeType.Section,
+		value: textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheHolyThingsForTheHoly = await makeMultilingualTextWithId(
+	'DB3FC96D-CD39-45D1-A5EC-4D64D4DDD7D5',
+	'54C62C48-CBAB-4B19-979D-E035A1BD75CB',
+	'Τὰ Ἅγια τοῖς Ἁγίοις',
+	'AEFD42A1-FBD8-40A6-8355-80A551CAF18E',
+	'Ⲛⲏ ⲉⲑⲟⲩⲁⲃ ⲛ̀ⲛⲏ ⲉⲑⲟⲩⲁⲃ',
+	'8111396E-A3B7-4982-A820-D51BAFC9CE69',
+	'الْقُدْسَاتُ لِلْقِدِّيسِينَ',
+	'CB603533-E7F2-4A6A-83EA-AC521094A7F4',
+	'The Holy Things for the Holy',
+	'877065C5-A678-4B15-9698-E4F463659354',
+	'Das Heilige den Heiligen'
+);
+
+export const sectionTheHolyThingsForTheHoly = registerNode<Basenode>({
+	id: 'AA0902E6-4C34-4B35-B844-9626EEC779D7',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textTheHolyThingsForTheHoly.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConfessionSection = await makeMultilingualTextWithId(
+	'E09219FE-9ACE-463B-A44E-4B7A089B79BF',
+	'ED1EA9EA-9837-4347-967A-E692F6FB6CAF',
+	'Ἡ Ὁμολογία',
+	'0D076200-3F78-4F95-9DD5-81A16513F14D',
+	'Ϯⲟⲙⲟⲗⲟⲅⲓⲁ',
+	'DA12381B-8CF3-4BFB-A6EA-E6BB8BA7DDAC',
+	'الاِعْتِرَافُ',
+	'521F58CD-AD37-4D5F-A3A3-801E270A0208',
+	'The Confession',
+	'F5846A0A-2119-4EB5-BE6A-D080092172EE',
+	'Das Bekenntnis'
+);
+
+export const sectionTheConfession = registerNode<Basenode>({
+	id: '04172A7E-6E3F-4C1B-9358-AE3EC51CF5C9',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textTheConfessionSection.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAResponseOfTheConfession = await makeMultilingualTextWithId(
+	'AD39DBFA-90F2-4D06-A879-74758D77C469',
+	'0570714E-8464-4C4D-8912-D5627E7CE751',
+	'Ἀπόκρισις τῆς Ὁμολογίας',
+	'71954216-A0BB-4C19-A8FA-703CCE4EBFDC',
+	'Ⲟⲩⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ',
+	'5B45BC35-5374-4160-894B-A13057E9E587',
+	'مَرَدٌّ عَلَى الاِعْتِرَافِ',
+	'2678F803-6B33-4D14-B0B6-6763E5B76A9B',
+	'A Response to the Confession',
+	'F2A92237-CCF9-48C4-981D-48684DC176ED',
+	'Eine Erwiderung des Bekenntnisses'
+);
+
+export const sectionAResponseOfTheConfession = registerNode<Basenode>({
+	id: '38F967A3-77E3-4576-8431-4E47B87C189F',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textAResponseOfTheConfession.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAnotherResponseOfTheConfession = await makeMultilingualTextWithId(
+	'707B38CB-EAD3-40B1-AB71-D3B499265AAA',
+	'26B84134-4C1E-44F7-A454-8E4E0EB9F257',
+	'Ἄλλη Ἀπόκρισις τῆς Ὁμολογίας',
+	'5CDCE310-6B2D-40AE-9A21-8E98A1421226',
+	'Ⲕⲉⲉ̀ⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ',
+	'2CBFC7B9-9B49-473F-8B10-5907ABC4FE01',
+	'مَرَدٌّ آخَرُ عَلَى الاِعْتِرَافِ',
+	'3F6475BF-41FA-459E-9C95-70CE780C8CCF',
+	'Another Response to the Confession',
+	'1B3CF4E2-B701-4170-9754-DC1D01890F8D',
+	'Eine andere Erwiderung des Bekenntnisses'
+);
+
+export const sectionAnotherResponseOfTheConfession = registerNode<Basenode>({
+	id: 'EC8B19CC-7435-49F9-8984-D59025412C44',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textAnotherResponseOfTheConfession.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAPrayerForParticipationInTheEucharist = await makeMultilingualTextWithId(
+	'B449D021-5D97-48D7-87B5-50391DB01EEE',
+	'029B2B39-635C-40E9-8C3D-B3F8FB14AEF9',
+	'Εὐχὴ διὰ τὴν μετάληψιν τῆς Εὐχαριστίας',
+	'78ACF7CD-F3B9-4817-A2D0-5E4B7A2C93F8',
+	'Ⲟⲩϣⲗⲏⲗ ⲉⲑⲃⲉ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ϯⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ',
+	'48D68604-95E8-45DB-9595-540F42AC12FF',
+	'صَلاَةٌ لِلتَّنَاوُلِ مِنَ الإِفْخَارِسْتِيَّا',
+	'AB23FD94-649C-444C-88C5-FC7A145057B5',
+	'A Prayer for Participation in the Eucharist',
+	'05B3B348-7C1B-48D0-BFE8-CB20C4218BCF',
+	'Ein Gebet zur Teilnahme an der Eucharistie'
+);
+
+export const sectionAPrayerForParticipationInTheEucharist = registerNode<Basenode>({
+	id: 'C95193E6-3AF3-4A06-8691-ECD382F395EA',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textAPrayerForParticipationInTheEucharist.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textASecondPrayerForParticipationInTheEucharist = await makeMultilingualTextWithId(
+	'0AA5B2F9-C73B-4612-828B-F76029121F5E',
+	'E225162B-FD92-4A82-8B61-E8B78DAC8FBC',
+	'Δευτέρα Εὐχὴ διὰ τὴν μετάληψιν τῆς Εὐχαριστίας',
+	'00A4F17D-A0D3-4BB0-9791-F1BBB8AE4BC5',
+	'Ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ϣⲗⲏⲗ ⲉⲑⲃⲉ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ϯⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ',
+	'7E8B2E2B-46E9-451C-A80B-5D0463DD84E2',
+	'صَلاَةٌ ثَانِيَةٌ لِلتَّنَاوُلِ مِنَ الإِفْخَارِسْتِيَّا',
+	'B06A91C7-E64B-41E8-AA4C-CF9BA7D65FBA',
+	'A Second Prayer for Participation in the Eucharist',
+	'AE535AD1-2D91-4132-B13E-6266BBD0E1DD',
+	'Ein zweites Gebet zur Teilnahme an der Eucharistie'
+);
+
+export const sectionASecondPrayerForParticipationInTheEucharist = registerNode<Basenode>({
+	id: 'BADFDF06-1C6D-4E76-A6AD-17C80839F067',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textASecondPrayerForParticipationInTheEucharist.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAThirdPrayerForParticipationInTheEucharist = await makeMultilingualTextWithId(
+	'0B6E7C7B-1409-4674-8C31-BB5231DAC17C',
+	'69898F80-79F0-4870-A1C5-BB2A0599410A',
+	'Τρίτη Εὐχὴ διὰ τὴν μετάληψιν τῆς Εὐχαριστίας',
+	'A3153B10-5CD2-436B-87E6-473A3E3F0B04',
+	'Ⲡⲓⲙⲁϩϣⲟⲙⲧ ⲛ̀ϣⲗⲏⲗ ⲉⲑⲃⲉ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ϯⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ',
+	'420692CA-676E-44DF-B31F-1B9CD7F16FF7',
+	'صَلاَةٌ ثَالِثَةٌ لِلتَّنَاوُلِ مِنَ الإِفْخَارِسْتِيَّا',
+	'20FEF235-0130-4F57-95BB-4C1DF97767C1',
+	'A Third Prayer for Participation in the Eucharist',
+	'5948E1A4-F0DB-42A2-BA48-DA6742570408',
+	'Ein drittes Gebet zur Teilnahme an der Eucharistie'
+);
+
+export const sectionAThirdPrayerForParticipationInTheEucharist = registerNode<Basenode>({
+	id: '2C3AE5B3-F8A2-4545-83E1-C1A2F6133AA9',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textAThirdPrayerForParticipationInTheEucharist.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAFourthPrayerForParticipationInTheEucharist = await makeMultilingualTextWithId(
+	'A024BF71-F8C0-4DAF-AE80-4BDBA39358A0',
+	'3451E866-7BA1-4341-8871-F7B5A91507D8',
+	'Τετάρτη Εὐχὴ διὰ τὴν μετάληψιν τῆς Εὐχαριστίας',
+	'CDB11DC8-6FDA-4B6B-BFA8-7E7414EADA66',
+	'Ⲡⲓⲙⲁϩϥⲧⲟⲟⲩ ⲛ̀ϣⲗⲏⲗ ⲉⲑⲃⲉ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ϯⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ',
+	'F639FCF5-6B1F-4E74-BEA2-2B969102D7C2',
+	'صَلاَةٌ رَابِعَةٌ لِلتَّنَاوُلِ مِنَ الإِفْخَارِسْتِيَّا',
+	'0E416279-7539-420B-AD6B-576744B508E0',
+	'A Fourth Prayer for Participation in the Eucharist',
+	'A96EC154-0DF2-4978-B53E-D93647CF008C',
+	'Ein viertes Gebet zur Teilnahme an der Eucharistie'
+);
+
+export const sectionAFourthPrayerForParticipationInTheEucharist = registerNode<Basenode>({
+	id: 'F0187AF3-6B7F-42C7-A8FB-BE0C94136B7D',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textAFourthPrayerForParticipationInTheEucharist.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConclusionOfTheConfession = await makeMultilingualTextWithId(
+	'E6D048DF-CE9B-40EC-80DE-426954876C3C',
+	'88F4C64A-99F5-447D-97E7-3C338CE831BD',
+	'Ἡ Λῆξις τῆς Ὁμολογίας',
+	'7A410CF0-CC67-43E6-B4E0-DBBF086A77C5',
+	'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ',
+	'914C3789-0EC9-4615-B431-B85E943B659C',
+	'خِتَامُ الاِعْتِرَافِ',
+	'9888C5D2-3E41-4F51-BAA9-5FB73A99352F',
+	'The Conclusion of the Confession',
+	'5EB074FB-A4DB-4B8E-93D5-2EE3CC3B2FF1',
+	'Der Abschluss des Bekenntnisses'
+);
+
+export const sectionTheConclusionOfTheConfession = registerNode<Basenode>({
+	id: 'F97FEA57-539B-4A32-BF59-132BD09079A9',
+	users: [chapterTheConfession.id],
+	type: NodeType.Section,
+	value: textTheConclusionOfTheConfession.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheConfession.children = [
+	[sectionTheLordsPrayer.id],
+	[sectionThePrayerForPreservationFromSinAndTemptation.id],
+	[sectionThePrayerOfSubmission.id],
+	[sectionThePrayerOfAbsolution.id],
+	[sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id],
+	[sectionTheHolyThingsForTheHoly.id],
+	[sectionTheConfession.id],
+	[sectionAResponseOfTheConfession.id],
+	[sectionAnotherResponseOfTheConfession.id],
+	[sectionAPrayerForParticipationInTheEucharist.id],
+	[sectionASecondPrayerForParticipationInTheEucharist.id],
+	[sectionAThirdPrayerForParticipationInTheEucharist.id],
+	[sectionAFourthPrayerForParticipationInTheEucharist.id],
+	[sectionTheConclusionOfTheConfession.id]
+];
+
+export const textTheDistributionOfTheMysteries = await makeMultilingualTextWithId(
+	'C25D3795-674C-4A3B-8E65-9A5DD743611B',
+	'827FFE28-1B78-43AB-A90B-776ABBBF8F35',
+	'Ἡ Μετάδοσις τῶν Μυστηρίων',
+	'8F100ACF-9DFE-4734-A668-FE4F8F70318C',
+	'Ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲛⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ',
+	'4FE8C1EC-7926-4C82-948A-0C60422F1132',
+	'تَوْزِيعُ الْأَسْرَارِ',
+	'19E72272-250F-40AE-B1F2-2F91EDC2E3F0',
+	'The Distribution of the Mysteries',
+	'EDC66E57-12DE-4204-8117-1F60AD8AF987',
+	'Die Spendung der Mysterien'
+);
+
+export const chapterTheDistributionOfTheMysteries = registerNode<Basenode>({
+	id: '898F0FB0-EB61-4772-8EC7-784F79338D97',
+	users: [partLiturgyOfTheFaithful.id],
+	type: NodeType.Chapter,
+	value: textTheDistributionOfTheMysteries.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+partLiturgyOfTheFaithful.children = [
+	[chapterTheReconciliation.id],
+	[chapterTheAnaphora.id],
+	[chapterAgios.id],
+	[chapterTheInstitutionPrayers.id],
+	[chapterTheLitanies.id],
+	[chapterTheCommemorationOfTheSaints.id],
+	[chapterTheBreakingOfTheBread.id],
+	[chapterTheConfession.id],
+	[chapterTheDistributionOfTheMysteries.id]
+];
+
+export const textTheDistributionOfTheBody = await makeMultilingualTextWithId(
+	'92634F02-AE3D-40AE-9FA7-BD9F3D4A9B50',
+	'1D801740-D9F5-4DBB-BC73-C69C851511BB',
+	'Ἡ Μετάδοσις τοῦ Σώματος',
+	'AC42C672-A1A7-40C0-B77E-7776FF2B287F',
+	'Ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ',
+	'5F6C79C2-99F2-4E00-A416-71B2B21D8F1B',
+	'تَوْزِيعُ الْجَسَدِ',
+	'E1460465-3115-4CB4-A97C-3B7D5BBD0158',
+	'The Distribution of the Body',
+	'9D5E1EE1-734F-4C7D-A81D-5E4D2C25CC45',
+	'Die Spendung des Leibes'
+);
+
+export const sectionTheDistributionOfTheBody = registerNode<Basenode>({
+	id: '857267C4-BCC5-4030-BCA4-CCDCDBFA8B3B',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheDistributionOfTheBody.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheDistributionOfTheBlood = await makeMultilingualTextWithId(
+	'355AE522-624C-4388-8B20-CBD9BEFAF3FA',
+	'B6EF8C87-49AA-468F-B7E2-ADD046023638',
+	'Ἡ Μετάδοσις τοῦ Αἵματος',
+	'1A7EC59B-2478-40CA-8683-78BFF0B12ED3',
+	'Ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲛⲟϥ',
+	'9A177373-AC0E-4C55-BD92-759C881E39F0',
+	'تَوْزِيعُ الدَّمِ',
+	'C81BFD3E-803E-440B-8D5B-8717DBAE2C79',
+	'The Distribution of the Blood',
+	'9EEB1B9B-A1AE-4AA1-8980-B6D0075EB615',
+	'Die Spendung des Blutes'
+);
+
+export const sectionTheDistributionOfTheBlood = registerNode<Basenode>({
+	id: '4FF88B12-FD0F-4487-B0B7-B4ABD13D94B8',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheDistributionOfTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheDistributionOfTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'A4B7E960-38A1-41F0-91FB-83EB0CA5EC83',
+	'33CB8F78-1E54-439C-868A-BD00C3417B3C',
+	'Ἡ Μετάδοσις τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'8E0989A8-2C6D-4983-8D0E-5D2CB55A0A1E',
+	'Ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'70D487B7-E128-4863-BCAC-D344F04F3FB6',
+	'تَوْزِيعُ الْجَسَدِ وَالدَّمِ',
+	'FE0E2D29-7165-4DF5-AB3B-5B31183C18F9',
+	'The Distribution of the Body and the Blood',
+	'692417A3-CBA0-44B0-9F6E-EA0373D1D1EE',
+	'Die Spendung des Leibes und des Blutes'
+);
+
+export const sectionTheDistributionOfTheBodyAndTheBlood = registerNode<Basenode>({
+	id: '971F5871-BCE1-4CC9-9ECE-40B69E672CF1',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheDistributionOfTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheDistributionOfTheMysteries.children = [
+	[sectionTheDistributionOfTheBody.id],
+	[sectionTheDistributionOfTheBlood.id],
+	[sectionTheDistributionOfTheBodyAndTheBlood.id]
 ];

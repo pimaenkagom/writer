@@ -67,7 +67,9 @@ provide a text with no Greek original.
 - **Jenkim** (ϫⲉⲛⲕⲓⲙ, combining grave accent U+0300, rendered as a small
   stroke over the letter): required on (a) the native one-consonant
   grammatical morphemes ⲛ̀, ⲧ̀, ⲣ̀, ⲙ̀ when they stand before another
-  consonant with no vowel of their own (e.g. `ⲛ̀ⲧⲉ`, `ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ`), and
+  consonant with no vowel of their own (e.g. `ⲛ̀ⲧⲉ`, `ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ`), including
+  the masculine article ⲡⲓ when it contracts to ⲡ̀ before a
+  consonant-initial word (e.g. `Ⲡ̀ϭⲟⲓⲥ`, "the Lord", from ⲡⲓ + ϭⲟⲓⲥ), and
   (b) the first letter of a Greek loanword that starts with a consonant
   cluster Coptic doesn't like word-initially, e.g. `ⲡ̀ⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ`,
   `ⲡ̀ⲣⲉⲥⲃⲓⲁ`, `ϣ̀ⲗⲏⲗ`. Not needed on ordinary polysyllabic words/loanwords
