@@ -110,6 +110,10 @@ provide a text with no Greek original.
     fourth, `ⲙⲁϩϯⲟⲩ` fifth, `ⲙⲁϩⲥⲟⲟⲩ` sixth, `ⲙⲁϩϣⲁϣϥ` seventh, `ⲙⲁϩϣⲙⲏⲛ`
     eighth); "first" is the irregular/suppletive **ϣⲟⲣⲡ**, not
     ⲙⲁϩ+one.
+- **Never abbreviate words** (e.g. no nomina-sacra contractions like
+  `ⲡ̅ⲛ̅ⲁ̅` for "spirit" — spell it out in full as `ⲡⲛⲉⲩⲙⲁ`). Numbers are the
+  only exception, where the traditional numeral-letter notation (e.g.
+  `ⲣ̅ⲛ̅` for "150") is fine.
 
 ## Arabic liturgical terminology
 

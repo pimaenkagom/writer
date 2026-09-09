@@ -2,7 +2,10 @@ import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import {
+	makeMultilingualTextWithId,
+	makeMultilingualTextWithIdWithoutGreek
+} from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 
@@ -1698,7 +1701,8 @@ export const sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropoli
 		id: '1B13A9F5-100B-45BE-8B78-4AC2854D1EBE',
 		users: [chapterTheConfession.id],
 		type: NodeType.Section,
-		value: textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id,
+		value:
+			textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
@@ -1915,15 +1919,19 @@ chapterTheConfession.children = [
 	[sectionThePrayerForPreservationFromSinAndTemptation.id],
 	[sectionThePrayerOfSubmission.id],
 	[sectionThePrayerOfAbsolution.id],
-	[sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id],
+	[
+		sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id
+	],
 	[sectionTheHolyThingsForTheHoly.id],
 	[sectionTheConfession.id],
 	[sectionAResponseOfTheConfession.id],
 	[sectionAnotherResponseOfTheConfession.id],
-	[sectionAPrayerForParticipationInTheEucharist.id],
-	[sectionASecondPrayerForParticipationInTheEucharist.id],
-	[sectionAThirdPrayerForParticipationInTheEucharist.id],
-	[sectionAFourthPrayerForParticipationInTheEucharist.id],
+	[
+		sectionAPrayerForParticipationInTheEucharist.id,
+		sectionASecondPrayerForParticipationInTheEucharist.id,
+		sectionAThirdPrayerForParticipationInTheEucharist.id,
+		sectionAFourthPrayerForParticipationInTheEucharist.id
+	],
 	[sectionTheConclusionOfTheConfession.id]
 ];
 
@@ -1950,60 +1958,94 @@ export const chapterTheDistributionOfTheMysteries = registerNode<Basenode>({
 	children: []
 });
 
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id],
-	[chapterTheLitanies.id],
-	[chapterTheCommemorationOfTheSaints.id],
-	[chapterTheBreakingOfTheBread.id],
-	[chapterTheConfession.id],
-	[chapterTheDistributionOfTheMysteries.id]
-];
-
-export const textTheDistributionOfTheBody = await makeMultilingualTextWithId(
-	'92634F02-AE3D-40AE-9FA7-BD9F3D4A9B50',
-	'1D801740-D9F5-4DBB-BC73-C69C851511BB',
-	'Ἡ Μετάδοσις τοῦ Σώματος',
-	'AC42C672-A1A7-40C0-B77E-7776FF2B287F',
-	'Ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ',
-	'5F6C79C2-99F2-4E00-A416-71B2B21D8F1B',
-	'تَوْزِيعُ الْجَسَدِ',
-	'E1460465-3115-4CB4-A97C-3B7D5BBD0158',
-	'The Distribution of the Body',
-	'9D5E1EE1-734F-4C7D-A81D-5E4D2C25CC45',
-	'Die Spendung des Leibes'
+export const textAPrayerBeforeReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'61B24ADA-2424-484A-A7FC-81E5A4DAAF26',
+	'EE6DD82C-DE7E-4FD9-A059-F2D028B770B5',
+	'Εὐχὴ πρὸ τῆς μεταλήψεως τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'F0E0437A-8CCB-46EE-918D-0EF8ABCC2091',
+	'Ⲟⲩϣⲗⲏⲗ ϧⲁϫⲉⲛ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'535E56A1-E05C-4ACC-BFEF-C3DC31BD5A30',
+	'صَلاَةٌ قَبْلَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'D086FD2D-5E17-4E0A-A076-636FCA64D573',
+	'A Prayer before Receiving the Body and the Blood',
+	'CFE99ABB-2793-4943-A21F-EE712B917FE0',
+	'Ein Gebet vor dem Empfangen des Leibes und des Blutes'
 );
 
-export const sectionTheDistributionOfTheBody = registerNode<Basenode>({
-	id: '857267C4-BCC5-4030-BCA4-CCDCDBFA8B3B',
+export const sectionAPrayerBeforeReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: '63369897-513A-43C0-A551-BDFEBAD2099E',
 	users: [chapterTheDistributionOfTheMysteries.id],
 	type: NodeType.Section,
-	value: textTheDistributionOfTheBody.id,
+	value: textAPrayerBeforeReceivingTheBodyAndTheBlood.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheDistributionOfTheBlood = await makeMultilingualTextWithId(
-	'355AE522-624C-4388-8B20-CBD9BEFAF3FA',
-	'B6EF8C87-49AA-468F-B7E2-ADD046023638',
-	'Ἡ Μετάδοσις τοῦ Αἵματος',
-	'1A7EC59B-2478-40CA-8683-78BFF0B12ED3',
-	'Ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲛⲟϥ',
-	'9A177373-AC0E-4C55-BD92-759C881E39F0',
-	'تَوْزِيعُ الدَّمِ',
-	'C81BFD3E-803E-440B-8D5B-8717DBAE2C79',
-	'The Distribution of the Blood',
-	'9EEB1B9B-A1AE-4AA1-8980-B6D0075EB615',
-	'Die Spendung des Blutes'
+export const textASecondPrayerBeforeReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'35437039-E51D-46AB-BFBD-7CFF1591E0E3',
+	'F1400FCE-A19A-4262-AC1D-F777BEED1B8B',
+	'Δευτέρα Εὐχὴ πρὸ τῆς μεταλήψεως τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'15C8A97D-7404-412A-BC29-A9304FCFC19F',
+	'Ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ϣⲗⲏⲗ ϧⲁϫⲉⲛ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'D721133F-3751-4EBD-9E41-7246733EBFF6',
+	'صَلاَةٌ ثَانِيَةٌ قَبْلَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'7B7D6C00-2521-4071-B537-EA7FDD5894C1',
+	'A Second Prayer before Receiving the Body and the Blood',
+	'8E5352AC-6FE7-4A22-86F0-6B39ECFD1B85',
+	'Ein zweites Gebet vor dem Empfangen des Leibes und des Blutes'
 );
 
-export const sectionTheDistributionOfTheBlood = registerNode<Basenode>({
-	id: '4FF88B12-FD0F-4487-B0B7-B4ABD13D94B8',
+export const sectionASecondPrayerBeforeReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: 'CFA49F5A-F3DD-45E4-B6B9-F88799C48B9D',
 	users: [chapterTheDistributionOfTheMysteries.id],
 	type: NodeType.Section,
-	value: textTheDistributionOfTheBlood.id,
+	value: textASecondPrayerBeforeReceivingTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAThirdPrayerBeforeReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'AA89C4F2-6B73-49E0-9CB4-0F5AE26FFD90',
+	'A3979C88-5585-4AE6-8866-7C5C5EEBC7F6',
+	'Τρίτη Εὐχὴ πρὸ τῆς μεταλήψεως τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'64F72047-7C3C-4B1A-ACF3-DCD22D0FB0C0',
+	'Ⲡⲓⲙⲁϩϣⲟⲙⲧ ⲛ̀ϣⲗⲏⲗ ϧⲁϫⲉⲛ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'1EB2C14D-37F8-4F76-B592-200B2A3290A7',
+	'صَلاَةٌ ثَالِثَةٌ قَبْلَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'C3CA2460-9A86-4BE5-B8CF-F9AEBD33CC99',
+	'A Third Prayer before Receiving the Body and the Blood',
+	'643DA9E8-F5AE-4D06-9357-49AE2584354E',
+	'Ein drittes Gebet vor dem Empfangen des Leibes und des Blutes'
+);
+
+export const sectionAThirdPrayerBeforeReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: '7C76DD29-8DB4-4391-86D7-F94004CFA710',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textAThirdPrayerBeforeReceivingTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAFourthPrayerBeforeReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'350FC79C-84B9-4D43-BC98-AC4B0E890B1A',
+	'210CF6D2-9160-45B4-B133-461692C224A4',
+	'Τετάρτη Εὐχὴ πρὸ τῆς μεταλήψεως τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'FAE0BC84-FE9A-4F75-9587-37FF78EF4670',
+	'Ⲡⲓⲙⲁϩϥⲧⲟⲟⲩ ⲛ̀ϣⲗⲏⲗ ϧⲁϫⲉⲛ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'B9869BED-E55B-4697-9423-C5B8D4ADE332',
+	'صَلاَةٌ رَابِعَةٌ قَبْلَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'2EC9D656-4889-486C-87B8-C98F46EAFB57',
+	'A Fourth Prayer before Receiving the Body and the Blood',
+	'98938DEB-A10D-4B0B-9EF4-2CF10D1FFF72',
+	'Ein viertes Gebet vor dem Empfangen des Leibes und des Blutes'
+);
+
+export const sectionAFourthPrayerBeforeReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: '246E7751-B9E2-4E7F-AB73-FFFF9259D8FC',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textAFourthPrayerBeforeReceivingTheBodyAndTheBlood.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -2031,8 +2073,311 @@ export const sectionTheDistributionOfTheBodyAndTheBlood = registerNode<Basenode>
 	children: []
 });
 
+export const textAPrayerAfterReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'5CE9AD92-A80F-4CB1-91B0-A3405DDBB13D',
+	'46D4810D-151D-4D11-8201-A92462FEA46E',
+	'Εὐχὴ μετὰ τὴν μετάληψιν τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'B6BA2EDC-9AAF-4F5B-B7D8-BD5B91372865',
+	'Ⲟⲩϣⲗⲏⲗ ⲙⲉⲛⲉⲛⲥⲁ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'1F5386AC-2C93-463B-A69F-38765CA3C479',
+	'صَلاَةٌ بَعْدَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'AC81217A-7B6D-484B-8BC1-82A30F79C23F',
+	'A Prayer after Receiving the Body and the Blood',
+	'1B5A414A-474B-405A-82B8-B7CE214F1338',
+	'Ein Gebet nach dem Empfangen des Leibes und des Blutes'
+);
+
+export const sectionAPrayerAfterReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: '464CA3B3-946B-4CDC-BF76-84957822C9C2',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textAPrayerAfterReceivingTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textASecondPrayerAfterReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'D32F01D3-18F4-42B2-BA3E-5E22AF8147C2',
+	'3BA0F321-69E0-4FD5-8AE1-816710822D02',
+	'Δευτέρα Εὐχὴ μετὰ τὴν μετάληψιν τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'6B1E1229-B7D7-41AD-9356-A7E70C6C1C93',
+	'Ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ϣⲗⲏⲗ ⲙⲉⲛⲉⲛⲥⲁ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'93658BD8-60DA-42B1-BA65-AD9FCD14F094',
+	'صَلاَةٌ ثَانِيَةٌ بَعْدَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'7F8B8298-B668-4320-8A51-C07D87EE7F35',
+	'A Second Prayer after Receiving the Body and the Blood',
+	'568D9BD4-132D-4DD6-A742-B5E16CCA39B1',
+	'Ein zweites Gebet nach dem Empfangen des Leibes und des Blutes'
+);
+
+export const sectionASecondPrayerAfterReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: '0B2DF8FC-83AE-4317-A38C-E5553A1BC07C',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textASecondPrayerAfterReceivingTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAThirdPrayerAfterReceivingTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'5B6FBB43-055B-4CE2-ADFE-9CF8C3008480',
+	'75F6BA0D-D468-468B-A09B-516D6C074920',
+	'Τρίτη Εὐχὴ μετὰ τὴν μετάληψιν τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'068A6B07-00EA-4BD5-899B-5F13F9217E19',
+	'Ⲡⲓⲙⲁϩϣⲟⲙⲧ ⲛ̀ϣⲗⲏⲗ ⲙⲉⲛⲉⲛⲥⲁ ⲡⲓϭⲓ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'2521302F-4484-4CF9-880F-27EBD80C8891',
+	'صَلاَةٌ ثَالِثَةٌ بَعْدَ تَنَاوُلِ الْجَسَدِ وَالدَّمِ',
+	'9353A373-AC64-49B6-86A9-233741B9E6A6',
+	'A Third Prayer after Receiving the Body and the Blood',
+	'94A11CDD-F050-449D-8C47-FABA07640D71',
+	'Ein drittes Gebet nach dem Empfangen des Leibes und des Blutes'
+);
+
+export const sectionAThirdPrayerAfterReceivingTheBodyAndTheBlood = registerNode<Basenode>({
+	id: 'D5CE5D95-42E4-4380-BDE1-151C21B441DE',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textAThirdPrayerAfterReceivingTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheCleaningOfTheHolyVessels = await makeMultilingualTextWithId(
+	'FF9255D1-B527-4FE8-BC40-96900D7707E6',
+	'72C0CF31-88E0-44C7-A634-87572D53462A',
+	'Ἡ Ἀπόπλυσις τῶν Ἁγίων Σκευῶν',
+	'45730A60-C65F-416C-8B1E-56B227382AC1',
+	'Ⲡⲓⲧⲟⲩⲃⲟ ⲛ̀ⲧⲉ ⲛⲓⲥⲕⲉⲩⲟⲥ ⲉⲑⲟⲩⲁⲃ',
+	'288E166E-20F8-41EB-9447-5123C3D2314B',
+	'تَنْظِيفُ الآنِيَةِ الْمُقَدَّسَةِ',
+	'DC119EEC-39A4-440A-B95D-994201700130',
+	'The Cleaning of the Holy Vessels',
+	'1F05E1F1-CB11-4DEE-A689-242D924D3F15',
+	'Die Reinigung der heiligen Gefäße'
+);
+
+export const sectionTheCleaningOfTheHolyVessels = registerNode<Basenode>({
+	id: 'D670CBA1-5FE3-4257-8D16-802738BC7991',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheCleaningOfTheHolyVessels.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePsalm150 = await makeMultilingualTextWithId(
+	'2FF519C4-DE64-4051-A362-CE195DC9E06D',
+	'0381F9E3-BE60-47FE-85E2-0AA5B10F1948',
+	'Ὁ Ψαλμὸς ΡΝʹ',
+	'7867BB5C-352D-4C69-BA3D-35B566DDB298',
+	'Ⲡⲓⲯⲁⲗⲙⲟⲥ ⲣ̅ⲛ̅',
+	'C981DD22-7EEA-4288-8AF0-30C07D323E43',
+	'الْمَزْمُورُ ١٥٠',
+	'4EB6F466-BC53-4D21-A7DC-DBB5A9F5A536',
+	'The Psalm 150',
+	'8B02DE57-813C-48C1-8829-86EF4A78272D',
+	'Der Psalm 150'
+);
+
+export const sectionThePsalm150 = registerNode<Basenode>({
+	id: '94144328-B7A6-41DB-8C51-421A1B83228D',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textThePsalm150.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnTrulyBlessed = await makeMultilingualTextWithIdWithoutGreek(
+	'3C363325-291A-406C-B398-D020C8946AA3',
+	'17D8B58B-28CF-4996-8682-05DD135C0683',
+	'Ⲡⲓϫⲱ Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
+	'1FA3DDC8-BBE8-49C2-81CF-5AC82EFC52DD',
+	'اللَّحْنُ مُبَارَكٌ أَنْتَ بِالْحَقِيقَةِ',
+	'828F2C07-E798-458A-B60C-A47F3170E947',
+	'The Hymn Blessed are You indeed',
+	'9E819EBC-1B6F-4B62-AAAB-8F3F8BEEDCD4',
+	'Das Lied Wahrlich gesegnet'
+);
+
+export const sectionTheHymnTrulyBlessed = registerNode<Basenode>({
+	id: '77B05D26-AB37-4291-8B3F-9E871824594E',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheHymnTrulyBlessed.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnTheBreadOfLife = await makeMultilingualTextWithIdWithoutGreek(
+	'428736B5-4162-40FD-8287-67BC0339E785',
+	'C54FA541-11F4-4F1F-B151-F09186820695',
+	'Ⲡⲓϫⲱ Ⲡⲓⲱⲓⲕ ⲛ̀ⲧⲉ ⲡ̀ⲱⲛϧ',
+	'8016C022-A954-49B7-9CD7-6F04341DFBD7',
+	'اللَّحْنُ خُبْزُ الْحَيَاةِ',
+	'89AC8BDB-03E8-4869-B0D9-C8FAF12B69E7',
+	'The Hymn "The Bread of Life"',
+	'033182C8-B46F-4C92-87C3-73A27658BC0F',
+	'Das Lied Das Brot des Lebens'
+);
+
+export const sectionTheHymnTheBreadOfLife = registerNode<Basenode>({
+	id: '8A764415-15B5-4609-ACEC-3C64C68B8A4D',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheHymnTheBreadOfLife.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit =
+	await makeMultilingualTextWithIdWithoutGreek(
+		'B0CC91FA-3DCB-4415-A95D-BFEFC19C6CDE',
+		'9521D4A5-B510-4BD2-AD6E-7481A087DF3E',
+		'Ⲡⲓϫⲱ Ϥ̀ⲥ̀ⲙⲁⲣⲱⲟⲩⲧ ⲛ̀ϫⲉ Ⲫ̀ⲓⲱⲧ ⲛⲉⲙ Ⲡ̀ϣⲏⲣⲓ ⲛⲉⲙ Ⲡⲓⲡ̀ⲛⲉⲩⲙⲁ ⲉⲑⲟⲩⲁⲃ',
+		'1775D468-F978-478B-8B8C-4F37DAD2DC9F',
+		'اللَّحْنُ مُبَارَكٌ الآبُ وَالاِبْنُ وَالرُّوحُ الْقُدُسُ',
+		'419319F5-615C-4357-989E-650BF5A94199',
+		'The Hymn "Blessed Be the Father and the Son and the Holy Spirit"',
+		'827370DB-CC97-46E4-B885-3A82185FD9A8',
+		'Das Lied Gesegnet sei der Vater und der Sohn und der Heilige Geist'
+	);
+
+export const sectionTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit = registerNode<Basenode>({
+	id: '796B59A5-B8F5-4AA1-B66B-EB485671C093',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnMyStrengthAndMyPraise = await makeMultilingualTextWithIdWithoutGreek(
+	'A6146CA4-8CEF-49CE-A565-9046AC410FDB',
+	'AA95DCFE-1BF4-404E-A8A7-6E0070A50635',
+	'Ⲡⲓϫⲱ Ⲧⲁϫⲟⲙ ⲛⲉⲙ ⲡⲁⲥ̀ⲙⲟⲩ',
+	'49DCA9F1-0707-45FF-B0E0-68D58A265D0F',
+	'التَّرْتِيلَةُ قُوَّتِي وَتَسْبِحَتِي',
+	'08269A0C-3F06-45CD-A55E-8DCB1B6E4F46',
+	'The Hymn "My Strength and My Praise"',
+	'2D8E091C-77C5-4281-9CB8-D35DEA73D8F8',
+	'Das Lied Meine Stärke und mein Lied'
+);
+
+export const sectionTheHymnMyStrengthAndMyPraise = registerNode<Basenode>({
+	id: '6A52BBC5-6E58-429A-83ED-3BA4F754529D',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheHymnMyStrengthAndMyPraise.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBloodOnMaundyThursday =
+	await makeMultilingualTextWithId(
+		'94EF2E7A-0304-4D8E-BDE1-7FFB10A9D714',
+		'F3689E98-AAE8-4079-AC3E-E058F0715073',
+		'Ἡ Εὐχὴ τῆς Εὐχαριστίας μετὰ τὴν Μετάδοσιν τοῦ Σώματος καὶ τοῦ Αἵματος ἐν τῇ Μεγάλῃ Πέμπτῃ',
+		'798427AE-E18C-455B-A53E-9BDF66987D2F',
+		'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡⲓϣⲉⲡϩⲙⲟⲧ ⲙⲉⲛⲉⲛⲥⲁ ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ ϧⲉⲛ ⲡⲓⲡⲉⲙⲯⲓ ⲛ̀ⲧⲉ ϯⲇⲓⲁⲑⲏⲕⲏ',
+		'980D476B-581A-4603-80D7-C0E988AC0BD7',
+		'صَلاَةُ الشُّكْرِ بَعْدَ تَوْزِيعِ الْجَسَدِ وَالدَّمِ فِي خَمِيسِ الْعَهْدِ',
+		'FF4BC851-7BF3-49E7-A3C9-F3C843B08279',
+		'The Prayer of Thanksgiving after the Distribution of the Body and the Blood on Maundy Thursday',
+		'CCED7D88-81F0-45E5-92A8-E5D5D28D84A3',
+		'Das Gebet der Danksagung nach der Spendung des Leibes und des Blutes an Gründonnerstag'
+	);
+
+export const sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBloodOnMaundyThursday =
+	registerNode<Basenode>({
+		id: '216F9A0C-2562-413B-A4A0-F9D5F8F2345F',
+		users: [chapterTheDistributionOfTheMysteries.id],
+		type: NodeType.Section,
+		value: textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBloodOnMaundyThursday.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood = await makeMultilingualTextWithId(
+	'734129D7-B2E3-4C99-AB4A-748E4A385B18',
+	'85D32047-EFCE-4464-A9EA-32D863D43197',
+	'Ἡ Εὐχὴ τῆς Εὐχαριστίας μετὰ τὴν Μετάδοσιν τοῦ Σώματος καὶ τοῦ Αἵματος',
+	'F0B0E947-9D05-4BEF-A80B-E6030BEE954D',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡⲓϣⲉⲡϩⲙⲟⲧ ⲙⲉⲛⲉⲛⲥⲁ ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+	'707ABA69-0EAC-44FF-922A-8D5377904BA6',
+	'صَلاَةُ الشُّكْرِ بَعْدَ تَوْزِيعِ الْجَسَدِ وَالدَّمِ',
+	'6957A01B-81AE-4942-BAAB-D6BEB8BB7BFF',
+	'The Prayer of Thanksgiving after the Distribution of the Body and the Blood',
+	'991F7F19-0CD3-4CCA-95D1-1C6858D74E70',
+	'Das Gebet der Danksagung nach der Spendung des Leibes und des Blutes'
+);
+
+export const sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood = registerNode<Basenode>({
+	id: 'C2808149-8C37-4A97-A1C1-1446B728C56B',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands =
+	await makeMultilingualTextWithId(
+		'44A144CA-CBAF-4F09-ABF2-DB9A7E5412D9',
+		'F5A2C33E-D490-4157-91F7-F1D17388FF65',
+		'Ἡ Εὐχὴ τῆς Ὑποταγῆς μετὰ τὴν Μετάδοσιν τοῦ Σώματος καὶ τοῦ Αἵματος καὶ πρὸ τῆς Χειροθεσίας',
+		'CE99BFFF-8A32-4C03-8235-6BC66744C823',
+		'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓϩⲱⲟⲩⲧ ⲙⲉⲛⲉⲛⲥⲁ ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ ⲟⲩⲟϩ ϧⲁϫⲉⲛ ϯⲭⲓⲣⲟⲑⲉⲥⲓⲁ',
+		'AB1AB60A-C2A6-400F-B136-05B41B73ABBB',
+		'صَلاَةُ الْخُضُوعِ بَعْدَ تَوْزِيعِ الْجَسَدِ وَالدَّمِ وَقَبْلَ وَضْعِ الأَيَادِي',
+		'729C3DE5-8FFB-469D-A924-AEA5A9710F16',
+		'The Prayer of Submission after the Distribution of the Body and the Blood and before the Laying on of Hands',
+		'F75CD162-DFB1-409B-8E53-9FDE6B09E429',
+		'Das Gebet der Unterwerfung nach der Spendung des Leibes und des Blutes und vor der Handauflegung'
+	);
+
+export const sectionThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands =
+	registerNode<Basenode>({
+		id: 'EEB03F5B-1217-4C8D-B88E-C5BAAB2B4E99',
+		users: [chapterTheDistributionOfTheMysteries.id],
+		type: NodeType.Section,
+		value: textThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
 chapterTheDistributionOfTheMysteries.children = [
-	[sectionTheDistributionOfTheBody.id],
-	[sectionTheDistributionOfTheBlood.id],
-	[sectionTheDistributionOfTheBodyAndTheBlood.id]
+	[
+		sectionAPrayerBeforeReceivingTheBodyAndTheBlood.id,
+		sectionASecondPrayerBeforeReceivingTheBodyAndTheBlood.id,
+		sectionAThirdPrayerBeforeReceivingTheBodyAndTheBlood.id,
+		sectionAFourthPrayerBeforeReceivingTheBodyAndTheBlood.id
+	],
+	[sectionTheDistributionOfTheBodyAndTheBlood.id],
+	[
+		sectionAPrayerAfterReceivingTheBodyAndTheBlood.id,
+		sectionASecondPrayerAfterReceivingTheBodyAndTheBlood.id,
+		sectionAThirdPrayerAfterReceivingTheBodyAndTheBlood.id
+	],
+	[sectionTheCleaningOfTheHolyVessels.id],
+	[sectionThePsalm150.id],
+	[sectionTheHymnTrulyBlessed.id],
+	[sectionTheHymnTheBreadOfLife.id],
+	[sectionTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit.id],
+	[sectionTheHymnMyStrengthAndMyPraise.id],
+	[sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBloodOnMaundyThursday.id],
+	[sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood.id],
+	[sectionThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands.id]
+];
+
+partLiturgyOfTheFaithful.children = [
+	[chapterTheReconciliation.id],
+	[chapterTheAnaphora.id],
+	[chapterAgios.id],
+	[chapterTheInstitutionPrayers.id],
+	[chapterTheLitanies.id],
+	[chapterTheCommemorationOfTheSaints.id],
+	[chapterTheBreakingOfTheBread.id],
+	[chapterTheConfession.id],
+	[chapterTheDistributionOfTheMysteries.id]
 ];
