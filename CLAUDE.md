@@ -127,6 +127,17 @@ provide a text with no Greek original.
   preference (an explicit override — idiomatic Coptic-Arabic convention
   more commonly uses **عن**, "concerning/about", e.g. real titles like
   «أوشية عن الراقدين»).
+- Dates in Arabic titles use **numerals** (e.g. `١١ بُؤُونَةَ`), not spelled-
+  out ordinal words (e.g. not «الحادي عشر مِن بؤونة»).
+- **قانون** (Qanun) — the correct Coptic-Arabic liturgical term for a
+  concluding/canon-type hymn (e.g. "قانون الختام", the concluding hymn for
+  the ordinary-days season), from Greek κανών. Use this rather than the
+  generic لحن ("melody/hymn") or ترتيلة ("chant") for this specific kind of
+  hymn.
+- **قربان** (Qorban) — the standard Coptic-Arabic term for the blessed/
+  offered bread (the eulogia distributed after the Liturgy, as well as the
+  Eucharistic bread generally). Prefer this over a literal الخبز المبارك
+  ("the blessed bread").
 - متنيح ("departed/at rest", from نياح "repose") is the standard Coptic-
   Arabic euphemism for a deceased cleric.
 - خميس العهد / سبت النور are the established Coptic-Arabic names for Maundy

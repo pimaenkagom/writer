@@ -1118,10 +1118,12 @@ chapterTheLitanies.children = [
 	[sectionThePrayerForTheServants.id],
 	[sectionThePrayerForTheMercyUponUsAll.id],
 	[sectionThePrayerForThePlace.id],
-	[sectionThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi.id],
-	[sectionThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi.id],
-	[sectionThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni.id],
-	[sectionTheYearRoundPrayerForNature.id]
+	[
+		sectionThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
+		sectionThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
+		sectionThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
+		sectionTheYearRoundPrayerForNature.id
+	]
 ];
 
 export const textThePrayerForTheOfferings = await makeMultilingualTextWithId(
@@ -2298,28 +2300,30 @@ export const sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBl
 		children: []
 	});
 
-export const textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood = await makeMultilingualTextWithId(
-	'734129D7-B2E3-4C99-AB4A-748E4A385B18',
-	'85D32047-EFCE-4464-A9EA-32D863D43197',
-	'Ἡ Εὐχὴ τῆς Εὐχαριστίας μετὰ τὴν Μετάδοσιν τοῦ Σώματος καὶ τοῦ Αἵματος',
-	'F0B0E947-9D05-4BEF-A80B-E6030BEE954D',
-	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡⲓϣⲉⲡϩⲙⲟⲧ ⲙⲉⲛⲉⲛⲥⲁ ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
-	'707ABA69-0EAC-44FF-922A-8D5377904BA6',
-	'صَلاَةُ الشُّكْرِ بَعْدَ تَوْزِيعِ الْجَسَدِ وَالدَّمِ',
-	'6957A01B-81AE-4942-BAAB-D6BEB8BB7BFF',
-	'The Prayer of Thanksgiving after the Distribution of the Body and the Blood',
-	'991F7F19-0CD3-4CCA-95D1-1C6858D74E70',
-	'Das Gebet der Danksagung nach der Spendung des Leibes und des Blutes'
-);
+export const textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood =
+	await makeMultilingualTextWithId(
+		'734129D7-B2E3-4C99-AB4A-748E4A385B18',
+		'85D32047-EFCE-4464-A9EA-32D863D43197',
+		'Ἡ Εὐχὴ τῆς Εὐχαριστίας μετὰ τὴν Μετάδοσιν τοῦ Σώματος καὶ τοῦ Αἵματος',
+		'F0B0E947-9D05-4BEF-A80B-E6030BEE954D',
+		'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡⲓϣⲉⲡϩⲙⲟⲧ ⲙⲉⲛⲉⲛⲥⲁ ϯⲙⲉⲧⲁⲇⲟⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲙⲁ ⲛⲉⲙ ⲡⲓⲥⲛⲟϥ',
+		'707ABA69-0EAC-44FF-922A-8D5377904BA6',
+		'صَلاَةُ الشُّكْرِ بَعْدَ تَوْزِيعِ الْجَسَدِ وَالدَّمِ',
+		'6957A01B-81AE-4942-BAAB-D6BEB8BB7BFF',
+		'The Prayer of Thanksgiving after the Distribution of the Body and the Blood',
+		'991F7F19-0CD3-4CCA-95D1-1C6858D74E70',
+		'Das Gebet der Danksagung nach der Spendung des Leibes und des Blutes'
+	);
 
-export const sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood = registerNode<Basenode>({
-	id: 'C2808149-8C37-4A97-A1C1-1446B728C56B',
-	users: [chapterTheDistributionOfTheMysteries.id],
-	type: NodeType.Section,
-	value: textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
+export const sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood =
+	registerNode<Basenode>({
+		id: 'C2808149-8C37-4A97-A1C1-1446B728C56B',
+		users: [chapterTheDistributionOfTheMysteries.id],
+		type: NodeType.Section,
+		value: textThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
 
 export const textThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands =
 	await makeMultilingualTextWithId(
@@ -2341,10 +2345,248 @@ export const sectionThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloo
 		id: 'EEB03F5B-1217-4C8D-B88E-C5BAAB2B4E99',
 		users: [chapterTheDistributionOfTheMysteries.id],
 		type: NodeType.Section,
-		value: textThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands.id,
+		value:
+			textThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
+
+export const textTheDismissal = await makeMultilingualTextWithId(
+	'B5FFF6C4-1E8B-43D6-BCE7-872E2BAF4C65',
+	'694F0B2E-9185-49F4-B377-87AA56D1FD68',
+	'Ἡ Ἀπόλυσις',
+	'D2958190-9CA6-460F-8444-8E4F110EC833',
+	'Ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ',
+	'69B7F093-9FE0-4184-B1CD-AB79B7B551FF',
+	'الْإِطْلاَقُ',
+	'42551D81-3086-4DE7-B688-BC74EF9D5C5E',
+	'The Dismissal',
+	'586CE7B9-8C28-4FD6-ABEA-43120210CF59',
+	'Die Entlassung'
+);
+
+export const sectionTheDismissal = registerNode<Basenode>({
+	id: '56968D95-8209-42C2-A299-1EADFF8B5C93',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheDismissal.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConcludingHymnForTheOrdinaryDaysFromThe11thOfPaoniToThe9thOfPaopi =
+	await makeMultilingualTextWithId(
+		'6FE9121C-1B50-4AB1-99B3-D636305885CF',
+		'D897F573-9796-4C04-887A-35C75354C06C',
+		'Ὁ Ὕμνος τῆς Λήξεως διὰ τὰς κοινὰς ἡμέρας ἀπὸ ια΄ Παωνὶ ἕως θ΄ Παωπί',
+		'D704864C-52B5-478E-9BF0-2D1BAC11156C',
+		'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲓⲥϫⲉⲛ ⲡⲓⲓ̅ⲁ̅ ⲙ̀Ⲡⲁⲱⲛⲓ ϣⲁ ⲡⲓⲑ̅ ⲙ̀Ⲡⲁⲟⲡⲓ',
+		'47AF9723-0A18-4B62-90F7-FED96335E485',
+		'قَانُونُ الْخِتَامِ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ ١١ بُؤُونَةَ إِلَى ٩ بَابَه',
+		'45FB5C94-1E92-4854-AE98-F2F2AB3FFA05',
+		'The Concluding Hymn for the Ordinary Days from the 11th of Paoni to the 9th of Paopi',
+		'C5B9DBCB-C72F-4E3D-B149-94C44461F8AC',
+		'Das Lied zum Abschluss an gewöhnlichen Tagen vom 11. Paoni bis zum 9. Paopi'
+	);
+
+export const sectionTheConcludingHymnForTheOrdinaryDaysFromThe11thOfPaoniToThe9thOfPaopi =
+	registerNode<Basenode>({
+		id: 'F5ECFC4C-4C94-4983-B477-16364085154B',
+		users: [chapterTheDistributionOfTheMysteries.id],
+		type: NodeType.Section,
+		value: textTheConcludingHymnForTheOrdinaryDaysFromThe11thOfPaoniToThe9thOfPaopi.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheConcludingHymnForTheOrdinaryDaysFromThe10thOfPaopiToThe10thOfTobi =
+	await makeMultilingualTextWithId(
+		'B1792B1A-2225-4F92-AB51-3BAECDA964C3',
+		'FA24E670-DCBC-4C8B-9936-782B3D0B925E',
+		'Ὁ Ὕμνος τῆς Λήξεως διὰ τὰς κοινὰς ἡμέρας ἀπὸ ι΄ Παωπὶ ἕως ι΄ Τωβί',
+		'CE64CDB5-88CD-42B5-B63C-8A40F0132736',
+		'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲓⲥϫⲉⲛ ⲡⲓⲓ̅ ⲙ̀Ⲡⲁⲟⲡⲓ ϣⲁ ⲡⲓⲓ̅ ⲙ̀Ⲧⲱⲃⲓ',
+		'1E9209A5-3FA6-4648-A31F-7811A6ACE8B2',
+		'قَانُونُ الْخِتَامِ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ ١٠ بَابَه إِلَى ١٠ طُوبَة',
+		'3A05EDEA-0B3A-4261-BC2B-4B228D6616C9',
+		'The Concluding Hymn for the Ordinary Days from the 10th of Paopi to the 10th of Tobi',
+		'C987B302-A1BE-400D-9D19-8E3B7F946096',
+		'Das Lied zum Abschluss an gewöhnlichen Tagen vom 10. Paopi bis zum 10. Tobi'
+	);
+
+export const sectionTheConcludingHymnForTheOrdinaryDaysFromThe10thOfPaopiToThe10thOfTobi =
+	registerNode<Basenode>({
+		id: '6E30EC44-4DD1-4281-886C-D45B98A41A0A',
+		users: [chapterTheDistributionOfTheMysteries.id],
+		type: NodeType.Section,
+		value: textTheConcludingHymnForTheOrdinaryDaysFromThe10thOfPaopiToThe10thOfTobi.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheConcludingHymnForTheOrdinaryDaysFromThe11thOfTobiToThe10thOfPaoni =
+	await makeMultilingualTextWithId(
+		'333D5B7C-371A-4B9B-B756-076DAD6655DA',
+		'F97EC60F-056B-42FD-B6B3-9FC50933FF95',
+		'Ὁ Ὕμνος τῆς Λήξεως διὰ τὰς κοινὰς ἡμέρας ἀπὸ ια΄ Τωβὶ ἕως ι΄ Παωνί',
+		'8BB4A798-3C22-45DA-AD82-EFA0DD423CEB',
+		'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲓⲥϫⲉⲛ ⲡⲓⲓ̅ⲁ̅ ⲙ̀Ⲧⲱⲃⲓ ϣⲁ ⲡⲓⲓ̅ ⲙ̀Ⲡⲁⲱⲛⲓ',
+		'27BFDF62-3FD0-40F5-9C9B-CD3324185A13',
+		'قَانُونُ الْخِتَامِ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ ١١ طُوبَة إِلَى ١٠ بُؤُونَةَ',
+		'22E54F02-4E72-48C6-9673-7211390E4F7A',
+		'The Concluding Hymn for the Ordinary Days from the 11th of Tobi to the 10th of Paoni',
+		'60A16D8A-957D-4492-B222-023A642AA4B6',
+		'Das Lied zum Abschluss an gewöhnlichen Tagen vom 11. Tobi bis zum 10. Paoni'
+	);
+
+export const sectionTheConcludingHymnForTheOrdinaryDaysFromThe11thOfTobiToThe10thOfPaoni =
+	registerNode<Basenode>({
+		id: '8D02380B-EC17-4464-A241-E7D4DA8CEB46',
+		users: [chapterTheDistributionOfTheMysteries.id],
+		type: NodeType.Section,
+		value: textTheConcludingHymnForTheOrdinaryDaysFromThe11thOfTobiToThe10thOfPaoni.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheConcludingHymnForTheOrdinaryDaysOfTheWholeYear =
+	await makeMultilingualTextWithId(
+		'9F4565C7-7DBC-40A7-819D-47BBF7ADA6EF',
+		'4206F9DA-2528-416B-9242-0CF202366DE7',
+		'Ὁ Ὕμνος τῆς Λήξεως διὰ τὰς κοινὰς ἡμέρας τοῦ ὅλου ἐνιαυτοῦ',
+		'BDF16016-2D6E-4CC7-A436-F11FE3877534',
+		'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲛ̀ⲧⲉ ϯⲣⲟⲙⲡⲓ ⲧⲏⲣⲥ',
+		'BD1DE8AC-5DC0-4446-AAE9-45A7606ECCCE',
+		'قَانُونُ الْخِتَامِ لِلْأَيَّامِ السَّنَوِيَّةِ طَوَالَ السَّنَةِ',
+		'9C3811B8-92D9-46FE-8D81-D6153EE3F744',
+		'The Concluding Hymn for the Ordinary Days of the Whole Year',
+		'9ECE75B1-A955-4649-AC3F-FFE751C3CB98',
+		'Das Lied zum Abschluss an gewöhnlichen Tagen des ganzen Jahres'
+	);
+
+export const sectionTheConcludingHymnForTheOrdinaryDaysOfTheWholeYear = registerNode<Basenode>({
+	id: 'EB12A861-C693-4D9D-8F01-0DCC5895ED3A',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheConcludingHymnForTheOrdinaryDaysOfTheWholeYear.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheLordsPrayerWithTheConcludingDoxology = await makeMultilingualTextWithId(
+	'32034035-672E-4360-812C-443C3C839AA9',
+	'49B78EFE-E496-4EF7-8413-5E3BF25C4B67',
+	'Ἡ Κυριακὴ Προσευχὴ μετὰ τῆς Δοξολογίας',
+	'574810BE-10C4-43BA-9680-B062D21369F7',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡ̀ϭⲟⲓⲥ ⲛⲉⲙ ϯⲇⲟⲝⲟⲗⲟⲅⲓⲁ',
+	'27B38BE0-6C74-47B1-BED1-E45847984C8F',
+	'صَلاَةُ الرَّبِّ مَعَ التَّمْجِيدِ الْخِتَامِيِّ',
+	'1F24FCDE-773F-4C20-BE70-4A43513EE6A0',
+	"The Lord's Prayer with the Concluding Doxology",
+	'6619A61B-1201-40DA-962C-151FD043BE61',
+	'Das Gebet des Herrn mit Schlusslob'
+);
+
+export const sectionTheLordsPrayerWithTheConcludingDoxology = registerNode<Basenode>({
+	id: '7C2EF024-4337-47BE-B09B-AFD6B0C21AB0',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheLordsPrayerWithTheConcludingDoxology.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textABlessingAtParting = await makeMultilingualTextWithId(
+	'A232FAF8-69BA-460E-8559-07F85718DA48',
+	'FA6302B6-371F-4DD8-B877-5D113DE9E7E9',
+	'Εὐλογία εἰς Ἀποχαιρετισμόν',
+	'FC55DCD5-2810-4607-A4D3-E4CE08BE8D6A',
+	'Ⲟⲩⲥⲙⲟⲩ ⲉⲑⲃⲉ ⲡⲓϫⲓⲛϣⲉ',
+	'D159B6A5-4AB0-49F8-B581-7EF83294E373',
+	'بَرَكَةٌ لِلْوَدَاعِ',
+	'FB3AD0A6-0216-452F-99AF-0D3DE3CE3E99',
+	'A Blessing at Parting',
+	'F0056F71-E002-494B-AF1F-02679F7DC719',
+	'Ein Segen zum Abschied'
+);
+
+export const sectionABlessingAtParting = registerNode<Basenode>({
+	id: '616BF531-BCB9-4765-ADEE-A93431687461',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textABlessingAtParting.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAnotherBlessingAtParting = await makeMultilingualTextWithId(
+	'631E9A9B-E63E-46A9-9510-4289C66E752A',
+	'DC776E3C-D1B2-447B-9B60-491FD3F69469',
+	'Ἄλλη Εὐλογία εἰς Ἀποχαιρετισμόν',
+	'D05C216E-5123-4F04-93A3-5762A6A32E92',
+	'Ⲕⲉⲥⲙⲟⲩ ⲉⲑⲃⲉ ⲡⲓϫⲓⲛϣⲉ',
+	'DED00D48-4C44-48E9-A059-560867992613',
+	'بَرَكَةٌ أُخْرَى لِلْوَدَاعِ',
+	'C8067EDD-8AB9-4BBB-B924-9F5A89E54BD7',
+	'Another Blessing at Parting',
+	'4E99A279-38CF-4038-AC5A-AF7A236B0487',
+	'Ein weiterer Segen zum Abschied'
+);
+
+export const sectionAnotherBlessingAtParting = registerNode<Basenode>({
+	id: 'DBC113DF-730A-4CB0-A7CE-436F005C5E4F',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textAnotherBlessingAtParting.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheVeilingOfTheHolyOfHolies = await makeMultilingualTextWithId(
+	'CF66634D-4370-4F49-9E2C-09797B1F1BA3',
+	'2285D40D-50A1-4196-90C8-C9724BBBDA42',
+	'Ἡ Κάλυψις τῶν Ἁγίων τῶν Ἁγίων',
+	'A3E76CC4-39C7-4C8D-B0D5-2A69506B437E',
+	'Ⲡⲓϩⲱⲃⲥ ⲛ̀ⲧⲉ ⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ ⲛ̀ⲧⲉ ⲛⲓⲉⲑⲟⲩⲁⲃ',
+	'C4E577DA-109A-4EB7-8503-341E9DE75CA2',
+	'تَغْطِيَةُ قُدْسِ الأَقْدَاسِ',
+	'D4119F58-C3C7-4A4B-B0A0-5F69CDF41CF2',
+	'The Veiling of the Holy of Holies',
+	'6CB51155-623F-4535-9736-0B96BC24B179',
+	'Die Verhüllung des Allerheiligsten'
+);
+
+export const sectionTheVeilingOfTheHolyOfHolies = registerNode<Basenode>({
+	id: '6028811F-56AB-4AF2-80F5-4CEF22517610',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheVeilingOfTheHolyOfHolies.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheDistributionOfTheBlessedBread = await makeMultilingualTextWithId(
+	'CEE98AB1-C0A3-4C6A-A58B-F300A412F163',
+	'8F66DF85-4208-4BFD-9D4B-FD42730B7A7A',
+	'Ἡ Διανομὴ τοῦ Εὐλογημένου Ἄρτου',
+	'01253341-1CA6-4D9B-BB80-4C73576B959E',
+	'Ⲡⲓⲫⲱϣ ⲛ̀ⲧⲉ ⲡⲓⲱⲓⲕ ⲉⲧⲥ̀ⲙⲁⲣⲱⲟⲩⲧ',
+	'4B0DC10B-F2C4-43A7-9B1A-3D238E325E4A',
+	'تَوْزِيعُ الْقُرْبَانِ',
+	'2B75A906-4EBC-427B-A9C1-CF099B97CD7D',
+	'The Distribution of the Blessed Bread',
+	'E0A7FE2F-FA7F-4F41-9924-753FF7E03F89',
+	'Die Austeilung des gesegneten Brotes'
+);
+
+export const sectionTheDistributionOfTheBlessedBread = registerNode<Basenode>({
+	id: '77E852CA-6CB3-4DEB-90ED-7BE798B4FBA9',
+	users: [chapterTheDistributionOfTheMysteries.id],
+	type: NodeType.Section,
+	value: textTheDistributionOfTheBlessedBread.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
 
 chapterTheDistributionOfTheMysteries.children = [
 	[
@@ -2367,7 +2609,22 @@ chapterTheDistributionOfTheMysteries.children = [
 	[sectionTheHymnMyStrengthAndMyPraise.id],
 	[sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBloodOnMaundyThursday.id],
 	[sectionThePrayerOfThanksgivingAfterTheDistributionOfTheBodyAndTheBlood.id],
-	[sectionThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands.id]
+	[
+		sectionThePrayerOfSubmissionAfterTheDistributionOfTheBodyAndTheBloodAndBeforeTheLayingOnOfHands.id
+	],
+	[sectionTheDismissal.id],
+	[
+		sectionTheConcludingHymnForTheOrdinaryDaysFromThe11thOfPaoniToThe9thOfPaopi.id,
+		sectionTheConcludingHymnForTheOrdinaryDaysFromThe10thOfPaopiToThe10thOfTobi.id,
+		sectionTheConcludingHymnForTheOrdinaryDaysFromThe11thOfTobiToThe10thOfPaoni.id,
+		sectionTheConcludingHymnForTheOrdinaryDaysOfTheWholeYear.id,
+		sectionTheShortBlessing.id
+	],
+	[sectionTheLordsPrayerWithTheConcludingDoxology.id],
+	[sectionABlessingAtParting.id],
+	[sectionAnotherBlessingAtParting.id],
+	[sectionTheVeilingOfTheHolyOfHolies.id],
+	[sectionTheDistributionOfTheBlessedBread.id]
 ];
 
 partLiturgyOfTheFaithful.children = [
