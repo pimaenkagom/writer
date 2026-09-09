@@ -116,7 +116,7 @@ export const textAspasmosAdamForTheOrdinaryDays = await makeMultilingualTextWith
 	'719FFC00-69CD-44F0-81C4-BECD1A982882',
 	'An Aspasmos Adam for the Ordinary Days',
 	'A4E7D2C7-12F0-4EEF-832C-FFED39D341D1',
-	'Ein Aspasmos Adam für die gewöhnlichen Tage'
+	'Ein Aspasmos Adam an gewöhnlichen Tagen'
 );
 
 export const sectionAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
@@ -139,7 +139,7 @@ export const textASecondAspasmosAdamForTheOrdinaryDays = await makeMultilingualT
 	'B901058E-2B05-4BBB-A58F-15BE79F87781',
 	'A Second Aspasmos Adam for the Ordinary Days',
 	'170B8144-E072-406E-846F-0192B9F20C48',
-	'Ein zweiter Aspasmos Adam für die gewöhnlichen Tage'
+	'Ein zweiter Aspasmos Adam an gewöhnlichen Tagen'
 );
 
 export const sectionASecondAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
@@ -162,7 +162,7 @@ export const textAThirdAspasmosAdamForTheOrdinaryDays = await makeMultilingualTe
 	'29F3D6F9-F0E4-491D-A85C-3F100DC32B59',
 	'A Third Aspasmos Adam for the Ordinary Days',
 	'708BB899-29C2-461B-AE54-E67A188F6C9F',
-	'Ein dritter Aspasmos Adam für die gewöhnlichen Tage'
+	'Ein dritter Aspasmos Adam an gewöhnlichen Tagen'
 );
 
 export const sectionAThirdAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
@@ -185,7 +185,7 @@ export const textAFourthAspasmosAdamForTheOrdinaryDays = await makeMultilingualT
 	'CC3285E9-1D18-4BF7-B164-3018D7D3B9FF',
 	'A Fourth Aspasmos Adam for the Ordinary Days',
 	'7F56ECD9-CE19-4708-BC79-5609E1B8B53B',
-	'Ein vierter Aspasmos Adam für die gewöhnlichen Tage'
+	'Ein vierter Aspasmos Adam an gewöhnlichen Tagen'
 );
 
 export const sectionAFourthAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
@@ -208,7 +208,7 @@ export const textAFifthAspasmosAdamForTheOrdinaryDays = await makeMultilingualTe
 	'2A060E7F-D2DF-43A9-9EEF-7DF372356C3E',
 	'A Fifth Aspasmos Adam for the Ordinary Days from the Liturgy according to Cyril',
 	'DF6FD869-4636-472D-B633-C531DD6F13F7',
-	'Ein fünfter Aspasmos Adam für die gewöhnlichen Tage aus der Liturgie nach Kyrillus'
+	'Ein fünfter Aspasmos Adam an gewöhnlichen Tagen aus der Liturgie nach Kyrillus'
 );
 
 export const sectionAFifthAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
@@ -337,7 +337,7 @@ export const textAspasmosWatosForTheOrdinaryDays = await makeMultilingualTextWit
 	'B4482BF3-0395-4945-A8FC-F583F6BA12A1',
 	'An Aspasmos Watos for the Ordinary Days',
 	'4F888B16-0882-4A5B-BC6A-1F0F15F970EB',
-	'Ein Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -360,7 +360,7 @@ export const textASecondAspasmosWatosForTheOrdinaryDays = await makeMultilingual
 	'E4E66F89-D655-4E55-B901-F4C9C99FD1AC',
 	'A Second Aspasmos Watos for the Ordinary Days',
 	'E2F54626-83B1-41B4-B6CE-05E04F607B9B',
-	'Ein zweiter Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein zweiter Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionASecondAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -383,7 +383,7 @@ export const textAThirdAspasmosWatosForTheOrdinaryDays = await makeMultilingualT
 	'E855F4D0-8C22-496D-89EE-4A59196CDF77',
 	'A Third Aspasmos Watos for the Ordinary Days',
 	'C78065C4-6CDA-48BC-86C0-7A2C05D64E9D',
-	'Ein dritter Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein dritter Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionAThirdAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -406,7 +406,7 @@ export const textAFourthAspasmosWatosForTheOrdinaryDays = await makeMultilingual
 	'E00F003A-9CF1-4688-ABD5-2C055F4AB6CA',
 	'A Fourth Aspasmos Watos for the Ordinary Days',
 	'FB548CBE-5936-4056-9EA0-E6417A86B107',
-	'Ein vierter Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein vierter Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionAFourthAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -429,7 +429,7 @@ export const textAFifthAspasmosWatosForTheOrdinaryDays = await makeMultilingualT
 	'FA4CB70D-3751-4CEE-8A6C-914DE87B74C2',
 	'A Fifth Aspasmos Watos for the Ordinary Days',
 	'BF97C8C4-387C-47A2-A5F6-2A5BB41A44CD',
-	'Ein fünfter Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein fünfter Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionAFifthAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -452,7 +452,7 @@ export const textASixthAspasmosWatosForTheOrdinaryDays = await makeMultilingualT
 	'02F3A349-D76F-4EB8-82FC-A31E90A26913',
 	'A Sixth Aspasmos Watos for the Ordinary Days',
 	'C967D884-C50F-4A06-A796-DEA84D239916',
-	'Ein sechster Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein sechster Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionASixthAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -475,7 +475,7 @@ export const textASeventhAspasmosWatosForTheOrdinaryDays = await makeMultilingua
 	'B6C234F8-AD56-4ECC-8D44-86F63717896E',
 	'A Seventh Aspasmos Watos for the Ordinary Days',
 	'D6B4A2A4-0A8D-4DC8-AE57-A269611DAB9A',
-	'Ein siebter Aspasmos Watos für die gewöhnlichen Tage'
+	'Ein siebter Aspasmos Watos an gewöhnlichen Tagen'
 );
 
 export const sectionASeventhAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
@@ -511,7 +511,7 @@ export const textAnEighthAspasmosWatosForTheOrdinaryDays = await makeMultilingua
 	'140D6EC9-E0A7-44FD-94BB-C5F1009560C9',
 	'An Eighth Aspasmos Watos for the Ordinary Days from the Liturgy according to Gregory',
 	'A2C9AC65-F014-4682-AAC1-1279633C4292',
-	'Ein achter Aspasmos Watos für die gewöhnlichen Tage aus der Liturgie nach Gregorius'
+	'Ein achter Aspasmos Watos an gewöhnlichen Tagen aus der Liturgie nach Gregorius'
 );
 
 export const sectionAnEighthAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
