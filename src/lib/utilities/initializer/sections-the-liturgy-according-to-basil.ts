@@ -1365,25 +1365,25 @@ export const sectionTheCommemorationOfTheDeparted = registerNode<Basenode>({
 	children: []
 });
 
-export const textTheShortBlessing = await makeMultilingualTextWithId(
+export const textTheShortBlessingForTheOrdinaryDays = await makeMultilingualTextWithId(
 	'346D4783-1AE4-4F81-B46F-D6DABE4301B2',
 	'C3F5B55E-C593-4DD8-BC89-37EC22742CF3',
-	'Ἡ Σύντομος Εὐλογία',
+	'Ἡ Σύντομος Εὐλογία διὰ τὰς κοινὰς ἡμέρας',
 	'13887E16-140B-4D5F-9637-9258A2B7DF5D',
-	'Ⲡⲓⲥⲙⲟⲩ ⲛ̀ⲕⲟⲩϫⲓ',
+	'Ⲡⲓⲥⲙⲟⲩ ⲛ̀ⲕⲟⲩϫⲓ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ',
 	'A50F19E2-AFC4-4085-9437-AC0381DF7123',
-	'الْبَرَكَةُ الْقَصِيرَةُ',
+	'الْبَرَكَةُ الْقَصِيرَةُ لِلْأَيَّامِ السَّنَوِيَّةِ',
 	'DBD60216-5E0D-4796-ABEE-6D30131FA622',
-	'The Short Blessing',
+	'The Short Blessing for the Ordinary Days',
 	'1D5B9C22-96F1-4B8A-B002-C2A6C0D6B9E3',
-	'Der kurze Segen'
+	'Der kurze Segen an gewöhnlichen Tagen'
 );
 
-export const sectionTheShortBlessing = registerNode<Basenode>({
+export const sectionTheShortBlessingForTheOrdinaryDays = registerNode<Basenode>({
 	id: 'A25A4067-0DBA-47DC-93E5-6EE99A09F294',
 	users: [chapterTheCommemorationOfTheSaints.id],
 	type: NodeType.Section,
-	value: textTheShortBlessing.id,
+	value: textTheShortBlessingForTheOrdinaryDays.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -1467,7 +1467,7 @@ chapterTheCommemorationOfTheSaints.children = [
 	[sectionTheCommemorationOfTheDepartedPriestsAndLaypeople.id],
 	[sectionTheCommemorationOfADepartedPatriarchMetropolitanOrBishop.id],
 	[sectionTheCommemorationOfTheDeparted.id],
-	[sectionTheShortBlessing.id],
+	[sectionTheShortBlessingForTheOrdinaryDays.id],
 	[sectionThePrayerForTheForgivenessOfSinsAndForTheRestOfTheDeparted.id],
 	[sectionTheResponseOfTheCommemoration.id],
 	[sectionThePrayerForTheLiving.id]
@@ -2618,7 +2618,7 @@ chapterTheDistributionOfTheMysteries.children = [
 		sectionTheConcludingHymnForTheOrdinaryDaysFromThe10thOfPaopiToThe10thOfTobi.id,
 		sectionTheConcludingHymnForTheOrdinaryDaysFromThe11thOfTobiToThe10thOfPaoni.id,
 		sectionTheConcludingHymnForTheOrdinaryDaysOfTheWholeYear.id,
-		sectionTheShortBlessing.id
+		sectionTheShortBlessingForTheOrdinaryDays.id
 	],
 	[sectionTheLordsPrayerWithTheConcludingDoxology.id],
 	[sectionABlessingAtParting.id],
