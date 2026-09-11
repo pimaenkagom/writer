@@ -38,6 +38,14 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   one file import the other's export; the other side references the known
   id as a literal UUID string with a one-line comment naming which constant
   it belongs to.
+- **Never duplicate a repeating node or MultilingualText.** When content or
+  structure (a node, a text, a whole subtree) recurs in more than one place
+  in the tree, don't create a second copy of the object — reference the
+  existing exported const from wherever it's needed, and move the shared
+  object's definition into `src/lib/utilities/initializer/shared/` (see
+  `shared/clauses-someone-says.ts` and `shared/section-the-call-to-prayer.ts`
+  for the pattern) so every parent can import and reuse the same underlying
+  node/text.
 
 ## MultilingualText conventions
 
@@ -57,6 +65,8 @@ provide a text with no Greek original.
   depending on the specific title (e.g. "Ein Aspasmos Adam..." vs "Die
   Anaphora") — match whichever the requester specifies; don't assume one
   over the other.
+- **No Oxford/serial comma** in English titles listing three or more items
+  (e.g. "Patriarch, Metropolitan or Bishop", not "..., or Bishop").
 
 ## Coptic (Bohairic) orthography
 
