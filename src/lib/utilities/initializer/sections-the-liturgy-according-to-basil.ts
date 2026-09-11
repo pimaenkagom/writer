@@ -2167,25 +2167,25 @@ export const sectionTheCleaningOfTheHolyVessels = registerNode<Basenode>({
 	children: []
 });
 
-export const textThePsalm150 = await makeMultilingualTextWithId(
+export const textThePsalm150ForTheOrdinaryDays = await makeMultilingualTextWithId(
 	'2FF519C4-DE64-4051-A362-CE195DC9E06D',
 	'0381F9E3-BE60-47FE-85E2-0AA5B10F1948',
-	'Ὁ Ψαλμὸς ΡΝʹ',
+	'Ὁ Ψαλμὸς ΡΝʹ διὰ τὰς κοινὰς ἡμέρας',
 	'7867BB5C-352D-4C69-BA3D-35B566DDB298',
-	'Ⲡⲓⲯⲁⲗⲙⲟⲥ ⲣ̅ⲛ̅',
+	'Ⲡⲓⲯⲁⲗⲙⲟⲥ ⲣ̅ⲛ̅ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ',
 	'C981DD22-7EEA-4288-8AF0-30C07D323E43',
-	'الْمَزْمُورُ ١٥٠',
+	'الْمَزْمُورُ ١٥٠ لِلْأَيَّامِ السَّنَوِيَّةِ',
 	'4EB6F466-BC53-4D21-A7DC-DBB5A9F5A536',
-	'The Psalm 150',
+	'The Psalm 150 for the Ordinary Days',
 	'8B02DE57-813C-48C1-8829-86EF4A78272D',
-	'Der Psalm 150'
+	'Der Psalm 150 an gewöhnlichen Tagen'
 );
 
-export const sectionThePsalm150 = registerNode<Basenode>({
+export const sectionThePsalm150ForTheOrdinaryDays = registerNode<Basenode>({
 	id: '94144328-B7A6-41DB-8C51-421A1B83228D',
 	users: [chapterTheDistributionOfTheMysteries.id],
 	type: NodeType.Section,
-	value: textThePsalm150.id,
+	value: textThePsalm150ForTheOrdinaryDays.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -2602,7 +2602,7 @@ chapterTheDistributionOfTheMysteries.children = [
 		sectionAThirdPrayerAfterReceivingTheBodyAndTheBlood.id
 	],
 	[sectionTheCleaningOfTheHolyVessels.id],
-	[sectionThePsalm150.id],
+	[sectionThePsalm150ForTheOrdinaryDays.id],
 	[sectionTheHymnTrulyBlessed.id],
 	[sectionTheHymnTheBreadOfLife.id],
 	[sectionTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit.id],
