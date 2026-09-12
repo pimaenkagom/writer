@@ -72,7 +72,7 @@ export const bookTheLiturgyAccordingToBasil = registerNode<Basenode>({
 	type: NodeType.Book,
 	value: textTheLiturgyAccordingToBasil.id,
 	valueType: ContentType.MultilingualText,
-	children: [[]]
+	children: []
 });
 
 export const textLiturgyAccordingToGregory = await makeMultilingualTextWithId(

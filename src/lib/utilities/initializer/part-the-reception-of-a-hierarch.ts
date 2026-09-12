@@ -29,11 +29,6 @@ export const partTheReceptionOfAPatriarchMetropolitanOrBishop = registerNode<Bas
 	children: [[]]
 });
 
-bookTheLiturgyAccordingToBasil.children = [
-	...bookTheLiturgyAccordingToBasil.children,
-	[partTheReceptionOfAPatriarchMetropolitanOrBishop.id]
-];
-
 export const textTheReceptionOfAPatriarchMetropolitanOrBishopChapter =
 	await makeMultilingualTextWithId(
 		'4EAF35E7-AE5A-4AAB-8B68-52CB7B505A63',

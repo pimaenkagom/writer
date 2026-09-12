@@ -6,6 +6,8 @@ import {
 	makeMultilingualTextWithId,
 	makeMultilingualTextWithIdWithoutGreek
 } from '$lib/utilities/initializer/constructors';
+import { partTheOfferingOfTheLamb } from '$lib/utilities/initializer/part-the-offering-of-the-lamb';
+import { partTheReceptionOfAPatriarchMetropolitanOrBishop } from '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
@@ -33,7 +35,11 @@ export const partLiturgyOfTheFaithful = registerNode<Basenode>({
 	children: [[]]
 });
 
-bookTheLiturgyAccordingToBasil.children = [[partLiturgyOfTheFaithful.id]];
+bookTheLiturgyAccordingToBasil.children = [
+	[partTheReceptionOfAPatriarchMetropolitanOrBishop.id],
+	[partTheOfferingOfTheLamb.id],
+	[partLiturgyOfTheFaithful.id]
+];
 
 export const textTheReconciliation = await makeMultilingualTextWithId(
 	'CD320193-240A-492D-BE3B-224CE1F28558',

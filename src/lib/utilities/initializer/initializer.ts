@@ -1,6 +1,7 @@
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 import '$lib/utilities/initializer/books';
+import '$lib/utilities/initializer/part-the-offering-of-the-lamb';
 import '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
 import { pendingNodes, pendingTexts } from '$lib/utilities/initializer/registry';
 import '$lib/utilities/initializer/sections-the-liturgy-according-to-basil';

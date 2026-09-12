@@ -38,6 +38,22 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   one file import the other's export; the other side references the known
   id as a literal UUID string with a one-line comment naming which constant
   it belongs to.
+- When a **new top-level Part file** needs to become a sibling under a Book
+  that already has other Part-file siblings (e.g. `part-the-*.ts` files
+  under `bookTheLiturgyAccordingToBasil`), don't have the new Part file
+  append itself to the parent's `children` (e.g. via
+  `book.children = [...book.children, [newPart.id]]`). That relies on
+  `initializer.ts`'s import order, which gets silently reordered
+  alphabetically by the formatter/linter and will drop siblings whose
+  side-effect import now runs later. Instead, follow the pattern already
+  used for `part-the-reception-of-a-hierarch.ts`: the new Part file only
+  defines its own text/node (`users: [book.id]`, nothing else); the file
+  that "owns" the Book's `children` (currently
+  `sections-the-liturgy-according-to-basil.ts`) explicitly imports every
+  sibling Part's exported const and lists them all in one reassignment.
+  This is order-independent because ES module imports guarantee the
+  imported module finishes evaluating first, regardless of
+  `initializer.ts`'s own import order.
 - **Never duplicate a repeating node or MultilingualText.** When content or
   structure (a node, a text, a whole subtree) recurs in more than one place
   in the tree, don't create a second copy of the object — reference the
