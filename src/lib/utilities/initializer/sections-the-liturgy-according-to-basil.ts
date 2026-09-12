@@ -7,7 +7,7 @@ import {
 	makeMultilingualTextWithIdWithoutGreek
 } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
-import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/hymn-truly-blessed';
+import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 
 export const textLiturgyOfTheFaithful = await makeMultilingualTextWithId(
