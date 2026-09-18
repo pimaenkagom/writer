@@ -4,6 +4,7 @@ import { NodeType } from '$lib/models/node-type.model';
 import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
 import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
+import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 
 export const textTheOfferingOfTheLamb = await makeMultilingualTextWithId(
 	'566FC8F1-FE7E-4C52-8896-83B616F2832D',
@@ -824,6 +825,35 @@ export const sectionTheBlessingOfTheGifts = registerNode<Basenode>({
 	children: []
 });
 
+export const textThePrayerOfThanksgiving = await makeMultilingualTextWithId(
+	'1D0E76D3-DFA8-48C5-A352-F8E24F6F6F38',
+	'5B6AA2D4-36DB-4E0B-A9B1-C06B568D92E2',
+	'Ἡ Εὐχὴ τῆς Εὐχαριστίας',
+	'ACB24E54-693E-4F5B-B196-845246D046BB',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡⲓϣⲉⲡϩⲙⲟⲧ',
+	'8CDB642D-FBB7-4F7A-9D33-446C48DBC497',
+	'صَلاَةُ الشُّكْرِ',
+	'84E2FA02-BD8B-41A7-AF3B-770DB3C2DCF3',
+	'The Prayer of Thanksgiving',
+	'4D759C3F-A698-4E06-B44F-869C1E0E8A41',
+	'Das Gebet der Danksagung'
+);
+
+textThePrayerOfThanksgiving.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfThanksgiving.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfThanksgiving.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfThanksgiving.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfThanksgiving.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionThePrayerOfThanksgiving = registerNode<Basenode>({
+	id: '8493664C-AF95-4319-BF8D-58835268C63E',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textThePrayerOfThanksgiving.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 chapterTheOfferingOfTheLamb.children = [
 	[sectionTheWashingOfTheHands.id],
 	[sectionTheSelectionOfTheLamb.id],
@@ -833,7 +863,9 @@ chapterTheOfferingOfTheLamb.children = [
 	[sectionThePsalmDuringTheProcessionOfTheLambOnFastingDays.id],
 	[sectionThePsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
 	[sectionAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
-	[sectionTheBlessingOfTheGifts.id]
+	[sectionTheBlessingOfTheGifts.id],
+	[sectionTheCallToPrayer.id],
+	[sectionThePrayerOfThanksgiving.id]
 ];
 
 partTheOfferingOfTheLamb.children = [
