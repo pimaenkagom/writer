@@ -854,6 +854,81 @@ export const sectionThePrayerOfThanksgiving = registerNode<Basenode>({
 	children: []
 });
 
+export const textAPsalmBeforeTheProstration = await makeMultilingualTextWithId(
+	'D6788489-B360-49BD-8FE3-75A98353D69F',
+	'26348360-AAD4-4DED-97FA-B013729761D4',
+	'Ὁ Ψαλμὸς πρὸ τῆς Προσκυνήσεως ἐν τῇ Νηστείᾳ τοῦ Ἰωνᾶ καὶ ἐν ταῖς καθημεριναῖς ἡμέραις τῆς Μεγάλης Τεσσαρακοστῆς',
+	'02D1463D-9E1D-41ED-9903-AE6A172CA855',
+	'Ⲡⲓⲯⲁⲗⲙⲟⲥ ϧⲁϫⲉⲛ ϯⲙⲉⲧⲁⲛⲟⲓⲁ ϧⲉⲛ ϯⲛⲏⲥⲧⲓⲁ ⲛ̀ⲧⲉ Ⲓⲱⲛⲁ ⲛⲉⲙ ⲛⲓⲉϩⲟⲟⲩ ⲙ̀ⲡⲓϩⲱⲃ ⲛ̀ⲧⲉ ϯⲛⲓϣϯ ⲛ̀ⲛⲏⲥⲧⲓⲁ',
+	'4B9CADD5-D35A-41C3-B744-A4C53A32E492',
+	'الْمَزْمُورُ قَبْلَ السُّجُودِ فِي صَوْمِ يُونَانَ وَأَيَّامِ الْأُسْبُوعِ مِنَ الصَّوْمِ الْكَبِيرِ',
+	'CA827AB7-0338-4C8B-AC58-7FCB6649C49E',
+	'The Psalm before the Prostration during the Fast of Jonah and the Weekdays of the Great Fast',
+	'AA95D6B3-8FF1-407A-8E7B-7DB1F5EEB0D3',
+	'Der Psalm vor der Niederwerfung während des Jonafastens und der Werktage des Großen Fastens'
+);
+
+export const sectionAPsalmBeforeTheProstration = registerNode<Basenode>({
+	id: 'D3F09D6E-B0CD-4527-BC36-F92312F2E423',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textAPsalmBeforeTheProstration.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheProstration = await makeMultilingualTextWithId(
+	'21210635-20E8-4FC8-82DA-CE04837ABA63',
+	'828A2E2D-4979-4855-9E77-93A340D92DCD',
+	'Ἡ Προσκύνησις',
+	'C6A7E3D1-D71D-4365-B128-232923C301D1',
+	'Ϯⲙⲉⲧⲁⲛⲟⲓⲁ',
+	'37C7E331-51BD-44FC-881D-4887FB6A0EA5',
+	'السُّجُودُ',
+	'A566C053-26E0-4133-8311-180E3504BE85',
+	'The Prostration',
+	'39AA4D73-E46F-4FC2-BB95-83492C79AB94',
+	'Die Niederwerfung'
+);
+
+export const sectionTheProstration = registerNode<Basenode>({
+	id: '830F7B0B-AEEC-4AF2-A232-89C3A2535285',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textTheProstration.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheResponseLordHaveMercy = await makeMultilingualTextWithId(
+	'62D5F8F5-80D8-48D3-BE23-001D2E29D6E2',
+	'032347BF-AF1A-4435-84A2-2061DCA94FC2',
+	'Ἡ Ἀπόκρισις Κύριε, ἐλέησον',
+	'264517F5-BE0D-4BE4-9201-DB56DDE8F644',
+	'Ϯⲉⲣⲟⲩⲱ ϫⲉ Ⲕⲩⲣⲓⲉ ⲉⲗⲉⲏⲥⲟⲛ',
+	'448919DB-F4D2-42D1-8638-B17AB10A0E3D',
+	'مَرَدُّ يَا رَبُّ ارْحَمْ',
+	'B9473E4B-6A16-4ADC-8945-E6C4A5E18D97',
+	'The Response Lord, Have Mercy',
+	'ED2548EB-7411-45AC-94FF-3A2D0157BA08',
+	'Die Erwiderung Herr, erbarme dich'
+);
+
+textTheResponseLordHaveMercy.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheResponseLordHaveMercy.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheResponseLordHaveMercy.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheResponseLordHaveMercy.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheResponseLordHaveMercy.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheResponseLordHaveMercy = registerNode<Basenode>({
+	id: '07501DF5-0B1E-41F5-906A-8D73185ABD34',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textTheResponseLordHaveMercy.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 chapterTheOfferingOfTheLamb.children = [
 	[sectionTheWashingOfTheHands.id],
 	[sectionTheSelectionOfTheLamb.id],
@@ -865,7 +940,10 @@ chapterTheOfferingOfTheLamb.children = [
 	[sectionAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
 	[sectionTheBlessingOfTheGifts.id],
 	[sectionTheCallToPrayer.id],
-	[sectionThePrayerOfThanksgiving.id]
+	[sectionThePrayerOfThanksgiving.id],
+	[sectionAPsalmBeforeTheProstration.id],
+	[sectionTheProstration.id],
+	[sectionTheResponseLordHaveMercy.id]
 ];
 
 partTheOfferingOfTheLamb.children = [
