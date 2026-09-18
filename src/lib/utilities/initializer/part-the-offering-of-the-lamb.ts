@@ -929,6 +929,65 @@ export const sectionTheResponseLordHaveMercy = registerNode<Basenode>({
 	children: []
 });
 
+export const textAPrayerForTheOfferingOfBreadAndWineToTheSon = await makeMultilingualTextWithId(
+	'D8EFF3B8-5B7A-4B85-8DDF-C4DC17CC59F5',
+	'5495CBAB-A79C-43CE-9AA4-7E95BD47B8BD',
+	'Εὐχὴ διὰ τὴν Πρόθεσιν τοῦ Ἄρτου καὶ τοῦ Οἴνου πρὸς τὸν Υἱόν',
+	'8A78BFDC-B297-454B-A99D-9DA39B3447FD',
+	'Ⲟⲩϣⲗⲏⲗ ⲉⲑⲃⲉ ϯⲡⲣⲟⲑⲉⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲱⲓⲕ ⲛⲉⲙ ⲡⲓⲏⲣⲡ ⲉ̀Ⲡ̀ϣⲏⲣⲓ',
+	'D374902B-C305-4FDF-9812-ECC243B47670',
+	'صَلاَةٌ لِتَقْدِيمِ الْخُبْزِ وَالْخَمْرِ لِلاِبْنِ',
+	'51FD5BFA-1610-4872-9F47-996232FEA173',
+	'A Prayer for the Offering of Bread and Wine to the Son',
+	'306FEC7D-75AE-4DB5-AD33-E420D9D2FD4D',
+	'Das Gebet zur Darbringung von Brot und Wein an den Sohn'
+);
+
+textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionAPrayerForTheOfferingOfBreadAndWineToTheSon = registerNode<Basenode>({
+	id: 'AF51E07F-6557-4666-9099-8EFA7ED5DC57',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textAPrayerForTheOfferingOfBreadAndWineToTheSon.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfAbsolutionToTheSon = await makeMultilingualTextWithId(
+	'D9AD0948-4CD3-4908-AF97-A9BDEC7629D0',
+	'395C02B6-65DF-45FC-93BD-20A1E226A5DE',
+	'Ἡ Εὐχὴ τῆς Ἀπολύσεως πρὸς τὸν Υἱόν',
+	'CD1CFD94-ED12-4FEE-97D8-A9036901F2E3',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲉ̀Ⲡ̀ϣⲏⲣⲓ',
+	'FDBE058B-8C43-40F9-831E-E18E7C490D5A',
+	'صَلاَةُ الْحَلِّ لِلاِبْنِ',
+	'DA88F3A1-89FC-4B6A-8CFE-03FE42ED869E',
+	'The Prayer of Absolution to the Son',
+	'F84312F6-BF75-42A3-84C6-40FC437B28BA',
+	'Das Gebet des Losspruches an den Sohn'
+);
+
+textThePrayerOfAbsolutionToTheSon.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionThePrayerOfAbsolutionToTheSon = registerNode<Basenode>({
+	id: '6194AFF5-889B-4965-93C8-72AB05D71384',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textThePrayerOfAbsolutionToTheSon.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 chapterTheOfferingOfTheLamb.children = [
 	[sectionTheWashingOfTheHands.id],
 	[sectionTheSelectionOfTheLamb.id],
@@ -943,7 +1002,9 @@ chapterTheOfferingOfTheLamb.children = [
 	[sectionThePrayerOfThanksgiving.id],
 	[sectionAPsalmBeforeTheProstration.id],
 	[sectionTheProstration.id],
-	[sectionTheResponseLordHaveMercy.id]
+	[sectionTheResponseLordHaveMercy.id],
+	[sectionAPrayerForTheOfferingOfBreadAndWineToTheSon.id],
+	[sectionThePrayerOfAbsolutionToTheSon.id]
 ];
 
 partTheOfferingOfTheLamb.children = [
