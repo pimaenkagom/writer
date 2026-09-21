@@ -615,6 +615,40 @@ export const sectionTheSelectionOfTheLamb = registerNode<Basenode>({
 	children: []
 });
 
+export const textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays = await makeMultilingualTextWithId(
+	'B2606DB6-1D88-42E9-8EFA-3F277B12C41C',
+	'C1A56C7C-0CAD-425C-88FC-2F025ADE0012',
+	'Ὁ Ὕμνος τῆς Ἐκλογῆς τοῦ Ἀμνοῦ κατὰ τὰς κοινὰς καὶ χαρμοσύνους ἡμέρας',
+	'C3E370FD-1B13-4D6C-A08A-68CFA5F77B07',
+	'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓⲥⲱⲧⲡ ⲛ̀ⲧⲉ ⲡⲓϩⲓⲏⲃ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲛⲉⲙ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲧⲉ ⲡⲓⲣⲁϣⲓ',
+	'FCD438C3-708B-4810-A3C9-2FC9FAC7C897',
+	'لَحْنُ اِخْتِيَارِ الْحَمَلِ فِي الْأَيَّامِ السَّنَوِيَّةِ وَأَيَّامِ الْفَرَحِ',
+	'F300B2F8-F947-4AF2-A952-72F2571741CC',
+	'The Hymn for the Selection of the Lamb on the Ordinary and Joyful Days',
+	'D229D083-CCFA-41AD-8DAB-B7963851A476',
+	'Das Lied zur Auswahl des Lammes an gewöhnlichen und freudigen Tagen'
+);
+
+textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.coptic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.arabic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.english.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.german.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays = registerNode<Basenode>({
+	id: 'F58C9D4D-0E07-4DF2-976D-E79C431FA473',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 export const textTheHymnForTheSelectionOfTheLambDuringAFast = await makeMultilingualTextWithId(
 	'FAC19393-B827-4F5A-8A72-161983C37361',
 	'86E006B6-079C-477C-B759-A529D053313C',
@@ -1055,6 +1089,7 @@ export const sectionTheAbsolutionOfTheServants = registerNode<Basenode>({
 chapterTheOfferingOfTheLamb.children = [
 	[sectionTheWashingOfTheHands.id],
 	[sectionTheSelectionOfTheLamb.id],
+	[sectionTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.id],
 	[sectionTheHymnForTheSelectionOfTheLambDuringAFast.id],
 	[sectionTheProcessionOfTheLamb.id],
 	[sectionThePsalmDuringTheProcessionOfTheLambOnTheOrdinaryAndJoyfulDays.id],
