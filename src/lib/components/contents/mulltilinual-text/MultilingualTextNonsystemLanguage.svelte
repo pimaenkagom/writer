@@ -12,7 +12,7 @@
 
 <div class="">
 	{#each getSelectedLanguages() as language}
-		{#if language !== systemLanguage}
+		{#if language !== systemLanguage && model.texts[language]}
 			<p class="has-text-left">
 				{#if language == 'coptic'}
 					<Coptic><Text model={model.texts[language]} /></Coptic>

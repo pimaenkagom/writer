@@ -10,12 +10,14 @@
 	const systemLanguage = $derived(getSystemLanguage());
 </script>
 
-<p class="has-text-left">
-	{#if systemLanguage == 'coptic'}
-		<Coptic><Text model={model.texts[systemLanguage]} /></Coptic>
-	{:else if systemLanguage == 'arabic'}
-		<Arabic><Text model={model.texts[systemLanguage]} /></Arabic>
-	{:else}
-		<Latin><Text model={model.texts[systemLanguage]} /></Latin>
-	{/if}
-</p>
+{#if model.texts[systemLanguage]}
+	<p class="has-text-left">
+		{#if systemLanguage == 'coptic'}
+			<Coptic><Text model={model.texts[systemLanguage]} /></Coptic>
+		{:else if systemLanguage == 'arabic'}
+			<Arabic><Text model={model.texts[systemLanguage]} /></Arabic>
+		{:else}
+			<Latin><Text model={model.texts[systemLanguage]} /></Latin>
+		{/if}
+	</p>
+{/if}

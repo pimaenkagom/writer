@@ -12,15 +12,17 @@
 
 <div class="">
 	{#each getSelectedLanguages() as language}
-		<p class="has-text-left">
-			{#if showLabel}<strong>{capitalize(language)}</strong>{/if}
-			{#if language == 'coptic'}
-				<Coptic><Text model={model.texts[language]} /></Coptic>
-			{:else if language == 'arabic'}
-				<Arabic><Text model={model.texts[language]} /></Arabic>
-			{:else}
-				<Latin><Text model={model.texts[language]} /></Latin>
-			{/if}
-		</p>
+		{#if model.texts[language]}
+			<p class="has-text-left">
+				{#if showLabel}<strong>{capitalize(language)}</strong>{/if}
+				{#if language == 'coptic'}
+					<Coptic><Text model={model.texts[language]} /></Coptic>
+				{:else if language == 'arabic'}
+					<Arabic><Text model={model.texts[language]} /></Arabic>
+				{:else}
+					<Latin><Text model={model.texts[language]} /></Latin>
+				{/if}
+			</p>
+		{/if}
 	{/each}
 </div>

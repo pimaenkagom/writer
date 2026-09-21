@@ -2,11 +2,14 @@ import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import {
+	makeMultilingualTextWithId,
+	makeMultilingualTextWithIdWithoutGreek
+} from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 
-export const textTheOfferingOfTheLamb = await makeMultilingualTextWithId(
+export const textTheOfferingOfTheOblations = await makeMultilingualTextWithId(
 	'566FC8F1-FE7E-4C52-8896-83B616F2832D',
 	'ADCD683A-10CD-4C5F-8EED-E9C1A9078E0E',
 	'Ἡ Πρόθεσις τῶν Δώρων',
@@ -20,11 +23,11 @@ export const textTheOfferingOfTheLamb = await makeMultilingualTextWithId(
 	'Die Darbringung der Opfergaben'
 );
 
-export const partTheOfferingOfTheLamb = registerNode<Basenode>({
+export const partTheOfferingOfTheOblations = registerNode<Basenode>({
 	id: '6B18A8DD-2142-4FE6-9874-3DCD942A22BF',
 	users: [bookTheLiturgyAccordingToBasil.id],
 	type: NodeType.Part,
-	value: textTheOfferingOfTheLamb.id,
+	value: textTheOfferingOfTheOblations.id,
 	valueType: ContentType.MultilingualText,
 	children: [[]]
 });
@@ -45,7 +48,7 @@ export const textThePreparationForTheEucharisticService = await makeMultilingual
 
 export const chapterThePreparationForTheEucharisticService = registerNode<Basenode>({
 	id: 'F37FF04A-3CF4-4702-9CCA-CF8502B3E2DC',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePreparationForTheEucharisticService.id,
 	valueType: ContentType.MultilingualText,
@@ -215,7 +218,7 @@ export const textThePsalmsOfTheThirdHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheThirdHour = registerNode<Basenode>({
 	id: 'E916BEAA-58E5-4684-89A0-A09CF09F4BBF',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheThirdHour.id,
 	valueType: ContentType.MultilingualText,
@@ -238,7 +241,7 @@ export const textThePsalmsOfTheSixthHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheSixthHour = registerNode<Basenode>({
 	id: 'CB063C83-D2F1-4BD4-B7F7-817D8BCD901A',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheSixthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -261,7 +264,7 @@ export const textThePsalmsOfTheNinthHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheNinthHour = registerNode<Basenode>({
 	id: '75035897-7DEE-47A1-B731-2FC9CF8C4A6E',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheNinthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -284,7 +287,7 @@ export const textThePsalmsOfTheEleventhHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheEleventhHour = registerNode<Basenode>({
 	id: 'F409BA49-0E59-4904-8E5D-8D0439F57FB7',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheEleventhHour.id,
 	valueType: ContentType.MultilingualText,
@@ -307,7 +310,7 @@ export const textThePsalmsOfTheTwelfthHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheTwelfthHour = registerNode<Basenode>({
 	id: '8834A5DD-F385-4C0F-8A1F-205F3C6D8F93',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheTwelfthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -330,14 +333,14 @@ export const textThePsalmsOfTheVeil = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheVeil = registerNode<Basenode>({
 	id: '345DD999-C135-48BA-821B-3B89299C8091',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheVeil.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheGospelAndTheLitaniesOfTheThirdHour = await makeMultilingualTextWithId(
+export const textTheGospelTheLitaniesAndThePrayersOfTheThirdHour = await makeMultilingualTextWithId(
 	'6F4A52F2-F8B8-49DB-B6A5-345017F9FCEB',
 	'1838758C-4E6E-4A0D-B7BA-66F1ABE4C75F',
 	'Τὸ Εὐαγγέλιον, αἱ Αἰτήσεις καὶ αἱ Εὐχαὶ τῆς Τρίτης Ὥρας',
@@ -351,27 +354,27 @@ export const textTheGospelAndTheLitaniesOfTheThirdHour = await makeMultilingualT
 	'Das Evangelium, die Bitten und Gebete der Dritten Stunde'
 );
 
-textTheGospelAndTheLitaniesOfTheThirdHour.texts.ancient_greek.status =
+textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheThirdHour.texts.coptic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.texts.coptic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheThirdHour.texts.arabic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.texts.arabic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheThirdHour.texts.english.status =
+textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.texts.english.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheThirdHour.texts.german.status =
+textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.texts.german.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
 
-export const chapterTheGospelAndTheLitaniesOfTheThirdHour = registerNode<Basenode>({
+export const chapterTheGospelTheLitaniesAndThePrayersOfTheThirdHour = registerNode<Basenode>({
 	id: '617B9FE6-B27F-4D08-9A15-105E806CD47B',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheGospelAndTheLitaniesOfTheThirdHour.id,
+	value: textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheGospelAndTheLitaniesOfTheSixthHour = await makeMultilingualTextWithId(
+export const textTheGospelTheLitaniesAndThePrayersOfTheSixthHour = await makeMultilingualTextWithId(
 	'6D7FA48D-BB01-42D3-8447-78E1056DBD5B',
 	'B85F8A27-1ECC-4A91-9863-1AAF658CF475',
 	'Τὸ Εὐαγγέλιον, αἱ Αἰτήσεις καὶ αἱ Εὐχαὶ τῆς Ἕκτης Ὥρας',
@@ -385,27 +388,27 @@ export const textTheGospelAndTheLitaniesOfTheSixthHour = await makeMultilingualT
 	'Das Evangelium, die Bitten und Gebete der Sechsten Stunde'
 );
 
-textTheGospelAndTheLitaniesOfTheSixthHour.texts.ancient_greek.status =
+textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheSixthHour.texts.coptic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.texts.coptic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheSixthHour.texts.arabic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.texts.arabic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheSixthHour.texts.english.status =
+textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.texts.english.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheSixthHour.texts.german.status =
+textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.texts.german.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
 
-export const chapterTheGospelAndTheLitaniesOfTheSixthHour = registerNode<Basenode>({
+export const chapterTheGospelTheLitaniesAndThePrayersOfTheSixthHour = registerNode<Basenode>({
 	id: '913FF446-4613-4527-ABC3-1F54CA97C104',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheGospelAndTheLitaniesOfTheSixthHour.id,
+	value: textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheGospelAndTheLitaniesOfTheNinthHour = await makeMultilingualTextWithId(
+export const textTheGospelTheLitaniesAndThePrayersOfTheNinthHour = await makeMultilingualTextWithId(
 	'E97A240C-26A8-4477-830F-4CE7276FAB10',
 	'AC9760FF-8A35-4D9B-8B61-E58143BAE46E',
 	'Τὸ Εὐαγγέλιον, αἱ Αἰτήσεις καὶ αἱ Εὐχαὶ τῆς Ἐνάτης Ὥρας',
@@ -419,27 +422,27 @@ export const textTheGospelAndTheLitaniesOfTheNinthHour = await makeMultilingualT
 	'Das Evangelium, die Bitten und Gebete der Neunten Stunde'
 );
 
-textTheGospelAndTheLitaniesOfTheNinthHour.texts.ancient_greek.status =
+textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheNinthHour.texts.coptic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.texts.coptic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheNinthHour.texts.arabic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.texts.arabic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheNinthHour.texts.english.status =
+textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.texts.english.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheNinthHour.texts.german.status =
+textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.texts.german.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
 
-export const chapterTheGospelAndTheLitaniesOfTheNinthHour = registerNode<Basenode>({
+export const chapterTheGospelTheLitaniesAndThePrayersOfTheNinthHour = registerNode<Basenode>({
 	id: '310A8D40-29C4-41AC-8EB8-B4BE8C699545',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheGospelAndTheLitaniesOfTheNinthHour.id,
+	value: textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheGospelAndTheLitaniesOfTheEleventhHour = await makeMultilingualTextWithId(
+export const textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour = await makeMultilingualTextWithId(
 	'0343A099-5771-4DBA-A361-1165476D5097',
 	'A1812F9B-219A-4DE0-AEE9-83F2612BBCC5',
 	'Τὸ Εὐαγγέλιον, αἱ Αἰτήσεις καὶ αἱ Εὐχαὶ τῆς Ἑνδεκάτης Ὥρας',
@@ -453,27 +456,27 @@ export const textTheGospelAndTheLitaniesOfTheEleventhHour = await makeMultilingu
 	'Das Evangelium, die Bitten und Gebete der Elften Stunde'
 );
 
-textTheGospelAndTheLitaniesOfTheEleventhHour.texts.ancient_greek.status =
+textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheEleventhHour.texts.coptic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.texts.coptic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheEleventhHour.texts.arabic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.texts.arabic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheEleventhHour.texts.english.status =
+textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.texts.english.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheEleventhHour.texts.german.status =
+textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.texts.german.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
 
-export const chapterTheGospelAndTheLitaniesOfTheEleventhHour = registerNode<Basenode>({
+export const chapterTheGospelTheLitaniesAndThePrayersOfTheEleventhHour = registerNode<Basenode>({
 	id: 'C809A449-DFB5-434A-ABA9-63434B99DF4C',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheGospelAndTheLitaniesOfTheEleventhHour.id,
+	value: textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheGospelAndTheLitaniesOfTheTwelfthHour = await makeMultilingualTextWithId(
+export const textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour = await makeMultilingualTextWithId(
 	'9F0F8800-736C-41D2-BC3B-58E69B4C38D1',
 	'A5A5C08A-F237-4407-B883-2B978A0BA3AD',
 	'Τὸ Εὐαγγέλιον, αἱ Αἰτήσεις καὶ αἱ Εὐχαὶ τῆς Δωδεκάτης Ὥρας',
@@ -487,27 +490,27 @@ export const textTheGospelAndTheLitaniesOfTheTwelfthHour = await makeMultilingua
 	'Das Evangelium, die Bitten und Gebete der Zwölften Stunde'
 );
 
-textTheGospelAndTheLitaniesOfTheTwelfthHour.texts.ancient_greek.status =
+textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheTwelfthHour.texts.coptic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.texts.coptic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheTwelfthHour.texts.arabic.status =
+textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.texts.arabic.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheTwelfthHour.texts.english.status =
+textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.texts.english.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheTwelfthHour.texts.german.status =
+textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.texts.german.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
 
-export const chapterTheGospelAndTheLitaniesOfTheTwelfthHour = registerNode<Basenode>({
+export const chapterTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour = registerNode<Basenode>({
 	id: '02FE91C9-1F11-410B-9A6C-76391AE781A8',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheGospelAndTheLitaniesOfTheTwelfthHour.id,
+	value: textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheGospelAndTheLitaniesOfTheVeil = await makeMultilingualTextWithId(
+export const textTheGospelTheLitaniesAndThePrayersOfTheVeil = await makeMultilingualTextWithId(
 	'CFCF5AC4-6F73-4675-8F23-E5EF2AEAB392',
 	'32370D6C-BF3E-470D-BADE-45D7A8089183',
 	'Τὸ Εὐαγγέλιον, αἱ Αἰτήσεις καὶ αἱ Εὐχαὶ τοῦ Καταπετάσματος',
@@ -521,18 +524,18 @@ export const textTheGospelAndTheLitaniesOfTheVeil = await makeMultilingualTextWi
 	'Das Evangelium, die Bitten und Gebete des Schleiers'
 );
 
-textTheGospelAndTheLitaniesOfTheVeil.texts.ancient_greek.status =
+textTheGospelTheLitaniesAndThePrayersOfTheVeil.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheVeil.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheVeil.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheVeil.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheGospelAndTheLitaniesOfTheVeil.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheGospelTheLitaniesAndThePrayersOfTheVeil.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheGospelTheLitaniesAndThePrayersOfTheVeil.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheGospelTheLitaniesAndThePrayersOfTheVeil.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheGospelTheLitaniesAndThePrayersOfTheVeil.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 
-export const chapterTheGospelAndTheLitaniesOfTheVeil = registerNode<Basenode>({
+export const chapterTheGospelTheLitaniesAndThePrayersOfTheVeil = registerNode<Basenode>({
 	id: '42F5EF31-6F83-4318-B96F-15B9BE115A95',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheGospelAndTheLitaniesOfTheVeil.id,
+	value: textTheGospelTheLitaniesAndThePrayersOfTheVeil.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -559,7 +562,7 @@ textTheOfferingOfTheLambChapter.texts.german.status = '4ACF926E-370D-4D90-B642-5
 
 export const chapterTheOfferingOfTheLamb = registerNode<Basenode>({
 	id: '375F2ABE-D728-4F1F-A64C-46821A40D3DB',
-	users: [partTheOfferingOfTheLamb.id],
+	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
 	value: textTheOfferingOfTheLambChapter.id,
 	valueType: ContentType.MultilingualText,
@@ -854,7 +857,83 @@ export const sectionThePrayerOfThanksgiving = registerNode<Basenode>({
 	children: []
 });
 
-export const textAPsalmBeforeTheProstration = await makeMultilingualTextWithId(
+export const textTheVeilingOfTheOfferings = await makeMultilingualTextWithId(
+	'D8EFF3B8-5B7A-4B85-8DDF-C4DC17CC59F5',
+	'5495CBAB-A79C-43CE-9AA4-7E95BD47B8BD',
+	'Ἡ Κάλυψις τῶν Δώρων',
+	'8A78BFDC-B297-454B-A99D-9DA39B3447FD',
+	'Ⲡⲓϩⲱⲃⲥ ⲛ̀ⲛⲓⲇⲱⲣⲟⲛ',
+	'D374902B-C305-4FDF-9812-ECC243B47670',
+	'سَتْرُ الْقَرَابِينِ',
+	'51FD5BFA-1610-4872-9F47-996232FEA173',
+	'The Veiling of the Offerings',
+	'306FEC7D-75AE-4DB5-AD33-E420D9D2FD4D',
+	'Die Verhüllung der Opfergaben'
+);
+
+export const sectionTheVeilingOfTheOfferings = registerNode<Basenode>({
+	id: 'AF51E07F-6557-4666-9099-8EFA7ED5DC57',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textTheVeilingOfTheOfferings.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfAbsolutionToTheSon = await makeMultilingualTextWithId(
+	'D9AD0948-4CD3-4908-AF97-A9BDEC7629D0',
+	'395C02B6-65DF-45FC-93BD-20A1E226A5DE',
+	'Ἡ Εὐχὴ τῆς Ἀπολύσεως πρὸς τὸν Υἱόν',
+	'CD1CFD94-ED12-4FEE-97D8-A9036901F2E3',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲉ̀Ⲡ̀ϣⲏⲣⲓ',
+	'FDBE058B-8C43-40F9-831E-E18E7C490D5A',
+	'صَلاَةُ الْحَلِّ لِلاِبْنِ',
+	'DA88F3A1-89FC-4B6A-8CFE-03FE42ED869E',
+	'The Prayer of Absolution to the Son',
+	'F84312F6-BF75-42A3-84C6-40FC437B28BA',
+	'Das Gebet des Losspruches an den Sohn'
+);
+
+textThePrayerOfAbsolutionToTheSon.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerOfAbsolutionToTheSon.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionThePrayerOfAbsolutionToTheSon = registerNode<Basenode>({
+	id: '6194AFF5-889B-4965-93C8-72AB05D71384',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textThePrayerOfAbsolutionToTheSon.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheDescentFromTheHolyOfHolies = await makeMultilingualTextWithId(
+	'30563E4B-1332-45D2-AACC-043AB7862D5B',
+	'527E5343-C895-458A-8F6A-4BF0D8F4BB44',
+	'Ἡ Κατάβασις ἀπὸ τῶν Ἁγίων τῶν Ἁγίων',
+	'BBA5E4A1-9330-467A-8D64-7524EB3368DF',
+	'Ⲡⲓⲉⲓ ⲉ̀ⲡⲉⲥⲏⲧ ⲉ̀ⲃⲟⲗϩⲁ ⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ ⲛ̀ⲧⲉ ⲛⲓⲉⲑⲟⲩⲁⲃ',
+	'DC21DE26-AF99-415C-A072-27E24055CEEE',
+	'النُّزُولُ مِنْ قُدْسِ الأَقْدَاسِ',
+	'A5B4AB61-96DD-4F6C-AA78-15D85C8D2EDF',
+	'The Descent from the Holy of Holies',
+	'31B255E8-012A-439A-8DD6-DC34FA70F376',
+	'Der Abstieg vom Allerheiligsten'
+);
+
+export const sectionTheDescentFromTheHolyOfHolies = registerNode<Basenode>({
+	id: 'FD1A7CF2-75FE-4B46-9926-AC5B9D424A54',
+	users: [chapterTheOfferingOfTheLamb.id],
+	type: NodeType.Section,
+	value: textTheDescentFromTheHolyOfHolies.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast = await makeMultilingualTextWithId(
 	'D6788489-B360-49BD-8FE3-75A98353D69F',
 	'26348360-AAD4-4DED-97FA-B013729761D4',
 	'Ὁ Ψαλμὸς πρὸ τῆς Προσκυνήσεως ἐν τῇ Νηστείᾳ τοῦ Ἰωνᾶ καὶ ἐν ταῖς καθημεριναῖς ἡμέραις τῆς Μεγάλης Τεσσαρακοστῆς',
@@ -868,11 +947,11 @@ export const textAPsalmBeforeTheProstration = await makeMultilingualTextWithId(
 	'Der Psalm vor der Niederwerfung während des Jonafastens und der Werktage des Großen Fastens'
 );
 
-export const sectionAPsalmBeforeTheProstration = registerNode<Basenode>({
+export const sectionThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast = registerNode<Basenode>({
 	id: 'D3F09D6E-B0CD-4527-BC36-F92312F2E423',
 	users: [chapterTheOfferingOfTheLamb.id],
 	type: NodeType.Section,
-	value: textAPsalmBeforeTheProstration.id,
+	value: textThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -929,61 +1008,46 @@ export const sectionTheResponseLordHaveMercy = registerNode<Basenode>({
 	children: []
 });
 
-export const textAPrayerForTheOfferingOfBreadAndWineToTheSon = await makeMultilingualTextWithId(
-	'D8EFF3B8-5B7A-4B85-8DDF-C4DC17CC59F5',
-	'5495CBAB-A79C-43CE-9AA4-7E95BD47B8BD',
-	'Εὐχὴ διὰ τὴν Πρόθεσιν τοῦ Ἄρτου καὶ τοῦ Οἴνου πρὸς τὸν Υἱόν',
-	'8A78BFDC-B297-454B-A99D-9DA39B3447FD',
-	'Ⲟⲩϣⲗⲏⲗ ⲉⲑⲃⲉ ϯⲡⲣⲟⲑⲉⲥⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲱⲓⲕ ⲛⲉⲙ ⲡⲓⲏⲣⲡ ⲉ̀Ⲡ̀ϣⲏⲣⲓ',
-	'D374902B-C305-4FDF-9812-ECC243B47670',
-	'صَلاَةٌ لِتَقْدِيمِ الْخُبْزِ وَالْخَمْرِ لِلاِبْنِ',
-	'51FD5BFA-1610-4872-9F47-996232FEA173',
-	'A Prayer for the Offering of Bread and Wine to the Son',
-	'306FEC7D-75AE-4DB5-AD33-E420D9D2FD4D',
-	'Das Gebet zur Darbringung von Brot und Wein an den Sohn'
+export const textTheHymnAllTheWiseMenOfIsrael = await makeMultilingualTextWithIdWithoutGreek(
+	'0447A5C4-4A34-4391-BBF3-0242DB353B84',
+	'C1D045B3-9AA1-4C89-AD80-5EE9DEC2092A',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲛⲓⲥⲁⲃⲉⲩ ⲧⲏⲣⲟⲩ ⲛ̀ⲧⲉ Ⲡⲓⲥⲣⲁⲏⲗ',
+	'3AC14675-B1D8-4601-AFCE-BAA5D6E31458',
+	'اللَّحْنُ كُلُّ حُكَمَاءِ إِسْرَائِيلَ',
+	'6F54179B-F76C-4912-9589-F621D5226B8C',
+	'The Hymn All the Wise Men of Israel',
+	'275CCC18-830E-471F-82AD-B7B114D46F01',
+	'Das Lied All die Weisen Israels'
 );
 
-textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.ancient_greek.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textAPrayerForTheOfferingOfBreadAndWineToTheSon.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-
-export const sectionAPrayerForTheOfferingOfBreadAndWineToTheSon = registerNode<Basenode>({
-	id: 'AF51E07F-6557-4666-9099-8EFA7ED5DC57',
+export const sectionTheHymnAllTheWiseMenOfIsrael = registerNode<Basenode>({
+	id: '8F9DFDDB-4361-4B81-B7D7-96D31425060C',
 	users: [chapterTheOfferingOfTheLamb.id],
 	type: NodeType.Section,
-	value: textAPrayerForTheOfferingOfBreadAndWineToTheSon.id,
+	value: textTheHymnAllTheWiseMenOfIsrael.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerOfAbsolutionToTheSon = await makeMultilingualTextWithId(
-	'D9AD0948-4CD3-4908-AF97-A9BDEC7629D0',
-	'395C02B6-65DF-45FC-93BD-20A1E226A5DE',
-	'Ἡ Εὐχὴ τῆς Ἀπολύσεως πρὸς τὸν Υἱόν',
-	'CD1CFD94-ED12-4FEE-97D8-A9036901F2E3',
-	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲉ̀Ⲡ̀ϣⲏⲣⲓ',
-	'FDBE058B-8C43-40F9-831E-E18E7C490D5A',
-	'صَلاَةُ الْحَلِّ لِلاِبْنِ',
-	'DA88F3A1-89FC-4B6A-8CFE-03FE42ED869E',
-	'The Prayer of Absolution to the Son',
-	'F84312F6-BF75-42A3-84C6-40FC437B28BA',
-	'Das Gebet des Losspruches an den Sohn'
+export const textTheAbsolutionOfTheServants = await makeMultilingualTextWithId(
+	'C01023CF-AF64-4DF9-BEAB-3ADF0511857A',
+	'E2FBC520-B3FC-4477-85E7-51CE265D642C',
+	'Ἡ Ἀπόλυσις τῶν Διακόνων',
+	'BE6E1503-BC7A-47DB-ACC4-DD21C7EB0345',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲛ̀ⲧⲉ ⲛⲓⲣⲉϥϣⲉⲙϣⲓ',
+	'F458A901-F0E9-40AB-AE35-8DFEB1B3A723',
+	'صَلاَةُ الْحَلِّ لِلْخُدَّامِ',
+	'5104B135-6C10-4DD7-8CAA-84B73892EAEF',
+	'The Absolution of the Servants',
+	'FDFB4FC7-A226-4C7E-A1A5-F78B0A61C11C',
+	'Der Losspruch der Diener'
 );
 
-textThePrayerOfAbsolutionToTheSon.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerOfAbsolutionToTheSon.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerOfAbsolutionToTheSon.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerOfAbsolutionToTheSon.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerOfAbsolutionToTheSon.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-
-export const sectionThePrayerOfAbsolutionToTheSon = registerNode<Basenode>({
-	id: '6194AFF5-889B-4965-93C8-72AB05D71384',
+export const sectionTheAbsolutionOfTheServants = registerNode<Basenode>({
+	id: '60AA4D01-AB80-42C8-B7AA-258014D34662',
 	users: [chapterTheOfferingOfTheLamb.id],
 	type: NodeType.Section,
-	value: textThePrayerOfAbsolutionToTheSon.id,
+	value: textTheAbsolutionOfTheServants.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -1000,14 +1064,17 @@ chapterTheOfferingOfTheLamb.children = [
 	[sectionTheBlessingOfTheGifts.id],
 	[sectionTheCallToPrayer.id],
 	[sectionThePrayerOfThanksgiving.id],
-	[sectionAPsalmBeforeTheProstration.id],
+	[sectionTheVeilingOfTheOfferings.id],
+	[sectionThePrayerOfAbsolutionToTheSon.id],
+	[sectionTheDescentFromTheHolyOfHolies.id],
+	[sectionThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast.id],
 	[sectionTheProstration.id],
 	[sectionTheResponseLordHaveMercy.id],
-	[sectionAPrayerForTheOfferingOfBreadAndWineToTheSon.id],
-	[sectionThePrayerOfAbsolutionToTheSon.id]
+	[sectionTheHymnAllTheWiseMenOfIsrael.id],
+	[sectionTheAbsolutionOfTheServants.id]
 ];
 
-partTheOfferingOfTheLamb.children = [
+partTheOfferingOfTheOblations.children = [
 	[chapterThePreparationForTheEucharisticService.id],
 	[chapterThePsalmsOfTheThirdHour.id],
 	[chapterThePsalmsOfTheSixthHour.id],
@@ -1015,11 +1082,11 @@ partTheOfferingOfTheLamb.children = [
 	[chapterThePsalmsOfTheEleventhHour.id],
 	[chapterThePsalmsOfTheTwelfthHour.id],
 	[chapterThePsalmsOfTheVeil.id],
-	[chapterTheGospelAndTheLitaniesOfTheThirdHour.id],
-	[chapterTheGospelAndTheLitaniesOfTheSixthHour.id],
-	[chapterTheGospelAndTheLitaniesOfTheNinthHour.id],
-	[chapterTheGospelAndTheLitaniesOfTheEleventhHour.id],
-	[chapterTheGospelAndTheLitaniesOfTheTwelfthHour.id],
-	[chapterTheGospelAndTheLitaniesOfTheVeil.id],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheThirdHour.id],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheSixthHour.id],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheNinthHour.id],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.id],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.id],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheVeil.id],
 	[chapterTheOfferingOfTheLamb.id]
 ];

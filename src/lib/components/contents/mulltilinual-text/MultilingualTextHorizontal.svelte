@@ -11,14 +11,16 @@
 
 <div class="columns">
 	{#each getSelectedLanguages() as language}
-		<div class="column">
-			{#if language == 'coptic'}
-				<p><Coptic><Text model={model.texts[language]} /></Coptic></p>
-			{:else if language == 'arabic'}
-				<p class="has-text-right"><Arabic><Text model={model.texts[language]} /></Arabic></p>
-			{:else}
-				<p><Latin>{model.texts[language].value}</Latin></p>
-			{/if}
-		</div>
+		{#if model.texts[language]}
+			<div class="column">
+				{#if language == 'coptic'}
+					<p><Coptic><Text model={model.texts[language]} /></Coptic></p>
+				{:else if language == 'arabic'}
+					<p class="has-text-right"><Arabic><Text model={model.texts[language]} /></Arabic></p>
+				{:else}
+					<p><Latin>{model.texts[language].value}</Latin></p>
+				{/if}
+			</div>
+		{/if}
 	{/each}
 </div>
