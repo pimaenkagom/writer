@@ -6,6 +6,7 @@ import {
 	makeMultilingualTextWithId,
 	makeMultilingualTextWithIdWithoutGreek
 } from '$lib/utilities/initializer/constructors';
+import { partTheLiturgyOfTheWord } from '$lib/utilities/initializer/part-the-liturgy-of-the-word';
 import { partTheOfferingOfTheOblations } from '$lib/utilities/initializer/part-the-offering-of-the-lamb';
 import { partTheReceptionOfAPatriarchMetropolitanOrBishop } from '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
 import { registerNode } from '$lib/utilities/initializer/registry';
@@ -38,6 +39,7 @@ export const partLiturgyOfTheFaithful = registerNode<Basenode>({
 bookTheLiturgyAccordingToBasil.children = [
 	[partTheReceptionOfAPatriarchMetropolitanOrBishop.id],
 	[partTheOfferingOfTheOblations.id],
+	[partTheLiturgyOfTheWord.id],
 	[partLiturgyOfTheFaithful.id]
 ];
 
