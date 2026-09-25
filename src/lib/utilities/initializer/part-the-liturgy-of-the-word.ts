@@ -147,36 +147,25 @@ export const sectionTheOfferingOfIncenseInTheHolyOfHolies = registerNode<Basenod
 	children: []
 });
 
-export const textTheOfferingOfIncenseInTheSecondChoir = await makeMultilingualTextWithId(
+export const textTheOfferingOfIncenseInAllFourDirections = await makeMultilingualTextWithId(
 	'1FF14D78-08DD-49BF-8A50-00D4BE99F00D',
 	'7DB654D5-9BF0-4A75-956E-D7418BA61DE5',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ἐν τῷ δευτέρῳ Χορῷ',
+	'Ἡ Προσφορὰ τοῦ Θυμιάματος πρὸς τὰ Τέσσαρα Κλίματα',
 	'276704F3-BFCE-4404-9860-A4C59D409929',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ϧⲉⲛ ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ⲭⲟⲣⲟⲥ',
+	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉ̀ⲡⲓϥⲧⲟⲟⲩ ⲛ̀ⲧⲉⲛϩ ⲛ̀ⲧⲉ ⲡⲓⲕⲁϩⲓ',
 	'18786D41-EA7A-4198-96A5-06A6E049156C',
-	'رَفْعُ الْبَخُورِ فِي الْخُورُسِ الثَّانِي',
+	'رَفْعُ الْبَخُورِ إِلَى الْجِهَاتِ الْأَرْبَعِ',
 	'4BAC8F1F-4F2F-4558-B9D7-C2776FACA1AF',
-	'The Offering of Incense in the Second Choir',
+	'The Offering of Incense in All Four Directions',
 	'FE78894F-E853-40F7-B7D2-E09FC478C351',
-	'Die Darbringung des Weihrauchs im zweiten Chor'
+	'Die Darbringung des Weihrauchs in alle vier Himmelsrichtungen'
 );
 
-textTheOfferingOfIncenseInTheSecondChoir.texts.ancient_greek.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseInTheSecondChoir.texts.coptic.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseInTheSecondChoir.texts.arabic.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseInTheSecondChoir.texts.english.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseInTheSecondChoir.texts.german.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-
-export const sectionTheOfferingOfIncenseInTheSecondChoir = registerNode<Basenode>({
+export const sectionTheOfferingOfIncenseInAllFourDirections = registerNode<Basenode>({
 	id: '090E5F56-C83A-43F4-8049-7F5622371C19',
 	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
 	type: NodeType.Section,
-	value: textTheOfferingOfIncenseInTheSecondChoir.id,
+	value: textTheOfferingOfIncenseInAllFourDirections.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -479,7 +468,7 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children
 	[sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle.id],
 	[sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar.id],
 	[sectionTheOfferingOfIncenseInTheHolyOfHolies.id],
-	[sectionTheOfferingOfIncenseInTheSecondChoir.id],
+	[sectionTheOfferingOfIncenseInAllFourDirections.id],
 	[sectionTheOfferingOfIncenseForTheGospel.id],
 	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
 	[sectionTheOfferingOfIncenseForThePatriarch.id],
@@ -490,7 +479,7 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children
 	[sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle.id],
 	[sectionTheOfferingOfIncenseForTheCrucifiedLord.id],
 	[sectionTheOfferingOfIncenseForTheConfessionOfThePeople.id],
-	[sectionTheOfferingOfIncenseInTheSecondChoir.id],
+	[sectionTheOfferingOfIncenseInAllFourDirections.id],
 	[sectionTheOfferingOfIncenseForTheGospel.id],
 	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
 	[sectionTheOfferingOfIncenseForThePatriarch.id],

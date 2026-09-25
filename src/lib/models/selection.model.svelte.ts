@@ -40,7 +40,15 @@ export class Selection extends Stated {
 			if (loadedIndex !== null) {
 				const isRoot = nodeType === order[0];
 				if (isRoot) {
-					this._nodes[nodeType] = getCollectionForNodeType(nodeType).values[loadedIndex[0]];
+					const node = getCollectionForNodeType(nodeType).values[loadedIndex[0]];
+					if (node === undefined) {
+						this._indices[nodeType] = null;
+						this._nodes[nodeType] = null;
+						setSetting(nodeType, JSON.stringify(null));
+						continue;
+					}
+
+					this._nodes[nodeType] = node;
 				} else {
 					const parentNode = this._nodes[supertypeOf(nodeType)];
 					if (parentNode === null) {
@@ -49,7 +57,14 @@ export class Selection extends Stated {
 						);
 					}
 
-					const nodeId = parentNode.children[loadedIndex[0]][loadedIndex[1]];
+					const nodeId = parentNode.children[loadedIndex[0]]?.[loadedIndex[1]];
+					if (nodeId === undefined) {
+						this._indices[nodeType] = null;
+						this._nodes[nodeType] = null;
+						setSetting(nodeType, JSON.stringify(null));
+						continue;
+					}
+
 					this._nodes[nodeType] = getCollectionForNodeType(nodeType).items[nodeId];
 				}
 			}
