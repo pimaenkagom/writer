@@ -12,6 +12,7 @@ import { partTheReceptionOfAPatriarchMetropolitanOrBishop } from '$lib/utilities
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
+import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 
 export const textLiturgyOfTheFaithful = await makeMultilingualTextWithId(
 	'3D13ECE5-662E-4052-8C72-0847F405A541',
@@ -248,29 +249,6 @@ export const sectionTheIntercessionsOfSaintMary = registerNode<Basenode>({
 	users: [chapterTheReconciliation.id],
 	type: NodeType.Section,
 	value: textTheIntercessionsOfSaintMary.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheResponseOfThePeopleWeWorshipYouOChrist = await makeMultilingualTextWithId(
-	'44B0C4C4-0B55-473B-AB20-391E2F33528F',
-	'A5A8461B-F257-4138-B4CF-56A9DBC000FD',
-	'Ἡ Ἀπόκρισις τοῦ Λαοῦ· Προσκυνοῦμέν σε, ὦ Χριστέ',
-	'188CF048-E1A7-4E0E-85A9-E46F1128604D',
-	'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ ⲧⲉⲛⲟⲩⲱϣⲧ ⲙ̀ⲙⲟⲕ ⲱ̀ Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ',
-	'32EF319D-7EA3-424E-BED0-F95F0CC53D3F',
-	'مَرَدُّ الشَّعْبِ: نَسْجُدُ لَكَ أَيُّهَا الْمَسِيحُ',
-	'1FBA5052-0722-442A-ADD5-FAEBC9C82FE4',
-	'The Response of the People: We Worship You, O Christ',
-	'25DD97A0-1DB6-4F74-9504-B04915EC5550',
-	'Die Erwiderung des Volkes: Wir beten dich an, o Christus'
-);
-
-export const sectionTheResponseOfThePeopleWeWorshipYouOChrist = registerNode<Basenode>({
-	id: '852E5B1F-E0BB-47F1-AFF2-BAF2D36BA7CE',
-	users: [chapterTheReconciliation.id],
-	type: NodeType.Section,
-	value: textTheResponseOfThePeopleWeWorshipYouOChrist.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });

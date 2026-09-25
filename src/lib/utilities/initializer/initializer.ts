@@ -10,6 +10,7 @@ import '$lib/utilities/initializer/sections/section-a-prayer-of-reconciliation';
 import '$lib/utilities/initializer/shared/clauses-someone-says';
 import '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
 import '$lib/utilities/initializer/shared/section-the-call-to-prayer';
+import '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 import '$lib/utilities/initializer/shared/texts-empty';
 
 export async function initializeLibrary() {

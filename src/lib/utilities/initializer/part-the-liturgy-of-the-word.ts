@@ -4,6 +4,7 @@ import { NodeType } from '$lib/models/node-type.model';
 import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
 import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
+import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 
 export const textTheLiturgyOfTheWord = await makeMultilingualTextWithId(
 	'944E89D6-5748-4FC0-BB72-9DD9E8E1F884',
@@ -485,12 +486,474 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children
 	[sectionTheOfferingOfIncenseForThePatriarch.id],
 	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
 	[sectionTheOfferingOfIncenseForTheBishop.id],
+	[sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id],
 	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
 	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id],
 	[sectionTheConclusionOfTheOfferingOfIncense.id]
 ];
 
+export const textTheHymnsBeforeTheReadingOfThePaulineEpistle = await makeMultilingualTextWithId(
+	'88658A1C-C251-42A6-AAAC-4C687F78AC3C',
+	'7F122B44-F27F-4DF1-BB07-FE178EDE1A28',
+	'Οἱ Ὕμνοι πρὸ τῆς Ἀναγνώσεως τῆς Ἐπιστολῆς τοῦ Παύλου',
+	'390F78F2-85E3-46CA-B2A7-250017816E40',
+	'Ⲛⲓϫⲱ ϧⲁϫⲉⲛ ⲡ̀ⲱϣ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'04049C8D-08A4-4212-A093-EBE9E0451098',
+	'أَلْحَانُ قَبْلَ قِرَاءَةِ الرِّسَالَةِ الْبُولُسِيَّةِ',
+	'3D7B5A2C-4B07-4E33-B719-480FB7C7254C',
+	'The Hymns before the Reading of the Pauline Epistle',
+	'21CB6626-9FEB-4B43-9200-F88C43CE1E56',
+	'Die Lieder vor der Lesung des Paulinischen Briefes'
+);
+
+export const chapterTheHymnsBeforeTheReadingOfThePaulineEpistle = registerNode<Basenode>({
+	id: '9260246D-CC8F-4472-9952-68F6F6AED38E',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheHymnsBeforeTheReadingOfThePaulineEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays = await makeMultilingualTextWithId(
+	'CCEBC9F8-975B-44BC-BDD2-AE523222548E',
+	'EFF07BC3-3B2C-40FD-9317-32E4609B5B59',
+	'Ὁ Ὕμνος τοῦ Θυμιατηρίου κατὰ τὰς κοινὰς καὶ χαρμοσύνους ἡμέρας',
+	'1EBD46DD-5993-4E7F-AFA8-82A6EF3E0443',
+	'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϣⲟⲩⲣⲏϣ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲛⲉⲙ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲧⲉ ⲡⲓⲣⲁϣⲓ',
+	'0A49E46C-90D2-49AC-8365-2BCB5CF72CF5',
+	'لَحْنُ الْمِجْمَرَةِ فِي الْأَيَّامِ السَّنَوِيَّةِ وَأَيَّامِ الْفَرَحِ',
+	'92171063-08CE-4FA6-985F-9D2A8FE2D49F',
+	'The Hymn of the Censer on the Ordinary and Joyful Days',
+	'7C48AF36-C49F-47C2-9D3B-374D16E9F6F2',
+	'Das Lied des Weihrauchfasses an gewöhnlichen und freudigen Tagen'
+);
+
+textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.texts.coptic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.texts.arabic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.texts.english.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.texts.german.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays = registerNode<Basenode>({
+	id: '2D6A4A45-6F00-42AF-80B6-05FC57CA2FC0',
+	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnOfTheCenserOnFastingDays = await makeMultilingualTextWithId(
+	'ABD58BCF-DEEC-47E3-9BA1-3F186CA00467',
+	'07FB2FE5-14AD-420A-B12B-EB77B8BD93AC',
+	'Ὁ Ὕμνος τοῦ Θυμιατηρίου ἐν ἡμέραις νηστείας',
+	'00F4CE97-DB94-43BB-B038-22F4D2C45394',
+	'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϣⲟⲩⲣⲏϣ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲧⲉ ϯⲛⲏⲥⲧⲓⲁ',
+	'70129D11-87FA-45E3-8064-1724C2ED1899',
+	'لَحْنُ الْمِجْمَرَةِ فِي أَيَّامِ الصَّوْمِ',
+	'50F90DB5-6E3B-4EFF-A928-0E19E7984247',
+	'The Hymn of the Censer on Fasting Days',
+	'5F91FD21-A34E-416A-AB8A-841D3C20CCAF',
+	'Das Lied des Weihrauchfasses an Fastentagen'
+);
+
+textTheHymnOfTheCenserOnFastingDays.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnFastingDays.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnFastingDays.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnFastingDays.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnFastingDays.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheHymnOfTheCenserOnFastingDays = registerNode<Basenode>({
+	id: 'AE1B682C-F8F6-4BC3-9C29-4C90FB794816',
+	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheHymnOfTheCenserOnFastingDays.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast =
+	await makeMultilingualTextWithId(
+		'02670D72-63A0-4912-8A32-9856C9A2BE4D',
+		'0828F67A-8595-42A9-A56A-FDEC2B7D6898',
+		'Ὁ Ὕμνος τοῦ Θυμιατηρίου ἐν ταῖς καθημεριναῖς ἡμέραις τῆς Νηστείας τοῦ Ἰωνᾶ καὶ τῆς Μεγάλης Τεσσαρακοστῆς',
+		'8AD4865A-5543-4FAE-BC8B-F3458504D7D4',
+		'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓϣⲟⲩⲣⲏϣ ϧⲉⲛ ⲛⲓⲉϩⲟⲟⲩ ⲙ̀ⲡⲓϩⲱⲃ ⲛ̀ⲧⲉ ϯⲛⲏⲥⲧⲓⲁ ⲛ̀ⲧⲉ Ⲓⲱⲛⲁ ⲛⲉⲙ ϯⲛⲓϣϯ ⲛ̀ⲛⲏⲥⲧⲓⲁ',
+		'AB2ED0F4-3DD6-455D-B4D7-9DDC9FFAC534',
+		'لَحْنُ الْمِجْمَرَةِ فِي أَيَّامِ الْأُسْبُوعِ مِنْ صَوْمِ يُونَانَ وَالصَّوْمِ الْكَبِيرِ',
+		'0EA25250-A608-45F5-8168-502D534D8498',
+		'The Hymn of the Censer on the Weekdays of the Fast of Jonah and the Great Fast',
+		'5DE6F903-68C1-4AB9-8F04-794AA97ABBCE',
+		'Das Lied des Weihrauchfasses an den Werktagen des Jona- und großen Fastens'
+	);
+
+textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.texts.coptic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.texts.arabic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.texts.english.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.texts.german.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast =
+	registerNode<Basenode>({
+		id: '2D788E3C-156F-4C52-AB39-D089DEEC0E73',
+		users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+		type: NodeType.Section,
+		value: textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheHymnOfTheCross = await makeMultilingualTextWithId(
+	'6B5657DA-6ADA-425D-BE93-753E3027D76B',
+	'7B4DB35D-C35A-462F-A502-F513E5D1B01F',
+	'Ὁ Ὕμνος τοῦ Σταυροῦ',
+	'1B9ADA99-BE10-4297-B26A-33F9FCFF5927',
+	'Ⲡⲓϫⲱ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲧⲁⲩⲣⲟⲥ',
+	'7CA93C96-B981-406D-A9FF-3C88C7AAF3F7',
+	'لَحْنُ الصَّلِيبِ',
+	'72F5C6BE-9243-4D92-BD8C-6905AEA81B7B',
+	'The Hymn of the Cross',
+	'EF3C8110-0DA2-4D71-B90F-0270AEDC2A81',
+	'Das Lied des Kreuzes'
+);
+
+export const sectionTheHymnOfTheCross = registerNode<Basenode>({
+	id: '198F5502-738D-4951-B887-E2629C377662',
+	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheHymnOfTheCross.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntercessions = await makeMultilingualTextWithId(
+	'072612EE-FA51-49BF-8036-4E091B393888',
+	'F36DAD68-6941-48B5-9DDF-AA711B5DD4CF',
+	'Αἱ Πρεσβεῖαι',
+	'9C752A26-2164-4AF3-8ECA-64B8FCA1AF57',
+	'Ⲛⲓⲡ̀ⲣⲉⲥⲃⲓⲁ',
+	'F4D55B45-0547-4816-8539-7A2451447686',
+	'الشَّفَاعَاتُ',
+	'355080DF-D67B-49C0-BA1A-539154E5B8A3',
+	'The Intercessions',
+	'59947448-E5B0-4A44-8426-7D302832FFBF',
+	'Die Fürbitten'
+);
+
+export const sectionTheIntercessions = registerNode<Basenode>({
+	id: '2F98E34A-ECE9-40FD-B494-58AF5997EB59',
+	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheIntercessions.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.children = [
+	[sectionTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.id],
+	[sectionTheHymnOfTheCenserOnFastingDays.id],
+	[sectionTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
+	[sectionTheHymnOfTheCross.id],
+	[sectionTheIntercessions.id]
+];
+
+export const textTheReadingOfThePaulineEpistle = await makeMultilingualTextWithId(
+	'01E56160-5D85-4DF8-A162-1D1380E030D5',
+	'F4A84F4A-C8EC-4517-A82C-23F66AFAEF7D',
+	'Ἡ Ἀνάγνωσις τῆς Ἐπιστολῆς τοῦ Παύλου',
+	'65136B5C-78A4-434D-8D7D-51C0E8873191',
+	'Ⲡ̀ⲱϣ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'F584A936-0C6E-42F3-9A1E-EA1B1E2769DD',
+	'قِرَاءَةُ الرِّسَالَةِ الْبُولُسِيَّةِ',
+	'DDEAF84A-36DC-4BBA-84BA-C2D259CD2819',
+	'The Reading of the Pauline Epistle',
+	'206173AD-2A9B-4AB7-BF44-205DEC17E074',
+	'Die Lesung des Paulinischen Briefes'
+);
+
+export const chapterTheReadingOfThePaulineEpistle = registerNode<Basenode>({
+	id: 'BC58164A-3F61-45FC-ADF6-AA86D889216C',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfThePaulineEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerDuringTheReadingOfThePaulineEpistle = await makeMultilingualTextWithId(
+	'E4EB0D14-4A15-4463-8A85-E97B7E7C52A8',
+	'86646AAA-C4F8-4CC0-8F2F-FA9751153543',
+	'Ἡ Εὐχὴ κατὰ τὴν Ἀνάγνωσιν τῆς Ἐπιστολῆς τοῦ Παύλου',
+	'E65CAA10-7CB4-4537-9087-624FF6E6812D',
+	'Ⲡⲓϣⲗⲏⲗ ϧⲉⲛ ⲡ̀ⲱϣ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'C80ABFB5-9CFA-45C6-AF11-7C46DF96EBC5',
+	'الصَّلاَةُ أَثْنَاءَ قِرَاءَةِ الرِّسَالَةِ الْبُولُسِيَّةِ',
+	'1DA9F088-6901-479C-9CC9-98623290F2C3',
+	'The Prayer during the Reading of the Pauline Epistle',
+	'447CC1E8-E3A0-4504-8589-22E508429031',
+	'Das Gebet während der Lesung des Paulinischen Briefes'
+);
+
+export const sectionThePrayerDuringTheReadingOfThePaulineEpistle = registerNode<Basenode>({
+	id: 'C0148872-6C20-449B-9106-976798ABAEF9',
+	users: [chapterTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textThePrayerDuringTheReadingOfThePaulineEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToThePaulineEpistle = await makeMultilingualTextWithId(
+	'6F9B7DA6-8BD7-4BB0-B494-CAAB215373D5',
+	'8834A818-AEE9-435E-8BF0-3F67D7E8FE47',
+	'Ἡ Εἰσαγωγὴ τῆς Ἐπιστολῆς τοῦ Παύλου',
+	'01B877E7-0CA5-4A73-8623-C8792244F577',
+	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'8E7FD01C-183F-4468-9245-B3DA06AF5966',
+	'مُقَدِّمَةُ الرِّسَالَةِ الْبُولُسِيَّةِ',
+	'BB9F878C-D33D-4A66-945F-929FA9F1AD7A',
+	'The Introduction to the Pauline Epistle',
+	'E87B762B-663B-4179-B7A3-F16A73AFA94B',
+	'Die Einleitung des Paulinischen Briefes'
+);
+
+export const sectionTheIntroductionToThePaulineEpistle = registerNode<Basenode>({
+	id: '14E73616-8736-48DB-9FE6-986C18741D23',
+	users: [chapterTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToThePaulineEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePaulineEpistle = await makeMultilingualTextWithId(
+	'349EE858-6C6B-4480-A561-B1114CA1E959',
+	'64874A60-4537-47E8-B19E-024CEE69E373',
+	'Ἡ Ἐπιστολὴ τοῦ Παύλου',
+	'ACA63FD9-399C-4196-9E77-A38DC53B2DEA',
+	'Ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'28497952-F1DD-4EC8-B5A8-A6B603A3814D',
+	'الرِّسَالَةُ الْبُولُسِيَّةُ',
+	'95978EFB-D19B-4EBB-BB94-145338EC884D',
+	'The Pauline Epistle',
+	'7B683839-2BA0-42B8-81EE-B78BB5840EF9',
+	'Der Paulinische Brief'
+);
+
+textThePaulineEpistle.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePaulineEpistle.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePaulineEpistle.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePaulineEpistle.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePaulineEpistle.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionThePaulineEpistle = registerNode<Basenode>({
+	id: 'EEDA48B3-2DF2-4EDE-97B3-4BF2837F481B',
+	users: [chapterTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textThePaulineEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConclusionOfThePaulineEpistle = await makeMultilingualTextWithId(
+	'2DA7855B-D33A-4574-B61B-D85C4B7850BA',
+	'D3CE80B2-BAE8-4753-BD49-80F78FF9A9A2',
+	'Ἡ Λῆξις τῆς Ἐπιστολῆς τοῦ Παύλου',
+	'C1F29E6E-B936-45FA-8E75-FA077ECEACF7',
+	'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'ECEB57DA-6B66-4E95-96A6-1650596E1B0F',
+	'خِتَامُ الرِّسَالَةِ الْبُولُسِيَّةِ',
+	'F03ABF44-266D-4762-815C-4858424EDCB0',
+	'The Conclusion of the Pauline Epistle',
+	'54696894-481E-45EF-950B-2F4074451C30',
+	'Der Abschluss des Paulinischen Briefes'
+);
+
+export const sectionTheConclusionOfThePaulineEpistle = registerNode<Basenode>({
+	id: '27290A36-DF30-4C7F-9ED0-88B8FA216C37',
+	users: [chapterTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheConclusionOfThePaulineEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'540D290C-A565-4975-AB7D-A6E15CA2C7AC',
+		'A3177103-6088-44C2-8E60-1B30A971554B',
+		'Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'5267298B-78A8-4A9D-89A4-CB8BF989BF5B',
+		'Ⲟⲩⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+		'13E073B0-27B1-4629-AA12-DE14D2BD20B9',
+		'مَرَدٌّ لِلرِّسَالَةِ الْبُولُسِيَّةِ بِحُضُورِ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ',
+		'962599CE-B128-49EE-81BB-5D217709AEBA',
+		'A Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
+		'A37CD2EF-6AF4-4EB4-9811-6876FD9EFF9C',
+		'Eine Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+	);
+
+export const sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: '37CA7988-1C4F-4004-B926-95AA070A3DC9',
+		users: [chapterTheReadingOfThePaulineEpistle.id],
+		type: NodeType.Section,
+		value: textAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'023AB9E1-28F1-49BC-B10F-CA6EF2267824',
+		'54B53734-FF02-4828-A2DC-DB0E429EE703',
+		'Δευτέρα Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'A983AC25-5964-418E-A55E-7BA5DC16D238',
+		'Ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+		'2D6C155A-E161-49DA-BD80-5B658B92853D',
+		'مَرَدٌّ ثَانٍ لِلرِّسَالَةِ الْبُولُسِيَّةِ بِحُضُورِ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ',
+		'BC3482D3-606E-4F76-952F-17776FDABEBB',
+		'A Second Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
+		'C03C028B-5242-4849-BBC6-BF450386C633',
+		'Eine zweite Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+	);
+
+export const sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: 'A8018E92-FAE6-4FE5-992D-EC8F09BF7B15',
+		users: [chapterTheReadingOfThePaulineEpistle.id],
+		type: NodeType.Section,
+		value: textASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'B39C42C5-AA35-40BF-8EE2-6C16230DBE6C',
+		'64E3107A-D64A-4A28-AA12-C4EC4C1485CD',
+		'Τρίτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'60DA9CA8-396A-4750-A580-76B3EAA55B27',
+		'Ⲡⲓⲙⲁϩϣⲟⲙⲧ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+		'72FE8EE2-F187-435C-A7A8-40AB91F53F5F',
+		'مَرَدٌّ ثَالِثٌ لِلرِّسَالَةِ الْبُولُسِيَّةِ بِحُضُورِ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ',
+		'842BAC3B-585F-4981-9973-CBECD0C4B3ED',
+		'A Third Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
+		'7F984DAD-1D5A-4D21-9C65-3B781B178D48',
+		'Eine dritte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+	);
+
+export const sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: '069D8700-F9FB-45B4-8EC9-C573019538A8',
+		users: [chapterTheReadingOfThePaulineEpistle.id],
+		type: NodeType.Section,
+		value: textAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'8FA4525C-0E1A-485E-AAA1-2E740659A3F9',
+		'8D1E8010-E1B7-48BF-8A74-60F08318AD1D',
+		'Ὁ Ὕμνος τῶν Ἀρετῶν - Τετάρτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'100C0031-6013-49E7-9898-272771E61093',
+		'Ⲡⲓϫⲱ ⲛ̀ⲛⲓⲁⲣⲉⲧⲏ - Ⲡⲓⲙⲁϩϥⲧⲟⲟⲩ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+		'1CDF5FF6-447B-4B9F-9895-63A54AEA3D1C',
+		'لَحْنُ الْفَضَائِلِ - مَرَدٌّ رَابِعٌ لِلرِّسَالَةِ الْبُولُسِيَّةِ بِحُضُورِ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ',
+		'73EFCDF8-0F29-422A-9F65-574A5373B42C',
+		'The Hymn of the Virtues - A Fourth Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
+		'61341EC0-6906-45EC-A656-E0BACD9A575C',
+		'Das Lied der Tugenden - Eine vierte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+	);
+
+export const sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: '00E759E4-B38C-4CEA-AAD6-592DD6B7EE51',
+		users: [chapterTheReadingOfThePaulineEpistle.id],
+		type: NodeType.Section,
+		value: textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'DBF1658A-EC88-4D4D-B650-9C7BFCF3F12C',
+		'CAEB3048-85BC-4A63-9630-C9F3109804ED',
+		'Πέμπτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'FBAC2847-2F78-454F-9EC4-5A9614DA0FD6',
+		'Ⲡⲓⲙⲁϩϯⲟⲩ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+		'154B87E7-E7C9-482C-AE19-DCC08315F799',
+		'مَرَدٌّ خَامِسٌ لِلرِّسَالَةِ الْبُولُسِيَّةِ بِحُضُورِ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ',
+		'CC132631-15C6-431C-B3F2-411BC0C02E81',
+		'A Fifth Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
+		'33F9BCB5-6CFE-48DC-B3B9-34362032F4D3',
+		'Eine fünfte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+	);
+
+export const sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: 'E38667E9-8298-40A5-83B6-84E9B97F8DD5',
+		users: [chapterTheReadingOfThePaulineEpistle.id],
+		type: NodeType.Section,
+		value: textAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheTranslationOfTheReading = await makeMultilingualTextWithId(
+	'AD3A7D9A-C1C8-4803-909F-A095675CA1EA',
+	'0725351B-2266-48CD-B9D6-B6CA564EE35C',
+	'Ἡ Ἑρμηνεία τῆς Ἀναγνώσεως',
+	'6EB3EF38-F8C2-4B46-B760-7F5AC713CEDB',
+	'Ϯⲁⲣⲙⲏⲛⲓⲁ ⲛ̀ⲧⲉ ⲡ̀ⲱϣ',
+	'EE205DC6-8FE3-4CFD-B5D4-4D73D20C3C84',
+	'تَرْجَمَةُ الْقِرَاءَةِ',
+	'0E94377A-1052-4C92-9331-C779F871B23B',
+	'The Translation of the Reading',
+	'C8BB3F8C-7E47-4E63-BC71-9056D39B266E',
+	'Die Übersetzung der Lesung'
+);
+
+export const sectionTheTranslationOfTheReading = registerNode<Basenode>({
+	id: '2331943B-C5FD-4BED-A544-6C5E52777E33',
+	users: [chapterTheReadingOfThePaulineEpistle.id],
+	type: NodeType.Section,
+	value: textTheTranslationOfTheReading.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfThePaulineEpistle.children = [
+	[sectionTheResponseOfThePeopleWeWorshipYouOChrist.id],
+	[sectionThePrayerDuringTheReadingOfThePaulineEpistle.id],
+	[sectionTheIntroductionToThePaulineEpistle.id],
+	[sectionThePaulineEpistle.id],
+	[sectionTheConclusionOfThePaulineEpistle.id],
+	[sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[sectionTheTranslationOfTheReading.id]
+];
+
 partTheLiturgyOfTheWord.children = [
-	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id]
+	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
+	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	[chapterTheReadingOfThePaulineEpistle.id]
 ];
