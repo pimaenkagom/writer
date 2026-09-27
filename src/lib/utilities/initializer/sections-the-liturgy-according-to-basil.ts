@@ -816,7 +816,7 @@ partLiturgyOfTheFaithful.children = [
 	[chapterTheLitanies.id]
 ];
 
-export const textTheShortPrayerForPeace = await makeMultilingualTextWithId(
+export const textTheShortLitanyForPeace = await makeMultilingualTextWithId(
 	'E1A0C2EF-45FA-4516-9DD5-793BCD304EBF',
 	'D811DA57-29BE-4E70-8C3B-CEA0B946BED8',
 	'Ἡ Σύντομος Εὐχὴ τῆς Εἰρήνης',
@@ -825,21 +825,21 @@ export const textTheShortPrayerForPeace = await makeMultilingualTextWithId(
 	'EF7E2D2C-4DAE-4360-AA7B-94F9CFDD98F4',
 	'أُوشِيَةُ السَّلاَمِ الْقَصِيرَةُ',
 	'8425BCA9-99D5-49FC-A780-1AFBE171E806',
-	'The Short Prayer for Peace',
+	'The Short Litany for Peace',
 	'857EFA5F-3C5D-41BC-97CC-E7787D1B1595',
 	'Das kurze Gebet für den Frieden'
 );
 
-export const sectionTheShortPrayerForPeace = registerNode<Basenode>({
+export const sectionTheShortLitanyForPeace = registerNode<Basenode>({
 	id: 'B86E8578-0B19-4D03-BC31-42B90EB9F2A8',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textTheShortPrayerForPeace.id,
+	value: textTheShortLitanyForPeace.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheShortPrayerForThePatriarchMetropolitanAndBishop =
+export const textTheShortLitanyForThePatriarchMetropolitanAndBishop =
 	await makeMultilingualTextWithId(
 		'E4D3AA67-DBA0-4856-A0DB-48E1CF018BF2',
 		'77795BAE-F04E-4418-A4C2-9FFB8C4AA9D2',
@@ -849,21 +849,21 @@ export const textTheShortPrayerForThePatriarchMetropolitanAndBishop =
 		'ED15E0DA-34AB-4385-8BF9-EAD7A9A05D3C',
 		'أُوشِيَةُ الْبَطْرِيَرْكِ وَالْمُطْرَانِ وَالْأُسْقُفِ الْقَصِيرَةُ',
 		'20C51A47-02D4-4D15-954E-760FF303611B',
-		'The Short Prayer for the Patriarch, Metropolitan, and Bishop',
+		'The Short Litany for the Patriarch, Metropolitan and Bishop',
 		'5BF744C8-BDDB-4178-BF16-6A51E9113522',
 		'Das kurze Gebet für den Patriarchen, Metropoliten und Bischof'
 	);
 
-export const sectionTheShortPrayerForThePatriarchMetropolitanAndBishop = registerNode<Basenode>({
+export const sectionTheShortLitanyForThePatriarchMetropolitanAndBishop = registerNode<Basenode>({
 	id: 'DC5B6414-57D4-4C02-8580-8C7CB8961038',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textTheShortPrayerForThePatriarchMetropolitanAndBishop.id,
+	value: textTheShortLitanyForThePatriarchMetropolitanAndBishop.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForADepartedPatriarch = await makeMultilingualTextWithId(
+export const textTheLitanyForADepartedPatriarch = await makeMultilingualTextWithId(
 	'6876F7DD-A433-4129-B025-CC8102512EF1',
 	'66228ECA-B4C3-4AC6-B3D4-AF413CC4D9B2',
 	'Ἡ Εὐχὴ ὑπὲρ Πατριάρχου Κεκοιμημένου',
@@ -872,21 +872,21 @@ export const textThePrayerForADepartedPatriarch = await makeMultilingualTextWith
 	'023BC65C-4572-4CB9-83F1-9D950123AF6F',
 	'أُوشِيَةٌ لِبَطْرِيَرْكٍ مُتَنَيِّحٍ',
 	'2EAE56E7-CD42-49E5-8D17-237FF5203A59',
-	'The Prayer for a Departed Patriarch',
+	'The Litany for a Departed Patriarch',
 	'F11F5C7F-A961-4D3D-955C-0EA0D3941EB4',
 	'Das Gebet für einen entschlafenen Patriarchen'
 );
 
-export const sectionThePrayerForADepartedPatriarch = registerNode<Basenode>({
+export const sectionTheLitanyForADepartedPatriarch = registerNode<Basenode>({
 	id: '4A4A6DCC-58F7-47E0-861F-43A3E626D815',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForADepartedPatriarch.id,
+	value: textTheLitanyForADepartedPatriarch.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForADepartedMetropolitan = await makeMultilingualTextWithId(
+export const textTheLitanyForADepartedMetropolitan = await makeMultilingualTextWithId(
 	'522AF7AE-80A9-4A5B-8154-B2E1776D8DBA',
 	'A4A7FDF1-B9AF-4F7A-BDEA-C1D858A3320F',
 	'Ἡ Εὐχὴ ὑπὲρ Μητροπολίτου Κεκοιμημένου',
@@ -895,21 +895,21 @@ export const textThePrayerForADepartedMetropolitan = await makeMultilingualTextW
 	'7F6E56D1-A60F-41EA-87FA-9395097B32FD',
 	'أُوشِيَةٌ لِمُطْرَانٍ مُتَنَيِّحٍ',
 	'A13DC7CD-4479-49EB-AA7A-EC216B573276',
-	'The Prayer for a Departed Metropolitan',
+	'The Litany for a Departed Metropolitan',
 	'182E0A9C-95AD-4508-9C9A-D07D3F8D74A3',
 	'Das Gebet für einen entschlafenen Metropoliten'
 );
 
-export const sectionThePrayerForADepartedMetropolitan = registerNode<Basenode>({
+export const sectionTheLitanyForADepartedMetropolitan = registerNode<Basenode>({
 	id: '109FAC2D-6F18-4120-A2A6-B938B28E1DB7',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForADepartedMetropolitan.id,
+	value: textTheLitanyForADepartedMetropolitan.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForADepartedBishop = await makeMultilingualTextWithId(
+export const textTheLitanyForADepartedBishop = await makeMultilingualTextWithId(
 	'C0FA803C-1F88-4979-AF1C-13F778409B05',
 	'C24DC413-B659-4F0D-B2FE-AB92F162F00C',
 	'Ἡ Εὐχὴ ὑπὲρ Ἐπισκόπου Κεκοιμημένου',
@@ -918,21 +918,21 @@ export const textThePrayerForADepartedBishop = await makeMultilingualTextWithId(
 	'5DF0B46A-997F-4DC4-9CB1-2A7EB066D0D2',
 	'أُوشِيَةٌ لِأُسْقُفٍ مُتَنَيِّحٍ',
 	'D234B06B-6104-461E-9A6B-671DF5AF5813',
-	'The Prayer for a Departed Bishop',
+	'The Litany for a Departed Bishop',
 	'30B2197A-3D2E-4802-B3B2-33670D42E3E5',
 	'Das Gebet für einen entschlafenen Bischof'
 );
 
-export const sectionThePrayerForADepartedBishop = registerNode<Basenode>({
+export const sectionTheLitanyForADepartedBishop = registerNode<Basenode>({
 	id: '71014825-8405-4465-B6ED-38DE215E6CB8',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForADepartedBishop.id,
+	value: textTheLitanyForADepartedBishop.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForTheServants = await makeMultilingualTextWithId(
+export const textTheLitanyForTheServants = await makeMultilingualTextWithId(
 	'517608CE-53DC-415A-A002-6039ADFFF0F1',
 	'3DC624E1-5F12-434C-837F-1CD126C7E0E2',
 	'Ἡ Εὐχὴ ὑπὲρ τῶν Ὑπηρετούντων',
@@ -941,21 +941,21 @@ export const textThePrayerForTheServants = await makeMultilingualTextWithId(
 	'D56EEE98-9818-4CE4-B9D3-4440FC7F3087',
 	'أُوشِيَةُ الْخُدَّامِ',
 	'F12CBCDC-A1B2-4AC7-9A1E-1A6432166B96',
-	'The Prayer for the Servants',
+	'The Litany for the Servants',
 	'5608AF60-6F5E-4FFA-8385-82D2EB55E9EF',
 	'Das Gebet für die Diener'
 );
 
-export const sectionThePrayerForTheServants = registerNode<Basenode>({
+export const sectionTheLitanyForTheServants = registerNode<Basenode>({
 	id: '24045B0A-BA98-45B9-88B1-65C466DAE83E',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForTheServants.id,
+	value: textTheLitanyForTheServants.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForTheMercyUponUsAll = await makeMultilingualTextWithId(
+export const textTheLitanyForTheMercyUponUsAll = await makeMultilingualTextWithId(
 	'0EDBAFAC-0F81-4279-832A-BF5BA7B1D5CB',
 	'4F2D77E9-95E2-49DB-B52A-34A44EB13D36',
 	'Ἡ Εὐχὴ ὑπὲρ τοῦ Ἐλέους πάντων ἡμῶν',
@@ -964,21 +964,21 @@ export const textThePrayerForTheMercyUponUsAll = await makeMultilingualTextWithI
 	'EB7125E9-B688-43FA-98C2-26E9CACF1FB0',
 	'أُوشِيَةُ الرَّحْمَةِ عَلَيْنَا كُلِّنَا',
 	'9233BDCE-9241-46DE-871E-3552688303F4',
-	'The Prayer for the Mercy upon Us All',
+	'The Litany for the Mercy upon Us All',
 	'9535A82D-41BA-42CC-93D2-5E426FB68417',
 	'Das Gebet für das Erbarmen unser aller'
 );
 
-export const sectionThePrayerForTheMercyUponUsAll = registerNode<Basenode>({
+export const sectionTheLitanyForTheMercyUponUsAll = registerNode<Basenode>({
 	id: '28B79594-810C-49B0-9C00-6FCDB2D5B20F',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForTheMercyUponUsAll.id,
+	value: textTheLitanyForTheMercyUponUsAll.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForThePlace = await makeMultilingualTextWithId(
+export const textTheLitanyForTheSalvationOfThisPlace = await makeMultilingualTextWithId(
 	'1C5EDE37-D726-4F0B-ACAF-4B170A740F3F',
 	'1736E826-8DC8-4348-8E0D-8AB6B5224D2E',
 	'Ἡ Εὐχὴ ὑπὲρ τῆς Σωτηρίας τοῦ Τόπου τούτου',
@@ -987,21 +987,21 @@ export const textThePrayerForThePlace = await makeMultilingualTextWithId(
 	'FF84545E-1A11-4AF0-9BDD-FAA8FED39436',
 	'أُوشِيَةُ خَلاَصِ هَذَا الْمَوْضِعِ',
 	'B82EE78A-FF1A-45BA-801B-67B1007522E8',
-	'The Prayer for the Salvation of This Place',
+	'The Litany for the Salvation of This Place',
 	'CB462957-070A-4FC0-8305-0307EC72B6E3',
 	'Das Gebet für das Heil dieses Ortes'
 );
 
-export const sectionThePrayerForThePlace = registerNode<Basenode>({
+export const sectionTheLitanyForTheSalvationOfThisPlace = registerNode<Basenode>({
 	id: '7267A3D6-5715-432B-A732-BEB5C63278AD',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForThePlace.id,
+	value: textTheLitanyForTheSalvationOfThisPlace.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi =
+export const textTheLitanyForNatureFromThe11thOfPaoniToThe9thOfPaopi =
 	await makeMultilingualTextWithId(
 		'7F0A2ECF-D30D-4862-9FBE-346745C0600E',
 		'1FE32FEA-BB12-49ED-B0A4-E71E6E8FFC5B',
@@ -1011,21 +1011,21 @@ export const textThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi =
 		'64D5E78D-F982-44CB-A171-A5C2631F222D',
 		'أُوشِيَةُ الطَّبِيعَةِ مِنَ الْحَادِي عَشَرَ مِنْ بَؤُونَةَ إِلَى التَّاسِعِ مِنْ بَابَةَ',
 		'BD07DF49-ACC2-4D4B-8E7D-0A15A4DC7BFC',
-		'The Prayer for Nature from the 11th of Paoni to the 9th of Paopi',
+		'The Litany for Nature from the 11th of Paoni to the 9th of Paopi',
 		'A83087E0-F87E-4C5A-B092-DA3652B0190C',
 		'Das Gebet für die Natur vom 11. Paoni bis zum 9. Paopi'
 	);
 
-export const sectionThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi = registerNode<Basenode>({
+export const sectionTheLitanyForNatureFromThe11thOfPaoniToThe9thOfPaopi = registerNode<Basenode>({
 	id: '88CE88DD-1020-412A-8F5A-0E6D244BD3BC',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
+	value: textTheLitanyForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi =
+export const textTheLitanyForNatureFromThe10thOfPaopiToThe10thOfTobi =
 	await makeMultilingualTextWithId(
 		'4DC0BBE6-8ADA-47E8-B6C4-72A9617CAA03',
 		'FDA55855-448B-4531-9426-D1D1F796D774',
@@ -1035,21 +1035,21 @@ export const textThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi =
 		'B49A8722-6BB4-48C1-B88F-E4919D63E8FF',
 		'أُوشِيَةُ الطَّبِيعَةِ مِنَ الْعَاشِرِ مِنْ بَابَةَ إِلَى الْعَاشِرِ مِنْ طُوبَةَ',
 		'60584FE8-A1A3-4AB1-A2E3-D03828F16F5A',
-		'The Prayer for Nature from the 10th of Paopi to the 10th of Tobi',
+		'The Litany for Nature from the 10th of Paopi to the 10th of Tobi',
 		'57D57CB7-4B87-4D5D-A630-561CB88E0147',
 		'Das Gebet für die Natur vom 10. Paopi bis zum 10. Tobi'
 	);
 
-export const sectionThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi = registerNode<Basenode>({
+export const sectionTheLitanyForNatureFromThe10thOfPaopiToThe10thOfTobi = registerNode<Basenode>({
 	id: '35C5BF7D-95E0-49BE-A25A-044CDDDBC6C8',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
+	value: textTheLitanyForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni =
+export const textTheLitanyForNatureFromThe11thOfTobiToThe10thOfPaoni =
 	await makeMultilingualTextWithId(
 		'ED32B204-81CC-4F45-A04B-6E687F6B3A61',
 		'5403C56A-0589-41D5-8B0C-E3AC7D592C46',
@@ -1059,21 +1059,21 @@ export const textThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni =
 		'F18A8CE8-6422-4B48-B402-92A73A530C27',
 		'أُوشِيَةُ الطَّبِيعَةِ مِنَ الْحَادِي عَشَرَ مِنْ طُوبَةَ إِلَى الْعَاشِرِ مِنْ بَؤُونَةَ',
 		'7BA33435-860C-46D5-A5BB-640A0D0BD46D',
-		'The Prayer for Nature from the 11th of Tobi to the 10th of Paoni',
+		'The Litany for Nature from the 11th of Tobi to the 10th of Paoni',
 		'868F3D3E-37C4-4279-9E6E-E08F2ED53B81',
 		'Das Gebet für die Natur vom 11. Tobi bis zum 10. Paoni'
 	);
 
-export const sectionThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni = registerNode<Basenode>({
+export const sectionTheLitanyForNatureFromThe11thOfTobiToThe10thOfPaoni = registerNode<Basenode>({
 	id: '0BA19326-530F-45C6-AA56-CCC1E817EB9E',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
+	value: textTheLitanyForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textTheYearRoundPrayerForNature = await makeMultilingualTextWithId(
+export const textTheYearRoundLitanyForNature = await makeMultilingualTextWithId(
 	'78430D94-5E26-412F-BA2B-9641D900721C',
 	'7CABB1E8-499C-448C-81DF-04E4AD1D65C7',
 	"Ἡ Εὐχὴ ὑπὲρ τῆς Φύσεως δι' ὅλου τοῦ ἔτους",
@@ -1082,38 +1082,38 @@ export const textTheYearRoundPrayerForNature = await makeMultilingualTextWithId(
 	'5706C981-C060-488E-BECC-F70DB388FB54',
 	'أُوشِيَةُ الطَّبِيعَةِ طُولَ السَّنَةِ',
 	'6F0BD318-F77E-4E71-8107-7732F002B37E',
-	'The Year-Round Prayer for Nature',
+	'The Year-Round Litany for Nature',
 	'B8E21806-5505-4142-98DC-2E0648C0C949',
 	'Das ganzjährige Gebet für die Natur'
 );
 
-export const sectionTheYearRoundPrayerForNature = registerNode<Basenode>({
+export const sectionTheYearRoundLitanyForNature = registerNode<Basenode>({
 	id: '39A32ED8-9DAF-4C8F-9FCC-BC90097167F3',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textTheYearRoundPrayerForNature.id,
+	value: textTheYearRoundLitanyForNature.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
 chapterTheLitanies.children = [
-	[sectionTheShortPrayerForPeace.id],
-	[sectionTheShortPrayerForThePatriarchMetropolitanAndBishop.id],
-	[sectionThePrayerForADepartedPatriarch.id],
-	[sectionThePrayerForADepartedMetropolitan.id],
-	[sectionThePrayerForADepartedBishop.id],
-	[sectionThePrayerForTheServants.id],
-	[sectionThePrayerForTheMercyUponUsAll.id],
-	[sectionThePrayerForThePlace.id],
+	[sectionTheShortLitanyForPeace.id],
+	[sectionTheShortLitanyForThePatriarchMetropolitanAndBishop.id],
+	[sectionTheLitanyForADepartedPatriarch.id],
+	[sectionTheLitanyForADepartedMetropolitan.id],
+	[sectionTheLitanyForADepartedBishop.id],
+	[sectionTheLitanyForTheServants.id],
+	[sectionTheLitanyForTheMercyUponUsAll.id],
+	[sectionTheLitanyForTheSalvationOfThisPlace.id],
 	[
-		sectionThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
-		sectionThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
-		sectionThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
-		sectionTheYearRoundPrayerForNature.id
+		sectionTheLitanyForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
+		sectionTheLitanyForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
+		sectionTheLitanyForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
+		sectionTheYearRoundLitanyForNature.id
 	]
 ];
 
-export const textThePrayerForTheOfferings = await makeMultilingualTextWithId(
+export const textTheLitanyForTheOfferings = await makeMultilingualTextWithId(
 	'CD02EAB8-570E-4912-A5C6-59A04946EC94',
 	'76BED07F-E59E-4E02-9D31-AB82952DCC3F',
 	'Ἡ Εὐχὴ ὑπὲρ τῶν Προσφορῶν',
@@ -1122,36 +1122,36 @@ export const textThePrayerForTheOfferings = await makeMultilingualTextWithId(
 	'153839BD-F937-4D4B-AC1C-819B0EB19BBA',
 	'أُوشِيَةُ الْقَرَابِينِ',
 	'207673A0-5BB1-4AC2-8F3D-4004BCD05F75',
-	'The Prayer for the Offerings',
+	'The Litany for the Offerings',
 	'9D1D08C6-7C6B-455A-A28E-6B0D2722DBC0',
 	'Das Gebet für die Opfergaben'
 );
 
-export const sectionThePrayerForTheOfferings = registerNode<Basenode>({
+export const sectionTheLitanyForTheOfferings = registerNode<Basenode>({
 	id: '18334C4E-C66F-4B42-9317-02FFD50B091D',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textThePrayerForTheOfferings.id,
+	value: textTheLitanyForTheOfferings.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
 chapterTheLitanies.children = [
-	[sectionTheShortPrayerForPeace.id],
-	[sectionTheShortPrayerForThePatriarchMetropolitanAndBishop.id],
-	[sectionThePrayerForADepartedPatriarch.id],
-	[sectionThePrayerForADepartedMetropolitan.id],
-	[sectionThePrayerForADepartedBishop.id],
-	[sectionThePrayerForTheServants.id],
-	[sectionThePrayerForTheMercyUponUsAll.id],
-	[sectionThePrayerForThePlace.id],
+	[sectionTheShortLitanyForPeace.id],
+	[sectionTheShortLitanyForThePatriarchMetropolitanAndBishop.id],
+	[sectionTheLitanyForADepartedPatriarch.id],
+	[sectionTheLitanyForADepartedMetropolitan.id],
+	[sectionTheLitanyForADepartedBishop.id],
+	[sectionTheLitanyForTheServants.id],
+	[sectionTheLitanyForTheMercyUponUsAll.id],
+	[sectionTheLitanyForTheSalvationOfThisPlace.id],
 	[
-		sectionThePrayerForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
-		sectionThePrayerForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
-		sectionThePrayerForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
-		sectionTheYearRoundPrayerForNature.id
+		sectionTheLitanyForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
+		sectionTheLitanyForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
+		sectionTheLitanyForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
+		sectionTheYearRoundLitanyForNature.id
 	],
-	[sectionThePrayerForTheOfferings.id]
+	[sectionTheLitanyForTheOfferings.id]
 ];
 
 export const textTheCommemorationOfTheSaints = await makeMultilingualTextWithId(
@@ -1381,9 +1381,9 @@ export const textThePrayerForTheForgivenessOfSinsAndForTheRestOfTheDeparted =
 		'A793AB36-EE68-43E4-85A3-9D91A6A24B87',
 		'Ἡ Εὐχὴ ὑπὲρ τῆς Ἀφέσεως τῶν Ἁμαρτιῶν καὶ ὑπὲρ τῆς Ἀναπαύσεως τῶν Κεκοιμημένων',
 		'5CDB6BEF-3677-4262-81B6-0CCBE16A36FB',
-		'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲛ̀ⲧⲉ ⲛⲓⲛⲟⲃⲓ ⲛⲉⲙ ⲡⲓⲙ̀ⲧⲟⲛ ⲛ̀ⲧⲉ ⲛⲏ ⲉⲧⲁⲩⲉⲛⲕⲟⲧ',
+		'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲭⲱ ⲉ̀ⲃⲟⲗ ⲛ̀ⲧⲉ ⲛⲓⲛⲟⲃⲓ ⲛⲉⲙ ⲡⲓⲙ̀ⲧⲟⲛ ⲛ̀ⲧⲉ ⲛⲏ ⲉⲧⲁⲩⲉⲛⲕⲟⲧ',
 		'739C62F8-1AF4-4993-A20F-E098B4FDB2E3',
-		'أُوشِيَةُ غُفْرَانِ الْخَطَايَا وَنِيَاحَةِ الرَّاقِدِينَ',
+		'صَلاَةُ غُفْرَانِ الْخَطَايَا وَنِيَاحَةِ الرَّاقِدِينَ',
 		'03C3A0B7-7985-4F67-A1A5-B66FEBBFB35C',
 		'The Prayer for the Forgiveness of Sins and for the Rest of the Departed',
 		'1A27B1A4-4138-4F3F-AA30-F094D49276ED',
@@ -1670,7 +1670,7 @@ export const sectionThePrayerOfAbsolution = registerNode<Basenode>({
 	children: []
 });
 
-export const textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
+export const textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
 	await makeMultilingualTextWithId(
 		'7F630295-26C9-4F0C-A381-D4ED10FE1104',
 		'6BF3C9BE-D056-4FF4-A2F7-1F8ADE6401A7',
@@ -1680,18 +1680,18 @@ export const textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitan
 		'F6CC379B-1B05-4EA8-ABAF-F2D725DBA97C',
 		'أُوشِيَةُ سَلاَمِ الْكَنِيسَةِ وَالْبَطْرِيَرْكِ وَالْمُطْرَانِ أَوِ الْأُسْقُفِ وَالاِجْتِمَاعَاتِ الْقَصِيرَةُ',
 		'BF3CDD64-D9A7-466B-B5D1-50935969C555',
-		'The Short Prayer for the Peace of the Church, the Patriarch, the Metropolitan or Bishop, and the Congregations',
+		'The Short Litany for the Peace of the Church, the Patriarch, the Metropolitan or Bishop and the Congregations',
 		'E316F60D-ABA2-4C91-ABBE-F2A345BD6FBD',
 		'Das kurze Gebet für den Frieden der Kirche, für den Patriarchen sowie den Metropoliten oder Bischof und für die Versammlungen'
 	);
 
-export const sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
+export const sectionTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
 	registerNode<Basenode>({
 		id: '1B13A9F5-100B-45BE-8B78-4AC2854D1EBE',
 		users: [chapterTheConfession.id],
 		type: NodeType.Section,
 		value:
-			textTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id,
+			textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
@@ -1909,7 +1909,7 @@ chapterTheConfession.children = [
 	[sectionThePrayerOfSubmission.id],
 	[sectionThePrayerOfAbsolution.id],
 	[
-		sectionTheShortPrayerForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id
+		sectionTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id
 	],
 	[sectionTheHolyThingsForTheHoly.id],
 	[sectionTheConfession.id],

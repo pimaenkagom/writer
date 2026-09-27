@@ -124,7 +124,10 @@ provide a text with no Greek original.
     heading (e.g. section titled "A Prayer of ...").
   - **ⲉⲩⲭⲏ** (Greek loanword) — used for the Litany-type prayers under
     "Die Bittgebete"/"The Litanies" (mirrors Arabic أوشية and Greek Εὐχή,
-    see below) and for "another prayer" constructions.
+    see below) and for "another prayer" constructions. It takes the
+    feminine article (`Ϯⲉⲩⲭⲏ`, not `Ⲡⲓⲉⲩⲭⲏ`), and its English rendering
+    is always **"The Litany ..."**, never "The Prayer ..." — even when the
+    German title says "Das Gebet ...".
   - **ⲧⲱⲃϩ** — "entreaty/petition", a different nuance from ϣⲗⲏⲗ; not the
     default choice for a titled "Prayer" heading.
   - **ϣⲁⲓ** = "feast/festival" (e.g. `ⲡⲓϣⲁⲓ ⲛ̀ⲧⲉ ⲡⲓϫⲓⲛⲙⲓⲥⲓ`, "the Feast of

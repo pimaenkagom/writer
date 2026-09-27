@@ -2,9 +2,35 @@ import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import {
+	makeMultilingualTextWithId,
+	makeMultilingualTextWithIdWithoutGreek
+} from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
+import {
+	sectionTheBlessingOfTheIncenseAtAnotherOffering,
+	sectionTheBlessingOfTheIncenseAtTheFirstOffering,
+	sectionTheConclusionOfTheOfferingOfIncense,
+	sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar,
+	sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies,
+	sectionTheOfferingOfIncenseForTheBishop,
+	sectionTheOfferingOfIncenseForTheConfessionOfThePeople,
+	sectionTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles,
+	sectionTheOfferingOfIncenseForTheCrucifiedLord,
+	sectionTheOfferingOfIncenseForTheGospel,
+	sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy,
+	sectionTheOfferingOfIncenseForTheMetropolitan,
+	sectionTheOfferingOfIncenseForThePatriarch,
+	sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheApostles,
+	sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle,
+	sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy,
+	sectionTheOfferingOfIncenseForTheRelicsOfTheSaints,
+	sectionTheOfferingOfIncenseInAllFourDirections,
+	sectionTheOfferingOfIncenseInTheHolyOfHolies,
+	sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheApostles,
+	sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle
+} from '$lib/utilities/initializer/shared/sections-the-offering-of-incense';
 
 export const textTheLiturgyOfTheWord = await makeMultilingualTextWithId(
 	'944E89D6-5748-4FC0-BB72-9DD9E8E1F884',
@@ -53,416 +79,6 @@ export const chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpi
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
-
-export const textTheBlessingOfTheIncenseAtTheFirstOffering = await makeMultilingualTextWithId(
-	'D7E0A0CB-6FAD-4580-9659-F227CF8BDC80',
-	'C800104F-0742-4923-9714-03CBE3E3B061',
-	'Ἡ Εὐλογία τοῦ Θυμιάματος κατὰ τὴν πρώτην Προσφοράν',
-	'1C4CACBA-EF8A-42C7-96EB-718EA4101B36',
-	'Ⲡⲓⲥⲙⲟⲩ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ϧⲉⲛ ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲁϩⲟ',
-	'15DA1588-4D2F-4E83-BDE2-E42E3EE03738',
-	'مُبَارَكَةُ الْبَخُورِ فِي الرَّفْعَةِ الأُولَى',
-	'B0A84741-63D1-41FC-8409-920259A6C442',
-	'The Blessing of the Incense at the First Offering',
-	'B7844455-A32E-4A04-8355-269345D7BDFC',
-	'Die Segnung des Weihrauchs bei der ersten Darbringung'
-);
-
-export const sectionTheBlessingOfTheIncenseAtTheFirstOffering = registerNode<Basenode>({
-	id: 'B56E022F-4BE4-4C67-9126-F3BBBF5407BA',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheBlessingOfTheIncenseAtTheFirstOffering.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle =
-	await makeMultilingualTextWithId(
-		'E78F79A5-B56D-4884-87BE-B928CF04036E',
-		'6BF1151E-943E-4E09-A53F-09C2EE834E79',
-		'Ἡ Εὐχὴ τῆς Προσφορᾶς τοῦ Θυμιάματος κατὰ τὴν Ἀνάγνωσιν τῆς Ἐπιστολῆς τοῦ Παύλου',
-		'EB431314-AF18-4093-A8B1-91C39FAE6C31',
-		'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ϧⲉⲛ ⲡ̀ⲱϣ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
-		'04C63AD4-C6B2-4C80-AE52-2819868FEBE8',
-		'صَلاَةُ رَفْعِ الْبَخُورِ أَثْنَاءَ قِرَاءَةِ الرِّسَالَةِ الْبُولُسِيَّةِ',
-		'B1E45F88-EFCC-475E-8D05-A3F1C8001857',
-		'The Prayer of the Offering of Incense during the Reading of the Pauline Epistle',
-		'9A2EFDCB-BFBD-43EF-92E1-B38DF8CBD6BC',
-		'Das Gebet der Darbringung des Weihrauchs während der Lesung des Paulinischen Briefes'
-	);
-
-export const sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle =
-	registerNode<Basenode>({
-		id: '8E28C457-ED1D-4E18-A5F0-D843114F6785',
-		users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-		type: NodeType.Section,
-		value: textThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle.id,
-		valueType: ContentType.MultilingualText,
-		children: []
-	});
-
-export const textTheOfferingOfIncenseDuringTheCirclingOfTheAltar = await makeMultilingualTextWithId(
-	'8F6C204D-21A5-49C0-893C-5AD28FC93E81',
-	'FBCAD536-7B45-46F3-8AB8-B024E5890E23',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος κατὰ τὴν Περιφορὰν τοῦ Θυσιαστηρίου',
-	'D8EA5ADE-51BE-4ADC-BCA0-8DEFA6611C0A',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ϧⲉⲛ ⲡⲓⲕⲱϯ ⲛ̀ⲧⲉ ⲡⲓⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ',
-	'DD5ACA31-510A-4DC2-BCB8-9430DF5017C3',
-	'رَفْعُ الْبَخُورِ أَثْنَاءَ دَوْرَةِ الْمَذْبَحِ',
-	'958CC77F-F32B-4922-93CE-533ACAFE6C3D',
-	'The Offering of Incense during the Circling of the Altar',
-	'933C8BD8-93BA-44B1-9188-24A29D8F78FF',
-	'Die Darbringung des Weihrauchs während der Umschreitung des Altars'
-);
-
-export const sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar = registerNode<Basenode>({
-	id: '7ED576D0-2D2C-4932-865C-E7091814A061',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseDuringTheCirclingOfTheAltar.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseInTheHolyOfHolies = await makeMultilingualTextWithId(
-	'F2B60533-FF65-435E-AD5B-007490CC0052',
-	'6A192124-46DE-4593-86BE-8C279F92C6C3',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ἐν τοῖς Ἁγίοις τῶν Ἁγίων',
-	'9931D220-9445-42A2-A351-1E1AFEA265B1',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ϧⲉⲛ ⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ ⲛ̀ⲧⲉ ⲛⲓⲉⲑⲟⲩⲁⲃ',
-	'090DAE68-906E-4C42-818B-266E7AACC5E9',
-	'رَفْعُ الْبَخُورِ فِي قُدْسِ الأَقْدَاسِ',
-	'764235FC-27A1-4A44-BF05-C4DA4EF7E0F3',
-	'The Offering of Incense in the Holy of Holies',
-	'3097EEF2-2028-4F8B-8109-F12C9D367DB9',
-	'Die Darbringung des Weihrauchs im Allerheiligsten'
-);
-
-export const sectionTheOfferingOfIncenseInTheHolyOfHolies = registerNode<Basenode>({
-	id: '14F2D5E5-68FF-4FDA-9A39-6581A8111137',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseInTheHolyOfHolies.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseInAllFourDirections = await makeMultilingualTextWithId(
-	'1FF14D78-08DD-49BF-8A50-00D4BE99F00D',
-	'7DB654D5-9BF0-4A75-956E-D7418BA61DE5',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος πρὸς τὰ Τέσσαρα Κλίματα',
-	'276704F3-BFCE-4404-9860-A4C59D409929',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉ̀ⲡⲓϥⲧⲟⲟⲩ ⲛ̀ⲧⲉⲛϩ ⲛ̀ⲧⲉ ⲡⲓⲕⲁϩⲓ',
-	'18786D41-EA7A-4198-96A5-06A6E049156C',
-	'رَفْعُ الْبَخُورِ إِلَى الْجِهَاتِ الْأَرْبَعِ',
-	'4BAC8F1F-4F2F-4558-B9D7-C2776FACA1AF',
-	'The Offering of Incense in All Four Directions',
-	'FE78894F-E853-40F7-B7D2-E09FC478C351',
-	'Die Darbringung des Weihrauchs in alle vier Himmelsrichtungen'
-);
-
-export const sectionTheOfferingOfIncenseInAllFourDirections = registerNode<Basenode>({
-	id: '090E5F56-C83A-43F4-8049-7F5622371C19',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseInAllFourDirections.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForTheGospel = await makeMultilingualTextWithId(
-	'D28EB15D-9969-4484-B658-66DBC43E7A9E',
-	'942013FF-B769-4903-8F9F-2EBD0224AD1E',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος διὰ τὸ Εὐαγγέλιον',
-	'76848F61-8E46-427E-96D3-FECACD4D5C2A',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
-	'79122224-E7AD-4320-B4F8-89040E4ED06F',
-	'رَفْعُ الْبَخُورِ لِلْإِنْجِيلِ',
-	'3485DEA3-235C-40C4-B0ED-5A1D79835230',
-	'The Offering of Incense for the Gospel',
-	'AFB408F6-896E-4E55-8B91-4474982227A3',
-	'Die Darbringung des Weihrauchs für das Evangelium'
-);
-
-export const sectionTheOfferingOfIncenseForTheGospel = registerNode<Basenode>({
-	id: '8E26391E-ABB6-4294-B27C-4D8FF182380E',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheGospel.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForTheRelicsOfTheSaints = await makeMultilingualTextWithId(
-	'46E14AC4-8E2B-4A44-97F8-534EC3F4A47B',
-	'20C3A97A-999E-4C43-B184-F6A5F39C9782',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τῶν Λειψάνων τῶν Ἁγίων',
-	'483CFB0F-AB55-43DA-BBA2-A7145E57CBCE',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲛⲓⲗⲓⲯⲁⲛⲟⲛ ⲛ̀ⲧⲉ ⲛⲓⲉⲑⲟⲩⲁⲃ',
-	'4E556400-4CC6-4923-A71A-26CDC0788F7B',
-	'رَفْعُ الْبَخُورِ لِرُفَاتِ الْقِدِّيسِينَ',
-	'E216A614-C3D7-478E-8569-2904EB48D3B0',
-	'The Offering of Incense for the Relics of the Saints',
-	'C6D9F1DA-2F6C-423D-9905-9E39BCE26AFA',
-	'Die Darbringung des Weihrauchs für die Heiligtümer'
-);
-
-textTheOfferingOfIncenseForTheRelicsOfTheSaints.texts.ancient_greek.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseForTheRelicsOfTheSaints.texts.coptic.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseForTheRelicsOfTheSaints.texts.arabic.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseForTheRelicsOfTheSaints.texts.english.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfIncenseForTheRelicsOfTheSaints.texts.german.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-
-export const sectionTheOfferingOfIncenseForTheRelicsOfTheSaints = registerNode<Basenode>({
-	id: 'C224E13C-3B19-4E45-8B54-C9F3D6F0C758',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheRelicsOfTheSaints.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForThePatriarch = await makeMultilingualTextWithId(
-	'90CFA5DD-E62E-4386-982C-3A29E066379C',
-	'087121B1-2B91-44B7-935A-51E3E8E758CE',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ Πατριάρχου',
-	'94EBAA9F-1820-4DFE-AE16-D7AC9B0FC26C',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡⲓⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ',
-	'B0DD1BFE-00C4-4FB2-9883-6CDB9616BF13',
-	'رَفْعُ الْبَخُورِ لِلْبَطْرِيَرْكِ',
-	'4A3B4535-98BB-4E36-A031-97DE14406807',
-	'The Offering of Incense for the Patriarch',
-	'629B8816-B6E7-4FA1-A90F-FF96DBEDF3EE',
-	'Die Darbringung des Weihrauchs für den Patriarchen'
-);
-
-export const sectionTheOfferingOfIncenseForThePatriarch = registerNode<Basenode>({
-	id: 'EF0273E0-4C32-42F2-87E9-0A4495A0FB9A',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForThePatriarch.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForTheMetropolitan = await makeMultilingualTextWithId(
-	'E9E91906-99D3-4546-BC2E-2D34F84EB53F',
-	'9251F9E5-7592-43E6-88E9-B888B9B3FBEF',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ Μητροπολίτου',
-	'28FB0C5D-E9F1-422F-9B18-1BA61457C0AD',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡⲓⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ',
-	'F980C75D-F790-426B-BBB0-C16BA1B32CDD',
-	'رَفْعُ الْبَخُورِ لِلْمُطْرَانِ',
-	'B7D56BFA-C20F-43DF-A43F-302228B8D3C8',
-	'The Offering of Incense for the Metropolitan',
-	'66E933F0-5F0C-43BD-9161-8E648C5FE77E',
-	'Die Darbringung des Weihrauchs für den Metropoliten'
-);
-
-export const sectionTheOfferingOfIncenseForTheMetropolitan = registerNode<Basenode>({
-	id: '6446EAA4-1EEE-4C47-893A-D59A3ABF4436',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheMetropolitan.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForTheBishop = await makeMultilingualTextWithId(
-	'08EE2036-A088-406D-A9DF-AEDBB547E170',
-	'731F040F-B1D6-47E6-A813-41DD9E419E84',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ Ἐπισκόπου',
-	'5E0E43CC-8AFC-4274-82D0-7BB20721CFE4',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
-	'5B69BA78-A68B-405D-BF82-0B40363D5314',
-	'رَفْعُ الْبَخُورِ لِلْأُسْقُفِ',
-	'7069E174-F7A5-44FE-8A8C-C9F5E46DD76D',
-	'The Offering of Incense for the Bishop',
-	'1E93D72C-CBFB-4C59-9248-6ED71F8C4AAB',
-	'Die Darbringung des Weihrauchs für den Bischof'
-);
-
-export const sectionTheOfferingOfIncenseForTheBishop = registerNode<Basenode>({
-	id: '5D121F89-9C1B-4E81-9758-9DEBDD4249AB',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheBishop.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForTheHegumenDuringTheLiturgy =
-	await makeMultilingualTextWithId(
-		'0921E296-3C33-42D5-B62B-E2C461D22A86',
-		'579B0FBD-59B0-4E06-B367-4118639B48A1',
-		'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ Ἡγουμένου κατὰ τὴν Λειτουργίαν',
-		'210903E2-A592-4003-9364-EB4E876CBFF0',
-		'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡⲓϩⲏⲅⲟⲩⲙⲉⲛⲟⲥ ϧⲉⲛ ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ',
-		'785A44F7-E556-48D7-AD10-0541B2E64C23',
-		'رَفْعُ الْبَخُورِ لِلْقُمُّصِ أَثْنَاءَ الْقُدَّاسِ',
-		'BB6F5785-7AA5-4A0A-97EF-67A5A7E6F7C1',
-		'The Offering of Incense for the Hegumen during the Liturgy',
-		'D3EBA537-7C97-4E63-B352-3DAB2715A7BC',
-		'Die Darbringung des Weihrauchs für den Hegumen während der Liturgie'
-	);
-
-export const sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy = registerNode<Basenode>({
-	id: '36ED33D3-7055-4E0A-8AFE-8216149FD54A',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForThePriestDuringTheLiturgy =
-	await makeMultilingualTextWithId(
-		'5AB53E53-5F78-494D-9AC9-02DFE088D6CF',
-		'C7BD4061-1AD4-49F1-867D-AD0F9850326B',
-		'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ Πρεσβυτέρου κατὰ τὴν Λειτουργίαν',
-		'01DC9DF4-8C8A-4ACE-99E3-F7B3F2B8095E',
-		'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡ̀ⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ϧⲉⲛ ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ',
-		'F9C5E143-8B1E-4E9B-9F51-8C79C98349F9',
-		'رَفْعُ الْبَخُورِ لِلْكَاهِنِ أَثْنَاءَ الْقُدَّاسِ',
-		'FD39D8A3-0698-4612-A072-97016C5DA390',
-		'The Offering of Incense for the Priest during the Liturgy',
-		'CB58A6D3-B320-447F-BF48-DB1E9EA4A410',
-		'Die Darbringung des Weihrauchs für den Priester während der Liturgie'
-	);
-
-export const sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy = registerNode<Basenode>({
-	id: 'A51A11C5-D051-4C40-95EC-CD0C8BEFCAAA',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForThePriestDuringTheLiturgy.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle =
-	await makeMultilingualTextWithId(
-		'FD42D254-2F57-47BC-B44B-D87633964058',
-		'CA45D4AC-725D-46FF-9CD4-113E732F7B9B',
-		'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ Λαοῦ κατὰ τὴν Ἀνάγνωσιν τῆς Ἐπιστολῆς τοῦ Παύλου',
-		'FE31CDAA-56A6-43BB-9B5B-13CD70FFD411',
-		'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲡⲓⲗⲁⲟⲥ ϧⲉⲛ ⲡ̀ⲱϣ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
-		'1108C116-CABF-44C8-A449-AC393D35FE23',
-		'رَفْعُ الْبَخُورِ لِلشَّعْبِ أَثْنَاءَ قِرَاءَةِ الرِّسَالَةِ الْبُولُسِيَّةِ',
-		'3AC5CA40-B4F3-4252-94FA-F0E38D616A6D',
-		'The Offering of Incense for the People during the Reading of the Pauline Epistle',
-		'A6EECED2-1A03-430C-817F-5B5D8EC80F3F',
-		'Die Darbringung des Weihrauchs für das Volk während der Lesung des Paulinischen Briefes'
-	);
-
-export const sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle =
-	registerNode<Basenode>({
-		id: 'DB0A75E0-FC56-44F0-A9E2-1EF6BBAED64E',
-		users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-		type: NodeType.Section,
-		value: textTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle.id,
-		valueType: ContentType.MultilingualText,
-		children: []
-	});
-
-export const textTheOfferingOfIncenseForTheCrucifiedLord = await makeMultilingualTextWithId(
-	'867CDF42-A3DE-46B7-8047-27A0179D5E10',
-	'EA5F6E39-6588-41BC-B510-A593518B352C',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τοῦ ἐσταυρωμένου Κυρίου',
-	'5C89CC61-4C38-4E33-B45C-AC41D4048104',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ Ⲡ̀ϭⲟⲓⲥ ⲫⲏⲉⲧⲁⲩⲁϣϥ',
-	'5D9E0FAB-B916-4E56-BD7E-3593F19C5987',
-	'رَفْعُ الْبَخُورِ لِلرَّبِّ الْمَصْلُوبِ',
-	'C25B575C-71E4-48EA-BAAF-61003654B68C',
-	'The Offering of Incense for the Crucified Lord',
-	'1E5FD1CE-B8C9-4197-BBCC-2C71D911351A',
-	'Die Darbringung des Weihrauchs für den gekreuzigten Herrn'
-);
-
-export const sectionTheOfferingOfIncenseForTheCrucifiedLord = registerNode<Basenode>({
-	id: '5AB4D980-8165-4B1E-A764-AF11B13AC1D4',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheCrucifiedLord.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForTheConfessionOfThePeople = await makeMultilingualTextWithId(
-	'D2514E30-1A8B-4ED1-BFBE-520E3C68B819',
-	'A246DD30-6687-4C30-BC27-CE7FADEAC27C',
-	'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ τῆς Ὁμολογίας τοῦ Λαοῦ',
-	'22DCE261-2611-4D6C-BD2F-8A255116F9FF',
-	'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ',
-	'72AF51EC-B27A-4043-A8A5-573F3D96C682',
-	'رَفْعُ الْبَخُورِ لِاعْتِرَافِ الشَّعْبِ',
-	'ED5762AA-8AAC-4522-AA23-B8028FC9D0A0',
-	'The Offering of Incense for the Confession of the People',
-	'C2EA8508-AA86-433E-B544-D9F15CEB86A6',
-	'Die Darbringung des Weihrauchs für das Bekenntnis des Volkes'
-);
-
-export const sectionTheOfferingOfIncenseForTheConfessionOfThePeople = registerNode<Basenode>({
-	id: '9E80E720-50F2-4C8D-8010-E9FD3CF56E0B',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheOfferingOfIncenseForTheConfessionOfThePeople.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies =
-	await makeMultilingualTextWithId(
-		'0EE0EC5F-1B67-48F8-8670-18C89982AA2D',
-		'2BCF7A49-E348-4BDD-BA5E-E5C6477591D0',
-		'Ἡ Προσφορὰ τοῦ Θυμιάματος ὑπὲρ πάντων τῶν Ἡγουμένων καὶ τῶν Πρεσβυτέρων κατὰ τὴν Λειτουργίαν ἐπὶ τῆς θύρας τῶν Ἁγίων τῶν Ἁγίων',
-		'2DBEEDD7-5EB6-4F02-8554-90FC1D462526',
-		'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ⲉⲑⲃⲉ ⲛⲓϩⲏⲅⲟⲩⲙⲉⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲛⲉⲙ ⲛⲓⲡ̀ⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ϧⲉⲛ ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ ϧⲁⲧⲉⲛ ⲡⲓⲣⲟ ⲛ̀ⲧⲉ ⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ ⲛ̀ⲧⲉ ⲛⲓⲉⲑⲟⲩⲁⲃ',
-		'7813198E-72B1-4DBD-8B39-94BB16023C07',
-		'رَفْعُ الْبَخُورِ لِجَمِيعِ الْقَمَامِصَةِ وَالْكَهَنَةِ أَثْنَاءَ الْقُدَّاسِ عِنْدَ عَتَبَةِ قُدْسِ الْأَقْدَاسِ',
-		'A7EA10F5-9D0F-4C4B-840D-96EF35D88A1E',
-		'The Offering of Incense for All the Hegumens and Priests during the Liturgy at the Threshold of the Holy of Holies',
-		'26C89876-3961-41F3-BC89-5C6859DF4E37',
-		'Die Darbringung des Weihrauchs für alle Hegumen und Priester während der Liturgie an der Schwelle des Allerheiligsten'
-	);
-
-export const sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies =
-	registerNode<Basenode>({
-		id: '6017968E-F18F-404F-AD30-FF99E3789F84',
-		users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-		type: NodeType.Section,
-		value: textTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id,
-		valueType: ContentType.MultilingualText,
-		children: []
-	});
-
-export const textTheConclusionOfTheOfferingOfIncense = await makeMultilingualTextWithId(
-	'3B074A34-A78A-4640-A558-05AB4EE4AED4',
-	'E4DC8AFA-F4C6-4900-81EE-E1E340E18506',
-	'Ἡ Λῆξις τῆς Προσφορᾶς τοῦ Θυμιάματος',
-	'092BC0E6-8308-4E92-A785-5A6A3A7C2C03',
-	'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ',
-	'158A218C-0B89-42C6-B50D-8D56E0C02F0B',
-	'خِتَامُ رَفْعِ الْبَخُورِ',
-	'57AF39D2-F26D-440A-900C-B2F4A332C8B5',
-	'The Conclusion of the Offering of Incense',
-	'A5748609-E201-48B8-ABAD-309E9DC55D77',
-	'Der Abschluss der Darbringung des Weihrauchs'
-);
-
-export const sectionTheConclusionOfTheOfferingOfIncense = registerNode<Basenode>({
-	id: 'C8144F44-89A1-4570-8BD6-9EF4D23162C5',
-	users: [chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	type: NodeType.Section,
-	value: textTheConclusionOfTheOfferingOfIncense.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
 
 chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children = [
 	[sectionTheBlessingOfTheIncenseAtTheFirstOffering.id],
@@ -885,7 +501,8 @@ export const sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePr
 		id: '00E759E4-B38C-4CEA-AAD6-592DD6B7EE51',
 		users: [chapterTheReadingOfThePaulineEpistle.id],
 		type: NodeType.Section,
-		value: textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		value:
+			textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
@@ -947,13 +564,618 @@ chapterTheReadingOfThePaulineEpistle.children = [
 	[sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
 	[sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
 	[sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
-	[sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[
+		sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id
+	],
 	[sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
 	[sectionTheTranslationOfTheReading.id]
+];
+
+export const textTheHymnsBeforeTheReadingOfTheCatholicEpistle = await makeMultilingualTextWithId(
+	'1CF2A816-478F-4B1C-8803-2104E6949563',
+	'D8F8F81B-9CB2-4078-B293-4A7C08FA16A1',
+	'Οἱ Ὕμνοι πρὸ τῆς Ἀναγνώσεως τῆς Καθολικῆς Ἐπιστολῆς',
+	'7F522347-6102-4703-B001-7A02D5E8C89E',
+	'Ⲛⲓϫⲱ ϧⲁϫⲉⲛ ⲡ̀ⲱϣ ⲛ̀ϯⲕⲁⲑⲟⲗⲓⲕⲏ ⲛ̀ⲉⲡⲓⲥⲧⲟⲗⲏ',
+	'BB62103F-F60A-4633-9908-1A17B23A84B0',
+	'أَلْحَانُ قَبْلَ قِرَاءَةِ الرِّسَالَةِ الْجَامِعَةِ',
+	'FE61CEDB-EEA2-4EEA-9C75-79147D0FCE12',
+	'The Hymns before the Reading of the Catholic Epistle',
+	'1B7F2DE3-5EAE-4D8A-B66B-D63C6A155941',
+	'Die Lieder vor der Lesung des Katholischen Briefes'
+);
+
+export const chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle = registerNode<Basenode>({
+	id: '10864F1C-E864-4716-90AE-D3F0839ABD4B',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheHymnsBeforeTheReadingOfTheCatholicEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth = await makeMultilingualTextWithId(
+	'2C5EE4D1-4D2F-4943-8611-850E3568A513',
+	'876730AC-5F72-46C2-82B4-22892B51366F',
+	'Ὁ Ὕμνος Ὄντως ἀληθῶς γὰρ ἐξῆλθεν πᾶσι τὴν γῆν',
+	'4AD9543E-87F3-47FE-8B2F-44B51317B14B',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲟⲛⲧⲱⲥ ⲁⲗⲏⲑⲱⲥ ⲅⲁⲣ ⲉⲝⲏⲗⲑⲓⲛ ⲡⲁⲥⲓ ⲧⲏⲛ ⲅⲏⲛ',
+	'15FCF3AA-32FA-4CA8-8617-0EDBD124F500',
+	'اللَّحْنُ بِالْحَقِيقَةِ وَالْحَقِّ تَتَمَجَّدُ أَسْمَاؤُكَ عَلَى الْأَرْضِ',
+	'6576CEFE-3AC5-4010-A129-1AA65D319567',
+	'The Hymn Truly, Truly Your Names Are Glorified on Earth',
+	'CB54D81A-5F0A-4788-AE15-5DED44DF8CC2',
+	'Das Lied Wahrlich, wahrhaftig werden deine Namen auf der Erde verherrlicht'
+);
+
+textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.texts.coptic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.texts.arabic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.texts.english.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.texts.german.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth = registerNode<Basenode>({
+	id: 'F3A9F6C1-DA76-40C7-89BC-C7B1A61EB8B2',
+	users: [chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnPerfectIsTheBlessing = await makeMultilingualTextWithIdWithoutGreek(
+	'64CAF24F-45E2-4478-9AC2-D953E066AAEE',
+	'1B7AAF75-D775-42C5-AE7F-3DA7714A5420',
+	'Ⲡⲓϫⲱ ϫⲉ ⲁ ⲡⲉⲧϫⲏⲕ ⲉ̀ⲃⲟⲗ ⲛ̀ϫⲉ ⲡⲓⲥⲙⲟⲩ',
+	'58E63B11-CF34-46E6-B60B-6AEFFB55A4F0',
+	'اللَّحْنُ كَامِلَةٌ هِيَ الْبَرَكَةُ',
+	'B51675C4-95B4-4ACB-86AF-45C9A6438D38',
+	'The Hymn Perfect Is the Blessing',
+	'A2083DD6-DA93-4E59-A12D-ABD7CDB000E1',
+	'Das Lied Vollkommen ist der Segen'
+);
+
+export const sectionTheHymnPerfectIsTheBlessing = registerNode<Basenode>({
+	id: 'D3E730EC-2FB0-4B37-9E53-5B668A6992BA',
+	users: [chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textTheHymnPerfectIsTheBlessing.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.children = [
+	[sectionTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.id],
+	[sectionTheHymnPerfectIsTheBlessing.id]
+];
+
+export const textTheReadingOfTheCatholicEpistle = await makeMultilingualTextWithId(
+	'051B09E7-688D-46E4-812D-CBBF19309DD0',
+	'2513697F-A603-47B0-8676-05E0351730A4',
+	'Ἡ Ἀνάγνωσις τῆς Καθολικῆς Ἐπιστολῆς',
+	'E5ABBB98-D513-4FE9-9DD1-4C51888B549E',
+	'Ⲡ̀ⲱϣ ⲛ̀ϯⲕⲁⲑⲟⲗⲓⲕⲏ ⲛ̀ⲉⲡⲓⲥⲧⲟⲗⲏ',
+	'68FF8B66-1D57-410F-83F1-640973CFBA2D',
+	'قِرَاءَةُ الرِّسَالَةِ الْجَامِعَةِ',
+	'E53CE360-74C0-451C-A888-6ED6B8E5E553',
+	'The Reading of the Catholic Epistle',
+	'A6C534A8-9648-4310-9633-CE5DF9647524',
+	'Die Lesung des Katholischen Briefes'
+);
+
+export const chapterTheReadingOfTheCatholicEpistle = registerNode<Basenode>({
+	id: '3C7F3577-DDB5-4542-81FE-3FF6E0903399',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfTheCatholicEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerDuringTheReadingOfTheCatholicEpistle = await makeMultilingualTextWithId(
+	'74937E4F-7DA3-443F-AC6A-49FF6ED7C8B9',
+	'A430B5BF-4EBE-4FC7-9144-9EE48AF110B0',
+	'Ἡ Εὐχὴ κατὰ τὴν Ἀνάγνωσιν τῆς Καθολικῆς Ἐπιστολῆς',
+	'DC1E728B-B73E-4B1F-9EDD-5199F3F57A16',
+	'Ⲡⲓϣⲗⲏⲗ ϧⲉⲛ ⲡ̀ⲱϣ ⲛ̀ϯⲕⲁⲑⲟⲗⲓⲕⲏ ⲛ̀ⲉⲡⲓⲥⲧⲟⲗⲏ',
+	'B25E7267-7A67-45CC-A98B-9A10CEBBF645',
+	'الصَّلاَةُ أَثْنَاءَ قِرَاءَةِ الرِّسَالَةِ الْجَامِعَةِ',
+	'67EE3C2F-B960-4855-AA5F-81BDB8F40EBA',
+	'The Prayer during the Reading of the Catholic Epistle',
+	'C6E4EEF4-5509-4F09-B4DB-82CE87852113',
+	'Das Gebet während der Lesung des Katholischen Briefes'
+);
+
+export const sectionThePrayerDuringTheReadingOfTheCatholicEpistle = registerNode<Basenode>({
+	id: '3B30EDD9-ABEF-4A2D-B4D1-EDC2C8F2F2EC',
+	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textThePrayerDuringTheReadingOfTheCatholicEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheLitanyForTheOblationsSilent = await makeMultilingualTextWithId(
+	'C59AA8BD-1CC3-4B47-A11B-A195058EB66A',
+	'546A8CD0-61BB-4F02-BB1D-3563C263DC7C',
+	'Ἡ Εὐχὴ ὑπὲρ τῶν Προσφορῶν (μυστικῶς)',
+	'1ED8EC5B-18E8-4897-8300-04C648FB235E',
+	'Ϯⲉⲩⲭⲏ ⲉⲑⲃⲉ ⲛⲓⲇⲱⲣⲟⲛ (ϧⲉⲛ ⲟⲩⲕⲁⲣⲱϥ)',
+	'458ED38E-105E-4D79-B197-C2C78D284F2B',
+	'أُوشِيَةُ الْقَرَابِينِ (سِرًّا)',
+	'7174965E-9D42-4787-8CC7-0DA3309C3021',
+	'The Litany for the Oblations (silent)',
+	'77F95A5A-458E-4C90-B7B3-12D5B0B5C7CB',
+	'Das Gebet für die Opfergaben (still)'
+);
+
+export const sectionTheLitanyForTheOblationsSilent = registerNode<Basenode>({
+	id: 'CED39BE2-BDC0-4D07-8033-D274AD4C7D6C',
+	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textTheLitanyForTheOblationsSilent.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToTheCatholicEpistle = await makeMultilingualTextWithId(
+	'050A4313-7B30-4017-A7EF-6724A6810EB5',
+	'7BFFAB18-C9D0-43E0-A310-BF2BD0CCFC25',
+	'Ἡ Εἰσαγωγὴ τῆς Καθολικῆς Ἐπιστολῆς',
+	'6565BE4E-2D3A-4828-A361-EFAD5C405465',
+	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲛ̀ϯⲕⲁⲑⲟⲗⲓⲕⲏ ⲛ̀ⲉⲡⲓⲥⲧⲟⲗⲏ',
+	'0312EED3-97CB-478D-A0F0-D197D695A82E',
+	'مُقَدِّمَةُ الرِّسَالَةِ الْجَامِعَةِ',
+	'DED5304C-D330-431C-AA96-865205EB1504',
+	'The Introduction to the Catholic Epistle',
+	'2EA479A5-AF8E-453C-98AA-A798A265677A',
+	'Die Einleitung des Katholischen Briefes'
+);
+
+export const sectionTheIntroductionToTheCatholicEpistle = registerNode<Basenode>({
+	id: '94B09D98-F0C7-40AB-99B0-7F9F4C1D85F6',
+	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToTheCatholicEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheCatholicEpistle = await makeMultilingualTextWithId(
+	'7D40341B-733A-42B6-B74A-80626A18ECA8',
+	'5C1528C2-1B84-4B35-9D4F-1017506137B2',
+	'Ἡ Καθολικὴ Ἐπιστολή',
+	'5CA58AF8-8D06-4630-8BAB-EAFA64AABBED',
+	'Ϯⲕⲁⲑⲟⲗⲓⲕⲏ ⲛ̀ⲉⲡⲓⲥⲧⲟⲗⲏ',
+	'CFF54BCE-BFDC-484C-86D7-696F77FC81AE',
+	'الرِّسَالَةُ الْجَامِعَةُ',
+	'5F6DDA1F-8E54-45D7-870B-EC018E8A0548',
+	'The Catholic Epistle',
+	'7FA5A604-0143-49AF-93B4-0209B25984DC',
+	'Der Katholische Brief'
+);
+
+textTheCatholicEpistle.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCatholicEpistle.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCatholicEpistle.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCatholicEpistle.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCatholicEpistle.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheCatholicEpistle = registerNode<Basenode>({
+	id: 'BC026463-CEB8-4F88-82BC-27BFFD1118CE',
+	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textTheCatholicEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConclusionOfTheCatholicEpistle = await makeMultilingualTextWithId(
+	'23F67C91-17E0-4CC4-BE97-3284901AC357',
+	'42B53648-B40E-4F1D-9B13-C5C9A083B586',
+	'Ἡ Λῆξις τῆς Καθολικῆς Ἐπιστολῆς',
+	'3A5777D5-295B-45B1-9843-7B3EB7A2DB55',
+	'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ϯⲕⲁⲑⲟⲗⲓⲕⲏ ⲛ̀ⲉⲡⲓⲥⲧⲟⲗⲏ',
+	'BB0B8081-76D7-4FDF-858F-DA8BE19308E0',
+	'خِتَامُ الرِّسَالَةِ الْجَامِعَةِ',
+	'DBC0C18A-5292-47A6-8681-54A2C7E9B608',
+	'The Conclusion of the Catholic Epistle',
+	'504445ED-861E-4C09-8974-A9A9D44E11FA',
+	'Der Abschluss des Katholischen Briefes'
+);
+
+export const sectionTheConclusionOfTheCatholicEpistle = registerNode<Basenode>({
+	id: '18EDA3E1-C635-42EA-AF22-7D148E4F12F2',
+	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	type: NodeType.Section,
+	value: textTheConclusionOfTheCatholicEpistle.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfTheCatholicEpistle.children = [
+	[sectionThePrayerDuringTheReadingOfTheCatholicEpistle.id],
+	[sectionTheLitanyForTheOblationsSilent.id],
+	[sectionTheIntroductionToTheCatholicEpistle.id],
+	[sectionTheCatholicEpistle.id],
+	[sectionTheConclusionOfTheCatholicEpistle.id],
+	[sectionTheTranslationOfTheReading.id]
+];
+
+export const textTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles =
+	await makeMultilingualTextWithId(
+		'0A330B70-345C-42A8-B4B3-F5D0E30D7B63',
+		'69A7FB89-22F9-4192-B41B-AB319410CE52',
+		'Ἡ Προσφορὰ τοῦ Θυμιάματος πρὸ καὶ κατὰ τὴν Ἀνάγνωσιν τῶν Πράξεων τῶν Ἀποστόλων',
+		'1A4B1A8B-8E88-4F87-B6D6-69475EF1AB82',
+		'Ⲡⲓⲧⲁϩⲟ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲑⲟⲓⲛⲟⲩϥⲓ ϧⲁϫⲉⲛ ⲛⲉⲙ ϧⲉⲛ ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+		'B3BBD21A-F251-4F6C-BF0E-4D250C37938E',
+		'رَفْعُ الْبَخُورِ قَبْلَ وَأَثْنَاءَ قِرَاءَةِ الْإِبْرَكْسِيسِ',
+		'327E572F-0ECA-4A58-B8D9-6A29E158F4DD',
+		'The Offering of Incense before and during the Reading of the Acts of the Apostles',
+		'84BAB30A-4D03-4E81-84B8-42555B05843B',
+		'Die Darbringung des Weihrauchs vor und während der Lesung der Apostelgeschichte'
+	);
+
+export const chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles =
+	registerNode<Basenode>({
+		id: '4783EE40-F229-46D0-B4F2-11897530FAB1',
+		users: [partTheLiturgyOfTheWord.id],
+		type: NodeType.Chapter,
+		value: textTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.children = [
+	[sectionTheBlessingOfTheIncenseAtAnotherOffering.id],
+	[sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheApostles.id],
+	[sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar.id],
+	[sectionTheOfferingOfIncenseInTheHolyOfHolies.id],
+	[sectionTheOfferingOfIncenseInAllFourDirections.id],
+	[sectionTheOfferingOfIncenseForTheGospel.id],
+	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
+	[sectionTheOfferingOfIncenseForThePatriarch.id],
+	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
+	[sectionTheOfferingOfIncenseForTheBishop.id],
+	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
+	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
+	[sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheApostles.id],
+	[sectionTheOfferingOfIncenseForTheCrucifiedLord.id],
+	[sectionTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles.id],
+	[sectionTheOfferingOfIncenseInAllFourDirections.id],
+	[sectionTheOfferingOfIncenseForTheGospel.id],
+	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
+	[sectionTheOfferingOfIncenseForThePatriarch.id],
+	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
+	[sectionTheOfferingOfIncenseForTheBishop.id],
+	[sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id],
+	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
+	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
+	[sectionTheConclusionOfTheOfferingOfIncense.id]
+];
+
+export const textTheHymnsBeforeTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'D44921B0-A6A6-4833-9B43-5C2D7C169F41',
+	'5E7352E2-8518-43DD-851C-B709937962A0',
+	'Οἱ Ὕμνοι πρὸ τῆς Ἀναγνώσεως τῶν Πράξεων τῶν Ἀποστόλων',
+	'5695FA7F-AC59-4E07-A47F-6A6FA88AA77C',
+	'Ⲛⲓϫⲱ ϧⲁϫⲉⲛ ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'0C888B0C-2E81-4DAF-A85C-4A48A434D502',
+	'أَلْحَانُ قَبْلَ قِرَاءَةِ الْإِبْرَكْسِيسِ',
+	'527B12F3-8C36-4268-AD78-3E36E23A25FA',
+	'The Hymns before the Reading of the Acts of the Apostles',
+	'CAF2A064-66D4-46CE-92AD-E12A0D1202E4',
+	'Die Lieder vor der Lesung der Apostelgeschichte'
+);
+
+export const chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
+	id: '214059F7-F8B5-4925-8721-A083D90ADD8F',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAHymnForTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'83B5BFE4-90E3-49AD-85DA-486500A95243',
+	'CEB1E4D0-DEEA-47CB-82D1-A1BCAC1544BF',
+	'Ὕμνος διὰ τὰς Πράξεις τῶν Ἀποστόλων',
+	'890394E1-DD6C-425E-B034-AD3E815739B1',
+	'Ⲟⲩϫⲱ ⲛ̀ⲧⲉ ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'1464315E-7D72-4197-A348-04BD5845C138',
+	'لَحْنٌ لِلْإِبْرَكْسِيسِ',
+	'51733AA8-F779-476D-994E-8B70603AE368',
+	'A Hymn for the Acts of the Apostles',
+	'9EC7B161-5716-4B3E-A2F3-71139FA00D11',
+	'Ein Lied zur Apostelgeschichte'
+);
+
+export const sectionAHymnForTheActsOfTheApostles = registerNode<Basenode>({
+	id: 'AD2E054F-09FE-43B8-9ED4-8D78C59247A0',
+	users: [chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textAHymnForTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textASecondHymnForTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'4F6B5171-B85A-4AF3-B13B-04AFC0C04C87',
+	'FDFA337F-A828-43BB-8B9B-2140E892BBC1',
+	'Δεύτερος Ὕμνος διὰ τὰς Πράξεις τῶν Ἀποστόλων',
+	'7F4394B1-C72A-49A0-AC5C-F17E19B42A55',
+	'Ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ϫⲱ ⲛ̀ⲧⲉ ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'1180E1C0-69C1-411A-9BEC-F04C0AFA9130',
+	'لَحْنٌ ثَانٍ لِلْإِبْرَكْسِيسِ',
+	'95EFB6DC-BCFF-4DA9-805A-329FAA9BDDC2',
+	'A Second Hymn for the Acts of the Apostles',
+	'92345F06-DB27-479A-9747-B79B28D0DA6B',
+	'Ein zweites Lied zur Apostelgeschichte'
+);
+
+export const sectionASecondHymnForTheActsOfTheApostles = registerNode<Basenode>({
+	id: '44F8B168-3F68-402E-A724-06B3938067E7',
+	users: [chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textASecondHymnForTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAThirdHymnForTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'DC253FE6-814C-418D-B287-9F7E323C7362',
+	'039A9EB4-1D8D-4102-A034-52BCBF81C6EF',
+	'Τρίτος Ὕμνος διὰ τὰς Πράξεις τῶν Ἀποστόλων',
+	'7FF75E74-DDE6-4B19-A14D-1881F6B8C551',
+	'Ⲡⲓⲙⲁϩϣⲟⲙⲧ ⲛ̀ϫⲱ ⲛ̀ⲧⲉ ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'5230FFA5-BE76-4B87-A40F-8AB4B75EB8BD',
+	'لَحْنٌ ثَالِثٌ لِلْإِبْرَكْسِيسِ',
+	'FE5AEAE5-393F-4E15-9D80-4FC9C406EF80',
+	'A Third Hymn for the Acts of the Apostles',
+	'4BE8E261-A92C-4E28-9BB6-4014AA092A66',
+	'Ein drittes Lied zur Apostelgeschichte'
+);
+
+export const sectionAThirdHymnForTheActsOfTheApostles = registerNode<Basenode>({
+	id: '03FBBAA3-AB1F-4683-A5DA-3FAF462763F1',
+	users: [chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textAThirdHymnForTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.children = [
+	[
+		sectionAHymnForTheActsOfTheApostles.id,
+		sectionASecondHymnForTheActsOfTheApostles.id,
+		sectionAThirdHymnForTheActsOfTheApostles.id
+	]
+];
+
+export const textTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'27E82086-53D1-4E19-9DBA-0B1384A17C82',
+	'D9263B77-3580-49CF-87AD-FE4FEB69489B',
+	'Ἡ Ἀνάγνωσις τῶν Πράξεων τῶν Ἀποστόλων',
+	'2B51DCE2-66DF-4C4F-B8C3-33BA99507173',
+	'Ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'85DDF87B-F5DE-411A-B2DD-822B6E3C73D8',
+	'قِرَاءَةُ الْإِبْرَكْسِيسِ',
+	'4986E060-CB99-4C1A-83F8-BE64771EB0FC',
+	'The Reading of the Acts of the Apostles',
+	'7F2C7142-8C1D-40DF-B40A-1A25DD1ADF8E',
+	'Die Lesung der Apostelgeschichte'
+);
+
+export const chapterTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
+	id: '28EB6F10-A98A-4A5F-A7AB-CAEAF82DB4F9',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerDuringTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'7584CFF2-9C3C-4BDE-A4AD-D2AE330D54A1',
+	'1C587D77-74A8-4656-9E06-182E96EF0878',
+	'Ἡ Εὐχὴ κατὰ τὴν Ἀνάγνωσιν τῶν Πράξεων τῶν Ἀποστόλων',
+	'2C079FBC-BF75-476E-A5EC-846E96A2D3A2',
+	'Ⲡⲓϣⲗⲏⲗ ϧⲉⲛ ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'0E37D7E9-E6B3-4003-85A4-333AC3AB00FC',
+	'الصَّلاَةُ أَثْنَاءَ قِرَاءَةِ الْإِبْرَكْسِيسِ',
+	'4D5D2D79-84D2-4CFA-BD75-736EBE01269A',
+	'The Prayer during the Reading of the Acts of the Apostles',
+	'7FEEFA15-19E9-457C-81E3-297459B9C990',
+	'Das Gebet während der Lesung der Apostelgeschichte'
+);
+
+export const sectionThePrayerDuringTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
+	id: '38007AD2-9E59-40CD-B630-92E74A8C9ED0',
+	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textThePrayerDuringTheReadingOfTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'D8F9C39C-82EA-410B-A028-F6D4A5438FAA',
+	'3545249B-9CEE-4B58-B504-168D26B16CD7',
+	'Ἡ Εἰσαγωγὴ τῶν Πράξεων τῶν Ἀποστόλων',
+	'D53C7E01-6669-4051-AEF8-40A2915ACE28',
+	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲙ̀ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'3DD22EF5-A340-431C-8059-90B68C8A23E8',
+	'مُقَدِّمَةُ الْإِبْرَكْسِيسِ',
+	'BA7C7369-B5FE-4374-97F1-60A357C03ED2',
+	'The Introduction to the Acts of the Apostles',
+	'D4D99F26-89B5-42EE-A1AC-9D77E520CB88',
+	'Die Einleitung der Apostelgeschichte'
+);
+
+export const sectionTheIntroductionToTheActsOfTheApostles = registerNode<Basenode>({
+	id: 'BE1048EC-F31E-4DFC-824A-5D3FCD9A9430',
+	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'DA8FF496-2729-41CB-B8F7-A04110E90B3A',
+	'AEC11BEA-1FB5-4F76-A210-BDC045BA304F',
+	'Αἱ Πράξεις τῶν Ἀποστόλων',
+	'F23466B0-6D8A-4283-8BEE-A03C4C7D37B1',
+	'Ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'B9E83AD5-E8FB-4AA8-BFB2-5B2AFA1E1729',
+	'الْإِبْرَكْسِيسُ',
+	'F1882D82-450B-48A2-9A4B-AE8B2D14E257',
+	'The Acts of the Apostles',
+	'AEC6180A-50E6-451A-B3EC-BF6603E98745',
+	'Die Apostelgeschichte'
+);
+
+textTheActsOfTheApostles.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheActsOfTheApostles.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheActsOfTheApostles.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheActsOfTheApostles.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheActsOfTheApostles.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheActsOfTheApostles = registerNode<Basenode>({
+	id: '597DDB9B-A34D-476A-B1B5-FD9D6856779C',
+	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConclusionOfTheActsOfTheApostles = await makeMultilingualTextWithId(
+	'F4CFA325-FB55-48BB-8218-2806B424AFF2',
+	'96A06A1F-E59C-4710-9BE1-13B14304A2B1',
+	'Ἡ Λῆξις τῶν Πράξεων τῶν Ἀποστόλων',
+	'A59B8F8C-F1C1-458D-8057-275B93A57FBB',
+	'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'C2A651CC-4D0A-44F2-B0D3-8DE1D39EBD8F',
+	'خِتَامُ الْإِبْرَكْسِيسِ',
+	'232E29EE-5FEF-4FA4-9B32-C6762722C131',
+	'The Conclusion of the Acts of the Apostles',
+	'93E3594D-57FD-41F8-AF00-045F0E477B89',
+	'Der Abschluss der Apostelgeschichte'
+);
+
+export const sectionTheConclusionOfTheActsOfTheApostles = registerNode<Basenode>({
+	id: '58DBA3B6-28FB-4255-A42F-5EEB18BC4E67',
+	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textTheConclusionOfTheActsOfTheApostles.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfTheActsOfTheApostles.children = [
+	[sectionThePrayerDuringTheReadingOfTheActsOfTheApostles.id],
+	[sectionTheIntroductionToTheActsOfTheApostles.id],
+	[sectionTheActsOfTheApostles.id],
+	[sectionTheConclusionOfTheActsOfTheApostles.id]
+];
+
+export const textTheReadingOfTheSynaxarium = await makeMultilingualTextWithId(
+	'697AB302-39F5-44DF-8E1E-C81ED90A853B',
+	'94CD28E7-E934-41D0-83F4-445B6017ED8C',
+	'Ἡ Ἀνάγνωσις τοῦ Συναξαρίου',
+	'33A4C749-C9D9-4CC8-BD0E-ED109D91E900',
+	'Ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲥⲩⲛⲁⲝⲁⲣⲓⲟⲛ',
+	'31DDA160-8E90-4ACE-96E2-4D58DA5B1670',
+	'قِرَاءَةُ السِّنْكِسَارِ',
+	'51898C8E-80A6-44AA-B204-E5596D8FD9F1',
+	'The Reading of the Synaxarium',
+	'EF2B29FE-6DEC-47FC-AC38-A3417DF1611B',
+	'Die Lesung des Synaxariums'
+);
+
+export const chapterTheReadingOfTheSynaxarium = registerNode<Basenode>({
+	id: 'B20376F1-8F53-4B8B-847B-4EFFF45545FF',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfTheSynaxarium.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToTheSynaxarium = await makeMultilingualTextWithId(
+	'2C1F93F7-32ED-4856-BC0E-7647FB5BB7FB',
+	'9E44329B-7EBE-4937-8C0D-96ED5DDDB130',
+	'Ἡ Εἰσαγωγὴ τοῦ Συναξαρίου',
+	'5755C152-443B-4173-A061-75F8127A34A2',
+	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲙ̀ⲡⲓⲥⲩⲛⲁⲝⲁⲣⲓⲟⲛ',
+	'46F57372-2F4E-4FC9-B5D8-8AC886091418',
+	'مُقَدِّمَةُ السِّنْكِسَارِ',
+	'E3D05470-DD93-47F5-A0D4-2DC83956BCF1',
+	'The Introduction to the Synaxarium',
+	'6A1493E1-CD8F-4DF8-AD63-899C0E43BE52',
+	'Die Einleitung des Synaxariums'
+);
+
+export const sectionTheIntroductionToTheSynaxarium = registerNode<Basenode>({
+	id: 'E814F182-D89C-4F21-85D8-1C2C7735D917',
+	users: [chapterTheReadingOfTheSynaxarium.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToTheSynaxarium.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheSynaxarium = await makeMultilingualTextWithId(
+	'483F3DAE-1C07-4083-8874-1D6DB1E46AD2',
+	'98C79C82-C97A-4E01-9CEE-DB19B94E26F5',
+	'Τὸ Συναξάριον',
+	'5AA0F19A-0198-4A60-90F6-0DFAC7CE0FCC',
+	'Ⲡⲓⲥⲩⲛⲁⲝⲁⲣⲓⲟⲛ',
+	'641271DF-43DB-4D1C-BD23-EB7AF1D0E28D',
+	'السِّنْكِسَارُ',
+	'96766181-571B-420A-AE74-7403566C3542',
+	'The Synaxarium',
+	'716809D5-2D02-42C5-9AC4-3C63D26040B1',
+	'Das Synaxarium'
+);
+
+textTheSynaxarium.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheSynaxarium.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheSynaxarium.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheSynaxarium.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheSynaxarium.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheSynaxarium = registerNode<Basenode>({
+	id: '8F789384-97C2-4D69-9206-96F6ED980BA3',
+	users: [chapterTheReadingOfTheSynaxarium.id],
+	type: NodeType.Section,
+	value: textTheSynaxarium.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfTheSynaxarium.children = [
+	[sectionTheIntroductionToTheSynaxarium.id],
+	[sectionTheSynaxarium.id]
 ];
 
 partTheLiturgyOfTheWord.children = [
 	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
 	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
-	[chapterTheReadingOfThePaulineEpistle.id]
+	[chapterTheReadingOfThePaulineEpistle.id],
+	[chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.id],
+	[chapterTheReadingOfTheCatholicEpistle.id],
+	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.id],
+	[chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	[chapterTheReadingOfTheActsOfTheApostles.id],
+	[chapterTheReadingOfTheSynaxarium.id]
 ];
