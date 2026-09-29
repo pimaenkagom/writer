@@ -1191,6 +1191,31 @@ chapterTheReadingOfTheSynaxarium.children = [
 	[sectionTheSynaxarium.id]
 ];
 
+export const textTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel =
+	await makeMultilingualTextWithId(
+		'97865E7D-85FB-4D9B-B1E8-3454912FD70E',
+		'14952CF3-CAE0-48EF-B64E-C57354ABA6D3',
+		'Οἱ Ὕμνοι διὰ τὸν Εὐαγγελισμὸν τοῦ Χριστοῦ πρὸ τῆς Ἀναγνώσεως τοῦ Ψαλμοῦ καὶ τοῦ Εὐαγγελίου',
+		'C5181370-3131-4CAA-BDF8-F36BBFCC9F7F',
+		'Ⲛⲓϫⲱ ⲉⲑⲃⲉ ⲡⲓϣⲉⲛⲛⲟⲩϥⲓ ⲛ̀ⲧⲉ Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ ϧⲁϫⲉⲛ ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ ⲛⲉⲙ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+		'3C6700D4-F551-473F-852C-BB62B61FDA50',
+		'أَلْحَانُ بِشَارَةِ الْمَسِيحِ قَبْلَ قِرَاءَةِ الْمَزْمُورِ وَالْإِنْجِيلِ',
+		'CD1A755B-71FD-4C27-A5B5-74F8B92B010D',
+		'The Hymns for the Annunciation of Christ before the Reading of the Psalm and the Gospel',
+		'47BCF5C4-CEA7-488B-A53A-B01EB65226B9',
+		'Die Lieder für die Verkündigung Christi vor der Lesung des Psalms und des Evangeliums'
+	);
+
+export const chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel =
+	registerNode<Basenode>({
+		id: 'C1534998-5747-4F49-A025-1DAB7BB67DD3',
+		users: [partTheLiturgyOfTheWord.id],
+		type: NodeType.Chapter,
+		value: textTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
 partTheLiturgyOfTheWord.children = [
 	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
 	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
@@ -1200,5 +1225,6 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.id],
 	[chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
 	[chapterTheReadingOfTheActsOfTheApostles.id],
-	[chapterTheReadingOfTheSynaxarium.id]
+	[chapterTheReadingOfTheSynaxarium.id],
+	[chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id]
 ];
