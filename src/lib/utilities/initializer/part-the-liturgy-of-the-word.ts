@@ -983,6 +983,28 @@ export const chapterTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
 	children: []
 });
 
+export const textTheResponseOfThePeopleTrulyBlessedAreYou =
+	await makeMultilingualTextWithIdWithoutGreek(
+		'562014B6-0F37-4F1B-B0F4-1605CA33A027',
+		'D5AC3713-E7E0-463C-8BF8-589161B54C5B',
+		'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
+		'2F95C876-D2AA-4DED-83F1-B8D8E1B0E5C5',
+		'مَرَدُّ الشَّعْبِ مُبَارَكٌ أَنْتَ بِالْحَقِيقَةِ',
+		'D143255C-9827-4FF0-BE4A-D0E6A4030693',
+		'The Response of the People Blessed Are You indeed',
+		'E24FFF9A-DDE2-493A-B8AD-C609B626FE44',
+		'Die Erwiderung des Volkes Wahrlich gesegnet bist du'
+	);
+
+export const sectionTheResponseOfThePeopleTrulyBlessedAreYou = registerNode<Basenode>({
+	id: '358D212F-22A1-4911-BDBD-30DD3FE8B306',
+	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	type: NodeType.Section,
+	value: textTheResponseOfThePeopleTrulyBlessedAreYou.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 export const textThePrayerDuringTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWithId(
 	'7584CFF2-9C3C-4BDE-A4AD-D2AE330D54A1',
 	'1C587D77-74A8-4656-9E06-182E96EF0878',
@@ -1082,6 +1104,7 @@ export const sectionTheConclusionOfTheActsOfTheApostles = registerNode<Basenode>
 });
 
 chapterTheReadingOfTheActsOfTheApostles.children = [
+	[sectionTheResponseOfThePeopleTrulyBlessedAreYou.id],
 	[sectionThePrayerDuringTheReadingOfTheActsOfTheApostles.id],
 	[sectionTheIntroductionToTheActsOfTheApostles.id],
 	[sectionTheActsOfTheApostles.id],

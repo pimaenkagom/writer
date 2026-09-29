@@ -13,7 +13,7 @@ export const textTheHymnTrulyBlessed = await makeMultilingualTextWithIdWithoutGr
 	'828F2C07-E798-458A-B60C-A47F3170E947',
 	'The Hymn Blessed are You indeed',
 	'9E819EBC-1B6F-4B62-AAAB-8F3F8BEEDCD4',
-	'Das Lied Wahrlich gesegnet'
+	'Das Lied Wahrlich gesegnet bist du'
 );
 
 export const sectionTheHymnTrulyBlessed = registerNode<Basenode>({
