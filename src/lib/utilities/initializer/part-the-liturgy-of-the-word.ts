@@ -1263,9 +1263,44 @@ export const sectionTheHymnTheAnnunciationOfGabriel = registerNode<Basenode>({
 	children: []
 });
 
+export const textTheParalexForTheAnnunciationOfChrist = await makeMultilingualTextWithId(
+	'B301B486-8DFA-4FBF-BF30-D3641DD02960',
+	'53A02707-0AAF-4A8C-8F1D-0E258A0F5DAD',
+	'Ἡ Παράλεξις διὰ τὸν Εὐαγγελισμὸν τοῦ Χριστοῦ',
+	'B2F3F7EA-2A0A-4B2A-A3AC-879119A3EE7A',
+	'Ϯⲡⲁⲣⲁⲗⲉⲝⲓⲥ ⲉⲑⲃⲉ ⲡⲓϣⲉⲛⲛⲟⲩϥⲓ ⲛ̀ⲧⲉ Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ',
+	'F4A73EA7-08AE-4641-97ED-857640F578E0',
+	'الْبَرْلُكْسُ لِبِشَارَةِ الْمَسِيحِ',
+	'8A103146-A931-4A87-A01B-0D01DA6EAF4C',
+	'The Paralex for the Annunciation of Christ',
+	'0E2B76B1-4B3E-434C-902A-1650D31727EC',
+	'Der Paralex für die Verkündigung Christi'
+);
+
+textTheParalexForTheAnnunciationOfChrist.texts.ancient_greek.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheParalexForTheAnnunciationOfChrist.texts.coptic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheParalexForTheAnnunciationOfChrist.texts.arabic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheParalexForTheAnnunciationOfChrist.texts.english.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheParalexForTheAnnunciationOfChrist.texts.german.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheParalexForTheAnnunciationOfChrist = registerNode<Basenode>({
+	id: '384C1672-6DD8-426E-8F96-211605770D52',
+	users: [chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textTheParalexForTheAnnunciationOfChrist.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
 chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.children = [
 	[sectionTheHymnTheCounselThatExistedFromEternity.id],
-	[sectionTheHymnTheAnnunciationOfGabriel.id]
+	[sectionTheHymnTheAnnunciationOfGabriel.id],
+	[sectionTheParalexForTheAnnunciationOfChrist.id]
 ];
 
 partTheLiturgyOfTheWord.children = [
