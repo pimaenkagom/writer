@@ -8,7 +8,7 @@ export const textTheResponseOfThePeopleWeWorshipYouOChrist =
 	await makeMultilingualTextWithIdWithoutGreek(
 		'44B0C4C4-0B55-473B-AB20-391E2F33528F',
 		'188CF048-E1A7-4E0E-85A9-E46F1128604D',
-		'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ ⲧⲉⲛⲟⲩⲱϣⲧ ⲙ̀ⲙⲟⲕ ⲱ̀ Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ',
+		'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ Ⲧⲉⲛⲟⲩⲱϣⲧ ⲙ̀ⲙⲟⲕ ⲱ̀ Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ',
 		'32EF319D-7EA3-424E-BED0-F95F0CC53D3F',
 		'مَرَدُّ الشَّعْبِ نَسْجُدُ لَكَ أَيُّهَا الْمَسِيحُ',
 		'1FBA5052-0722-442A-ADD5-FAEBC9C82FE4',

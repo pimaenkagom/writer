@@ -631,7 +631,7 @@ export const sectionTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth = registerNode
 export const textTheHymnPerfectIsTheBlessing = await makeMultilingualTextWithIdWithoutGreek(
 	'64CAF24F-45E2-4478-9AC2-D953E066AAEE',
 	'1B7AAF75-D775-42C5-AE7F-3DA7714A5420',
-	'Ⲡⲓϫⲱ ϫⲉ ⲁ ⲡⲉⲧϫⲏⲕ ⲉ̀ⲃⲟⲗ ⲛ̀ϫⲉ ⲡⲓⲥⲙⲟⲩ',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲁ̀ ⲡⲉⲧϫⲏⲕ ⲉ̀ⲃⲟⲗ ⲛ̀ϫⲉ ⲡⲓⲥⲙⲟⲩ',
 	'58E63B11-CF34-46E6-B60B-6AEFFB55A4F0',
 	'اللَّحْنُ كَامِلَةٌ هِيَ الْبَرَكَةُ',
 	'B51675C4-95B4-4ACB-86AF-45C9A6438D38',
@@ -987,7 +987,7 @@ export const textTheResponseOfThePeopleBlessedAreYouIndeed =
 	await makeMultilingualTextWithIdWithoutGreek(
 		'562014B6-0F37-4F1B-B0F4-1605CA33A027',
 		'D5AC3713-E7E0-463C-8BF8-589161B54C5B',
-		'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
+		'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
 		'2F95C876-D2AA-4DED-83F1-B8D8E1B0E5C5',
 		'مَرَدُّ الشَّعْبِ مُبَارَكٌ أَنْتَ بِالْحَقِيقَةِ',
 		'D143255C-9827-4FF0-BE4A-D0E6A4030693',
@@ -1215,6 +1215,58 @@ export const chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalm
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
+
+export const textTheHymnTheCounselThatExistedFromEternity = await makeMultilingualTextWithId(
+	'B0CB2453-E0F7-4710-8BC3-BEC21B6483AB',
+	'573089D5-4869-4605-AE3B-5C5EA5DB89EB',
+	'Ὁ Ὕμνος Βουλὴν προαιώνιον',
+	'56DCBFF4-BB8E-4E65-A3BF-A249CDCB8C5C',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲃⲟⲩⲗⲏⲛ ⲡⲣⲟⲁⲓⲱⲛⲓⲟⲛ',
+	'DB623F91-BDA5-4FE6-94E9-20E49318C143',
+	'اللَّحْنُ الْمَشُورَةَ الَّتِي كَانَتْ مُنْذُ الْأَزَلِ',
+	'EE89DC29-E543-490D-AE2E-3B824A34AA40',
+	'The Hymn The Counsel That Existed from Eternity',
+	'9247EF4E-E087-4D0D-B426-311B7F52736C',
+	'Das Lied Den Ratschluss, der von Ewigkeit her bestand'
+);
+
+textTheHymnTheCounselThatExistedFromEternity.texts.coptic.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheHymnTheCounselThatExistedFromEternity = registerNode<Basenode>({
+	id: '9424F5D4-EB0A-4C8A-8EB9-4BD5C9C8F664',
+	users: [chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textTheHymnTheCounselThatExistedFromEternity.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheHymnTheAnnunciationOfGabriel = await makeMultilingualTextWithIdWithoutGreek(
+	'1CF5A730-1FE2-4B15-8CD9-4D87E5F92F8F',
+	'FFCE0D23-21F4-483B-B858-6FC187D575D1',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲡⲓϣⲉⲛⲛⲟⲩϥⲓ ⲛ̀ⲧⲉ Ⲅⲁⲃⲣⲓⲏⲗ',
+	'E6440313-F66C-4815-9EEE-981466D54D89',
+	'اللَّحْنُ بِشَارَةُ غُبْرِيَالَ',
+	'1AA84272-FB8D-4F85-A42D-EB0CFC047C94',
+	'The Hymn The Annunciation of Gabriel',
+	'B5913A9E-7ABB-4FCC-9DE7-2866196ACBFC',
+	'Das Lied Die Verkündigung Gabriels'
+);
+
+export const sectionTheHymnTheAnnunciationOfGabriel = registerNode<Basenode>({
+	id: '6E065761-765B-4366-BFCE-89D11136B27D',
+	users: [chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textTheHymnTheAnnunciationOfGabriel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.children = [
+	[sectionTheHymnTheCounselThatExistedFromEternity.id],
+	[sectionTheHymnTheAnnunciationOfGabriel.id]
+];
 
 partTheLiturgyOfTheWord.children = [
 	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],

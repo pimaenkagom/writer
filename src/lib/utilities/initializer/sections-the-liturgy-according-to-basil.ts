@@ -2180,7 +2180,7 @@ export const sectionThePsalm150ForTheOrdinaryDays = registerNode<Basenode>({
 export const textTheHymnTheBreadOfLife = await makeMultilingualTextWithIdWithoutGreek(
 	'428736B5-4162-40FD-8287-67BC0339E785',
 	'C54FA541-11F4-4F1F-B151-F09186820695',
-	'Ⲡⲓϫⲱ Ⲡⲓⲱⲓⲕ ⲛ̀ⲧⲉ ⲡ̀ⲱⲛϧ',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲡⲓⲱⲓⲕ ⲛ̀ⲧⲉ ⲡ̀ⲱⲛϧ',
 	'8016C022-A954-49B7-9CD7-6F04341DFBD7',
 	'اللَّحْنُ خُبْزُ الْحَيَاةِ',
 	'89AC8BDB-03E8-4869-B0D9-C8FAF12B69E7',
@@ -2202,7 +2202,7 @@ export const textTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit =
 	await makeMultilingualTextWithIdWithoutGreek(
 		'B0CC91FA-3DCB-4415-A95D-BFEFC19C6CDE',
 		'9521D4A5-B510-4BD2-AD6E-7481A087DF3E',
-		'Ⲡⲓϫⲱ Ϥ̀ⲥ̀ⲙⲁⲣⲱⲟⲩⲧ ⲛ̀ϫⲉ Ⲫ̀ⲓⲱⲧ ⲛⲉⲙ Ⲡ̀ϣⲏⲣⲓ ⲛⲉⲙ Ⲡⲓⲡ̀ⲛⲉⲩⲙⲁ ⲉⲑⲟⲩⲁⲃ',
+		'Ⲡⲓϫⲱ ϫⲉ Ϥ̀ⲥ̀ⲙⲁⲣⲱⲟⲩⲧ ⲛ̀ϫⲉ Ⲫ̀ⲓⲱⲧ ⲛⲉⲙ Ⲡ̀ϣⲏⲣⲓ ⲛⲉⲙ Ⲡⲓⲡ̀ⲛⲉⲩⲙⲁ ⲉⲑⲟⲩⲁⲃ',
 		'1775D468-F978-478B-8B8C-4F37DAD2DC9F',
 		'اللَّحْنُ مُبَارَكٌ الآبُ وَالاِبْنُ وَالرُّوحُ الْقُدُسُ',
 		'419319F5-615C-4357-989E-650BF5A94199',
@@ -2223,7 +2223,7 @@ export const sectionTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit = registe
 export const textTheHymnMyStrengthAndMyPraise = await makeMultilingualTextWithIdWithoutGreek(
 	'A6146CA4-8CEF-49CE-A565-9046AC410FDB',
 	'AA95DCFE-1BF4-404E-A8A7-6E0070A50635',
-	'Ⲡⲓϫⲱ Ⲧⲁϫⲟⲙ ⲛⲉⲙ ⲡⲁⲥ̀ⲙⲟⲩ',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲧⲁϫⲟⲙ ⲛⲉⲙ ⲡⲁⲥ̀ⲙⲟⲩ',
 	'49DCA9F1-0707-45FF-B0E0-68D58A265D0F',
 	'التَّرْتِيلَةُ قُوَّتِي وَتَسْبِحَتِي',
 	'08269A0C-3F06-45CD-A55E-8DCB1B6E4F46',

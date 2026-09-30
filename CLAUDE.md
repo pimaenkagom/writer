@@ -90,6 +90,10 @@ provide a text with no Greek original.
   (unlike German) and not systematically per word (unlike English title
   case). A word mid-sentence stays lowercase even if it's a proper name's
   epithet, e.g. `ⲡⲉϥⲕⲉϣⲫⲏⲣ ⲛ̀ⲗⲓⲧⲟⲩⲣⲅⲟⲥ`.
+- **Exception — quoted incipits:** when a title quotes the opening words of
+  a hymn or response, introduce the quote with `ϫⲉ` and capitalize the
+  first word of the quote, e.g. `Ⲡⲓϫⲱ ϫⲉ Ⲭⲣⲓⲥⲧⲟⲥ ⲁⲛⲉⲥⲧⲏ`,
+  `Ⲡⲓϫⲱ ϫⲉ Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ`, `Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲗⲁⲟⲥ ϫⲉ Ⲧⲉⲛⲟⲩⲱϣⲧ ⲙ̀ⲙⲟⲕ …`.
 - **Jenkim** (ϫⲉⲛⲕⲓⲙ, combining grave accent U+0300, rendered as a small
   stroke over the letter): required on (a) the native one-consonant
   grammatical morphemes ⲛ̀, ⲧ̀, ⲣ̀, ⲙ̀ when they stand before another

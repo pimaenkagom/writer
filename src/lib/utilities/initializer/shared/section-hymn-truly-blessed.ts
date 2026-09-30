@@ -7,7 +7,7 @@ import { registerNode } from '$lib/utilities/initializer/registry';
 export const textTheHymnTrulyBlessed = await makeMultilingualTextWithIdWithoutGreek(
 	'3C363325-291A-406C-B398-D020C8946AA3',
 	'17D8B58B-28CF-4996-8682-05DD135C0683',
-	'Ⲡⲓϫⲱ Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
+	'Ⲡⲓϫⲱ ϫⲉ Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
 	'1FA3DDC8-BBE8-49C2-81CF-5AC82EFC52DD',
 	'اللَّحْنُ مُبَارَكٌ أَنْتَ بِالْحَقِيقَةِ',
 	'828F2C07-E798-458A-B60C-A47F3170E947',
