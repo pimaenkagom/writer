@@ -1,6 +1,9 @@
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 import '$lib/utilities/initializer/books';
+import '$lib/utilities/initializer/occasions/occasion-the-annunciation-of-christ';
+import '$lib/utilities/initializer/occasions/occasion-the-month-of-koiak';
+import '$lib/utilities/initializer/occasions/occasion-the-paramoun-of-the-nativity-of-christ';
 import '$lib/utilities/initializer/part-the-liturgy-of-the-word';
 import '$lib/utilities/initializer/part-the-offering-of-the-lamb';
 import '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
