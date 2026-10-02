@@ -146,7 +146,12 @@ provide a text with no Greek original.
 - **Never abbreviate words** (e.g. no nomina-sacra contractions like
   `ⲡ̅ⲛ̅ⲁ̅` for "spirit" — spell it out in full as `ⲡⲛⲉⲩⲙⲁ`). Numbers are the
   only exception, where the traditional numeral-letter notation (e.g.
-  `ⲣ̅ⲛ̅` for "150") is fine.
+  `ⲣ̅ⲛ̅` for "150") is fine in titles; in running/body text (paragraphs,
+  clauses) add the number spelled out in parentheses right after the
+  numeral. This applies to **all five languages**, not
+  just Coptic: no "St." for "Saint", no "Hl." for "Heilige", no shortened
+  book names like "Ps."/"Mt." etc. If an abbreviation shows up in existing
+  data or a supplied source, expand it and tell the user.
 
 ## Arabic liturgical terminology
 

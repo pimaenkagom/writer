@@ -8,6 +8,7 @@ import {
 } from '$lib/utilities/initializer/constructors';
 import { chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-annunciation-of-christ';
 import { chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-month-of-koiak';
+import { chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-nativity-of-christ';
 import { chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-paramoun-of-the-nativity-of-christ';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
@@ -1206,5 +1207,6 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheReadingOfTheSynaxarium.id],
 	[chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id]
+	[chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id]
 ];

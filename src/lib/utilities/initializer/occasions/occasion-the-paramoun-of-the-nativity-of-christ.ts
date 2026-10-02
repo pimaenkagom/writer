@@ -3,6 +3,7 @@ import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
+import { sectionTheHymnAStarRoseInTheEast } from '$lib/utilities/initializer/shared/section-hymn-a-star-rose-in-the-east';
 
 export const textTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	await makeMultilingualTextWithId(
@@ -19,6 +20,9 @@ export const textTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfTh
 		'Die Lieder für das Paramun der Geburt Christi vor der Lesung des Psalms und des Evangeliums'
 	);
 
+textTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.texts.english.status =
+	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+
 export const chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '80AC9FE8-93A1-4AE7-8FFA-45C70F0F154F',
@@ -31,31 +35,6 @@ export const chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingO
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
-
-export const textTheHymnAStarRoseInTheEast = await makeMultilingualTextWithId(
-	'6496E03C-D85D-4E8C-BC4B-CB0819342B32',
-	'843C7546-E4C6-4ED9-A343-ADFA9E7AB7E6',
-	'Ὁ Ὕμνος Ἀστὴρ ἀνέτειλεν ἐν τῇ ἀνατολῇ',
-	'FA8ECB39-E550-45EC-B2E3-245E231E6E25',
-	'Ⲡⲓϫⲱ ϫⲉ Ⲟⲩⲥⲓⲟⲩ ⲁϥϣⲁⲓ ϧⲉⲛ ⲛⲓⲙⲁⲛϣⲁⲓ',
-	'C84879C6-0D79-4D64-81B5-8D9CB973B2B7',
-	'اللَّحْنُ أَشْرَقَ نَجْمٌ فِي الْمَشْرِقِ',
-	'C9AE5821-EBCC-4AAD-84DA-A2B2CBE7C3E2',
-	'The Hymn A Star Rose in the East',
-	'766B0A71-1571-4DC2-9ECE-34D558EE9821',
-	'Das Lied Ein Stern ging im Osten auf'
-);
-
-export const sectionTheHymnAStarRoseInTheEast = registerNode<Basenode>({
-	id: 'A0943273-10C6-4363-9FD9-D1D86D26BCDB',
-	users: [
-		chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id
-	],
-	type: NodeType.Section,
-	value: textTheHymnAStarRoseInTheEast.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
 
 chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.children =
 	[[sectionTheHymnAStarRoseInTheEast.id]];
