@@ -10,6 +10,27 @@ import { chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndT
 import { chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-month-of-koiak';
 import { chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-nativity-of-christ';
 import { chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-paramoun-of-the-nativity-of-christ';
+import { chapterTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-fast-before-the-feast-of-the-nativity-of-christ';
+import { chapterTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-circumcision-of-christ';
+import { chapterTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-presentation-of-christ-in-the-temple';
+import { chapterTheHymnsForTheEntryOfChristIntoEgyptBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-entry-of-christ-into-egypt';
+import { chapterTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-paramoun-of-the-theophany';
+import { chapterTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-theophany';
+import { chapterTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-blessing-of-the-wedding-at-cana-of-galilee-by-jesus-christ';
+import { chapterTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-transfiguration-of-christ';
+import { chapterTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-fast-and-the-pascha-of-jonah';
+import { chapterTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-great-fast';
+import { chapterTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-saturday-of-lazarus';
+import { chapterTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-entry-of-christ-into-jerusalem';
+import { chapterTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-maundy-thursday';
+import { chapterTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-saturday-of-the-apocalypse';
+import { chapterTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-resurrection-of-christ';
+import { chapterTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-sunday-of-thomas';
+import { chapterTheHymnsForTheAscensionOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-ascension-of-christ';
+import { chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-descent-of-the-holy-spirit';
+import { chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-fast-of-the-apostles';
+import { chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-cross';
+import { chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-crown-of-the-year';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 import {
@@ -1206,7 +1227,32 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheReadingOfTheActsOfTheApostles.id],
 	[chapterTheReadingOfTheSynaxarium.id],
 	[chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[
+		chapterTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id
+	],
 	[chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id]
+	[chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheEntryOfChristIntoEgyptBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[
+		chapterTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadingOfThePsalmAndTheGospel.id
+	],
+	[chapterTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheAscensionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id]
 ];
