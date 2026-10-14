@@ -1133,7 +1133,8 @@ chapterTheReadingOfTheActsOfTheApostles.children = [
 	[sectionThePrayerDuringTheReadingOfTheActsOfTheApostles.id],
 	[sectionTheIntroductionToTheActsOfTheApostles.id],
 	[sectionTheActsOfTheApostles.id],
-	[sectionTheConclusionOfTheActsOfTheApostles.id]
+	[sectionTheConclusionOfTheActsOfTheApostles.id],
+	[sectionTheTranslationOfTheReading.id]
 ];
 
 export const textTheReadingOfTheSynaxarium = await makeMultilingualTextWithId(
@@ -1213,7 +1214,8 @@ export const sectionTheSynaxarium = registerNode<Basenode>({
 
 chapterTheReadingOfTheSynaxarium.children = [
 	[sectionTheIntroductionToTheSynaxarium.id],
-	[sectionTheSynaxarium.id]
+	[sectionTheSynaxarium.id],
+	[sectionTheTranslationOfTheReading.id]
 ];
 
 partTheLiturgyOfTheWord.children = [
