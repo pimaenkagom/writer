@@ -112,6 +112,11 @@ provide a text with no Greek original.
   `ⲉ-`, e.g. `ⲉ̀ⲃⲟⲗ`, `ⲉ̀ϩⲣⲏⲓ`, `ⲉ̀ⲡⲓϣ̀ⲗⲏⲗ` — the same "short syllable
   standing on its own" logic as the consonant cases above, just on a
   vowel instead of a consonant.
+- **ⲛ̀ → ⲙ̀ before labials:** the one-consonant particle ⲛ̀ (genitive,
+  object marker, etc.) assimilates to **ⲙ̀** before ⲡ, ⲙ, ⲫ, ⲯ, and it is
+  always written attached to the following word, never as a separate word
+  (`ⲙ̀ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ`, `ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ`, `ⲙ̀ⲡⲁⲣⲑⲉⲛⲓⲕⲟⲛ`, `ⲙ̀Ⲡⲁⲱⲛⲓ` — not
+  `ⲛ̀ ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ`).
 - **ⲛ̀ + noun** ("X who/that is a Y") only makes sense when the head noun
   can literally *be* the second noun (e.g. a person who is a minister:
   `ⲡⲉϥⲕⲉϣⲫⲏⲣ ⲛ̀ⲗⲓⲧⲟⲩⲣⲅⲟⲥ`, "his fellow who is a minister"). For an
