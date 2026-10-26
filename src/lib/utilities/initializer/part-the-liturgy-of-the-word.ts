@@ -31,6 +31,7 @@ import { chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAn
 import { chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-fast-of-the-apostles';
 import { chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-cross';
 import { chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-crown-of-the-year';
+import { chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-ordinary-days';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 import {
@@ -1256,5 +1257,6 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id]
+	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id]
 ];

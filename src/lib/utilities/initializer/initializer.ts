@@ -26,6 +26,7 @@ import '$lib/utilities/initializer/occasions/occasion-the-descent-of-the-holy-sp
 import '$lib/utilities/initializer/occasions/occasion-the-fast-of-the-apostles';
 import '$lib/utilities/initializer/occasions/occasion-the-cross';
 import '$lib/utilities/initializer/occasions/occasion-the-crown-of-the-year';
+import '$lib/utilities/initializer/occasions/occasion-the-ordinary-days';
 import '$lib/utilities/initializer/part-the-liturgy-of-the-word';
 import '$lib/utilities/initializer/part-the-offering-of-the-lamb';
 import '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
