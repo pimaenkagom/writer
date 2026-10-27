@@ -67,8 +67,6 @@ export const chapterTheReconciliation = registerNode<Basenode>({
 	children: []
 });
 
-partLiturgyOfTheFaithful.children = [[chapterTheReconciliation.id]];
-
 export const textAPrayerOfReconciliation = await makeMultilingualTextWithId(
 	'5DDC7807-9042-486C-B908-309D6A76786A',
 	'1F9C9067-643D-4154-86A3-D1CCD4C5028C',
@@ -474,19 +472,6 @@ export const sectionASeventhAspasmosWatosForTheOrdinaryDays = registerNode<Basen
 	children: []
 });
 
-chapterTheAnaphora.children = [
-	[sectionTheAnaphora.id],
-	[
-		sectionAspasmosWatosForTheOrdinaryDays.id,
-		sectionASecondAspasmosWatosForTheOrdinaryDays.id,
-		sectionAThirdAspasmosWatosForTheOrdinaryDays.id,
-		sectionAFourthAspasmosWatosForTheOrdinaryDays.id,
-		sectionAFifthAspasmosWatosForTheOrdinaryDays.id,
-		sectionASixthAspasmosWatosForTheOrdinaryDays.id,
-		sectionASeventhAspasmosWatosForTheOrdinaryDays.id
-	]
-];
-
 export const textAnEighthAspasmosWatosForTheOrdinaryDays = await makeMultilingualTextWithId(
 	'F201D10A-39D1-4F2C-BA10-9FCA02481068',
 	'9685C54F-753D-4E6B-A2B0-0E6F77E0EA63',
@@ -546,12 +531,6 @@ export const chapterAgios = registerNode<Basenode>({
 	valueType: ContentType.MultilingualText,
 	children: []
 });
-
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id]
-];
 
 export const textAgiosAgiosAgios = await makeMultilingualTextWithId(
 	'52CF95A7-63D0-45FA-B7DA-301F238E6CAD',
@@ -654,13 +633,6 @@ export const chapterTheInstitutionPrayers = registerNode<Basenode>({
 	valueType: ContentType.MultilingualText,
 	children: []
 });
-
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id]
-];
 
 export const textTheIntroductionToTheWordsOfInstitution = await makeMultilingualTextWithId(
 	'1F589439-924F-41F3-A569-29F364D7220B',
@@ -807,14 +779,6 @@ export const chapterTheLitanies = registerNode<Basenode>({
 	valueType: ContentType.MultilingualText,
 	children: []
 });
-
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id],
-	[chapterTheLitanies.id]
-];
 
 export const textTheShortLitanyForPeace = await makeMultilingualTextWithId(
 	'E1A0C2EF-45FA-4516-9DD5-793BCD304EBF',
@@ -1096,23 +1060,6 @@ export const sectionTheYearRoundLitanyForNature = registerNode<Basenode>({
 	children: []
 });
 
-chapterTheLitanies.children = [
-	[sectionTheShortLitanyForPeace.id],
-	[sectionTheShortLitanyForThePatriarchMetropolitanAndBishop.id],
-	[sectionTheLitanyForADepartedPatriarch.id],
-	[sectionTheLitanyForADepartedMetropolitan.id],
-	[sectionTheLitanyForADepartedBishop.id],
-	[sectionTheLitanyForTheServants.id],
-	[sectionTheLitanyForTheMercyUponUsAll.id],
-	[sectionTheLitanyForTheSalvationOfThisPlace.id],
-	[
-		sectionTheLitanyForNatureFromThe11thOfPaoniToThe9thOfPaopi.id,
-		sectionTheLitanyForNatureFromThe10thOfPaopiToThe10thOfTobi.id,
-		sectionTheLitanyForNatureFromThe11thOfTobiToThe10thOfPaoni.id,
-		sectionTheYearRoundLitanyForNature.id
-	]
-];
-
 export const textTheLitanyForTheOfferings = await makeMultilingualTextWithId(
 	'CD02EAB8-570E-4912-A5C6-59A04946EC94',
 	'76BED07F-E59E-4E02-9D31-AB82952DCC3F',
@@ -1176,15 +1123,6 @@ export const chapterTheCommemorationOfTheSaints = registerNode<Basenode>({
 	valueType: ContentType.MultilingualText,
 	children: []
 });
-
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id],
-	[chapterTheLitanies.id],
-	[chapterTheCommemorationOfTheSaints.id]
-];
 
 export const textTheCommemorationOfTheSaintsSection = await makeMultilingualTextWithId(
 	'6D10026E-2AF2-4BDE-A19F-DC8623F49A48',
@@ -1534,16 +1472,6 @@ chapterTheBreakingOfTheBread.children = [
 	[sectionThePrayerOfTheFraction.id]
 ];
 
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id],
-	[chapterTheLitanies.id],
-	[chapterTheCommemorationOfTheSaints.id],
-	[chapterTheBreakingOfTheBread.id]
-];
-
 export const textTheConfession = await makeMultilingualTextWithId(
 	'28D372FD-E8BB-4E0A-8C59-F53942109B81',
 	'F28B3BF0-2992-4FF0-AEA5-6DBCB73B9DD5',
@@ -1566,17 +1494,6 @@ export const chapterTheConfession = registerNode<Basenode>({
 	valueType: ContentType.MultilingualText,
 	children: []
 });
-
-partLiturgyOfTheFaithful.children = [
-	[chapterTheReconciliation.id],
-	[chapterTheAnaphora.id],
-	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id],
-	[chapterTheLitanies.id],
-	[chapterTheCommemorationOfTheSaints.id],
-	[chapterTheBreakingOfTheBread.id],
-	[chapterTheConfession.id]
-];
 
 export const textTheLordsPrayer = await makeMultilingualTextWithId(
 	'E1FEC3CB-62A5-478C-A796-C19A72A174C3',
