@@ -33,6 +33,7 @@ import { chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel } from
 import { chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-crown-of-the-year';
 import { chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-ordinary-days';
 import { registerNode } from '$lib/utilities/initializer/registry';
+import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 import {
 	sectionTheBlessingOfTheIncenseAtAnotherOffering,
@@ -1219,6 +1220,135 @@ chapterTheReadingOfTheSynaxarium.children = [
 	[sectionTheTranslationOfTheReading.id]
 ];
 
+export const textTheReadingOfThePsalmAndTheGospel = await makeMultilingualTextWithId(
+	'F21905A1-F544-4CDF-A30E-01FCF962869B',
+	'4887A406-A3F8-402C-8FFB-061D5B39394B',
+	'Ἡ Ἀνάγνωσις τοῦ Ψαλμοῦ καὶ τοῦ Εὐαγγελίου',
+	'ED1582E0-7173-487F-A8A0-8BF3218C156E',
+	'Ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ ⲛⲉⲙ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'8C8C035F-4EB0-482D-9354-36C85678934A',
+	'قِرَاءَةُ الْمَزْمُورِ وَالْإِنْجِيلِ',
+	'A12EEA81-4690-4E8B-8CC3-6D14787D01A8',
+	'The Reading of the Psalm and the Gospel',
+	'CF6F77AA-EE47-464D-B74D-443B5EED3484',
+	'Die Lesung des Psalms und des Evangeliums'
+);
+
+export const chapterTheReadingOfThePsalmAndTheGospel = registerNode<Basenode>({
+	id: 'A2E52040-E76D-4D3B-8603-2AC88F24205B',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfThePsalmAndTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheTrisagion = await makeMultilingualTextWithId(
+	'D5011C65-DBAA-4026-B83B-EFF04A4886E6',
+	'C676F897-2723-433E-A7A0-F0EF49CD722A',
+	'Ὁ Τρισάγιος Ὕμνος',
+	'DBA46C48-3E6F-423C-B101-470C1BA9C583',
+	'Ⲡⲓⲧ̀ⲣⲓⲥⲁⲅⲓⲟⲥ',
+	'7C343EA5-2F40-43D0-9DE1-05219CC593A0',
+	'الثَّلَاثُ تَقْدِيسَاتٍ',
+	'070DAE68-011F-4CB2-B25D-00E68B192A95',
+	'The Trisagion',
+	'857BB061-7BA0-4CAB-AB59-8BA81668B761',
+	'Das Dreimalheilig'
+);
+
+textTheTrisagion.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheTrisagion.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheTrisagion.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheTrisagion.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheTrisagion.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheTrisagion = registerNode<Basenode>({
+	id: '4CD7914D-C9B4-4856-9F58-4F7E293E846C',
+	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textTheTrisagion.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textALitanyForTheGospel = await makeMultilingualTextWithId(
+	'71646655-0BAC-40F6-ABB9-6C68AF7190F4',
+	'2385C7BF-02BE-4C58-84B2-E3DA385C689F',
+	'Εὐχὴ ὑπὲρ τοῦ Εὐαγγελίου',
+	'EE734F16-DE00-4B83-BF9D-CB9477B89908',
+	'Ⲟⲩⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'5DD07D04-B646-47D5-8389-19E7285E3E4C',
+	'أُوشِيَةٌ لِلْإِنْجِيلِ',
+	'34FF40FE-7524-4DBA-95DA-75E9CE28F9BB',
+	'A Litany for the Gospel',
+	'4F0CEF3C-CBE3-4D48-8C2C-634524692B53',
+	'Ein Gebet für das Evangelium'
+);
+
+export const sectionALitanyForTheGospel = registerNode<Basenode>({
+	id: '5C6CAB9D-E5E9-4D35-B97E-00037781270D',
+	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textALitanyForTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textAnotherLitanyForTheGospel = await makeMultilingualTextWithId(
+	'C2D4E8B5-1ABA-4441-8A7B-352C12270BFB',
+	'EC95ED3E-8CF4-4963-A79E-316554FF9EF5',
+	'Ἄλλη Εὐχὴ ὑπὲρ τοῦ Εὐαγγελίου',
+	'2F91AA1E-97D7-4213-B3B6-BB5ADB6FE435',
+	'Ⲕⲉⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'25FE58A0-071A-4D05-8A28-3C5A732EA90D',
+	'أُوشِيَةٌ أُخْرَى لِلْإِنْجِيلِ',
+	'07EE2DC0-08C9-4CD0-987D-BCF1684E0AEB',
+	'Another Litany for the Gospel',
+	'15069501-F4C4-4FBF-9A07-ED495F17FA3E',
+	'Ein anderes Gebet für das Evangelium'
+);
+
+export const sectionAnotherLitanyForTheGospel = registerNode<Basenode>({
+	id: '4F0C95BF-9B98-49F3-9889-26A212F2A6FE',
+	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textAnotherLitanyForTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheProcessionOfTheGospel = await makeMultilingualTextWithId(
+	'2A1DC22A-D799-40AC-9B19-889E4204DC41',
+	'8F4ACF8E-FA10-4D4E-92A2-E66DA2B46485',
+	'Ἡ Περιφορὰ τοῦ Εὐαγγελίου',
+	'90B9CC22-4AC2-44F3-8BCA-EF746CD830CA',
+	'Ⲡⲓⲕⲱϯ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'61711B57-D2C4-4040-8085-8DE15190977F',
+	'دَوْرَةُ الْإِنْجِيلِ',
+	'57F364DD-44EF-4F74-B526-C9B634A0CA73',
+	'The Procession of the Gospel',
+	'A7402023-4653-4C93-B023-2A5343A6A933',
+	'Der Evangeliumsumgang'
+);
+
+export const sectionTheProcessionOfTheGospel = registerNode<Basenode>({
+	id: 'E2204B8A-B95B-4D61-A344-F3C3D65A7594',
+	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	type: NodeType.Section,
+	value: textTheProcessionOfTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfThePsalmAndTheGospel.children = [
+	[sectionTheTrisagion.id],
+	[sectionTheCallToPrayer.id],
+	[sectionALitanyForTheGospel.id],
+	[sectionAnotherLitanyForTheGospel.id],
+	[sectionTheProcessionOfTheGospel.id]
+];
+
 partTheLiturgyOfTheWord.children = [
 	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
 	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
@@ -1258,5 +1388,6 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id]
+	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheReadingOfThePsalmAndTheGospel.id]
 ];

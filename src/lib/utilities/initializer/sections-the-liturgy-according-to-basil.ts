@@ -97,7 +97,7 @@ export const textAnotherPrayerOfReconciliation = await makeMultilingualTextWithI
 	'E14A2A6A-17D6-4F95-831F-257F352F18FE',
 	'Ἄλλη Εὐχὴ τῆς Καταλλαγῆς',
 	'713A2DB3-122C-4067-9108-F029ACC62875',
-	'Ⲟⲩⲕⲉϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓϩⲱⲧⲡ',
+	'Ⲕⲉϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓϩⲱⲧⲡ',
 	'CB7FD2B5-589A-4C59-AC46-9B9617859EF8',
 	'صَلاَةٌ أُخْرَى لِلصُّلْحِ',
 	'4E909FCB-1D05-4FC0-AE47-81AEEA10298C',

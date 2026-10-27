@@ -122,12 +122,14 @@ provide a text with no Greek original.
   `ⲡⲉϥⲕⲉϣⲫⲏⲣ ⲛ̀ⲗⲓⲧⲟⲩⲣⲅⲟⲥ`, "his fellow who is a minister"). For an
   inanimate head noun taking on a *quality* ("liturgical library"), use the
   adjective form instead (`ⲗⲓⲧⲟⲩⲣⲅⲓⲕⲟⲛ`, not the noun `ⲗⲓⲧⲟⲩⲣⲅⲟⲥ`).
-- **ⲕⲉ-** ("other/another") already carries its own indefiniteness; don't
-  additionally prefix the indefinite article `Ⲟⲩ` (`ⲕⲉϣ̀ⲗⲏⲗ`, not
-  `ⲟⲩⲕⲉϣ̀ⲗⲏⲗ`) — that double-marks indefiniteness. (`Ⲟⲩ` **is** used, and
-  needed, on the *first* item that isn't marked with ⲕⲉ-, e.g.
-  `ⲟⲩⲁⲥⲡⲁⲥⲙⲟⲥ ⲁ̀ⲇⲁⲙ` for "an Aspasmos Adam" before "a second Aspasmos
-  Adam" etc.)
+- **ⲕⲉ-** ("other/another") is not itself an article. Grammatically it
+  normally takes one (`ⲟⲩⲕⲉ-` "another", `ⲡⲓⲕⲉ-` "the other"), but
+  **headings** in liturgical books conventionally use it bare — so at the
+  **start of a title** write `Ⲕⲉϣ̀ⲗⲏⲗ`, `Ⲕⲉⲉⲩⲭⲏ`, `Ⲕⲉⲯⲁⲗⲙⲟⲥ` (no `Ⲟⲩ`);
+  **inside a phrase** (e.g. after a preposition) use the full form, e.g.
+  `ϧⲉⲛ ⲟⲩⲕⲉⲧⲁϩⲟ`. (`Ⲟⲩ` is also used on the *first* item of a numbered
+  series that isn't marked with ⲕⲉ-, e.g. `ⲟⲩⲁⲥⲡⲁⲥⲙⲟⲥ ⲁ̀ⲇⲁⲙ`.) This is
+  still to be verified against the books — see open decisions.
 - Word choice for "prayer" depends on register — this project's convention:
   - **ϣⲗⲏⲗ** — the standard word for a formal/liturgical "Prayer" used as a
     heading (e.g. section titled "A Prayer of ...").
