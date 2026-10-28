@@ -9,7 +9,7 @@ import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/se
 export const textTheReceptionOfAPatriarchMetropolitanOrBishop = await makeMultilingualTextWithId(
 	'3584475F-391D-4E1E-9782-216AAB172CDA',
 	'5B2C231E-6432-40CE-8323-E9939AE3E933',
-	'Ἡ Ὑποδοχὴ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+	'Ἡ Ὑποδοχὴ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 	'B7CB326E-EA15-4C48-93DC-34F114328B09',
 	'Ⲡⲓϣⲱⲡ ⲉ̀ⲣⲟϥ ⲛ̀ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 	'2B1843E0-AFC4-48AB-9E86-F4D309BFBDF9',
@@ -33,7 +33,7 @@ export const textTheReceptionOfAPatriarchMetropolitanOrBishopChapter =
 	await makeMultilingualTextWithId(
 		'4EAF35E7-AE5A-4AAB-8B68-52CB7B505A63',
 		'9C6695CC-DFAC-40B9-AE1E-66E7A9D86211',
-		'Ἡ Ὑποδοχὴ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'Ἡ Ὑποδοχὴ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 		'C6888AE9-B537-40CE-90A8-C395E1A5D46E',
 		'Ⲡⲓϣⲱⲡ ⲉ̀ⲣⲟϥ ⲛ̀ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 		'33E38566-0D8D-4F19-856E-3A9DAB6CA473',

@@ -1246,7 +1246,7 @@ export const textTheCommemorationOfADepartedPatriarchMetropolitanOrBishop =
 	await makeMultilingualTextWithId(
 		'03866866-A6DB-43C2-976F-5FA738537054',
 		'CF16750C-4F0C-4548-8DE5-6CD680BDBE7E',
-		'Ἡ Μνήμη Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου Κεκοιμημένου',
+		'Ἡ Μνήμη Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου Κεκοιμημένου',
 		'667A8A55-4D65-46BA-B642-E17E01DB1DC2',
 		'Ⲡⲓⲉⲣⲫⲙⲉⲩⲓ ⲛ̀ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉ̀ⲁϥⲉⲛⲕⲟⲧ',
 		'F148F7DA-CEA1-4311-9EB9-797FC5C40EE7',

@@ -363,7 +363,7 @@ export const textTheIntroductionToThePaulineEpistle = await makeMultilingualText
 	'8834A818-AEE9-435E-8BF0-3F67D7E8FE47',
 	'Ἡ Εἰσαγωγὴ τῆς Ἐπιστολῆς τοῦ Παύλου',
 	'01B877E7-0CA5-4A73-8623-C8792244F577',
-	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲛ̀ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ',
 	'8E7FD01C-183F-4468-9245-B3DA06AF5966',
 	'مُقَدِّمَةُ الرِّسَالَةِ الْبُولُسِيَّةِ',
 	'BB9F878C-D33D-4A66-945F-929FA9F1AD7A',
@@ -437,7 +437,7 @@ export const textAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolit
 	await makeMultilingualTextWithId(
 		'540D290C-A565-4975-AB7D-A6E15CA2C7AC',
 		'A3177103-6088-44C2-8E60-1B30A971554B',
-		'Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 		'5267298B-78A8-4A9D-89A4-CB8BF989BF5B',
 		'Ⲟⲩⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 		'13E073B0-27B1-4629-AA12-DE14D2BD20B9',
@@ -445,7 +445,7 @@ export const textAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolit
 		'962599CE-B128-49EE-81BB-5D217709AEBA',
 		'A Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
 		'A37CD2EF-6AF4-4EB4-9811-6876FD9EFF9C',
-		'Eine Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+		'Eine Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder Bischofs'
 	);
 
 export const sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
@@ -462,7 +462,7 @@ export const textASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetr
 	await makeMultilingualTextWithId(
 		'023AB9E1-28F1-49BC-B10F-CA6EF2267824',
 		'54B53734-FF02-4828-A2DC-DB0E429EE703',
-		'Δευτέρα Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'Δευτέρα Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 		'A983AC25-5964-418E-A55E-7BA5DC16D238',
 		'Ⲡⲓⲙⲁϩⲥ̀ⲛⲟⲩϯ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 		'2D6C155A-E161-49DA-BD80-5B658B92853D',
@@ -470,7 +470,7 @@ export const textASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetr
 		'BC3482D3-606E-4F76-952F-17776FDABEBB',
 		'A Second Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
 		'C03C028B-5242-4849-BBC6-BF450386C633',
-		'Eine zweite Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+		'Eine zweite Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder Bischofs'
 	);
 
 export const sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
@@ -487,7 +487,7 @@ export const textAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetro
 	await makeMultilingualTextWithId(
 		'B39C42C5-AA35-40BF-8EE2-6C16230DBE6C',
 		'64E3107A-D64A-4A28-AA12-C4EC4C1485CD',
-		'Τρίτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'Τρίτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 		'60DA9CA8-396A-4750-A580-76B3EAA55B27',
 		'Ⲡⲓⲙⲁϩϣⲟⲙⲧ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 		'72FE8EE2-F187-435C-A7A8-40AB91F53F5F',
@@ -495,7 +495,7 @@ export const textAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetro
 		'842BAC3B-585F-4981-9973-CBECD0C4B3ED',
 		'A Third Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
 		'7F984DAD-1D5A-4D21-9C65-3B781B178D48',
-		'Eine dritte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+		'Eine dritte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder Bischofs'
 	);
 
 export const sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
@@ -512,7 +512,7 @@ export const textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePrese
 	await makeMultilingualTextWithId(
 		'8FA4525C-0E1A-485E-AAA1-2E740659A3F9',
 		'8D1E8010-E1B7-48BF-8A74-60F08318AD1D',
-		'Ὁ Ὕμνος τῶν Ἀρετῶν - Τετάρτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'Ὁ Ὕμνος τῶν Ἀρετῶν - Τετάρτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 		'100C0031-6013-49E7-9898-272771E61093',
 		'Ⲡⲓϫⲱ ⲛ̀ⲛⲓⲁⲣⲉⲧⲏ - Ⲡⲓⲙⲁϩϥⲧⲟⲟⲩ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 		'1CDF5FF6-447B-4B9F-9895-63A54AEA3D1C',
@@ -520,7 +520,7 @@ export const textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePrese
 		'73EFCDF8-0F29-422A-9F65-574A5373B42C',
 		'The Hymn of the Virtues - A Fourth Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
 		'61341EC0-6906-45EC-A656-E0BACD9A575C',
-		'Das Lied der Tugenden - Eine vierte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+		'Das Lied der Tugenden - Eine vierte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder Bischofs'
 	);
 
 export const sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
@@ -538,7 +538,7 @@ export const textAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetro
 	await makeMultilingualTextWithId(
 		'DBF1658A-EC88-4D4D-B650-9C7BFCF3F12C',
 		'CAEB3048-85BC-4A63-9630-C9F3109804ED',
-		'Πέμπτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου, ἢ Ἐπισκόπου',
+		'Πέμπτη Ἀπόκρισις τῆς Ἐπιστολῆς τοῦ Παύλου ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
 		'FBAC2847-2F78-454F-9EC4-5A9614DA0FD6',
 		'Ⲡⲓⲙⲁϩϯⲟⲩ ⲛ̀ⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
 		'154B87E7-E7C9-482C-AE19-DCC08315F799',
@@ -546,7 +546,7 @@ export const textAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetro
 		'CC132631-15C6-431C-B3F2-411BC0C02E81',
 		'A Fifth Response to the Pauline Epistle in the Presence of a Patriarch, Metropolitan or Bishop',
 		'33F9BCB5-6CFE-48DC-B3B9-34362032F4D3',
-		'Eine fünfte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder eines Bischofs'
+		'Eine fünfte Erwiderung des Paulinischen Briefes bei Anwesenheit eines Patriarchen, Metropoliten oder Bischofs'
 	);
 
 export const sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
@@ -755,7 +755,7 @@ export const textTheIntroductionToTheCatholicEpistle = await makeMultilingualTex
 	'7BFFAB18-C9D0-43E0-A310-BF2BD0CCFC25',
 	'Ἡ Εἰσαγωγὴ τῆς Καθολικῆς Ἐπιστολῆς',
 	'6565BE4E-2D3A-4828-A361-EFAD5C405465',
-	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲙ̀ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ',
 	'0312EED3-97CB-478D-A0F0-D197D695A82E',
 	'مُقَدِّمَةُ الرِّسَالَةِ الْجَامِعَةِ',
 	'DED5304C-D330-431C-AA96-865205EB1504',
@@ -1060,7 +1060,7 @@ export const textTheIntroductionToTheActsOfTheApostles = await makeMultilingualT
 	'3545249B-9CEE-4B58-B504-168D26B16CD7',
 	'Ἡ Εἰσαγωγὴ τῶν Πράξεων τῶν Ἀποστόλων',
 	'D53C7E01-6669-4051-AEF8-40A2915ACE28',
-	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲙ̀ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ',
 	'3DD22EF5-A340-431C-8059-90B68C8A23E8',
 	'مُقَدِّمَةُ الْإِبْرَكْسِيسِ',
 	'BA7C7369-B5FE-4374-97F1-60A357C03ED2',
@@ -1167,7 +1167,7 @@ export const textTheIntroductionToTheSynaxarium = await makeMultilingualTextWith
 	'9E44329B-7EBE-4937-8C0D-96ED5DDDB130',
 	'Ἡ Εἰσαγωγὴ τοῦ Συναξαρίου',
 	'5755C152-443B-4173-A061-75F8127A34A2',
-	'Ϯⲉⲓⲥⲁⲅⲱⲅⲏ ⲙ̀ⲡⲓⲥⲩⲛⲁⲝⲁⲣⲓⲟⲛ',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ⲡⲓⲥⲩⲛⲁⲝⲁⲣⲓⲟⲛ',
 	'46F57372-2F4E-4FC9-B5D8-8AC886091418',
 	'مُقَدِّمَةُ السِّنْكِسَارِ',
 	'E3D05470-DD93-47F5-A0D4-2DC83956BCF1',
@@ -1220,25 +1220,25 @@ chapterTheReadingOfTheSynaxarium.children = [
 	[sectionTheTranslationOfTheReading.id]
 ];
 
-export const textTheReadingOfThePsalmAndTheGospel = await makeMultilingualTextWithId(
+export const textThePrayerBeforeTheReadingOfThePsalmAndTheGospel = await makeMultilingualTextWithId(
 	'F21905A1-F544-4CDF-A30E-01FCF962869B',
 	'4887A406-A3F8-402C-8FFB-061D5B39394B',
-	'Ἡ Ἀνάγνωσις τοῦ Ψαλμοῦ καὶ τοῦ Εὐαγγελίου',
+	'Ἡ Εὐχὴ πρὸ τῆς Ἀναγνώσεως τοῦ Ψαλμοῦ καὶ τοῦ Εὐαγγελίου',
 	'ED1582E0-7173-487F-A8A0-8BF3218C156E',
-	'Ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ ⲛⲉⲙ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'Ⲡⲓϣⲗⲏⲗ ϧⲁϫⲉⲛ ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ ⲛⲉⲙ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
 	'8C8C035F-4EB0-482D-9354-36C85678934A',
-	'قِرَاءَةُ الْمَزْمُورِ وَالْإِنْجِيلِ',
+	'الصَّلاَةُ قَبْلَ قِرَاءَةِ الْمَزْمُورِ وَالْإِنْجِيلِ',
 	'A12EEA81-4690-4E8B-8CC3-6D14787D01A8',
-	'The Reading of the Psalm and the Gospel',
+	'The Prayer before the Reading of the Psalm and the Gospel',
 	'CF6F77AA-EE47-464D-B74D-443B5EED3484',
-	'Die Lesung des Psalms und des Evangeliums'
+	'Das Gebet vor der Lesung des Psalms und des Evangeliums'
 );
 
-export const chapterTheReadingOfThePsalmAndTheGospel = registerNode<Basenode>({
+export const chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel = registerNode<Basenode>({
 	id: 'A2E52040-E76D-4D3B-8603-2AC88F24205B',
 	users: [partTheLiturgyOfTheWord.id],
 	type: NodeType.Chapter,
-	value: textTheReadingOfThePsalmAndTheGospel.id,
+	value: textThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -1265,7 +1265,7 @@ textTheTrisagion.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 
 export const sectionTheTrisagion = registerNode<Basenode>({
 	id: '4CD7914D-C9B4-4856-9F58-4F7E293E846C',
-	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
 	type: NodeType.Section,
 	value: textTheTrisagion.id,
 	valueType: ContentType.MultilingualText,
@@ -1288,7 +1288,7 @@ export const textALitanyForTheGospel = await makeMultilingualTextWithId(
 
 export const sectionALitanyForTheGospel = registerNode<Basenode>({
 	id: '5C6CAB9D-E5E9-4D35-B97E-00037781270D',
-	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
 	type: NodeType.Section,
 	value: textALitanyForTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1311,7 +1311,7 @@ export const textAnotherLitanyForTheGospel = await makeMultilingualTextWithId(
 
 export const sectionAnotherLitanyForTheGospel = registerNode<Basenode>({
 	id: '4F0C95BF-9B98-49F3-9889-26A212F2A6FE',
-	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
 	type: NodeType.Section,
 	value: textAnotherLitanyForTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1334,19 +1334,371 @@ export const textTheProcessionOfTheGospel = await makeMultilingualTextWithId(
 
 export const sectionTheProcessionOfTheGospel = registerNode<Basenode>({
 	id: 'E2204B8A-B95B-4D61-A344-F3C3D65A7594',
-	users: [chapterTheReadingOfThePsalmAndTheGospel.id],
+	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
 	type: NodeType.Section,
 	value: textTheProcessionOfTheGospel.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfThePsalmAndTheGospel.children = [
+chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.children = [
 	[sectionTheTrisagion.id],
 	[sectionTheCallToPrayer.id],
 	[sectionALitanyForTheGospel.id],
 	[sectionAnotherLitanyForTheGospel.id],
 	[sectionTheProcessionOfTheGospel.id]
+];
+
+export const textTheReadingOfThePsalm = await makeMultilingualTextWithId(
+	'B70ECBE8-7A2A-4516-B0BE-2DEAF0B891FD',
+	'2C1A0131-C46C-4D31-AD6A-E3548C8B879A',
+	'Ἡ Ἀνάγνωσις τοῦ Ψαλμοῦ',
+	'D72BC231-7269-48E1-BDDD-195EED3CC846',
+	'Ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ',
+	'5C6FC634-E29D-42C0-BDAE-79425AD833DE',
+	'قِرَاءَةُ الْمَزْمُورِ',
+	'5F4F8E99-E7CB-483E-8AC9-0BF7DBBCABD4',
+	'The Reading of the Psalm',
+	'06D7131F-4258-40DC-80B0-978963B11B6F',
+	'Die Lesung des Psalms'
+);
+
+export const chapterTheReadingOfThePsalm = registerNode<Basenode>({
+	id: '661054FA-6F50-4F43-A987-4A742695F2BF',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfThePsalm.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToThePsalm = await makeMultilingualTextWithId(
+	'15C57512-2486-4A0F-8E21-F5FA7AF4101E',
+	'3A165EDE-98D9-4CB8-B835-AED610A891AE',
+	'Ἡ Εἰσαγωγὴ τοῦ Ψαλμοῦ',
+	'3B57C472-E60B-497F-ACAC-1CA6A2A68A66',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ⲡⲓⲯⲁⲗⲙⲟⲥ',
+	'66523863-B698-49C3-8342-A8FE690A5A06',
+	'مُقَدِّمَةُ الْمَزْمُورِ',
+	'A4CCB3E8-1768-493C-9F61-48EEE2B0C84E',
+	'The Introduction to the Psalm',
+	'7D8928D8-6289-422E-8D42-268E41493DAC',
+	'Die Einleitung des Psalms'
+);
+
+export const sectionTheIntroductionToThePsalm = registerNode<Basenode>({
+	id: 'FBE90A41-B392-4D78-8D85-776003A33AFA',
+	users: [chapterTheReadingOfThePsalm.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToThePsalm.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePsalm = await makeMultilingualTextWithId(
+	'CC7C0A89-BC23-4900-93E2-B7EA0281C790',
+	'B8F5970F-6786-4E49-A948-F713C934205A',
+	'Ὁ Ψαλμός',
+	'E78FED9B-69D9-4630-9C1D-3D655392558C',
+	'Ⲡⲓⲯⲁⲗⲙⲟⲥ',
+	'0C9A2B03-2175-4799-ABDB-39C3170D6E77',
+	'الْمَزْمُورُ',
+	'1344453A-F5D7-456F-A864-A834499494D2',
+	'The Psalm',
+	'F8500E73-75AC-46DD-85F6-D70B5F0B4D6F',
+	'Der Psalm'
+);
+
+export const sectionThePsalm = registerNode<Basenode>({
+	id: '66920905-5BEF-4579-B9FF-A1C9411D9A57',
+	users: [chapterTheReadingOfThePsalm.id],
+	type: NodeType.Section,
+	value: textThePsalm.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop =
+	await makeMultilingualTextWithId(
+		'53225660-5D82-42B7-86EB-224351A11EC1',
+		'4644DB12-2320-4C6F-A56A-07BC3E2761E1',
+		'Ὁ Ἐπίλογος τοῦ Ψαλμοῦ ἐν παρουσίᾳ Πατριάρχου, Μητροπολίτου ἢ Ἐπισκόπου',
+		'1D3C97A0-DE53-4D8B-8BCC-44EF27E2B1DE',
+		'Ⲡⲓⲉⲡⲓⲗⲟⲅⲟⲥ ⲙ̀ⲡⲓⲯⲁⲗⲙⲟⲥ ⲛⲁϩⲣⲉⲛ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲓⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲓⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+		'911FD32D-8D82-4307-A988-3E58D3011DBE',
+		'طَوَافُ الْمَزْمُورِ بِحُضُورِ بَطْرِيَرْكٍ أَوْ مُطْرَانٍ أَوْ أُسْقُفٍ',
+		'EE5EBB47-55EA-44CD-9162-D3C3B1FAFFBD',
+		'The Psalm Trailer in the Presence of a Patriarch, Metropolitan or Bishop',
+		'0B5A99BD-8340-43D0-8DDC-E3D8D7BB7132',
+		'Der Psalmnachsatz bei Anwesenheit eines Patriarchen, Metropoliten oder Bischofs'
+	);
+
+export const sectionThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop =
+	registerNode<Basenode>({
+		id: '0D4CEF87-9EE7-4884-AAFF-281D5D097A1E',
+		users: [chapterTheReadingOfThePsalm.id],
+		type: NodeType.Section,
+		value: textThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
+
+export const textTheResponseOfThePsalm = await makeMultilingualTextWithId(
+	'AA5FCB47-0867-4516-B73E-D76FA3762B85',
+	'79FD320F-687F-426A-8CC9-A3B3AFE4E10B',
+	'Ἡ Ἀπόκρισις τοῦ Ψαλμοῦ',
+	'24A11AC4-AAE6-45DB-97D1-C2600B51D6D1',
+	'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲯⲁⲗⲙⲟⲥ',
+	'ED5578F1-D55F-4708-B5D8-37F42C01142D',
+	'مَرَدُّ الْمَزْمُورِ',
+	'6B43B0C8-FBE3-41A5-9F64-4F768A1D5740',
+	'The Response of the Psalm',
+	'032989AF-F7E3-48A3-8D54-E40F575520F4',
+	'Die Erwiderung des Psalms'
+);
+
+export const sectionTheResponseOfThePsalm = registerNode<Basenode>({
+	id: 'ED3F2806-5252-4A5D-8AEB-9846EB4927B4',
+	users: [chapterTheReadingOfThePsalm.id],
+	type: NodeType.Section,
+	value: textTheResponseOfThePsalm.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfThePsalm.children = [
+	[sectionTheIntroductionToThePsalm.id],
+	[sectionThePsalm.id],
+	[sectionThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+	[sectionTheResponseOfThePsalm.id]
+];
+
+export const textTheReadingOfTheGospel = await makeMultilingualTextWithId(
+	'D9DC3BC2-72DF-4384-814C-5AF64389595D',
+	'2015C1B7-46A3-4DCF-882F-69A445784043',
+	'Ἡ Ἀνάγνωσις τοῦ Εὐαγγελίου',
+	'B993E979-145C-4415-A9F3-49D37BB58950',
+	'Ⲡ̀ⲱϣ ⲙ̀ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'FE8294DC-078C-4B0B-AC61-1E704831AD9B',
+	'قِرَاءَةُ الْإِنْجِيلِ',
+	'4D936E81-BDAC-41FC-8775-0A8F72CF2649',
+	'The Reading of the Gospel',
+	'2B42EBF4-A1A4-4EED-A184-9DC26958BD1A',
+	'Die Lesung des Evangeliums'
+);
+
+export const chapterTheReadingOfTheGospel = registerNode<Basenode>({
+	id: '98E6CE08-CEA0-4203-9119-40F6EF53EFB6',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheReadingOfTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheIntroductionToTheGospel = await makeMultilingualTextWithId(
+	'F67499C0-29DD-4EB7-834E-41A45CA28926',
+	'18418B03-C808-45B7-B7D6-7D8AC85C00AB',
+	'Ἡ Εἰσαγωγὴ τοῦ Εὐαγγελίου',
+	'2B0E81EC-73EC-4D45-AC91-4E61FBC7CDB5',
+	'Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'3E7232EB-CB5C-4FAD-9700-5F869DED1A10',
+	'مُقَدِّمَةُ الْإِنْجِيلِ',
+	'4F373F54-DCED-43F4-890B-59A108269584',
+	'The Introduction to the Gospel',
+	'A6A039D5-4E0A-4B8E-8749-7D1E4AD29AEA',
+	'Die Einleitung des Evangeliums'
+);
+
+export const sectionTheIntroductionToTheGospel = registerNode<Basenode>({
+	id: '2D8D7B6C-D88F-4E9F-B7EF-868CC7C66E43',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textTheIntroductionToTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheGospel = await makeMultilingualTextWithId(
+	'DFFAA9A9-CE07-4D47-8981-A35625692EB5',
+	'C51A1D5F-F2C0-4448-8059-01C2AC4F4D75',
+	'Τὸ Εὐαγγέλιον',
+	'49D0F963-02C2-48EA-9C0D-ADB6520AB158',
+	'Ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'5A04EF87-2712-478D-9047-918216865604',
+	'الْإِنْجِيلُ',
+	'50B3F986-0AC4-4410-9BBB-BB46B88FC1B5',
+	'The Gospel',
+	'B1036233-17AD-40AE-B4BF-834339762731',
+	'Das Evangelium'
+);
+
+export const sectionTheGospel = registerNode<Basenode>({
+	id: '9F015FAF-C04C-49D9-BC9C-E96CFB8B840A',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheConclusionOfTheGospel = await makeMultilingualTextWithId(
+	'1540C000-85D7-42DF-BE64-E40EC93C720E',
+	'6D139EED-2893-4EBB-A40D-F8769175D438',
+	'Ἡ Λῆξις τοῦ Εὐαγγελίου',
+	'3ACE95F5-12F8-4389-A060-9D1832B6EDAA',
+	'Ⲡⲓϫⲱⲕ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'23197D5E-BC01-4C62-830F-9D5B4BC15E33',
+	'خِتَامُ الْإِنْجِيلِ',
+	'57DF3586-936C-434D-90CE-B129021D2922',
+	'The Conclusion of the Gospel',
+	'5A814C0F-A507-421A-8A26-A2BE84E9BCD1',
+	'Der Abschluss des Evangeliums'
+);
+
+export const sectionTheConclusionOfTheGospel = registerNode<Basenode>({
+	id: '4DA02236-B0C6-4E0C-9C4A-1E7C82688A2D',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textTheConclusionOfTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerAfterTheGospel = await makeMultilingualTextWithId(
+	'B6E222D2-7F64-417A-A361-B9F178BBA263',
+	'47C213CF-1453-494D-8D84-90452D26B6E4',
+	'Ἡ Εὐχὴ μετὰ τὸ Εὐαγγέλιον',
+	'D31F9EA8-52F0-4C1E-A957-0509E5B00E4E',
+	'Ⲡⲓϣⲗⲏⲗ ⲙⲉⲛⲉⲛⲥⲁ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'232616BC-50D3-4EEA-AB91-4796001C38DB',
+	'الصَّلاَةُ بَعْدَ الْإِنْجِيلِ',
+	'E9D5DD1D-3ED9-42D8-9BFB-7A912B92E593',
+	'The Prayer after the Gospel',
+	'74EE5CB9-C840-4C18-970B-8F26207A4332',
+	'Das Gebet nach dem Evangelium'
+);
+
+export const sectionThePrayerAfterTheGospel = registerNode<Basenode>({
+	id: '0122E32E-97F9-4E2D-9965-2E34A5E4E0B2',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textThePrayerAfterTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheProcessionForThePresentationOfChristInTheTemple =
+	await makeMultilingualTextWithId(
+		'B194F7A6-5448-4B56-B9D9-47E3C5DA95EC',
+		'2E59A64F-A2A0-4E1D-A0AC-30D4C3625B25',
+		'Ἡ Περιφορὰ διὰ τὴν Παράστασιν τοῦ Χριστοῦ ἐν τῷ Ἱερῷ',
+		'BD286A7E-7163-48BF-B63F-2DEE0CA45A93',
+		'Ⲡⲓⲕⲱϯ ⲉⲑⲃⲉ ⲡⲓⲓ̀ ⲉ̀ϧⲟⲩⲛ ⲛ̀ⲧⲉ Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ ⲉ̀ⲡⲓⲉⲣⲫⲉⲓ',
+		'73E9E81A-A5EF-4A5B-A577-A1D08A857935',
+		'دَوْرَةُ دُخُولِ الْمَسِيحِ الْهَيْكَلَ',
+		'9999BCFA-FC7C-4AC9-85E2-F155C201A3CA',
+		'The Procession for the Presentation of Christ in the Temple',
+		'635522D0-6612-44CF-A28B-F40AC0444042',
+		'Der Festzug für die Vorstellung Christi im Tempel'
+	);
+
+export const sectionTheProcessionForThePresentationOfChristInTheTemple = registerNode<Basenode>({
+	id: '80F1364A-415F-4AAD-9EB0-B5615D58EC49',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textTheProcessionForThePresentationOfChristInTheTemple.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheSermon = await makeMultilingualTextWithId(
+	'1F24893B-E2BA-4986-80B2-1C81457D1132',
+	'F1DD2298-4EAF-42B7-BDCA-649087BB4AE0',
+	'Ἡ Ὁμιλία',
+	'92DBD234-D3F5-487C-8D37-4CEF602D8156',
+	'Ϯⲟⲙⲓⲗⲓⲁ',
+	'87574EEE-3586-4C23-86C4-79E6B0883757',
+	'الْعِظَةُ',
+	'2C54931E-6890-4A7D-AE17-93A388D67A28',
+	'The Sermon',
+	'9ADBA3A0-6666-4CFE-BFFB-60E3EEBE2930',
+	'Die Predigt'
+);
+
+export const sectionTheSermon = registerNode<Basenode>({
+	id: '98131F7A-B802-42DF-9976-0D1B39D4F3C6',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textTheSermon.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textThePrayerOfTheVeil = await makeMultilingualTextWithId(
+	'ACE0959D-FECC-46E1-BA37-9C3F2C914D65',
+	'4BC3EF0C-C503-4670-A197-8460DC2FECAF',
+	'Ἡ Εὐχὴ τοῦ Καταπετάσματος',
+	'3A4FC635-6D84-4669-AC12-51C0594A76EC',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ',
+	'B818481A-E348-42FE-A871-C103B3A49352',
+	'صَلاَةُ الْحِجَابِ',
+	'E71481C8-55B8-4342-92E9-614FD8E0226B',
+	'The Prayer of the Veil',
+	'C3EBE67F-2186-425C-9035-28B86019834F',
+	'Das Gebet des Schleiers'
+);
+
+export const sectionThePrayerOfTheVeil = registerNode<Basenode>({
+	id: '07878A41-A3AE-44FF-8AB0-FA6F82CEF74E',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textThePrayerOfTheVeil.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheResponseOfTheGospel = await makeMultilingualTextWithId(
+	'5F20399C-F9A3-4AF9-925F-BFE9AC5AA675',
+	'12AA21C7-F35B-47DA-96BE-B672A8B28CE6',
+	'Ἡ Ἀπόκρισις τοῦ Εὐαγγελίου',
+	'7C65C5D2-C4C3-4594-832D-E7C8B36976AB',
+	'Ϯⲉⲣⲟⲩⲱ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ',
+	'0ABFE0D2-BB5C-4203-85F7-2C777D0DBED1',
+	'مَرَدُّ الْإِنْجِيلِ',
+	'36B1BC6A-BC1E-4BD6-A6ED-1DE64FF3077A',
+	'The Response of the Gospel',
+	'902ABF6F-15C0-40DC-874C-7B3F3FC5BC6B',
+	'Die Erwiderung des Evangeliums'
+);
+
+export const sectionTheResponseOfTheGospel = registerNode<Basenode>({
+	id: '8ED11F0A-D324-4BE3-9CED-6AED37D8D093',
+	users: [chapterTheReadingOfTheGospel.id],
+	type: NodeType.Section,
+	value: textTheResponseOfTheGospel.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheReadingOfTheGospel.children = [
+	[sectionTheIntroductionToTheGospel.id],
+	[sectionTheGospel.id],
+	[sectionTheConclusionOfTheGospel.id],
+	[sectionThePrayerAfterTheGospel.id],
+	[sectionTheTranslationOfTheReading.id],
+	[sectionTheProcessionForThePresentationOfChristInTheTemple.id],
+	[sectionTheSermon.id],
+	[sectionThePrayerOfTheVeil.id],
+	[sectionTheResponseOfTheGospel.id]
+];
+
+sectionTheTranslationOfTheReading.users = [
+	chapterTheReadingOfThePaulineEpistle.id,
+	chapterTheReadingOfTheCatholicEpistle.id,
+	chapterTheReadingOfTheActsOfTheApostles.id,
+	chapterTheReadingOfTheSynaxarium.id,
+	chapterTheReadingOfTheGospel.id
 ];
 
 partTheLiturgyOfTheWord.children = [
@@ -1389,5 +1741,7 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheReadingOfThePsalmAndTheGospel.id]
+	[chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheReadingOfThePsalm.id],
+	[chapterTheReadingOfTheGospel.id]
 ];
