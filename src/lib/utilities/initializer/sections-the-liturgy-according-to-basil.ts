@@ -780,25 +780,25 @@ export const chapterTheLitanies = registerNode<Basenode>({
 	children: []
 });
 
-export const textTheShortLitanyForPeace = await makeMultilingualTextWithId(
+export const textTheShortLitanyForThePeaceOfTheChurch = await makeMultilingualTextWithId(
 	'E1A0C2EF-45FA-4516-9DD5-793BCD304EBF',
 	'D811DA57-29BE-4E70-8C3B-CEA0B946BED8',
-	'Ἡ Σύντομος Εὐχὴ τῆς Εἰρήνης',
+	'Ἡ Σύντομος Εὐχὴ τῆς Εἰρήνης τῆς Ἐκκλησίας',
 	'233DE55B-F8FB-4677-8E35-1A29A7CBD66F',
-	'Ϯⲉⲩⲭⲏ ⲛ̀ⲕⲟⲩϫⲓ ⲛ̀ⲧⲉ ϯϩⲓⲣⲏⲛⲏ',
+	'Ϯⲉⲩⲭⲏ ⲛ̀ⲕⲟⲩϫⲓ ⲛ̀ⲧⲉ ϯϩⲓⲣⲏⲛⲏ ⲛ̀ⲧⲉ ϯⲉⲕⲕⲗⲏⲥⲓⲁ',
 	'EF7E2D2C-4DAE-4360-AA7B-94F9CFDD98F4',
-	'أُوشِيَةُ السَّلاَمِ الْقَصِيرَةُ',
+	'أُوشِيَةُ سَلاَمِ الْكَنِيسَةِ الْقَصِيرَةُ',
 	'8425BCA9-99D5-49FC-A780-1AFBE171E806',
-	'The Short Litany for Peace',
+	'The Short Litany for the Peace of the Church',
 	'857EFA5F-3C5D-41BC-97CC-E7787D1B1595',
-	'Das kurze Gebet für den Frieden'
+	'Das kurze Gebet für den Frieden der Kirche'
 );
 
-export const sectionTheShortLitanyForPeace = registerNode<Basenode>({
+export const sectionTheShortLitanyForThePeaceOfTheChurch = registerNode<Basenode>({
 	id: 'B86E8578-0B19-4D03-BC31-42B90EB9F2A8',
 	users: [chapterTheLitanies.id],
 	type: NodeType.Section,
-	value: textTheShortLitanyForPeace.id,
+	value: textTheShortLitanyForThePeaceOfTheChurch.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -1084,7 +1084,7 @@ export const sectionTheLitanyForTheOfferings = registerNode<Basenode>({
 });
 
 chapterTheLitanies.children = [
-	[sectionTheShortLitanyForPeace.id],
+	[sectionTheShortLitanyForThePeaceOfTheChurch.id],
 	[sectionTheShortLitanyForThePatriarchMetropolitanAndBishop.id],
 	[sectionTheLitanyForADepartedPatriarch.id],
 	[sectionTheLitanyForADepartedMetropolitan.id],
