@@ -82,29 +82,6 @@ export const chapterTheFaith = registerNode<Basenode>({
 	children: []
 });
 
-export const textTheShakingOffOfTheWater = await makeMultilingualTextWithId(
-	'9354890A-812C-4228-BE32-6BDA87C7DEC4',
-	'17335CF2-D1BA-410E-803A-97DC4BA95F5A',
-	'Ἡ Ἐκτίναξις τοῦ Ὕδατος',
-	'2A63C626-7D2F-4209-B716-E00A283FCB3E',
-	'Ⲡⲓⲛⲟⲩϩⲓ ⲙ̀ⲡⲓⲙⲱⲟⲩ',
-	'9AE2E0B9-6BA3-4BDA-ABFA-DE057235FF70',
-	'نَفْضُ الْمَاءِ',
-	'7EEFF790-C41A-4FA9-9F1E-04E5A68B812F',
-	'The Shaking Off of the Water',
-	'BF686DAB-EBE3-4209-8995-4CA93C92B4DF',
-	'Das Abschütteln des Wassers'
-);
-
-export const sectionTheShakingOffOfTheWater = registerNode<Basenode>({
-	id: 'FE1CB1A1-5CA9-4C8E-957B-3D78161847E3',
-	users: [chapterTheFaith.id],
-	type: NodeType.Section,
-	value: textTheShakingOffOfTheWater.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
 export const textTheCallToAttention = await makeMultilingualTextWithId(
 	'BB8C01CA-76B5-4CF4-AC37-E57D30CCD09E',
 	'B2FEDD55-8AE9-42EA-90C0-4F987E6ECD22',
@@ -130,6 +107,29 @@ export const sectionTheCallToAttention = registerNode<Basenode>({
 	users: [chapterTheFaith.id],
 	type: NodeType.Section,
 	value: textTheCallToAttention.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheShakingOffOfTheWater = await makeMultilingualTextWithId(
+	'9354890A-812C-4228-BE32-6BDA87C7DEC4',
+	'17335CF2-D1BA-410E-803A-97DC4BA95F5A',
+	'Ἡ Ἐκτίναξις τοῦ Ὕδατος',
+	'2A63C626-7D2F-4209-B716-E00A283FCB3E',
+	'Ⲡⲓⲛⲟⲩϩⲓ ⲙ̀ⲡⲓⲙⲱⲟⲩ',
+	'9AE2E0B9-6BA3-4BDA-ABFA-DE057235FF70',
+	'نَفْضُ الْمَاءِ',
+	'7EEFF790-C41A-4FA9-9F1E-04E5A68B812F',
+	'The Shaking Off of the Water',
+	'BF686DAB-EBE3-4209-8995-4CA93C92B4DF',
+	'Das Abschütteln des Wassers'
+);
+
+export const sectionTheShakingOffOfTheWater = registerNode<Basenode>({
+	id: 'FE1CB1A1-5CA9-4C8E-957B-3D78161847E3',
+	users: [chapterTheFaith.id],
+	type: NodeType.Section,
+	value: textTheShakingOffOfTheWater.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -164,9 +164,9 @@ export const sectionTheCreed = registerNode<Basenode>({
 });
 
 chapterTheFaith.children = [
+	[sectionTheCallToAttention.id],
 	[sectionTheWashingOfTheHands.id],
 	[sectionTheShakingOffOfTheWater.id],
-	[sectionTheCallToAttention.id],
 	[sectionTheCreed.id]
 ];
 

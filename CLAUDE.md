@@ -67,6 +67,11 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   German value) and its likely const name (e.g. `WashingOfTheHands`). If a
   match exists elsewhere, reuse it (moving it into `shared/` if it isn't
   there yet) instead of creating a new one.
+- **Definition order matches `children` order:** within a file, define the
+  children (text + node) in the same order as they appear in the parent's
+  `children` array where possible. When the order in `children` changes,
+  move the definitions accordingly (unless dependencies between the
+  constants prevent it).
 - **Variable names follow the English title** in PascalCase, prefixed with
   `text` / `part` / `chapter` / `section` / … depending on the object, e.g.
   "The Call to Attention" → `textTheCallToAttention` /
