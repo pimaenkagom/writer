@@ -34,6 +34,11 @@ import { chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGosp
 import { chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-ordinary-days';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
+import {
+	sectionTheLitanyForADepartedBishop,
+	sectionTheLitanyForADepartedMetropolitan,
+	sectionTheLitanyForADepartedPatriarch
+} from '$lib/utilities/initializer/shared/sections-the-litanies-for-departed-hierarchs';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 import {
 	sectionTheBlessingOfTheIncenseAtAnotherOffering,
@@ -1701,6 +1706,134 @@ sectionTheTranslationOfTheReading.users = [
 	chapterTheReadingOfTheGospel.id
 ];
 
+export const textTheThreeLitanies = await makeMultilingualTextWithId(
+	'79041FDF-DC80-4428-9568-F23BE8F54A63',
+	'58D53353-7A30-4057-B9F6-8192533D34F3',
+	'Αἱ Τρεῖς Εὐχαί',
+	'13DDCC8D-860A-405D-B0A1-DEAAD0FC9B69',
+	'Ⲡⲓϣⲟⲙⲧ ⲛ̀ⲉⲩⲭⲏ',
+	'8A739307-763A-43D8-A6A1-BAE776B2C221',
+	'الْأَوَاشِي الثَّلاَثُ',
+	'A5D30279-8202-4119-8192-2F41BA6DB010',
+	'The Three Litanies',
+	'A88EAAA8-74EA-4509-9E0B-B40D9FCD0E57',
+	'Die drei Bittgebete'
+);
+
+export const chapterTheThreeLitanies = registerNode<Basenode>({
+	id: 'FFD43B78-9B2F-49E1-8E51-FE0E1C181934',
+	users: [partTheLiturgyOfTheWord.id],
+	type: NodeType.Chapter,
+	value: textTheThreeLitanies.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheLitanyForThePeaceOfTheChurch = await makeMultilingualTextWithId(
+	'2764FB33-5499-4780-88E4-672C9D5DEFE4',
+	'245374F4-E11E-4A3E-88CC-FA0EB2C76D35',
+	'Ἡ Εὐχὴ τῆς Εἰρήνης τῆς Ἐκκλησίας',
+	'09C37556-BDFD-4541-9AE5-676A268B849B',
+	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ϯϩⲓⲣⲏⲛⲏ ⲛ̀ⲧⲉ ϯⲉⲕⲕⲗⲏⲥⲓⲁ',
+	'4D3EAC47-C871-40E0-BD38-21F7E08A4CD9',
+	'أُوشِيَةُ سَلاَمِ الْكَنِيسَةِ',
+	'16449C11-9123-4BB2-B6DD-FBCC61576CB7',
+	'The Litany for the Peace of the Church',
+	'2987EF35-7363-44BF-B619-E02D0A6F1B3D',
+	'Das Gebet für den Frieden der Kirche'
+);
+
+export const sectionTheLitanyForThePeaceOfTheChurch = registerNode<Basenode>({
+	id: 'D2FEA924-46D6-4D06-90A9-93FF296C6C69',
+	users: [chapterTheThreeLitanies.id],
+	type: NodeType.Section,
+	value: textTheLitanyForThePeaceOfTheChurch.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheLitanyForThePatriarchMetropolitanAndBishop = await makeMultilingualTextWithId(
+	'8690E0CA-4D45-4B87-A13A-454718E6733D',
+	'C72A503E-A509-413D-813F-F284534CB0AA',
+	'Ἡ Εὐχὴ ὑπὲρ τοῦ Πατριάρχου, τοῦ Μητροπολίτου καὶ τοῦ Ἐπισκόπου',
+	'41321F14-59DC-4CEC-ACEF-820404C3D2BA',
+	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲛⲉⲙ ⲡⲓⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲛⲉⲙ ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ',
+	'9635F638-F38C-4058-B01C-015C99B40BBE',
+	'أُوشِيَةُ الْبَطْرِيَرْكِ وَالْمُطْرَانِ وَالْأُسْقُفِ',
+	'CCFCEB02-FE9F-424C-9526-4F42FC678926',
+	'The Litany for the Patriarch, Metropolitan and Bishop',
+	'155EA9E7-E8F1-4D25-ABE9-05EBB3E7C295',
+	'Das Gebet für den Patriarchen, Metropoliten und Bischof'
+);
+
+export const sectionTheLitanyForThePatriarchMetropolitanAndBishop = registerNode<Basenode>({
+	id: '0430F416-98B5-4027-8DD4-C48F1999300D',
+	users: [chapterTheThreeLitanies.id],
+	type: NodeType.Section,
+	value: textTheLitanyForThePatriarchMetropolitanAndBishop.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheLitanyForTheAssemblies = await makeMultilingualTextWithId(
+	'00AD7634-04EC-4741-87AF-587A5A314120',
+	'5A7184A0-A8DB-4700-905B-47F9C8A7E498',
+	'Ἡ Εὐχὴ ὑπὲρ τῶν Συνάξεων',
+	'2A7A481D-7CA2-47B2-AA0D-81B69344B82F',
+	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲛⲓⲑⲱⲟⲩϯ',
+	'845E9F71-0A31-4574-B033-C54218428F52',
+	'أُوشِيَةُ الاِجْتِمَاعَاتِ',
+	'551EB10B-241C-4CC0-8BCD-4ADFCAFC9467',
+	'The Litany for the Assemblies',
+	'1F17DB21-1B64-4A76-815B-2FF0E757A183',
+	'Das Gebet für die Versammlungen'
+);
+
+export const sectionTheLitanyForTheAssemblies = registerNode<Basenode>({
+	id: '486F8458-1E0B-44F7-81EE-7F83104047D5',
+	users: [chapterTheThreeLitanies.id],
+	type: NodeType.Section,
+	value: textTheLitanyForTheAssemblies.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheLitanyForDepartureAndBlessing = await makeMultilingualTextWithId(
+	'7890ADF3-F832-4612-9FC4-7C021C58F152',
+	'F2FD14CA-398B-403F-B3DB-83E86D8FB1F6',
+	'Ἡ Εὐχὴ ὑπὲρ τῆς Ἐξόδου καὶ τῆς Εὐλογίας',
+	'822C95BE-CCD2-4EDA-AFDA-0EECC1F63BD0',
+	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓϣⲉⲛⲁϥ ⲛⲉⲙ ⲡⲓⲥ̀ⲙⲟⲩ',
+	'770B59D1-9908-4AB6-A680-B1CC829A4197',
+	'أُوشِيَةُ الاِنْطِلاَقِ وَالْبَرَكَةِ',
+	'B8DF0F06-7BA9-4E3B-BD53-36761ACCBFE3',
+	'The Litany for Departure and Blessing',
+	'0418B20C-1EC7-4340-9E68-8F6840CAAE30',
+	'Das Gebet um Aufbruch und Segen'
+);
+
+export const sectionTheLitanyForDepartureAndBlessing = registerNode<Basenode>({
+	id: '56DCA24E-F140-4B7E-AB67-D6ACDBC48AB1',
+	users: [chapterTheThreeLitanies.id],
+	type: NodeType.Section,
+	value: textTheLitanyForDepartureAndBlessing.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheThreeLitanies.children = [
+	[sectionTheCallToPrayer.id],
+	[sectionTheLitanyForThePeaceOfTheChurch.id],
+	[
+		sectionTheLitanyForThePatriarchMetropolitanAndBishop.id,
+		sectionTheLitanyForADepartedPatriarch.id,
+		sectionTheLitanyForADepartedMetropolitan.id,
+		sectionTheLitanyForADepartedBishop.id
+	],
+	[sectionTheLitanyForTheAssemblies.id],
+	[sectionTheLitanyForDepartureAndBlessing.id]
+];
+
 partTheLiturgyOfTheWord.children = [
 	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
 	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
@@ -1743,5 +1876,6 @@ partTheLiturgyOfTheWord.children = [
 	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
 	[chapterTheReadingOfThePsalm.id],
-	[chapterTheReadingOfTheGospel.id]
+	[chapterTheReadingOfTheGospel.id],
+	[chapterTheThreeLitanies.id]
 ];

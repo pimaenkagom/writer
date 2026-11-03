@@ -6,11 +6,19 @@ import {
 	makeMultilingualTextWithId,
 	makeMultilingualTextWithIdWithoutGreek
 } from '$lib/utilities/initializer/constructors';
-import { partTheLiturgyOfTheWord } from '$lib/utilities/initializer/part-the-liturgy-of-the-word';
+import {
+	chapterTheThreeLitanies,
+	partTheLiturgyOfTheWord
+} from '$lib/utilities/initializer/part-the-liturgy-of-the-word';
 import { partTheOfferingOfTheOblations } from '$lib/utilities/initializer/part-the-offering-of-the-lamb';
 import { partTheReceptionOfAPatriarchMetropolitanOrBishop } from '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
+import {
+	sectionTheLitanyForADepartedBishop,
+	sectionTheLitanyForADepartedMetropolitan,
+	sectionTheLitanyForADepartedPatriarch
+} from '$lib/utilities/initializer/shared/sections-the-litanies-for-departed-hierarchs';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
 
@@ -827,75 +835,6 @@ export const sectionTheShortLitanyForThePatriarchMetropolitanAndBishop = registe
 	children: []
 });
 
-export const textTheLitanyForADepartedPatriarch = await makeMultilingualTextWithId(
-	'6876F7DD-A433-4129-B025-CC8102512EF1',
-	'66228ECA-B4C3-4AC6-B3D4-AF413CC4D9B2',
-	'Ἡ Εὐχὴ ὑπὲρ Πατριάρχου Κεκοιμημένου',
-	'7162CAAA-1E58-4351-97F5-5E0DBFCCFBB8',
-	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲟⲩⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲉ̀ⲁϥⲉⲛⲕⲟⲧ',
-	'023BC65C-4572-4CB9-83F1-9D950123AF6F',
-	'أُوشِيَةٌ لِبَطْرِيَرْكٍ مُتَنَيِّحٍ',
-	'2EAE56E7-CD42-49E5-8D17-237FF5203A59',
-	'The Litany for a Departed Patriarch',
-	'F11F5C7F-A961-4D3D-955C-0EA0D3941EB4',
-	'Das Gebet für einen entschlafenen Patriarchen'
-);
-
-export const sectionTheLitanyForADepartedPatriarch = registerNode<Basenode>({
-	id: '4A4A6DCC-58F7-47E0-861F-43A3E626D815',
-	users: [chapterTheLitanies.id],
-	type: NodeType.Section,
-	value: textTheLitanyForADepartedPatriarch.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheLitanyForADepartedMetropolitan = await makeMultilingualTextWithId(
-	'522AF7AE-80A9-4A5B-8154-B2E1776D8DBA',
-	'A4A7FDF1-B9AF-4F7A-BDEA-C1D858A3320F',
-	'Ἡ Εὐχὴ ὑπὲρ Μητροπολίτου Κεκοιμημένου',
-	'10885E68-771E-459B-AF96-5D34EEA0506F',
-	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲟⲩⲙⲏⲧⲣⲟⲡⲟⲗⲓⲧⲏⲥ ⲉ̀ⲁϥⲉⲛⲕⲟⲧ',
-	'7F6E56D1-A60F-41EA-87FA-9395097B32FD',
-	'أُوشِيَةٌ لِمُطْرَانٍ مُتَنَيِّحٍ',
-	'A13DC7CD-4479-49EB-AA7A-EC216B573276',
-	'The Litany for a Departed Metropolitan',
-	'182E0A9C-95AD-4508-9C9A-D07D3F8D74A3',
-	'Das Gebet für einen entschlafenen Metropoliten'
-);
-
-export const sectionTheLitanyForADepartedMetropolitan = registerNode<Basenode>({
-	id: '109FAC2D-6F18-4120-A2A6-B938B28E1DB7',
-	users: [chapterTheLitanies.id],
-	type: NodeType.Section,
-	value: textTheLitanyForADepartedMetropolitan.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheLitanyForADepartedBishop = await makeMultilingualTextWithId(
-	'C0FA803C-1F88-4979-AF1C-13F778409B05',
-	'C24DC413-B659-4F0D-B2FE-AB92F162F00C',
-	'Ἡ Εὐχὴ ὑπὲρ Ἐπισκόπου Κεκοιμημένου',
-	'F63403AA-55F6-4640-A127-89BC9FBF04B4',
-	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉ̀ⲁϥⲉⲛⲕⲟⲧ',
-	'5DF0B46A-997F-4DC4-9CB1-2A7EB066D0D2',
-	'أُوشِيَةٌ لِأُسْقُفٍ مُتَنَيِّحٍ',
-	'D234B06B-6104-461E-9A6B-671DF5AF5813',
-	'The Litany for a Departed Bishop',
-	'30B2197A-3D2E-4802-B3B2-33670D42E3E5',
-	'Das Gebet für einen entschlafenen Bischof'
-);
-
-export const sectionTheLitanyForADepartedBishop = registerNode<Basenode>({
-	id: '71014825-8405-4465-B6ED-38DE215E6CB8',
-	users: [chapterTheLitanies.id],
-	type: NodeType.Section,
-	value: textTheLitanyForADepartedBishop.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
 export const textTheLitanyForTheServants = await makeMultilingualTextWithId(
 	'517608CE-53DC-415A-A002-6039ADFFF0F1',
 	'3DC624E1-5F12-434C-837F-1CD126C7E0E2',
@@ -1100,6 +1039,10 @@ chapterTheLitanies.children = [
 	],
 	[sectionTheLitanyForTheOfferings.id]
 ];
+
+sectionTheLitanyForADepartedPatriarch.users = [chapterTheThreeLitanies.id, chapterTheLitanies.id];
+sectionTheLitanyForADepartedMetropolitan.users = [chapterTheThreeLitanies.id, chapterTheLitanies.id];
+sectionTheLitanyForADepartedBishop.users = [chapterTheThreeLitanies.id, chapterTheLitanies.id];
 
 export const textTheCommemorationOfTheSaints = await makeMultilingualTextWithId(
 	'C78013DA-8C0E-4CF8-BE39-870612E2E429',
@@ -1587,7 +1530,7 @@ export const sectionThePrayerOfAbsolution = registerNode<Basenode>({
 	children: []
 });
 
-export const textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
+export const textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheAssemblies =
 	await makeMultilingualTextWithId(
 		'7F630295-26C9-4F0C-A381-D4ED10FE1104',
 		'6BF3C9BE-D056-4FF4-A2F7-1F8ADE6401A7',
@@ -1597,18 +1540,18 @@ export const textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitan
 		'F6CC379B-1B05-4EA8-ABAF-F2D725DBA97C',
 		'أُوشِيَةُ سَلاَمِ الْكَنِيسَةِ وَالْبَطْرِيَرْكِ وَالْمُطْرَانِ أَوِ الْأُسْقُفِ وَالاِجْتِمَاعَاتِ الْقَصِيرَةُ',
 		'BF3CDD64-D9A7-466B-B5D1-50935969C555',
-		'The Short Litany for the Peace of the Church, the Patriarch, the Metropolitan or Bishop and the Congregations',
+		'The Short Litany for the Peace of the Church, the Patriarch, the Metropolitan or Bishop and the Assemblies',
 		'E316F60D-ABA2-4C91-ABBE-F2A345BD6FBD',
 		'Das kurze Gebet für den Frieden der Kirche, für den Patriarchen sowie den Metropoliten oder Bischof und für die Versammlungen'
 	);
 
-export const sectionTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations =
+export const sectionTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheAssemblies =
 	registerNode<Basenode>({
 		id: '1B13A9F5-100B-45BE-8B78-4AC2854D1EBE',
 		users: [chapterTheConfession.id],
 		type: NodeType.Section,
 		value:
-			textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id,
+			textTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheAssemblies.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
@@ -1826,7 +1769,7 @@ chapterTheConfession.children = [
 	[sectionThePrayerOfSubmission.id],
 	[sectionThePrayerOfAbsolution.id],
 	[
-		sectionTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheCongregations.id
+		sectionTheShortLitanyForThePeaceOfTheChurchThePatriarchTheMetropolitanOrBishopAndTheAssemblies.id
 	],
 	[sectionTheHolyThingsForTheHoly.id],
 	[sectionTheConfession.id],
