@@ -8,6 +8,7 @@ import {
 } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
+import { sectionTheWashingOfTheHands } from '$lib/utilities/initializer/shared/section-the-washing-of-the-hands';
 
 export const textTheOfferingOfTheOblations = await makeMultilingualTextWithId(
 	'566FC8F1-FE7E-4C52-8896-83B616F2832D',
@@ -540,7 +541,7 @@ export const chapterTheGospelTheLitaniesAndThePrayersOfTheVeil = registerNode<Ba
 	children: []
 });
 
-export const textTheOfferingOfTheLambChapter = await makeMultilingualTextWithId(
+export const textTheOfferingOfTheLamb = await makeMultilingualTextWithId(
 	'B7DA0AD1-3E81-45A0-94D4-5921F1C9BEDF',
 	'3F45C09A-E105-4CF2-8DF7-AD2CE468FCF8',
 	'Ἡ Πρόθεσις τοῦ Ἀμνοῦ',
@@ -554,40 +555,17 @@ export const textTheOfferingOfTheLambChapter = await makeMultilingualTextWithId(
 	'Die Darbringung des Lammes'
 );
 
-textTheOfferingOfTheLambChapter.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfTheLambChapter.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfTheLambChapter.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfTheLambChapter.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
-textTheOfferingOfTheLambChapter.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheOfferingOfTheLamb.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheOfferingOfTheLamb.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheOfferingOfTheLamb.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheOfferingOfTheLamb.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheOfferingOfTheLamb.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 
 export const chapterTheOfferingOfTheLamb = registerNode<Basenode>({
 	id: '375F2ABE-D728-4F1F-A64C-46821A40D3DB',
 	users: [partTheOfferingOfTheOblations.id],
 	type: NodeType.Chapter,
-	value: textTheOfferingOfTheLambChapter.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
-
-export const textTheWashingOfTheHands = await makeMultilingualTextWithId(
-	'CF0E91E8-0D78-4B77-BDF0-6C24B050A4CE',
-	'11B27CB8-C356-446F-9986-C39EEA073A9F',
-	'Ἡ Νίψις τῶν Χειρῶν',
-	'475EC0B9-1177-4F68-BEDE-F5C45051805A',
-	'Ⲡⲓⲉⲓⲁ ⲛ̀ⲧⲉ ⲛⲓϫⲓϫ',
-	'64C92348-C428-4FDD-948B-DEF0C8DACFFC',
-	'غَسْلُ الْيَدَيْنِ',
-	'511AACD1-E8F5-4963-83CE-49A6C6EDA478',
-	'The Washing of the Hands',
-	'5797BAB7-8B4B-4AB3-A7B2-B8715A217B9C',
-	'Die Waschung der Hände'
-);
-
-export const sectionTheWashingOfTheHands = registerNode<Basenode>({
-	id: 'F40B02F0-01FA-44DF-AD0E-CA9077E192FC',
-	users: [chapterTheOfferingOfTheLamb.id],
-	type: NodeType.Section,
-	value: textTheWashingOfTheHands.id,
+	value: textTheOfferingOfTheLamb.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });

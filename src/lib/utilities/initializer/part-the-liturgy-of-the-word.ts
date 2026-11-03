@@ -45,7 +45,7 @@ import {
 	sectionTheBlessingOfTheIncenseAtTheFirstOffering,
 	sectionTheConclusionOfTheOfferingOfIncense,
 	sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar,
-	sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies,
+	sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies,
 	sectionTheOfferingOfIncenseForTheBishop,
 	sectionTheOfferingOfIncenseForTheConfessionOfThePeople,
 	sectionTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles,
@@ -134,7 +134,7 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children
 	[sectionTheOfferingOfIncenseForThePatriarch.id],
 	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
 	[sectionTheOfferingOfIncenseForTheBishop.id],
-	[sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id],
+	[sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id],
 	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
 	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
 	[sectionTheConclusionOfTheOfferingOfIncense.id]
@@ -886,7 +886,7 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.child
 	[sectionTheOfferingOfIncenseForThePatriarch.id],
 	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
 	[sectionTheOfferingOfIncenseForTheBishop.id],
-	[sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id],
+	[sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id],
 	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
 	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
 	[sectionTheConclusionOfTheOfferingOfIncense.id]

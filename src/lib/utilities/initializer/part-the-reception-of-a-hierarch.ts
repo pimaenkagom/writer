@@ -4,7 +4,7 @@ import { NodeType } from '$lib/models/node-type.model';
 import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
 import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
-import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
+import { sectionTheHymnBlessedAreYouIndeed } from '$lib/utilities/initializer/shared/section-the-hymn-blessed-are-you-indeed';
 
 export const textTheReceptionOfAPatriarchMetropolitanOrBishop = await makeMultilingualTextWithId(
 	'3584475F-391D-4E1E-9782-216AAB172CDA',
@@ -153,6 +153,6 @@ chapterTheReceptionOfAPatriarchMetropolitanOrBishop.children = [
 	[sectionTheHymnChristIsRisen.id],
 	[sectionTheHymnChristHasAscended.id],
 	[sectionTheHymnBlessedIsHeWhoComesInTheNameOfTheLord.id],
-	[sectionTheHymnTrulyBlessed.id],
+	[sectionTheHymnBlessedAreYouIndeed.id],
 	[sectionTheHymnHowBeautifulThatYouHaveComeToday.id]
 ];

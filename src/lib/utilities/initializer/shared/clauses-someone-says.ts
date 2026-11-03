@@ -195,7 +195,7 @@ export const textTheHypodeaconSays = await makeMultilingualTextWithId(
 	'7E4ECD71-1897-476A-B585-87A612182C7C',
 	':يَقُولُ مُسَاعِدُ الشَّمَّاسِ',
 	'3D7E5247-C5A3-48A4-8512-D0F08086640D',
-	'The hypodiakon says:',
+	'The hypodeacon says:',
 	'9169041E-4E0E-4FDE-9EE0-1AED42E23ACD',
 	'Der Hypodiakon sagt:'
 );
@@ -205,7 +205,7 @@ export const clauseTheHypodeaconSays = makeClause(
 	textTheHypodeaconSays.id
 );
 
-export const textTheAnagnostistSays = await makeMultilingualTextWithId(
+export const textTheReaderSays = await makeMultilingualTextWithId(
 	'0D6CF655-AF5A-4C05-9122-6ADFD24CB6BC',
 	'98CDD3C1-A8A2-4538-8DB4-1FDAFC8F658F',
 	'Ὁ ἀναγνώστης λέγει·',
@@ -219,12 +219,12 @@ export const textTheAnagnostistSays = await makeMultilingualTextWithId(
 	'Der Anagnostist sagt:'
 );
 
-export const clauseTheAnagnostistSays = makeClause(
+export const clauseTheReaderSays = makeClause(
 	'F95A1FA4-5479-401B-BA92-47DBA65DFE75',
-	textTheAnagnostistSays.id
+	textTheReaderSays.id
 );
 
-export const textThePsaltistSays = await makeMultilingualTextWithId(
+export const textTheChanterSays = await makeMultilingualTextWithId(
 	'3E502A86-C32C-4ED1-9F29-44285BCE6328',
 	'295CA132-DB3E-4FBC-B4D5-38D819A953BD',
 	'Ὁ ψάλτης λέγει·',
@@ -238,12 +238,12 @@ export const textThePsaltistSays = await makeMultilingualTextWithId(
 	'Der Psaltist sagt:'
 );
 
-export const clauseThePsaltistSays = makeClause(
+export const clauseTheChanterSays = makeClause(
 	'A8D228FE-78CA-47DB-B535-B8510EA53936',
-	textThePsaltistSays.id
+	textTheChanterSays.id
 );
 
-export const textThePeopleSays = await makeMultilingualTextWithId(
+export const textThePeopleSay = await makeMultilingualTextWithId(
 	'DC47670E-0EA9-4D07-B8B9-D705A5A07DAB',
 	'15090AEF-9F7D-4DA8-8640-A56A0E2F1119',
 	'Ὁ Λαὸς λέγει·',
@@ -257,9 +257,9 @@ export const textThePeopleSays = await makeMultilingualTextWithId(
 	'Das Volk sagt:'
 );
 
-export const clauseThePeopleSays = makeClause(
+export const clauseThePeopleSay = makeClause(
 	'62335375-CEC1-4562-9296-86414E5AFC00',
-	textThePeopleSays.id
+	textThePeopleSay.id
 );
 
 export const textTheAbbotSays = await makeMultilingualTextWithId(

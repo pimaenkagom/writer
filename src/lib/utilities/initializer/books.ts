@@ -75,7 +75,7 @@ export const bookTheLiturgyAccordingToBasil = registerNode<Basenode>({
 	children: []
 });
 
-export const textLiturgyAccordingToGregory = await makeMultilingualTextWithId(
+export const textTheLiturgyAccordingToGregory = await makeMultilingualTextWithId(
 	'21AB49EB-2C12-4C3B-B4EB-5695BA73CE71',
 	'D430BB46-F2A2-4DA2-9237-FBC7BB2A044B',
 	'Ἡ Λειτουργία κατὰ Γρηγόριον',
@@ -93,12 +93,12 @@ export const bookTheLiturgyAccordingToGregory = registerNode<Basenode>({
 	id: 'BEDEE816-771A-438C-BB15-E8E8BFDB6FF4',
 	users: [collectionTheLiturgicalDay.id],
 	type: NodeType.Book,
-	value: textLiturgyAccordingToGregory.id,
+	value: textTheLiturgyAccordingToGregory.id,
 	valueType: ContentType.MultilingualText,
 	children: [[]]
 });
 
-export const textLiturgyAccordingToCyril = await makeMultilingualTextWithId(
+export const textTheLiturgyAccordingToCyril = await makeMultilingualTextWithId(
 	'3F22FFFD-E4D5-4918-9C93-C5FBC48023E9',
 	'945206E2-A50B-4208-8184-83FC3FD0466F',
 	'Ἡ Λειτουργία κατὰ Κύριλλον',
@@ -116,7 +116,7 @@ export const bookTheLiturgyAccordingToCyril = registerNode<Basenode>({
 	id: '38E4A273-D423-4B87-B6CB-4C31E94669F3',
 	users: [collectionTheLiturgicalDay.id],
 	type: NodeType.Book,
-	value: textLiturgyAccordingToCyril.id,
+	value: textTheLiturgyAccordingToCyril.id,
 	valueType: ContentType.MultilingualText,
 	children: [[]]
 });

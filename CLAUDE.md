@@ -62,6 +62,32 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   `shared/clauses-someone-says.ts` and `shared/section-the-call-to-prayer.ts`
   for the pattern) so every parent can import and reuse the same underlying
   node/text.
+  **Before creating any new node or text, check whether it already exists**:
+  grep `src/lib/utilities/initializer/` for its title (e.g. the English or
+  German value) and its likely const name (e.g. `WashingOfTheHands`). If a
+  match exists elsewhere, reuse it (moving it into `shared/` if it isn't
+  there yet) instead of creating a new one.
+- **Variable names follow the English title** in PascalCase, prefixed with
+  `text` / `part` / `chapter` / `section` / … depending on the object, e.g.
+  "The Call to Attention" → `textTheCallToAttention` /
+  `sectionTheCallToAttention`. Only when two objects share the same title,
+  append a distinguishing suffix (e.g. `textTheAnaphoraSection` next to the
+  chapter's `textTheAnaphora`).
+- **Marking a text as "To Check":** the "To Check" status id is
+  `4ACF926E-370D-4D90-B642-530FA1A81E24`. To mark a node (e.g. a chapter or
+  section) as "To Check", set this id as the `status` of every language
+  entry of the node's `MultilingualText`, right after the text's definition:
+
+  ```ts
+  textTheFaith.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+  textTheFaith.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+  textTheFaith.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+  textTheFaith.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+  textTheFaith.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+  ```
+
+  (Skip `ancient_greek` for texts built with
+  `makeMultilingualTextWithIdWithoutGreek`.)
 
 ## MultilingualText conventions
 
@@ -85,6 +111,13 @@ provide a text with no Greek original.
   (e.g. "Patriarch, Metropolitan or Bishop", not "..., or Bishop").
 
 ## Coptic (Bohairic) orthography
+
+- **Vocabulary source:** the vocabulary of the **Bohairic Bible** and the
+  Bohairic liturgical books (e.g. the Euchologion) is authoritative for
+  Coptic translations. Back new terms with a Bible verse or a passage from
+  the liturgical books where possible (e.g. `ⲓⲁ` "to wash" from
+  `Ϯⲛⲁⲓⲁ ⲧⲟⲧ`, Psalm 25:6); if no attestation is known, tell the user
+  explicitly instead of presenting the word as certain.
 
 - Capitalize **only the first word of a sentence/title**, not every word
   (unlike German) and not systematically per word (unlike English title

@@ -375,7 +375,7 @@ export const sectionTheOfferingOfIncenseForTheConfessionOfThePeople = registerNo
 	children: []
 });
 
-export const textTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies =
+export const textTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies =
 	await makeMultilingualTextWithId(
 		'0EE0EC5F-1B67-48F8-8670-18C89982AA2D',
 		'2BCF7A49-E348-4BDD-BA5E-E5C6477591D0',
@@ -390,12 +390,12 @@ export const textTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfThe
 		'Die Darbringung des Weihrauchs für alle Hegumen und Priester während der Liturgie an der Schwelle des Allerheiligsten'
 	);
 
-export const sectionTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies =
+export const sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies =
 	registerNode<Basenode>({
 		id: '6017968E-F18F-404F-AD30-FF99E3789F84',
 		users: [],
 		type: NodeType.Section,
-		value: textTheOfferingOfIncenseForAllHegumensAndPriestsAtTheThresholdOfTheHolyOfHolies.id,
+		value: textTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});

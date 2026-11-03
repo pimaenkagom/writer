@@ -4,7 +4,7 @@ import { NodeType } from '$lib/models/node-type.model';
 import { makeMultilingualTextWithIdWithoutGreek } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 
-export const textTheHymnTrulyBlessed = await makeMultilingualTextWithIdWithoutGreek(
+export const textTheHymnBlessedAreYouIndeed = await makeMultilingualTextWithIdWithoutGreek(
 	'3C363325-291A-406C-B398-D020C8946AA3',
 	'17D8B58B-28CF-4996-8682-05DD135C0683',
 	'Ⲡⲓϫⲱ ϫⲉ Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ',
@@ -16,11 +16,11 @@ export const textTheHymnTrulyBlessed = await makeMultilingualTextWithIdWithoutGr
 	'Das Lied Wahrlich gesegnet bist du'
 );
 
-export const sectionTheHymnTrulyBlessed = registerNode<Basenode>({
+export const sectionTheHymnBlessedAreYouIndeed = registerNode<Basenode>({
 	id: '77B05D26-AB37-4291-8B3F-9E871824594E',
 	users: [],
 	type: NodeType.Section,
-	value: textTheHymnTrulyBlessed.id,
+	value: textTheHymnBlessedAreYouIndeed.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });

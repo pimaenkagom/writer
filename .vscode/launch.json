@@ -11,6 +11,35 @@
 			"skipFiles": ["<node_internals>/**"]
 		},
 		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Dev Server (Bun)",
+			"runtimeExecutable": "bun",
+			"runtimeArgs": ["--bun", "run", "dev"],
+			"console": "integratedTerminal",
+			"skipFiles": ["<node_internals>/**"]
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Build and Deploy",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["run", "build"],
+			"console": "integratedTerminal",
+			"skipFiles": ["<node_internals>/**"],
+			"postDebugTask": "deploy to firebase"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Build and Deploy (Bun)",
+			"runtimeExecutable": "bun",
+			"runtimeArgs": ["--bun", "run", "build"],
+			"console": "integratedTerminal",
+			"skipFiles": ["<node_internals>/**"],
+			"postDebugTask": "deploy to firebase"
+		},
+		{
 			"type": "firefox",
 			"request": "launch",
 			"name": "Debug in Firefox",
@@ -23,45 +52,6 @@
 			"name": "Debug in Chrome",
 			"url": "http://localhost:5173",
 			"webRoot": "${workspaceFolder}"
-		},
-		{
-			"type": "node",
-			"request": "launch",
-			"name": "Debug Current File",
-			"program": "${file}",
-			"skipFiles": ["<node_internals>/**"],
-			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
-		},
-		{
-			"type": "node",
-			"request": "launch",
-			"name": "Debug Tests",
-			"program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
-			"args": ["run", "${file}"],
-			"console": "integratedTerminal",
-			"internalConsoleOptions": "neverOpen"
-		},
-		{
-			"type": "node",
-			"request": "launch",
-			"name": "Build and Deploy",
-			"runtimeExecutable": "npm",
-			"runtimeArgs": ["run", "build"],
-			"console": "integratedTerminal",
-			"skipFiles": ["<node_internals>/**"],
-			"postDebugTask": "deploy to firebase"
-		}
-	],
-	"compounds": [
-		{
-			"name": "Dev Server + Firefox",
-			"configurations": ["Launch Dev Server", "Debug in Firefox"],
-			"stopAll": true
-		},
-		{
-			"name": "Dev Server + Chrome",
-			"configurations": ["Launch Dev Server", "Debug in Chrome"],
-			"stopAll": true
 		}
 	]
 }

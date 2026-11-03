@@ -13,7 +13,7 @@ import {
 import { partTheOfferingOfTheOblations } from '$lib/utilities/initializer/part-the-offering-of-the-lamb';
 import { partTheReceptionOfAPatriarchMetropolitanOrBishop } from '$lib/utilities/initializer/part-the-reception-of-a-hierarch';
 import { registerNode } from '$lib/utilities/initializer/registry';
-import { sectionTheHymnTrulyBlessed } from '$lib/utilities/initializer/shared/section-hymn-truly-blessed';
+import { sectionTheHymnBlessedAreYouIndeed } from '$lib/utilities/initializer/shared/section-the-hymn-blessed-are-you-indeed';
 import {
 	sectionTheLitanyForADepartedBishop,
 	sectionTheLitanyForADepartedMetropolitan,
@@ -21,8 +21,9 @@ import {
 } from '$lib/utilities/initializer/shared/sections-the-litanies-for-departed-hierarchs';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 import { sectionTheResponseOfThePeopleWeWorshipYouOChrist } from '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
+import { sectionTheWashingOfTheHands } from '$lib/utilities/initializer/shared/section-the-washing-of-the-hands';
 
-export const textLiturgyOfTheFaithful = await makeMultilingualTextWithId(
+export const textTheLiturgyOfTheFaithful = await makeMultilingualTextWithId(
 	'3D13ECE5-662E-4052-8C72-0847F405A541',
 	'7C6E2990-DA5D-4D96-8CD9-AB9381F98096',
 	'Ἡ Λειτουργία τῶν Πιστῶν',
@@ -36,11 +37,11 @@ export const textLiturgyOfTheFaithful = await makeMultilingualTextWithId(
 	'Die Liturgie der Gläubigen'
 );
 
-export const partLiturgyOfTheFaithful = registerNode<Basenode>({
+export const partTheLiturgyOfTheFaithful = registerNode<Basenode>({
 	id: 'A02E3E6F-B76F-4A8F-A299-04E538E7476A',
 	users: [bookTheLiturgyAccordingToBasil.id],
 	type: NodeType.Part,
-	value: textLiturgyOfTheFaithful.id,
+	value: textTheLiturgyOfTheFaithful.id,
 	valueType: ContentType.MultilingualText,
 	children: [[]]
 });
@@ -49,7 +50,124 @@ bookTheLiturgyAccordingToBasil.children = [
 	[partTheReceptionOfAPatriarchMetropolitanOrBishop.id],
 	[partTheOfferingOfTheOblations.id],
 	[partTheLiturgyOfTheWord.id],
-	[partLiturgyOfTheFaithful.id]
+	[partTheLiturgyOfTheFaithful.id]
+];
+
+export const textTheFaith = await makeMultilingualTextWithId(
+	'823A9459-A0BD-4E4A-BC47-98884E3804D7',
+	'FCAA5842-63BA-48A4-A0E8-4981DDF06BF0',
+	'Ἡ Πίστις',
+	'C44E0A3F-AD65-4CB1-99DD-29BD89C36C45',
+	'Ⲡⲓⲛⲁϩϯ',
+	'EF236ED8-9F44-4C6A-B56B-BD15249E3169',
+	'اَلْإِيمَانُ',
+	'2D72360F-4C69-42EC-B1FE-B7423BF4DF65',
+	'The Faith',
+	'C0649FF9-FF78-458D-88F3-4A5030E5F698',
+	'Der Glaube'
+);
+
+textTheFaith.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheFaith.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheFaith.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheFaith.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheFaith.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const chapterTheFaith = registerNode<Basenode>({
+	id: 'E3E9AC26-3CCD-44A9-9622-1BDA53658566',
+	users: [partTheLiturgyOfTheFaithful.id],
+	type: NodeType.Chapter,
+	value: textTheFaith.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheShakingOffOfTheWater = await makeMultilingualTextWithId(
+	'9354890A-812C-4228-BE32-6BDA87C7DEC4',
+	'17335CF2-D1BA-410E-803A-97DC4BA95F5A',
+	'Ἡ Ἐκτίναξις τοῦ Ὕδατος',
+	'2A63C626-7D2F-4209-B716-E00A283FCB3E',
+	'Ⲡⲓⲛⲟⲩϩⲓ ⲙ̀ⲡⲓⲙⲱⲟⲩ',
+	'9AE2E0B9-6BA3-4BDA-ABFA-DE057235FF70',
+	'نَفْضُ الْمَاءِ',
+	'7EEFF790-C41A-4FA9-9F1E-04E5A68B812F',
+	'The Shaking Off of the Water',
+	'BF686DAB-EBE3-4209-8995-4CA93C92B4DF',
+	'Das Abschütteln des Wassers'
+);
+
+export const sectionTheShakingOffOfTheWater = registerNode<Basenode>({
+	id: 'FE1CB1A1-5CA9-4C8E-957B-3D78161847E3',
+	users: [chapterTheFaith.id],
+	type: NodeType.Section,
+	value: textTheShakingOffOfTheWater.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheCallToAttention = await makeMultilingualTextWithId(
+	'BB8C01CA-76B5-4CF4-AC37-E57D30CCD09E',
+	'B2FEDD55-8AE9-42EA-90C0-4F987E6ECD22',
+	'Ἡ Πρόσκλησις εἰς Προσοχήν',
+	'54C9F94F-20C4-4B70-8E79-BE66208CCD17',
+	'Ⲡⲓⲑⲱϩⲉⲙ ⲉ̀ⲥⲱⲧⲉⲙ',
+	'03E18E2C-8E5E-442A-834B-5A09BAD7E27E',
+	'اَلدَّعْوَةُ إِلَى الْإِنْصَاتِ',
+	'34AF2E60-A1C4-464D-80F3-8B674F5CD00E',
+	'The Call to Attention',
+	'1CA86C36-77DF-45C3-8D23-909ADBFDC537',
+	'Der Aufruf zur Aufmerksamkeit'
+);
+
+textTheCallToAttention.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCallToAttention.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCallToAttention.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCallToAttention.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCallToAttention.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheCallToAttention = registerNode<Basenode>({
+	id: '004FBC44-F367-4EA2-9AD7-F1E3D0FA7C96',
+	users: [chapterTheFaith.id],
+	type: NodeType.Section,
+	value: textTheCallToAttention.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+export const textTheCreed = await makeMultilingualTextWithId(
+	'9AEF45BD-35B5-4F47-A714-7A85CD4923F2',
+	'F5C0FB71-7E97-471A-9DFA-D4F53C4C56C6',
+	'Τὸ Σύμβολον τῆς Πίστεως',
+	'E8CA30F0-67D2-4C50-BBC5-020403C5C983',
+	'Ⲡⲓⲥⲩⲙⲃⲟⲗⲟⲛ ⲛ̀ⲧⲉ ⲡⲓⲛⲁϩϯ',
+	'18BF807C-BEDE-412D-A2C1-121F6A5BB331',
+	'قَانُونُ الْإِيمَانِ',
+	'D94EBCBD-F6DA-408E-BDFD-D00BF46F9C33',
+	'The Creed',
+	'D2BA420D-2B66-4A7E-A201-D18441529BB6',
+	'Das Glaubensbekenntnis'
+);
+
+textTheCreed.texts.ancient_greek.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCreed.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCreed.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCreed.texts.english.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textTheCreed.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+
+export const sectionTheCreed = registerNode<Basenode>({
+	id: '0623B256-7D80-4DE0-A426-E5890EBA59D8',
+	users: [chapterTheFaith.id],
+	type: NodeType.Section,
+	value: textTheCreed.id,
+	valueType: ContentType.MultilingualText,
+	children: []
+});
+
+chapterTheFaith.children = [
+	[sectionTheWashingOfTheHands.id],
+	[sectionTheShakingOffOfTheWater.id],
+	[sectionTheCallToAttention.id],
+	[sectionTheCreed.id]
 ];
 
 export const textTheReconciliation = await makeMultilingualTextWithId(
@@ -68,7 +186,7 @@ export const textTheReconciliation = await makeMultilingualTextWithId(
 
 export const chapterTheReconciliation = registerNode<Basenode>({
 	id: '5BE6FC3C-DD66-4ACB-8203-B7323F86E9AD',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheReconciliation.id,
 	valueType: ContentType.MultilingualText,
@@ -121,7 +239,7 @@ export const sectionAnotherPrayerOfReconciliation = registerNode<Basenode>({
 	children: []
 });
 
-export const textAspasmosAdamForTheOrdinaryDays = await makeMultilingualTextWithId(
+export const textAnAspasmosAdamForTheOrdinaryDays = await makeMultilingualTextWithId(
 	'C250C95D-1D25-49AE-AD8F-30D046268B6C',
 	'1F2F2E01-8B6D-42F4-9072-E04063DF7003',
 	'Ἀσπασμὸς Ἀδὰμ διὰ τὰς κοινὰς ἡμέρας',
@@ -135,11 +253,11 @@ export const textAspasmosAdamForTheOrdinaryDays = await makeMultilingualTextWith
 	'Ein Aspasmos Adam an gewöhnlichen Tagen'
 );
 
-export const sectionAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
+export const sectionAnAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
 	id: '71DC6B78-75AE-423C-BBF2-30BEC933B153',
 	users: [chapterTheReconciliation.id],
 	type: NodeType.Section,
-	value: textAspasmosAdamForTheOrdinaryDays.id,
+	value: textAnAspasmosAdamForTheOrdinaryDays.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -213,7 +331,7 @@ export const sectionAFourthAspasmosAdamForTheOrdinaryDays = registerNode<Basenod
 	children: []
 });
 
-export const textAFifthAspasmosAdamForTheOrdinaryDays = await makeMultilingualTextWithId(
+export const textAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril = await makeMultilingualTextWithId(
 	'BAA17D48-E0FF-4112-A17B-EBF7C7061F94',
 	'C2161884-D36B-45F0-AE99-55E937A104AE',
 	'Πέμπτος Ἀσπασμὸς Ἀδὰμ διὰ τὰς κοινὰς ἡμέρας ἐκ τῆς Λειτουργίας κατὰ Κύριλλον',
@@ -227,11 +345,11 @@ export const textAFifthAspasmosAdamForTheOrdinaryDays = await makeMultilingualTe
 	'Ein fünfter Aspasmos Adam an gewöhnlichen Tagen aus der Liturgie nach Kyrillus'
 );
 
-export const sectionAFifthAspasmosAdamForTheOrdinaryDays = registerNode<Basenode>({
+export const sectionAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril = registerNode<Basenode>({
 	id: '56F1E7EB-B94D-447A-BF1C-1324E1A1F55E',
 	users: [chapterTheReconciliation.id],
 	type: NodeType.Section,
-	value: textAFifthAspasmosAdamForTheOrdinaryDays.id,
+	value: textAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -263,11 +381,11 @@ chapterTheReconciliation.children = [
 	[sectionTheCallToPrayer.id],
 	[sectionAPrayerOfReconciliation.id, sectionAnotherPrayerOfReconciliation.id],
 	[
-		sectionAspasmosAdamForTheOrdinaryDays.id,
+		sectionAnAspasmosAdamForTheOrdinaryDays.id,
 		sectionASecondAspasmosAdamForTheOrdinaryDays.id,
 		sectionAThirdAspasmosAdamForTheOrdinaryDays.id,
 		sectionAFourthAspasmosAdamForTheOrdinaryDays.id,
-		sectionAFifthAspasmosAdamForTheOrdinaryDays.id
+		sectionAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril.id
 	],
 	[sectionTheIntercessionsOfSaintMary.id],
 	[sectionTheResponseOfThePeopleWeWorshipYouOChrist.id]
@@ -289,7 +407,7 @@ export const textTheAnaphora = await makeMultilingualTextWithId(
 
 export const chapterTheAnaphora = registerNode<Basenode>({
 	id: '681220C0-4848-4288-9142-F183BAF1CE15',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheAnaphora.id,
 	valueType: ContentType.MultilingualText,
@@ -319,7 +437,7 @@ export const sectionTheAnaphora = registerNode<Basenode>({
 	children: []
 });
 
-export const textAspasmosWatosForTheOrdinaryDays = await makeMultilingualTextWithId(
+export const textAnAspasmosWatosForTheOrdinaryDays = await makeMultilingualTextWithId(
 	'37C5FA3C-0B0A-4AD7-BEF8-7810842C0D32',
 	'A7F9E452-800C-4E2B-814E-C2C56B123606',
 	'Ἀσπασμὸς Βάτος διὰ τὰς κοινὰς ἡμέρας',
@@ -333,11 +451,11 @@ export const textAspasmosWatosForTheOrdinaryDays = await makeMultilingualTextWit
 	'Ein Aspasmos Watos an gewöhnlichen Tagen'
 );
 
-export const sectionAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
+export const sectionAnAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
 	id: '01933292-9F6E-4BB1-9D36-5FB44C74A253',
 	users: [chapterTheAnaphora.id],
 	type: NodeType.Section,
-	value: textAspasmosWatosForTheOrdinaryDays.id,
+	value: textAnAspasmosWatosForTheOrdinaryDays.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -480,7 +598,7 @@ export const sectionASeventhAspasmosWatosForTheOrdinaryDays = registerNode<Basen
 	children: []
 });
 
-export const textAnEighthAspasmosWatosForTheOrdinaryDays = await makeMultilingualTextWithId(
+export const textAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory = await makeMultilingualTextWithId(
 	'F201D10A-39D1-4F2C-BA10-9FCA02481068',
 	'9685C54F-753D-4E6B-A2B0-0E6F77E0EA63',
 	'Ὄγδοος Ἀσπασμὸς Βάτος διὰ τὰς κοινὰς ἡμέρας ἐκ τῆς Λειτουργίας κατὰ Γρηγόριον',
@@ -494,11 +612,11 @@ export const textAnEighthAspasmosWatosForTheOrdinaryDays = await makeMultilingua
 	'Ein achter Aspasmos Watos an gewöhnlichen Tagen aus der Liturgie nach Gregorius'
 );
 
-export const sectionAnEighthAspasmosWatosForTheOrdinaryDays = registerNode<Basenode>({
+export const sectionAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory = registerNode<Basenode>({
 	id: 'E147C3F4-A56C-4593-AE93-01C3C84EFD24',
 	users: [chapterTheAnaphora.id],
 	type: NodeType.Section,
-	value: textAnEighthAspasmosWatosForTheOrdinaryDays.id,
+	value: textAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -506,14 +624,14 @@ export const sectionAnEighthAspasmosWatosForTheOrdinaryDays = registerNode<Basen
 chapterTheAnaphora.children = [
 	[sectionTheAnaphora.id],
 	[
-		sectionAspasmosWatosForTheOrdinaryDays.id,
+		sectionAnAspasmosWatosForTheOrdinaryDays.id,
 		sectionASecondAspasmosWatosForTheOrdinaryDays.id,
 		sectionAThirdAspasmosWatosForTheOrdinaryDays.id,
 		sectionAFourthAspasmosWatosForTheOrdinaryDays.id,
 		sectionAFifthAspasmosWatosForTheOrdinaryDays.id,
 		sectionASixthAspasmosWatosForTheOrdinaryDays.id,
 		sectionASeventhAspasmosWatosForTheOrdinaryDays.id,
-		sectionAnEighthAspasmosWatosForTheOrdinaryDays.id
+		sectionAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory.id
 	]
 ];
 
@@ -533,7 +651,7 @@ export const textAgios = await makeMultilingualTextWithId(
 
 export const chapterAgios = registerNode<Basenode>({
 	id: '4FF5FC67-300E-48AF-8D4D-250100F6C056',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textAgios.id,
 	valueType: ContentType.MultilingualText,
@@ -619,7 +737,7 @@ chapterAgios.children = [
 	]
 ];
 
-export const textTheInstitutionPrayers = await makeMultilingualTextWithId(
+export const textTheWordsOfInstitution = await makeMultilingualTextWithId(
 	'3B95CFDC-0F3D-46AF-87F6-3EA6FAD6D65D',
 	'E0DDD0C5-B0B5-4FF8-8859-B33991E7A562',
 	'Οἱ Λόγοι τῆς Ἱδρύσεως',
@@ -633,11 +751,11 @@ export const textTheInstitutionPrayers = await makeMultilingualTextWithId(
 	'Die Einsetzungsworte'
 );
 
-export const chapterTheInstitutionPrayers = registerNode<Basenode>({
+export const chapterTheWordsOfInstitution = registerNode<Basenode>({
 	id: '22CC0614-854F-4DF1-9FA1-FF7D388936DE',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
-	value: textTheInstitutionPrayers.id,
+	value: textTheWordsOfInstitution.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -658,7 +776,7 @@ export const textTheIntroductionToTheWordsOfInstitution = await makeMultilingual
 
 export const sectionTheIntroductionToTheWordsOfInstitution = registerNode<Basenode>({
 	id: 'DAA0FDCE-1DD1-4E11-9D38-584ECB57CE06',
-	users: [chapterTheInstitutionPrayers.id],
+	users: [chapterTheWordsOfInstitution.id],
 	type: NodeType.Section,
 	value: textTheIntroductionToTheWordsOfInstitution.id,
 	valueType: ContentType.MultilingualText,
@@ -681,7 +799,7 @@ export const textTheWordsOfInstitutionOverTheBread = await makeMultilingualTextW
 
 export const sectionTheWordsOfInstitutionOverTheBread = registerNode<Basenode>({
 	id: 'E8563164-3DB5-40A1-8D03-D10B24896141',
-	users: [chapterTheInstitutionPrayers.id],
+	users: [chapterTheWordsOfInstitution.id],
 	type: NodeType.Section,
 	value: textTheWordsOfInstitutionOverTheBread.id,
 	valueType: ContentType.MultilingualText,
@@ -704,7 +822,7 @@ export const textTheWordsOfInstitutionOverTheWine = await makeMultilingualTextWi
 
 export const sectionTheWordsOfInstitutionOverTheWine = registerNode<Basenode>({
 	id: '8F362BAB-7996-4738-973E-46496463A58E',
-	users: [chapterTheInstitutionPrayers.id],
+	users: [chapterTheWordsOfInstitution.id],
 	type: NodeType.Section,
 	value: textTheWordsOfInstitutionOverTheWine.id,
 	valueType: ContentType.MultilingualText,
@@ -727,7 +845,7 @@ export const textTheSolemnRemembrance = await makeMultilingualTextWithId(
 
 export const sectionTheSolemnRemembrance = registerNode<Basenode>({
 	id: '8C328250-BFF6-4F81-84CF-F1DCD5F0625C',
-	users: [chapterTheInstitutionPrayers.id],
+	users: [chapterTheWordsOfInstitution.id],
 	type: NodeType.Section,
 	value: textTheSolemnRemembrance.id,
 	valueType: ContentType.MultilingualText,
@@ -750,14 +868,14 @@ export const textTheInvocationOfTheHolySpirit = await makeMultilingualTextWithId
 
 export const sectionTheInvocationOfTheHolySpirit = registerNode<Basenode>({
 	id: '67EA30B4-8EB4-40CD-803D-C67C3A49418D',
-	users: [chapterTheInstitutionPrayers.id],
+	users: [chapterTheWordsOfInstitution.id],
 	type: NodeType.Section,
 	value: textTheInvocationOfTheHolySpirit.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheInstitutionPrayers.children = [
+chapterTheWordsOfInstitution.children = [
 	[sectionTheIntroductionToTheWordsOfInstitution.id],
 	[sectionTheWordsOfInstitutionOverTheBread.id],
 	[sectionTheWordsOfInstitutionOverTheWine.id],
@@ -781,7 +899,7 @@ export const textTheLitanies = await makeMultilingualTextWithId(
 
 export const chapterTheLitanies = registerNode<Basenode>({
 	id: 'E9DAE59D-1FC2-4A2C-B0A9-2E1ACDA30745',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheLitanies.id,
 	valueType: ContentType.MultilingualText,
@@ -1041,7 +1159,10 @@ chapterTheLitanies.children = [
 ];
 
 sectionTheLitanyForADepartedPatriarch.users = [chapterTheThreeLitanies.id, chapterTheLitanies.id];
-sectionTheLitanyForADepartedMetropolitan.users = [chapterTheThreeLitanies.id, chapterTheLitanies.id];
+sectionTheLitanyForADepartedMetropolitan.users = [
+	chapterTheThreeLitanies.id,
+	chapterTheLitanies.id
+];
 sectionTheLitanyForADepartedBishop.users = [chapterTheThreeLitanies.id, chapterTheLitanies.id];
 
 export const textTheCommemorationOfTheSaints = await makeMultilingualTextWithId(
@@ -1060,7 +1181,7 @@ export const textTheCommemorationOfTheSaints = await makeMultilingualTextWithId(
 
 export const chapterTheCommemorationOfTheSaints = registerNode<Basenode>({
 	id: 'A8799636-F33A-46A3-8F83-757BF9AEF332',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheCommemorationOfTheSaints.id,
 	valueType: ContentType.MultilingualText,
@@ -1357,7 +1478,7 @@ export const textTheBreakingOfTheBread = await makeMultilingualTextWithId(
 
 export const chapterTheBreakingOfTheBread = registerNode<Basenode>({
 	id: '546D237B-152E-4696-86BA-FFDC2401B8B2',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheBreakingOfTheBread.id,
 	valueType: ContentType.MultilingualText,
@@ -1431,7 +1552,7 @@ export const textTheConfession = await makeMultilingualTextWithId(
 
 export const chapterTheConfession = registerNode<Basenode>({
 	id: 'D8F0BAAD-6760-4B29-9088-832CC7EB706F',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheConfession.id,
 	valueType: ContentType.MultilingualText,
@@ -1602,7 +1723,7 @@ export const sectionTheConfession = registerNode<Basenode>({
 	children: []
 });
 
-export const textAResponseOfTheConfession = await makeMultilingualTextWithId(
+export const textAResponseToTheConfession = await makeMultilingualTextWithId(
 	'AD39DBFA-90F2-4D06-A879-74758D77C469',
 	'0570714E-8464-4C4D-8912-D5627E7CE751',
 	'Ἀπόκρισις τῆς Ὁμολογίας',
@@ -1616,16 +1737,16 @@ export const textAResponseOfTheConfession = await makeMultilingualTextWithId(
 	'Eine Erwiderung des Bekenntnisses'
 );
 
-export const sectionAResponseOfTheConfession = registerNode<Basenode>({
+export const sectionAResponseToTheConfession = registerNode<Basenode>({
 	id: '38F967A3-77E3-4576-8431-4E47B87C189F',
 	users: [chapterTheConfession.id],
 	type: NodeType.Section,
-	value: textAResponseOfTheConfession.id,
+	value: textAResponseToTheConfession.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-export const textAnotherResponseOfTheConfession = await makeMultilingualTextWithId(
+export const textAnotherResponseToTheConfession = await makeMultilingualTextWithId(
 	'707B38CB-EAD3-40B1-AB71-D3B499265AAA',
 	'26B84134-4C1E-44F7-A454-8E4E0EB9F257',
 	'Ἄλλη Ἀπόκρισις τῆς Ὁμολογίας',
@@ -1639,11 +1760,11 @@ export const textAnotherResponseOfTheConfession = await makeMultilingualTextWith
 	'Eine andere Erwiderung des Bekenntnisses'
 );
 
-export const sectionAnotherResponseOfTheConfession = registerNode<Basenode>({
+export const sectionAnotherResponseToTheConfession = registerNode<Basenode>({
 	id: 'EC8B19CC-7435-49F9-8984-D59025412C44',
 	users: [chapterTheConfession.id],
 	type: NodeType.Section,
-	value: textAnotherResponseOfTheConfession.id,
+	value: textAnotherResponseToTheConfession.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -1773,8 +1894,8 @@ chapterTheConfession.children = [
 	],
 	[sectionTheHolyThingsForTheHoly.id],
 	[sectionTheConfession.id],
-	[sectionAResponseOfTheConfession.id],
-	[sectionAnotherResponseOfTheConfession.id],
+	[sectionAResponseToTheConfession.id],
+	[sectionAnotherResponseToTheConfession.id],
 	[
 		sectionAPrayerForParticipationInTheEucharist.id,
 		sectionASecondPrayerForParticipationInTheEucharist.id,
@@ -1800,7 +1921,7 @@ export const textTheDistributionOfTheMysteries = await makeMultilingualTextWithI
 
 export const chapterTheDistributionOfTheMysteries = registerNode<Basenode>({
 	id: '898F0FB0-EB61-4772-8EC7-784F79338D97',
-	users: [partLiturgyOfTheFaithful.id],
+	users: [partTheLiturgyOfTheFaithful.id],
 	type: NodeType.Chapter,
 	value: textTheDistributionOfTheMysteries.id,
 	valueType: ContentType.MultilingualText,
@@ -2429,7 +2550,7 @@ chapterTheDistributionOfTheMysteries.children = [
 	],
 	[sectionTheCleaningOfTheHolyVessels.id],
 	[sectionThePsalm150ForTheOrdinaryDays.id],
-	[sectionTheHymnTrulyBlessed.id],
+	[sectionTheHymnBlessedAreYouIndeed.id],
 	[sectionTheHymnTheBreadOfLife.id],
 	[sectionTheHymnBlessedBeTheFatherAndTheSonAndTheHolySpirit.id],
 	[sectionTheHymnMyStrengthAndMyPraise.id],
@@ -2453,11 +2574,12 @@ chapterTheDistributionOfTheMysteries.children = [
 	[sectionTheDistributionOfTheBlessedBread.id]
 ];
 
-partLiturgyOfTheFaithful.children = [
+partTheLiturgyOfTheFaithful.children = [
+	[chapterTheFaith.id],
 	[chapterTheReconciliation.id],
 	[chapterTheAnaphora.id],
 	[chapterAgios.id],
-	[chapterTheInstitutionPrayers.id],
+	[chapterTheWordsOfInstitution.id],
 	[chapterTheLitanies.id],
 	[chapterTheCommemorationOfTheSaints.id],
 	[chapterTheBreakingOfTheBread.id],
