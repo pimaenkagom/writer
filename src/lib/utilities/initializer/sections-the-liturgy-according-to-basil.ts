@@ -331,28 +331,30 @@ export const sectionAFourthAspasmosAdamForTheOrdinaryDays = registerNode<Basenod
 	children: []
 });
 
-export const textAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril = await makeMultilingualTextWithId(
-	'BAA17D48-E0FF-4112-A17B-EBF7C7061F94',
-	'C2161884-D36B-45F0-AE99-55E937A104AE',
-	'Πέμπτος Ἀσπασμὸς Ἀδὰμ διὰ τὰς κοινὰς ἡμέρας ἐκ τῆς Λειτουργίας κατὰ Κύριλλον',
-	'E30A7F55-B3D5-4AA3-9F74-25BA52AC12A4',
-	'Ⲡⲓⲙⲁϩϯⲟⲩ ⲛ̀ⲁⲥⲡⲁⲥⲙⲟⲥ ⲁ̀ⲇⲁⲙ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲉ̀ⲃⲟⲗ ϧⲉⲛ Ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ ⲕⲁⲧⲁ Ⲕⲩⲣⲓⲗⲗⲟⲥ',
-	'1786E761-B3D0-4A93-AA52-B2194C7F018B',
-	'أَسْبَاسْمُوسْ آدَمْ خَامِسْ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ الْقُدَّاسِ الْكِيرِلُّسِيِّ',
-	'2A060E7F-D2DF-43A9-9EEF-7DF372356C3E',
-	'A Fifth Aspasmos Adam for the Ordinary Days from the Liturgy according to Cyril',
-	'DF6FD869-4636-472D-B633-C531DD6F13F7',
-	'Ein fünfter Aspasmos Adam an gewöhnlichen Tagen aus der Liturgie nach Kyrillus'
-);
+export const textAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril =
+	await makeMultilingualTextWithId(
+		'BAA17D48-E0FF-4112-A17B-EBF7C7061F94',
+		'C2161884-D36B-45F0-AE99-55E937A104AE',
+		'Πέμπτος Ἀσπασμὸς Ἀδὰμ διὰ τὰς κοινὰς ἡμέρας ἐκ τῆς Λειτουργίας κατὰ Κύριλλον',
+		'E30A7F55-B3D5-4AA3-9F74-25BA52AC12A4',
+		'Ⲡⲓⲙⲁϩϯⲟⲩ ⲛ̀ⲁⲥⲡⲁⲥⲙⲟⲥ ⲁ̀ⲇⲁⲙ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲉ̀ⲃⲟⲗ ϧⲉⲛ Ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ ⲕⲁⲧⲁ Ⲕⲩⲣⲓⲗⲗⲟⲥ',
+		'1786E761-B3D0-4A93-AA52-B2194C7F018B',
+		'أَسْبَاسْمُوسْ آدَمْ خَامِسْ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ الْقُدَّاسِ الْكِيرِلُّسِيِّ',
+		'2A060E7F-D2DF-43A9-9EEF-7DF372356C3E',
+		'A Fifth Aspasmos Adam for the Ordinary Days from the Liturgy according to Cyril',
+		'DF6FD869-4636-472D-B633-C531DD6F13F7',
+		'Ein fünfter Aspasmos Adam an gewöhnlichen Tagen aus der Liturgie nach Kyrillus'
+	);
 
-export const sectionAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril = registerNode<Basenode>({
-	id: '56F1E7EB-B94D-447A-BF1C-1324E1A1F55E',
-	users: [chapterTheReconciliation.id],
-	type: NodeType.Section,
-	value: textAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
+export const sectionAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril =
+	registerNode<Basenode>({
+		id: '56F1E7EB-B94D-447A-BF1C-1324E1A1F55E',
+		users: [chapterTheReconciliation.id],
+		type: NodeType.Section,
+		value: textAFifthAspasmosAdamForTheOrdinaryDaysFromTheLiturgyAccordingToCyril.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
 
 export const textTheIntercessionsOfSaintMary = await makeMultilingualTextWithId(
 	'E51A24CE-4F16-4FED-966B-AF409BE3D497',
@@ -598,28 +600,30 @@ export const sectionASeventhAspasmosWatosForTheOrdinaryDays = registerNode<Basen
 	children: []
 });
 
-export const textAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory = await makeMultilingualTextWithId(
-	'F201D10A-39D1-4F2C-BA10-9FCA02481068',
-	'9685C54F-753D-4E6B-A2B0-0E6F77E0EA63',
-	'Ὄγδοος Ἀσπασμὸς Βάτος διὰ τὰς κοινὰς ἡμέρας ἐκ τῆς Λειτουργίας κατὰ Γρηγόριον',
-	'1266E65B-014A-4790-A26F-4B1D83EF1355',
-	'Ⲡⲓⲙⲁϩϣⲙⲏⲛ ⲛ̀ⲁⲥⲡⲁⲥⲙⲟⲥ ⲃⲁⲧⲟⲥ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲉ̀ⲃⲟⲗ ϧⲉⲛ Ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ ⲕⲁⲧⲁ Ⲅⲣⲏⲅⲟⲣⲓⲟⲥ',
-	'6D80C1CB-7D0F-4F0C-8E6D-F132402E336C',
-	'أَسْبَاسْمُوسْ وَاطُسْ ثَامِنْ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ الْقُدَّاسِ الْغْرِيغُورِيِّ',
-	'140D6EC9-E0A7-44FD-94BB-C5F1009560C9',
-	'An Eighth Aspasmos Watos for the Ordinary Days from the Liturgy according to Gregory',
-	'A2C9AC65-F014-4682-AAC1-1279633C4292',
-	'Ein achter Aspasmos Watos an gewöhnlichen Tagen aus der Liturgie nach Gregorius'
-);
+export const textAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory =
+	await makeMultilingualTextWithId(
+		'F201D10A-39D1-4F2C-BA10-9FCA02481068',
+		'9685C54F-753D-4E6B-A2B0-0E6F77E0EA63',
+		'Ὄγδοος Ἀσπασμὸς Βάτος διὰ τὰς κοινὰς ἡμέρας ἐκ τῆς Λειτουργίας κατὰ Γρηγόριον',
+		'1266E65B-014A-4790-A26F-4B1D83EF1355',
+		'Ⲡⲓⲙⲁϩϣⲙⲏⲛ ⲛ̀ⲁⲥⲡⲁⲥⲙⲟⲥ ⲃⲁⲧⲟⲥ ⲛ̀ⲧⲉ ⲛⲓⲉϩⲟⲟⲩ ⲛ̀ⲁⲧϣⲁⲓ ⲉ̀ⲃⲟⲗ ϧⲉⲛ Ϯⲗⲓⲧⲟⲩⲣⲅⲓⲁ ⲕⲁⲧⲁ Ⲅⲣⲏⲅⲟⲣⲓⲟⲥ',
+		'6D80C1CB-7D0F-4F0C-8E6D-F132402E336C',
+		'أَسْبَاسْمُوسْ وَاطُسْ ثَامِنْ لِلْأَيَّامِ السَّنَوِيَّةِ مِنَ الْقُدَّاسِ الْغْرِيغُورِيِّ',
+		'140D6EC9-E0A7-44FD-94BB-C5F1009560C9',
+		'An Eighth Aspasmos Watos for the Ordinary Days from the Liturgy according to Gregory',
+		'A2C9AC65-F014-4682-AAC1-1279633C4292',
+		'Ein achter Aspasmos Watos an gewöhnlichen Tagen aus der Liturgie nach Gregorius'
+	);
 
-export const sectionAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory = registerNode<Basenode>({
-	id: 'E147C3F4-A56C-4593-AE93-01C3C84EFD24',
-	users: [chapterTheAnaphora.id],
-	type: NodeType.Section,
-	value: textAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory.id,
-	valueType: ContentType.MultilingualText,
-	children: []
-});
+export const sectionAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory =
+	registerNode<Basenode>({
+		id: 'E147C3F4-A56C-4593-AE93-01C3C84EFD24',
+		users: [chapterTheAnaphora.id],
+		type: NodeType.Section,
+		value: textAnEighthAspasmosWatosForTheOrdinaryDaysFromTheLiturgyAccordingToGregory.id,
+		valueType: ContentType.MultilingualText,
+		children: []
+	});
 
 chapterTheAnaphora.children = [
 	[sectionTheAnaphora.id],

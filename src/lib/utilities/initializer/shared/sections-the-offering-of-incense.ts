@@ -395,7 +395,8 @@ export const sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLitu
 		id: '6017968E-F18F-404F-AD30-FF99E3789F84',
 		users: [],
 		type: NodeType.Section,
-		value: textTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id,
+		value:
+			textTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});

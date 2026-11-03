@@ -134,7 +134,9 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children
 	[sectionTheOfferingOfIncenseForThePatriarch.id],
 	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
 	[sectionTheOfferingOfIncenseForTheBishop.id],
-	[sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id],
+	[
+		sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id
+	],
 	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
 	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
 	[sectionTheConclusionOfTheOfferingOfIncense.id]
@@ -886,7 +888,9 @@ chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.child
 	[sectionTheOfferingOfIncenseForThePatriarch.id],
 	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
 	[sectionTheOfferingOfIncenseForTheBishop.id],
-	[sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id],
+	[
+		sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id
+	],
 	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
 	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
 	[sectionTheConclusionOfTheOfferingOfIncense.id]
@@ -1814,14 +1818,11 @@ export const textThePrayerForTheBlessingOfHisPeople = await makeMultilingualText
 
 textThePrayerForTheBlessingOfHisPeople.texts.ancient_greek.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerForTheBlessingOfHisPeople.texts.coptic.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerForTheBlessingOfHisPeople.texts.arabic.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerForTheBlessingOfHisPeople.texts.coptic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerForTheBlessingOfHisPeople.texts.arabic.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 textThePrayerForTheBlessingOfHisPeople.texts.english.status =
 	'4ACF926E-370D-4D90-B642-530FA1A81E24';
-textThePrayerForTheBlessingOfHisPeople.texts.german.status =
-	'4ACF926E-370D-4D90-B642-530FA1A81E24';
+textThePrayerForTheBlessingOfHisPeople.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 
 export const sectionThePrayerForTheBlessingOfHisPeople = registerNode<Basenode>({
 	id: '56DCA24E-F140-4B7E-AB67-D6ACDBC48AB1',
