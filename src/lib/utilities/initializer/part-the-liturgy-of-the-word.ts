@@ -1798,25 +1798,25 @@ export const sectionTheLitanyForTheAssemblies = registerNode<Basenode>({
 	children: []
 });
 
-export const textTheLitanyForDepartureAndBlessing = await makeMultilingualTextWithId(
+export const textThePrayerForTheBlessingOfHisPeople = await makeMultilingualTextWithId(
 	'7890ADF3-F832-4612-9FC4-7C021C58F152',
 	'F2FD14CA-398B-403F-B3DB-83E86D8FB1F6',
-	'Ἡ Εὐχὴ ὑπὲρ τῆς Ἐξόδου καὶ τῆς Εὐλογίας',
+	'Ἡ Εὐχὴ ὑπὲρ τῆς Εὐλογίας τοῦ Λαοῦ αὐτοῦ',
 	'822C95BE-CCD2-4EDA-AFDA-0EECC1F63BD0',
-	'Ϯⲉⲩⲭⲏ ⲛ̀ⲧⲉ ⲡⲓϣⲉⲛⲁϥ ⲛⲉⲙ ⲡⲓⲥ̀ⲙⲟⲩ',
+	'Ⲡⲓϣⲗⲏⲗ ⲛ̀ⲧⲉ ⲡⲓⲥ̀ⲙⲟⲩ ⲛ̀ⲧⲉ ⲡⲉϥⲗⲁⲟⲥ',
 	'770B59D1-9908-4AB6-A680-B1CC829A4197',
-	'أُوشِيَةُ الاِنْطِلاَقِ وَالْبَرَكَةِ',
+	'صَلاَةُ الْبَرَكَةِ لِشَعْبِهِ',
 	'B8DF0F06-7BA9-4E3B-BD53-36761ACCBFE3',
-	'The Litany for Departure and Blessing',
+	'The Prayer for the Blessing of His People',
 	'0418B20C-1EC7-4340-9E68-8F6840CAAE30',
-	'Das Gebet um Aufbruch und Segen'
+	'Das Gebet um Segen für sein Volk'
 );
 
-export const sectionTheLitanyForDepartureAndBlessing = registerNode<Basenode>({
+export const sectionThePrayerForTheBlessingOfHisPeople = registerNode<Basenode>({
 	id: '56DCA24E-F140-4B7E-AB67-D6ACDBC48AB1',
 	users: [chapterTheThreeLitanies.id],
 	type: NodeType.Section,
-	value: textTheLitanyForDepartureAndBlessing.id,
+	value: textThePrayerForTheBlessingOfHisPeople.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
@@ -1831,7 +1831,7 @@ chapterTheThreeLitanies.children = [
 		sectionTheLitanyForADepartedBishop.id
 	],
 	[sectionTheLitanyForTheAssemblies.id],
-	[sectionTheLitanyForDepartureAndBlessing.id]
+	[sectionThePrayerForTheBlessingOfHisPeople.id]
 ];
 
 partTheLiturgyOfTheWord.children = [
