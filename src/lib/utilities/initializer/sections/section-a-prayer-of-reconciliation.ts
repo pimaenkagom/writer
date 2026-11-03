@@ -20,7 +20,7 @@ sectionAPrayerOfReconciliation.children = [[paragraphInPrayerOfReconciliation.id
 export const textGodTheGreatTheEternal = await makeMultilingualTextWithIdWithoutGreek(
 	'4F96A5C1-4C73-4A85-9B2B-9EB5EE784CF7',
 	'A104FA6A-2369-4B23-AA13-F3475E886387',
-	'Ⲫⲛⲟⲩϯ ⲡⲓⲛⲓϣϯ ⲡⲓϣⲁⲉⲛⲉϩ ⲫⲏⲉⲧⲁϥⲕⲱⲧ ⲙ̀ⲡⲓⲣⲱⲙⲓ ⲉ̀ϩⲣⲏⲓ ⲉϫⲉⲛ ϯⲙⲉⲧⲁⲧⲧⲁⲕⲟ.',
+	'Ⲫ̀ⲛⲟⲩϯ ⲡⲓⲛⲓϣϯ ⲡⲓϣⲁⲉ̀ⲛⲉϩ ⲫⲏⲉ̀ⲧⲁϥⲕⲱⲧ ⲙ̀ⲡⲓⲣⲱⲙⲓ ⲉ̀ϩ̀ⲣⲏⲓ ⲉ̀ϫⲉⲛ ϯⲙⲉⲧⲁⲧⲧⲁⲕⲟ.',
 	'1D7DBB4B-A96C-4BB2-9E2B-50DBE2F65F0A',
 	'يَا اللهُ الْعَظِيمُ الْأَبَدِيُّ الَّذِي جَبَلَ الْإِنْسَانَ عَلَى غَيْرِ فَسَادٍ.',
 	'7CA35758-2101-4D3D-A6A7-D7D217459A32',

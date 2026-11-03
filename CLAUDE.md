@@ -147,7 +147,7 @@ provide a text with no Greek original.
   vowel-final article, e.g. `Ⲡⲓⲁ̀ⲛⲁⲅⲛⲱⲥⲧⲏⲥ` (ⲡⲓ + ⲁ, so the article's
   final vowel and the noun's initial vowel don't read as one sound), and
   (b) one-vowel grammatical particles like the preposition/converter
-  `ⲉ-`, e.g. `ⲉ̀ⲃⲟⲗ`, `ⲉ̀ϩⲣⲏⲓ`, `ⲉ̀ⲡⲓϣ̀ⲗⲏⲗ` — the same "short syllable
+  `ⲉ-`, e.g. `ⲉ̀ⲃⲟⲗ`, `ⲉ̀ϩ̀ⲣⲏⲓ`, `ⲉ̀ⲡⲓϣ̀ⲗⲏⲗ` — the same "short syllable
   standing on its own" logic as the consonant cases above, just on a
   vowel instead of a consonant.
 - **ⲛ̀ → ⲙ̀ before labials:** the one-consonant particle ⲛ̀ (genitive,
