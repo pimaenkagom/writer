@@ -67,6 +67,16 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   German value) and its likely const name (e.g. `WashingOfTheHands`). If a
   match exists elsewhere, reuse it (moving it into `shared/` if it isn't
   there yet) instead of creating a new one.
+  **Match on the content, not on the label:** also grep for the distinctive
+  phrase or incipit (Coptic and/or English). The same liturgical text must be
+  reused even if the requested title frames it differently (e.g. "Das Lied
+  Wir beten dich an, o Christus" is the existing
+  `sectionTheResponseOfThePeopleWeWorshipYouOChrist`). Conversely, an
+  identical title does **not** guarantee identical content ("Das Gebet für
+  die Opfergaben" in the Catholic Epistle chapter is a different prayer from
+  the litany of the same German name, أوشية القرابين, under "Die Bittgebete").
+  So when a match is found only by title and the liturgical context differs,
+  ask briefly before moving it to `shared/`.
 - **Definition order matches `children` order:** within a file, define the
   children (text + node) in the same order as they appear in the parent's
   `children` array where possible. When the order in `children` changes,
@@ -92,7 +102,11 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   ```
 
   (Skip `ancient_greek` for texts built with
-  `makeMultilingualTextWithIdWithoutGreek`.)
+  `makeMultilingualTextWithIdWithoutGreek`.) The constructors set the default
+  status `FAC8DA02-072C-45A1-A1C9-2435D797A3B5` on every language entry. A
+  "To Check" line can also target a single language. It is an intentional
+  marker, not a bug: don't remove it or set it back to the default unless the
+  user says the check is done.
 
 ## MultilingualText conventions
 
@@ -103,7 +117,9 @@ provide a text with no Greek original.
 
 - **Arabic must always be fully vocalized** (tashkeel: fatha, damma, kasra,
   sukun, shadda, case endings) — never leave Arabic `value` fields
-  unvocalized, even in a first draft.
+  unvocalized, even in a first draft. If the vocalization of a transliterated
+  proper name is uncertain (e.g. Greek-derived names), tell the user it is a
+  best-effort approximation.
 - The "Ancient Greek" field is really **Koine/ecclesiastical Greek**, not
   Attic — vocabulary like λειτουργία (church service), ὀρθόδοξος, ἐκκλησία
   (church), or patristic names (Βασίλειος, Γρηγόριος, Κύριλλος) has no
@@ -122,8 +138,14 @@ provide a text with no Greek original.
   Coptic translations. Back new terms with a Bible verse or a passage from
   the liturgical books where possible (e.g. `ⲓⲁ` "to wash" from
   `Ϯⲛⲁⲓⲁ ⲧⲟⲧ`, Psalm 25:6); if no attestation is known, tell the user
-  explicitly instead of presenting the word as certain.
-
+  explicitly instead of presenting the word as certain. Before settling on
+  wording for a title, look for a verse on the same theme and prefer its
+  vocabulary over phrasing constructed from dictionary parts (e.g.
+  `ⲉⲣⲇⲟⲕⲓⲙⲁⲍⲓⲛ` for "Die Selbstprüfung vor dem Dienst", from
+  `ⲙⲁⲣⲉϥⲉⲣⲇⲟⲕⲓⲙⲁⲍⲓⲛ ⲙ̀ⲙⲟϥ ⲙ̀ⲙⲓⲛ ⲙ̀ⲙⲟϥ ⲛ̀ϫⲉ ⲡⲓⲣⲱⲙⲓ`, 1 Corinthians 11:28). This
+  matters most for content with a clear biblical parallel, less for purely
+  structural titles.
+- **"Introduction"/"Einleitung"** is always `Ⲡⲓϣⲟⲣⲡ ⲛ̀ⲧⲉ ...`.
 - Capitalize **only the first word of a sentence/title**, not every word
   (unlike German) and not systematically per word (unlike English title
   case). A word mid-sentence stays lowercase even if it's a proper name's
@@ -191,12 +213,16 @@ provide a text with no Greek original.
 - **Never abbreviate words** (e.g. no nomina-sacra contractions like
   `ⲡ̅ⲛ̅ⲁ̅` for "spirit" — spell it out in full as `ⲡⲛⲉⲩⲙⲁ`). Numbers are the
   only exception, where the traditional numeral-letter notation (e.g.
-  `ⲣ̅ⲛ̅` for "150") is fine in titles; in running/body text (paragraphs,
-  clauses) add the number spelled out in parentheses right after the
-  numeral. This applies to **all five languages**, not
+  `ⲣ̅ⲛ̅` for "150", Greek `ια΄`, digits) is fine in titles; in running/body
+  text (paragraphs, clauses) add the number spelled out in parentheses right
+  after the numeral. This applies to **all five languages**, not
   just Coptic: no "St." for "Saint", no "Hl." for "Heilige", no shortened
-  book names like "Ps."/"Mt." etc. If an abbreviation shows up in existing
-  data or a supplied source, expand it and tell the user.
+  book names like "Ps."/"Mt." etc. It also applies to code comments next to
+  the data and to **chat replies** (no "z. B.", "bzw.", "usw.", "ggf.",
+  "Jes 66,7"; write "zum Beispiel", "beziehungsweise", "und so weiter",
+  "gegebenenfalls", "Jesaja 66,7"). If an abbreviation shows up in the user's
+  request, existing data or a supplied source, expand it and tell the user
+  what was expanded.
 
 ## Arabic liturgical terminology
 
@@ -228,3 +254,30 @@ provide a text with no Greek original.
   Fire), not literal translations of the German/English names.
 - كلمات التأسيس is the standard term for "Words of Institution" (not
   «صلوات التأسيس», "prayers").
+
+## Working with the user
+
+- **Flag errors in the user's own text.** Before using a supplied German title
+  or text verbatim (as a `german` value or as the basis for a variable name),
+  scan it for spelling and grammar mistakes and point them out. Don't silently
+  correct them or silently carry them through. Correct and mention obvious
+  typos; otherwise ask whether to correct or keep the text as given.
+
+## Open decisions
+
+Terminology questions the user has postponed. Remind the user briefly when
+working on the affected sections, and remove an item once it is resolved.
+
+1. **Pauline Epistle in Coptic:** keep `ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ` or switch to the
+   lectionary short name `Ⲡⲓⲁ̀ⲡⲟⲥⲧⲟⲗⲟⲥ` ("the Apostle"), parallel to
+   `Ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ` / `Ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ`.
+2. **Jenkim on Greek loanwords with an initial consonant cluster:** the user
+   questioned `Ⲡⲓⲧ̀ⲣⲓⲥⲁⲅⲓⲟⲥ` (not a Coptic-origin word, so perhaps no jenkim).
+   It stays for now, based on the jenkim rule above, the user's book images
+   (`ⲙ̀ⲡ̀ⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ`, `ⲙ̀ⲡ̀ⲣⲟⲫⲏⲧⲓⲕⲟⲛ`) and existing `ⲡⲓⲥ̀ⲧⲁⲩⲣⲟⲥ` / `ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ` /
+   `Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ`. Whole Greek sentences in Coptic script get no jenkim, single
+   loanwords inside Coptic text do. Still to be investigated; if the rule
+   changes, all such loanwords must change consistently.
+3. **ⲕⲉ- with or without Ⲟⲩ:** currently bare at the start of headings and
+   `ⲟⲩⲕⲉ-` inside a phrase (see above). Still to be researched, including the
+   unusual jenkim in `Ⲕⲉⲉ̀ⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ` (`ⲉⲣⲟⲩⲱ` elsewhere has none).
