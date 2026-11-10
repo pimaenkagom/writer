@@ -177,8 +177,10 @@ provide a text with no Greek original.
   is integrated into a Coptic sentence in any way (Coptic article, e.g.
   `ⲡⲓⲁ̀ⲡⲟⲥⲧⲟⲗⲟⲥ`, which already counts as adapted; Coptic
   conjugation such as `ⲁⲣⲓⲡ̀ⲣⲉⲥⲃⲉⲩⲓⲛ`, declension and so on), the Coptic jenkim
-  rules above apply to it in full. Unadapted single Greek words inside a
-  Coptic sentence are still an open decision (see below).
+  rules above apply to it in full. The same holds for Greek words without any
+  Coptic morphology (adverbs, particles) as long as they stand in their place
+  according to Coptic grammar, i.e. are integrated into a Coptic phrase, e.g.
+  `ⲡⲉⲕⲗⲁⲟⲥ ⲅⲁⲣ`, `Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ`.
 - **ⲛ̀ → ⲙ̀ before labials:** the one-consonant particle ⲛ̀ (genitive,
   object marker, etc.) assimilates to **ⲙ̀** before ⲡ, ⲙ, ⲫ, ⲯ, and it is
   always written attached to the following word, never as a separate word
@@ -278,12 +280,6 @@ working on the affected sections, and remove an item once it is resolved.
 1. **Pauline Epistle in Coptic:** keep `ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ` or switch to the
    lectionary short name `Ⲡⲓⲁ̀ⲡⲟⲥⲧⲟⲗⲟⲥ` ("the Apostle"), parallel to
    `Ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ` / `Ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ`.
-2. **Jenkim on unadapted single Greek words in a Coptic sentence:** Greek
-   sentences get none, adapted Greek words follow the Coptic rules (see
-   "Greek text in Coptic script" above). Open: a single Greek word inside a
-   Coptic sentence that carries no Coptic adaptation, for example the adverb
-   in `Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ` or particles such as ⲇⲉ, ⲅⲁⲣ, ⲁⲗⲗⲁ. If the rule
-   changes, all affected words must change consistently.
-3. **ⲕⲉ- with or without Ⲟⲩ:** currently bare at the start of headings and
+2. **ⲕⲉ- with or without Ⲟⲩ:** currently bare at the start of headings and
    `ⲟⲩⲕⲉ-` inside a phrase (see above). Still to be researched, including the
    unusual jenkim in `Ⲕⲉⲉ̀ⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ` (`ⲉⲣⲟⲩⲱ` elsewhere has none).
