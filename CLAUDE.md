@@ -164,14 +164,21 @@ provide a text with no Greek original.
   cluster Coptic doesn't like word-initially, e.g. `ⲡ̀ⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ`,
   `ⲡ̀ⲣⲉⲥⲃⲓⲁ`, `ϣ̀ⲗⲏⲗ`. Not needed on ordinary polysyllabic words/loanwords
   that already carry their own vowels (e.g. `ⲗⲓⲧⲟⲩⲣⲅⲓⲕⲟⲛ`).
-- The same mark also appears on a **vowel** that must form its own
-  syllable rather than merging with a neighbour: (a) hiatus after a
-  vowel-final article, e.g. `Ⲡⲓⲁ̀ⲛⲁⲅⲛⲱⲥⲧⲏⲥ` (ⲡⲓ + ⲁ, so the article's
-  final vowel and the noun's initial vowel don't read as one sound), and
-  (b) one-vowel grammatical particles like the preposition/converter
-  `ⲉ-`, e.g. `ⲉ̀ⲃⲟⲗ`, `ⲉ̀ϩ̀ⲣⲏⲓ`, `ⲉ̀ⲡⲓϣ̀ⲗⲏⲗ` — the same "short syllable
-  standing on its own" logic as the consonant cases above, just on a
-  vowel instead of a consonant.
+- The same mark appears on a **vowel only when that single vowel forms an
+  entire syllable by itself**, i.e. it is followed by a consonant + vowel
+  (or stands alone): e.g. `ⲉ̀ⲃⲟⲗ` (ⲉ-ⲃⲟⲗ), `ⲉ̀ϩ̀ⲣⲏⲓ`, `ⲉ̀ⲡⲓϣ̀ⲗⲏⲗ`,
+  `ⲡⲓϣⲁⲉ̀ⲛⲉϩ` (ϣⲁ-ⲉ-ⲛⲉϩ), `Ⲡⲓⲁ̀ⲛⲁⲅⲛⲱⲥⲧⲏⲥ` (ⲁ-ⲛⲁⲅ-…), the vocative `ⲱ̀`.
+  **No jenkim** when the vowel belongs to a closed syllable with a following
+  consonant, e.g. `ⲛⲓⲁⲅⲅⲉⲗⲟⲥ` (ⲁⲅ-ⲅⲉ-ⲗⲟⲥ), `ⲛ̀ⲁⲣⲭⲏⲁⲅⲅⲉⲗⲟⲥ`, `ⲡⲓⲉⲣⲫⲉⲓ`
+  (ⲉⲣ-ⲫⲉⲓ) — not `ⲛⲓⲁ̀ⲅⲅⲉⲗⲟⲥ`.
+- **Greek text in Coptic script:** Greek sentences and Greek partial
+  sentences (e.g. the Trisagion, `Ⲕⲩⲣⲓⲉ ⲉⲗⲉⲏⲥⲟⲛ`) get **no jenkim at all**,
+  even though some modern liturgical books add them. As soon as a Greek word
+  is integrated into a Coptic sentence in any way (Coptic article, e.g.
+  `ⲡⲓⲁ̀ⲡⲟⲥⲧⲟⲗⲟⲥ`, which already counts as adapted; Coptic
+  conjugation such as `ⲁⲣⲓⲡ̀ⲣⲉⲥⲃⲉⲩⲓⲛ`, declension and so on), the Coptic jenkim
+  rules above apply to it in full. Unadapted single Greek words inside a
+  Coptic sentence are still an open decision (see below).
 - **ⲛ̀ → ⲙ̀ before labials:** the one-consonant particle ⲛ̀ (genitive,
   object marker, etc.) assimilates to **ⲙ̀** before ⲡ, ⲙ, ⲫ, ⲯ, and it is
   always written attached to the following word, never as a separate word
@@ -271,13 +278,12 @@ working on the affected sections, and remove an item once it is resolved.
 1. **Pauline Epistle in Coptic:** keep `ϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̀ⲧⲉ Ⲡⲁⲩⲗⲟⲥ` or switch to the
    lectionary short name `Ⲡⲓⲁ̀ⲡⲟⲥⲧⲟⲗⲟⲥ` ("the Apostle"), parallel to
    `Ⲡⲓⲕⲁⲑⲟⲗⲓⲕⲟⲛ` / `Ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ`.
-2. **Jenkim on Greek loanwords with an initial consonant cluster:** the user
-   questioned `Ⲡⲓⲧ̀ⲣⲓⲥⲁⲅⲓⲟⲥ` (not a Coptic-origin word, so perhaps no jenkim).
-   It stays for now, based on the jenkim rule above, the user's book images
-   (`ⲙ̀ⲡ̀ⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ`, `ⲙ̀ⲡ̀ⲣⲟⲫⲏⲧⲓⲕⲟⲛ`) and existing `ⲡⲓⲥ̀ⲧⲁⲩⲣⲟⲥ` / `ⲡⲓⲡ̀ⲣⲁⲝⲓⲥ` /
-   `Ⲡⲓⲭ̀ⲣⲓⲥⲧⲟⲥ`. Whole Greek sentences in Coptic script get no jenkim, single
-   loanwords inside Coptic text do. Still to be investigated; if the rule
-   changes, all such loanwords must change consistently.
+2. **Jenkim on unadapted single Greek words in a Coptic sentence:** Greek
+   sentences get none, adapted Greek words follow the Coptic rules (see
+   "Greek text in Coptic script" above). Open: a single Greek word inside a
+   Coptic sentence that carries no Coptic adaptation, for example the adverb
+   in `Ⲕ̀ⲥⲙⲁⲣⲱⲟⲩⲧ ⲁ̀ⲗⲏⲑⲱⲥ` or particles such as ⲇⲉ, ⲅⲁⲣ, ⲁⲗⲗⲁ. If the rule
+   changes, all affected words must change consistently.
 3. **ⲕⲉ- with or without Ⲟⲩ:** currently bare at the start of headings and
    `ⲟⲩⲕⲉ-` inside a phrase (see above). Still to be researched, including the
    unusual jenkim in `Ⲕⲉⲉ̀ⲣⲟⲩⲱ ⲛ̀ⲧⲉ ϯⲟⲙⲟⲗⲟⲅⲓⲁ` (`ⲉⲣⲟⲩⲱ` elsewhere has none).
