@@ -38,6 +38,7 @@ import '$lib/utilities/initializer/shared/section-hymn-a-star-rose-in-the-east';
 import '$lib/utilities/initializer/shared/section-the-hymn-blessed-are-you-indeed';
 import '$lib/utilities/initializer/shared/section-the-call-to-prayer';
 import '$lib/utilities/initializer/shared/section-the-response-of-the-people-we-worship-you-o-christ';
+import '$lib/utilities/initializer/shared/section-the-short-blessing-for-the-ordinary-days';
 import '$lib/utilities/initializer/shared/section-the-washing-of-the-hands';
 import '$lib/utilities/initializer/shared/sections-the-litanies-for-departed-hierarchs';
 import '$lib/utilities/initializer/shared/sections-the-offering-of-incense';

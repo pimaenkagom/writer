@@ -1,10 +1,10 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
 import {
 	makeMultilingualTextWithId,
-	makeMultilingualTextWithIdWithoutGreek
+	makeMultilingualTextWithIdWithoutGreek,
+	setChildren
 } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheCallToPrayer } from '$lib/utilities/initializer/shared/section-the-call-to-prayer';
@@ -26,7 +26,7 @@ export const textTheOfferingOfTheOblations = await makeMultilingualTextWithId(
 
 export const partTheOfferingOfTheOblations = registerNode<Basenode>({
 	id: '6B18A8DD-2142-4FE6-9874-3DCD942A22BF',
-	users: [bookTheLiturgyAccordingToBasil.id],
+	users: [],
 	type: NodeType.Part,
 	value: textTheOfferingOfTheOblations.id,
 	valueType: ContentType.MultilingualText,
@@ -49,7 +49,7 @@ export const textThePreparationForTheEucharisticService = await makeMultilingual
 
 export const chapterThePreparationForTheEucharisticService = registerNode<Basenode>({
 	id: 'F37FF04A-3CF4-4702-9CCA-CF8502B3E2DC',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePreparationForTheEucharisticService.id,
 	valueType: ContentType.MultilingualText,
@@ -72,7 +72,7 @@ export const textSelfExaminationBeforeTheService = await makeMultilingualTextWit
 
 export const sectionSelfExaminationBeforeTheService = registerNode<Basenode>({
 	id: '3FB75A8B-EF0E-4342-A2CA-CB5F73DDCC7C',
-	users: [chapterThePreparationForTheEucharisticService.id],
+	users: [],
 	type: NodeType.Section,
 	value: textSelfExaminationBeforeTheService.id,
 	valueType: ContentType.MultilingualText,
@@ -95,7 +95,7 @@ export const textThePuttingOnOfTheServiceVestments = await makeMultilingualTextW
 
 export const sectionThePuttingOnOfTheServiceVestments = registerNode<Basenode>({
 	id: '0A5CBCDD-327B-411F-A3CD-D343529CE782',
-	users: [chapterThePreparationForTheEucharisticService.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePuttingOnOfTheServiceVestments.id,
 	valueType: ContentType.MultilingualText,
@@ -118,7 +118,7 @@ export const textThePreparationOfTheAltar = await makeMultilingualTextWithId(
 
 export const sectionThePreparationOfTheAltar = registerNode<Basenode>({
 	id: '5BA4CA73-5A48-45CB-AAAC-19AF08ACCABD',
-	users: [chapterThePreparationForTheEucharisticService.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePreparationOfTheAltar.id,
 	valueType: ContentType.MultilingualText,
@@ -141,7 +141,7 @@ export const textTheHymnOfJoy = await makeMultilingualTextWithId(
 
 export const sectionTheHymnOfJoy = registerNode<Basenode>({
 	id: '0202832B-41BC-45A2-9D9C-F961A5DDF31A',
-	users: [chapterThePreparationForTheEucharisticService.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnOfJoy.id,
 	valueType: ContentType.MultilingualText,
@@ -164,7 +164,7 @@ export const textTheHymnOfBlessing = await makeMultilingualTextWithId(
 
 export const sectionTheHymnOfBlessing = registerNode<Basenode>({
 	id: '7ED1B158-904F-4434-9FE8-14F009E0B331',
-	users: [chapterThePreparationForTheEucharisticService.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnOfBlessing.id,
 	valueType: ContentType.MultilingualText,
@@ -187,21 +187,21 @@ export const textHailMaryTheQueen = await makeMultilingualTextWithId(
 
 export const sectionHailMaryTheQueen = registerNode<Basenode>({
 	id: '408B0893-C922-44B8-B861-55802274284F',
-	users: [chapterThePreparationForTheEucharisticService.id],
+	users: [],
 	type: NodeType.Section,
 	value: textHailMaryTheQueen.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterThePreparationForTheEucharisticService.children = [
-	[sectionSelfExaminationBeforeTheService.id],
-	[sectionThePuttingOnOfTheServiceVestments.id],
-	[sectionThePreparationOfTheAltar.id],
-	[sectionTheHymnOfJoy.id],
-	[sectionTheHymnOfBlessing.id],
-	[sectionHailMaryTheQueen.id]
-];
+setChildren(chapterThePreparationForTheEucharisticService, [
+	[sectionSelfExaminationBeforeTheService],
+	[sectionThePuttingOnOfTheServiceVestments],
+	[sectionThePreparationOfTheAltar],
+	[sectionTheHymnOfJoy],
+	[sectionTheHymnOfBlessing],
+	[sectionHailMaryTheQueen]
+]);
 
 export const textThePsalmsOfTheThirdHour = await makeMultilingualTextWithId(
 	'08FB4B66-93B3-4625-AD17-E12B5D5480D3',
@@ -219,7 +219,7 @@ export const textThePsalmsOfTheThirdHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheThirdHour = registerNode<Basenode>({
 	id: 'E916BEAA-58E5-4684-89A0-A09CF09F4BBF',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheThirdHour.id,
 	valueType: ContentType.MultilingualText,
@@ -242,7 +242,7 @@ export const textThePsalmsOfTheSixthHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheSixthHour = registerNode<Basenode>({
 	id: 'CB063C83-D2F1-4BD4-B7F7-817D8BCD901A',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheSixthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -265,7 +265,7 @@ export const textThePsalmsOfTheNinthHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheNinthHour = registerNode<Basenode>({
 	id: '75035897-7DEE-47A1-B731-2FC9CF8C4A6E',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheNinthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -288,7 +288,7 @@ export const textThePsalmsOfTheEleventhHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheEleventhHour = registerNode<Basenode>({
 	id: 'F409BA49-0E59-4904-8E5D-8D0439F57FB7',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheEleventhHour.id,
 	valueType: ContentType.MultilingualText,
@@ -311,7 +311,7 @@ export const textThePsalmsOfTheTwelfthHour = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheTwelfthHour = registerNode<Basenode>({
 	id: '8834A5DD-F385-4C0F-8A1F-205F3C6D8F93',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheTwelfthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -334,7 +334,7 @@ export const textThePsalmsOfTheVeil = await makeMultilingualTextWithId(
 
 export const chapterThePsalmsOfTheVeil = registerNode<Basenode>({
 	id: '345DD999-C135-48BA-821B-3B89299C8091',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePsalmsOfTheVeil.id,
 	valueType: ContentType.MultilingualText,
@@ -368,7 +368,7 @@ textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.texts.german.status =
 
 export const chapterTheGospelTheLitaniesAndThePrayersOfTheThirdHour = registerNode<Basenode>({
 	id: '617B9FE6-B27F-4D08-9A15-105E806CD47B',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheGospelTheLitaniesAndThePrayersOfTheThirdHour.id,
 	valueType: ContentType.MultilingualText,
@@ -402,7 +402,7 @@ textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.texts.german.status =
 
 export const chapterTheGospelTheLitaniesAndThePrayersOfTheSixthHour = registerNode<Basenode>({
 	id: '913FF446-4613-4527-ABC3-1F54CA97C104',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheGospelTheLitaniesAndThePrayersOfTheSixthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -436,7 +436,7 @@ textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.texts.german.status =
 
 export const chapterTheGospelTheLitaniesAndThePrayersOfTheNinthHour = registerNode<Basenode>({
 	id: '310A8D40-29C4-41AC-8EB8-B4BE8C699545',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheGospelTheLitaniesAndThePrayersOfTheNinthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -471,7 +471,7 @@ textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.texts.german.status =
 
 export const chapterTheGospelTheLitaniesAndThePrayersOfTheEleventhHour = registerNode<Basenode>({
 	id: 'C809A449-DFB5-434A-ABA9-63434B99DF4C',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.id,
 	valueType: ContentType.MultilingualText,
@@ -506,7 +506,7 @@ textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.texts.german.status =
 
 export const chapterTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour = registerNode<Basenode>({
 	id: '02FE91C9-1F11-410B-9A6C-76391AE781A8',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.id,
 	valueType: ContentType.MultilingualText,
@@ -540,7 +540,7 @@ textTheGospelTheLitaniesAndThePrayersOfTheVeil.texts.german.status =
 
 export const chapterTheGospelTheLitaniesAndThePrayersOfTheVeil = registerNode<Basenode>({
 	id: '42F5EF31-6F83-4318-B96F-15B9BE115A95',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheGospelTheLitaniesAndThePrayersOfTheVeil.id,
 	valueType: ContentType.MultilingualText,
@@ -569,7 +569,7 @@ textTheOfferingOfTheLamb.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A8
 
 export const chapterTheOfferingOfTheLamb = registerNode<Basenode>({
 	id: '375F2ABE-D728-4F1F-A64C-46821A40D3DB',
-	users: [partTheOfferingOfTheOblations.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheOfferingOfTheLamb.id,
 	valueType: ContentType.MultilingualText,
@@ -592,7 +592,7 @@ export const textTheSelectionOfTheLamb = await makeMultilingualTextWithId(
 
 export const sectionTheSelectionOfTheLamb = registerNode<Basenode>({
 	id: 'E036D876-BB47-4B96-B148-7003EFE96532',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheSelectionOfTheLamb.id,
 	valueType: ContentType.MultilingualText,
@@ -628,7 +628,7 @@ textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.german.statu
 export const sectionTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays =
 	registerNode<Basenode>({
 		id: 'F58C9D4D-0E07-4DF2-976D-E79C431FA473',
-		users: [chapterTheOfferingOfTheLamb.id],
+		users: [],
 		type: NodeType.Section,
 		value: textTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.id,
 		valueType: ContentType.MultilingualText,
@@ -651,7 +651,7 @@ export const textTheHymnForTheSelectionOfTheLambDuringAFast = await makeMultilin
 
 export const sectionTheHymnForTheSelectionOfTheLambDuringAFast = registerNode<Basenode>({
 	id: 'E328DE13-C4FB-402E-A684-52307B23F795',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnForTheSelectionOfTheLambDuringAFast.id,
 	valueType: ContentType.MultilingualText,
@@ -674,7 +674,7 @@ export const textTheProcessionOfTheLamb = await makeMultilingualTextWithId(
 
 export const sectionTheProcessionOfTheLamb = registerNode<Basenode>({
 	id: '977451C5-4400-404B-BB96-B67DF4257830',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheProcessionOfTheLamb.id,
 	valueType: ContentType.MultilingualText,
@@ -710,7 +710,7 @@ textThePsalmDuringTheProcessionOfTheLambOnTheOrdinaryAndJoyfulDays.texts.german.
 export const sectionThePsalmDuringTheProcessionOfTheLambOnTheOrdinaryAndJoyfulDays =
 	registerNode<Basenode>({
 		id: '3C46F54E-E8E6-40D7-90A4-16F805078561',
-		users: [chapterTheOfferingOfTheLamb.id],
+		users: [],
 		type: NodeType.Section,
 		value: textThePsalmDuringTheProcessionOfTheLambOnTheOrdinaryAndJoyfulDays.id,
 		valueType: ContentType.MultilingualText,
@@ -745,7 +745,7 @@ textThePsalmDuringTheProcessionOfTheLambOnFastingDays.texts.german.status =
 
 export const sectionThePsalmDuringTheProcessionOfTheLambOnFastingDays = registerNode<Basenode>({
 	id: '58C45D94-1403-44FD-8A4D-E981EA473F88',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePsalmDuringTheProcessionOfTheLambOnFastingDays.id,
 	valueType: ContentType.MultilingualText,
@@ -781,7 +781,7 @@ textThePsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreat
 export const sectionThePsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast =
 	registerNode<Basenode>({
 		id: '0679478D-6679-48F2-A9A0-5D5433F297B1',
-		users: [chapterTheOfferingOfTheLamb.id],
+		users: [],
 		type: NodeType.Section,
 		value: textThePsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id,
 		valueType: ContentType.MultilingualText,
@@ -817,7 +817,7 @@ textAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheG
 export const sectionAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast =
 	registerNode<Basenode>({
 		id: 'CA325870-297B-4B48-B022-DA17C3060AF2',
-		users: [chapterTheOfferingOfTheLamb.id],
+		users: [],
 		type: NodeType.Section,
 		value:
 			textAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id,
@@ -841,7 +841,7 @@ export const textTheBlessingOfTheGifts = await makeMultilingualTextWithId(
 
 export const sectionTheBlessingOfTheGifts = registerNode<Basenode>({
 	id: '59858B6B-C5DD-40B2-892E-EB6B7FD1DFB9',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheBlessingOfTheGifts.id,
 	valueType: ContentType.MultilingualText,
@@ -870,7 +870,7 @@ textThePrayerOfThanksgiving.texts.german.status = '4ACF926E-370D-4D90-B642-530FA
 
 export const sectionThePrayerOfThanksgiving = registerNode<Basenode>({
 	id: '8493664C-AF95-4319-BF8D-58835268C63E',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerOfThanksgiving.id,
 	valueType: ContentType.MultilingualText,
@@ -893,7 +893,7 @@ export const textTheVeilingOfTheOfferings = await makeMultilingualTextWithId(
 
 export const sectionTheVeilingOfTheOfferings = registerNode<Basenode>({
 	id: 'AF51E07F-6557-4666-9099-8EFA7ED5DC57',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheVeilingOfTheOfferings.id,
 	valueType: ContentType.MultilingualText,
@@ -923,7 +923,7 @@ textThePrayerOfAbsolutionToTheSon.texts.german.status = '4ACF926E-370D-4D90-B642
 
 export const sectionThePrayerOfAbsolutionToTheSon = registerNode<Basenode>({
 	id: '6194AFF5-889B-4965-93C8-72AB05D71384',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerOfAbsolutionToTheSon.id,
 	valueType: ContentType.MultilingualText,
@@ -946,7 +946,7 @@ export const textTheDescentFromTheHolyOfHolies = await makeMultilingualTextWithI
 
 export const sectionTheDescentFromTheHolyOfHolies = registerNode<Basenode>({
 	id: 'FD1A7CF2-75FE-4B46-9926-AC5B9D424A54',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheDescentFromTheHolyOfHolies.id,
 	valueType: ContentType.MultilingualText,
@@ -971,7 +971,7 @@ export const textThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysO
 export const sectionThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast =
 	registerNode<Basenode>({
 		id: 'D3F09D6E-B0CD-4527-BC36-F92312F2E423',
-		users: [chapterTheOfferingOfTheLamb.id],
+		users: [],
 		type: NodeType.Section,
 		value: textThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast.id,
 		valueType: ContentType.MultilingualText,
@@ -994,7 +994,7 @@ export const textTheProstration = await makeMultilingualTextWithId(
 
 export const sectionTheProstration = registerNode<Basenode>({
 	id: '830F7B0B-AEEC-4AF2-A232-89C3A2535285',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheProstration.id,
 	valueType: ContentType.MultilingualText,
@@ -1023,7 +1023,7 @@ textTheResponseLordHaveMercy.texts.german.status = '4ACF926E-370D-4D90-B642-530F
 
 export const sectionTheResponseLordHaveMercy = registerNode<Basenode>({
 	id: '07501DF5-0B1E-41F5-906A-8D73185ABD34',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheResponseLordHaveMercy.id,
 	valueType: ContentType.MultilingualText,
@@ -1044,7 +1044,7 @@ export const textTheHymnAllTheWiseMenOfIsrael = await makeMultilingualTextWithId
 
 export const sectionTheHymnAllTheWiseMenOfIsrael = registerNode<Basenode>({
 	id: '8F9DFDDB-4361-4B81-B7D7-96D31425060C',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnAllTheWiseMenOfIsrael.id,
 	valueType: ContentType.MultilingualText,
@@ -1067,49 +1067,49 @@ export const textTheAbsolutionOfTheServants = await makeMultilingualTextWithId(
 
 export const sectionTheAbsolutionOfTheServants = registerNode<Basenode>({
 	id: '60AA4D01-AB80-42C8-B7AA-258014D34662',
-	users: [chapterTheOfferingOfTheLamb.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheAbsolutionOfTheServants.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheOfferingOfTheLamb.children = [
-	[sectionTheWashingOfTheHands.id],
-	[sectionTheSelectionOfTheLamb.id],
-	[sectionTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays.id],
-	[sectionTheHymnForTheSelectionOfTheLambDuringAFast.id],
-	[sectionTheProcessionOfTheLamb.id],
-	[sectionThePsalmDuringTheProcessionOfTheLambOnTheOrdinaryAndJoyfulDays.id],
-	[sectionThePsalmDuringTheProcessionOfTheLambOnFastingDays.id],
-	[sectionThePsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
-	[sectionAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
-	[sectionTheBlessingOfTheGifts.id],
-	[sectionTheCallToPrayer.id],
-	[sectionThePrayerOfThanksgiving.id],
-	[sectionTheVeilingOfTheOfferings.id],
-	[sectionThePrayerOfAbsolutionToTheSon.id],
-	[sectionTheDescentFromTheHolyOfHolies.id],
-	[sectionThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast.id],
-	[sectionTheProstration.id],
-	[sectionTheResponseLordHaveMercy.id],
-	[sectionTheHymnAllTheWiseMenOfIsrael.id],
-	[sectionTheAbsolutionOfTheServants.id]
-];
+setChildren(chapterTheOfferingOfTheLamb, [
+	[sectionTheWashingOfTheHands],
+	[sectionTheSelectionOfTheLamb],
+	[sectionTheHymnForTheSelectionOfTheLambOnTheOrdinaryAndJoyfulDays],
+	[sectionTheHymnForTheSelectionOfTheLambDuringAFast],
+	[sectionTheProcessionOfTheLamb],
+	[sectionThePsalmDuringTheProcessionOfTheLambOnTheOrdinaryAndJoyfulDays],
+	[sectionThePsalmDuringTheProcessionOfTheLambOnFastingDays],
+	[sectionThePsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast],
+	[sectionAnotherPsalmDuringTheProcessionOfTheLambOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast],
+	[sectionTheBlessingOfTheGifts],
+	[sectionTheCallToPrayer],
+	[sectionThePrayerOfThanksgiving],
+	[sectionTheVeilingOfTheOfferings],
+	[sectionThePrayerOfAbsolutionToTheSon],
+	[sectionTheDescentFromTheHolyOfHolies],
+	[sectionThePsalmBeforeTheProstrationDuringTheFastOfJonahAndTheWeekdaysOfTheGreatFast],
+	[sectionTheProstration],
+	[sectionTheResponseLordHaveMercy],
+	[sectionTheHymnAllTheWiseMenOfIsrael],
+	[sectionTheAbsolutionOfTheServants]
+]);
 
-partTheOfferingOfTheOblations.children = [
-	[chapterThePreparationForTheEucharisticService.id],
-	[chapterThePsalmsOfTheThirdHour.id],
-	[chapterThePsalmsOfTheSixthHour.id],
-	[chapterThePsalmsOfTheNinthHour.id],
-	[chapterThePsalmsOfTheEleventhHour.id],
-	[chapterThePsalmsOfTheTwelfthHour.id],
-	[chapterThePsalmsOfTheVeil.id],
-	[chapterTheGospelTheLitaniesAndThePrayersOfTheThirdHour.id],
-	[chapterTheGospelTheLitaniesAndThePrayersOfTheSixthHour.id],
-	[chapterTheGospelTheLitaniesAndThePrayersOfTheNinthHour.id],
-	[chapterTheGospelTheLitaniesAndThePrayersOfTheEleventhHour.id],
-	[chapterTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour.id],
-	[chapterTheGospelTheLitaniesAndThePrayersOfTheVeil.id],
-	[chapterTheOfferingOfTheLamb.id]
-];
+setChildren(partTheOfferingOfTheOblations, [
+	[chapterThePreparationForTheEucharisticService],
+	[chapterThePsalmsOfTheThirdHour],
+	[chapterThePsalmsOfTheSixthHour],
+	[chapterThePsalmsOfTheNinthHour],
+	[chapterThePsalmsOfTheEleventhHour],
+	[chapterThePsalmsOfTheTwelfthHour],
+	[chapterThePsalmsOfTheVeil],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheThirdHour],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheSixthHour],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheNinthHour],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheEleventhHour],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheTwelfthHour],
+	[chapterTheGospelTheLitaniesAndThePrayersOfTheVeil],
+	[chapterTheOfferingOfTheLamb]
+]);

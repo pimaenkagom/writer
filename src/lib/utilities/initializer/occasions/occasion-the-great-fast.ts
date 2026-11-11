@@ -33,10 +33,7 @@ textTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel.texts.german.s
 export const chapterTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '5CC32F53-3A2F-4A9C-A1E6-B3A10529AEFC',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

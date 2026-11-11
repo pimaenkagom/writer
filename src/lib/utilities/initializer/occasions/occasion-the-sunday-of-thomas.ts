@@ -33,10 +33,7 @@ textTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel.texts.ger
 export const chapterTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '461B50CB-8D16-42A6-8D1A-CCDB88763B4F',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

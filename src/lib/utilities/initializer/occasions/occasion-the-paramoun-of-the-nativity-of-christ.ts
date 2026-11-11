@@ -1,7 +1,7 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import { makeMultilingualTextWithId, setChildren } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheHymnAStarRoseInTheEast } from '$lib/utilities/initializer/shared/section-hymn-a-star-rose-in-the-east';
 
@@ -26,15 +26,14 @@ textTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheG
 export const chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '80AC9FE8-93A1-4AE7-8FFA-45C70F0F154F',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
 
-chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.children =
-	[[sectionTheHymnAStarRoseInTheEast.id]];
+setChildren(
+	chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel,
+	[[sectionTheHymnAStarRoseInTheEast]]
+);

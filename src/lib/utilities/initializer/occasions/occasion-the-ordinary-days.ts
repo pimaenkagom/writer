@@ -22,10 +22,7 @@ export const textTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel
 export const chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '698F6CD1-4DFB-4632-9EAF-11D0FB8746E3',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

@@ -33,10 +33,7 @@ textTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel.
 export const chapterTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '1EDD20AA-20DD-4545-956E-BD070F17951E',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

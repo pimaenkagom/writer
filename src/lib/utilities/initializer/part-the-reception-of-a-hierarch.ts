@@ -1,8 +1,7 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import { makeMultilingualTextWithId, setChildren } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheHymnBlessedAreYouIndeed } from '$lib/utilities/initializer/shared/section-the-hymn-blessed-are-you-indeed';
 
@@ -22,7 +21,7 @@ export const textTheReceptionOfAPatriarchMetropolitanOrBishop = await makeMultil
 
 export const partTheReceptionOfAPatriarchMetropolitanOrBishop = registerNode<Basenode>({
 	id: 'F5A6BE5C-A420-4B8B-A601-C9040F169736',
-	users: [bookTheLiturgyAccordingToBasil.id],
+	users: [],
 	type: NodeType.Part,
 	value: textTheReceptionOfAPatriarchMetropolitanOrBishop.id,
 	valueType: ContentType.MultilingualText,
@@ -46,16 +45,16 @@ export const textTheReceptionOfAPatriarchMetropolitanOrBishopChapter =
 
 export const chapterTheReceptionOfAPatriarchMetropolitanOrBishop = registerNode<Basenode>({
 	id: '14723A09-B96D-4BA4-B5C9-3D94BC3B02FA',
-	users: [partTheReceptionOfAPatriarchMetropolitanOrBishop.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReceptionOfAPatriarchMetropolitanOrBishopChapter.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-partTheReceptionOfAPatriarchMetropolitanOrBishop.children = [
-	[chapterTheReceptionOfAPatriarchMetropolitanOrBishop.id]
-];
+setChildren(partTheReceptionOfAPatriarchMetropolitanOrBishop, [
+	[chapterTheReceptionOfAPatriarchMetropolitanOrBishop]
+]);
 
 export const textTheHymnChristIsRisen = await makeMultilingualTextWithId(
 	'6A561924-5D81-4220-A611-F322C1D0A59C',
@@ -73,7 +72,7 @@ export const textTheHymnChristIsRisen = await makeMultilingualTextWithId(
 
 export const sectionTheHymnChristIsRisen = registerNode<Basenode>({
 	id: 'C5127270-E3EB-4447-9665-1841A870B6EB',
-	users: [chapterTheReceptionOfAPatriarchMetropolitanOrBishop.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnChristIsRisen.id,
 	valueType: ContentType.MultilingualText,
@@ -96,7 +95,7 @@ export const textTheHymnChristHasAscended = await makeMultilingualTextWithId(
 
 export const sectionTheHymnChristHasAscended = registerNode<Basenode>({
 	id: 'B6D44DC2-500F-45E3-8233-5C34FCFEAF43',
-	users: [chapterTheReceptionOfAPatriarchMetropolitanOrBishop.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnChristHasAscended.id,
 	valueType: ContentType.MultilingualText,
@@ -119,7 +118,7 @@ export const textTheHymnBlessedIsHeWhoComesInTheNameOfTheLord = await makeMultil
 
 export const sectionTheHymnBlessedIsHeWhoComesInTheNameOfTheLord = registerNode<Basenode>({
 	id: 'CD218E32-811B-4E80-9E23-4DA2EFB56588',
-	users: [chapterTheReceptionOfAPatriarchMetropolitanOrBishop.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnBlessedIsHeWhoComesInTheNameOfTheLord.id,
 	valueType: ContentType.MultilingualText,
@@ -142,17 +141,17 @@ export const textTheHymnHowBeautifulThatYouHaveComeToday = await makeMultilingua
 
 export const sectionTheHymnHowBeautifulThatYouHaveComeToday = registerNode<Basenode>({
 	id: 'F8655B24-B2C7-4C3A-AFA9-85AC6BAF7F0D',
-	users: [chapterTheReceptionOfAPatriarchMetropolitanOrBishop.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnHowBeautifulThatYouHaveComeToday.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReceptionOfAPatriarchMetropolitanOrBishop.children = [
-	[sectionTheHymnChristIsRisen.id],
-	[sectionTheHymnChristHasAscended.id],
-	[sectionTheHymnBlessedIsHeWhoComesInTheNameOfTheLord.id],
-	[sectionTheHymnBlessedAreYouIndeed.id],
-	[sectionTheHymnHowBeautifulThatYouHaveComeToday.id]
-];
+setChildren(chapterTheReceptionOfAPatriarchMetropolitanOrBishop, [
+	[sectionTheHymnChristIsRisen],
+	[sectionTheHymnChristHasAscended],
+	[sectionTheHymnBlessedIsHeWhoComesInTheNameOfTheLord],
+	[sectionTheHymnBlessedAreYouIndeed],
+	[sectionTheHymnHowBeautifulThatYouHaveComeToday]
+]);

@@ -1,10 +1,10 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { bookTheLiturgyAccordingToBasil } from '$lib/utilities/initializer/books';
 import {
 	makeMultilingualTextWithId,
-	makeMultilingualTextWithIdWithoutGreek
+	makeMultilingualTextWithIdWithoutGreek,
+	setChildren
 } from '$lib/utilities/initializer/constructors';
 import { chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-annunciation-of-christ';
 import { chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel } from '$lib/utilities/initializer/occasions/occasion-the-month-of-koiak';
@@ -80,7 +80,7 @@ export const textTheLiturgyOfTheWord = await makeMultilingualTextWithId(
 
 export const partTheLiturgyOfTheWord = registerNode<Basenode>({
 	id: 'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69',
-	users: [bookTheLiturgyAccordingToBasil.id],
+	users: [],
 	type: NodeType.Part,
 	value: textTheLiturgyOfTheWord.id,
 	valueType: ContentType.MultilingualText,
@@ -105,42 +105,42 @@ export const textTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistl
 export const chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle =
 	registerNode<Basenode>({
 		id: '88392033-583A-4D33-85D9-E14FA390B632',
-		users: [partTheLiturgyOfTheWord.id],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
 
-chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.children = [
-	[sectionTheBlessingOfTheIncenseAtTheFirstOffering.id],
-	[sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle.id],
-	[sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar.id],
-	[sectionTheOfferingOfIncenseInTheHolyOfHolies.id],
-	[sectionTheOfferingOfIncenseInAllFourDirections.id],
-	[sectionTheOfferingOfIncenseForTheGospel.id],
-	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
-	[sectionTheOfferingOfIncenseForThePatriarch.id],
-	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
-	[sectionTheOfferingOfIncenseForTheBishop.id],
-	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle.id],
-	[sectionTheOfferingOfIncenseForTheCrucifiedLord.id],
-	[sectionTheOfferingOfIncenseForTheConfessionOfThePeople.id],
-	[sectionTheOfferingOfIncenseInAllFourDirections.id],
-	[sectionTheOfferingOfIncenseForTheGospel.id],
-	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
-	[sectionTheOfferingOfIncenseForThePatriarch.id],
-	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
-	[sectionTheOfferingOfIncenseForTheBishop.id],
+setChildren(chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle, [
+	[sectionTheBlessingOfTheIncenseAtTheFirstOffering],
+	[sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle],
+	[sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar],
+	[sectionTheOfferingOfIncenseInTheHolyOfHolies],
+	[sectionTheOfferingOfIncenseInAllFourDirections],
+	[sectionTheOfferingOfIncenseForTheGospel],
+	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints],
+	[sectionTheOfferingOfIncenseForThePatriarch],
+	[sectionTheOfferingOfIncenseForTheMetropolitan],
+	[sectionTheOfferingOfIncenseForTheBishop],
+	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy],
+	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy],
+	[sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle],
+	[sectionTheOfferingOfIncenseForTheCrucifiedLord],
+	[sectionTheOfferingOfIncenseForTheConfessionOfThePeople],
+	[sectionTheOfferingOfIncenseInAllFourDirections],
+	[sectionTheOfferingOfIncenseForTheGospel],
+	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints],
+	[sectionTheOfferingOfIncenseForThePatriarch],
+	[sectionTheOfferingOfIncenseForTheMetropolitan],
+	[sectionTheOfferingOfIncenseForTheBishop],
 	[
-		sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id
+		sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies
 	],
-	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
-	[sectionTheConclusionOfTheOfferingOfIncense.id]
-];
+	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy],
+	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy],
+	[sectionTheConclusionOfTheOfferingOfIncense]
+]);
 
 export const textTheHymnsBeforeTheReadingOfThePaulineEpistle = await makeMultilingualTextWithId(
 	'88658A1C-C251-42A6-AAAC-4C687F78AC3C',
@@ -158,7 +158,7 @@ export const textTheHymnsBeforeTheReadingOfThePaulineEpistle = await makeMultili
 
 export const chapterTheHymnsBeforeTheReadingOfThePaulineEpistle = registerNode<Basenode>({
 	id: '9260246D-CC8F-4472-9952-68F6F6AED38E',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheHymnsBeforeTheReadingOfThePaulineEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -192,7 +192,7 @@ textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.texts.german.status =
 
 export const sectionTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays = registerNode<Basenode>({
 	id: '2D6A4A45-6F00-42AF-80B6-05FC57CA2FC0',
-	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.id,
 	valueType: ContentType.MultilingualText,
@@ -222,7 +222,7 @@ textTheHymnOfTheCenserOnFastingDays.texts.german.status = '4ACF926E-370D-4D90-B6
 
 export const sectionTheHymnOfTheCenserOnFastingDays = registerNode<Basenode>({
 	id: 'AE1B682C-F8F6-4BC3-9C29-4C90FB794816',
-	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnOfTheCenserOnFastingDays.id,
 	valueType: ContentType.MultilingualText,
@@ -258,7 +258,7 @@ textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.texts.german.
 export const sectionTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast =
 	registerNode<Basenode>({
 		id: '2D788E3C-156F-4C52-AB39-D089DEEC0E73',
-		users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+		users: [],
 		type: NodeType.Section,
 		value: textTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id,
 		valueType: ContentType.MultilingualText,
@@ -281,7 +281,7 @@ export const textTheHymnOfTheCross = await makeMultilingualTextWithId(
 
 export const sectionTheHymnOfTheCross = registerNode<Basenode>({
 	id: '198F5502-738D-4951-B887-E2629C377662',
-	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnOfTheCross.id,
 	valueType: ContentType.MultilingualText,
@@ -304,20 +304,20 @@ export const textTheIntercessions = await makeMultilingualTextWithId(
 
 export const sectionTheIntercessions = registerNode<Basenode>({
 	id: '2F98E34A-ECE9-40FD-B494-58AF5997EB59',
-	users: [chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntercessions.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.children = [
-	[sectionTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays.id],
-	[sectionTheHymnOfTheCenserOnFastingDays.id],
-	[sectionTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast.id],
-	[sectionTheHymnOfTheCross.id],
-	[sectionTheIntercessions.id]
-];
+setChildren(chapterTheHymnsBeforeTheReadingOfThePaulineEpistle, [
+	[sectionTheHymnOfTheCenserOnTheOrdinaryAndJoyfulDays],
+	[sectionTheHymnOfTheCenserOnFastingDays],
+	[sectionTheHymnOfTheCenserOnTheWeekdaysOfTheFastOfJonahAndTheGreatFast],
+	[sectionTheHymnOfTheCross],
+	[sectionTheIntercessions]
+]);
 
 export const textTheReadingOfThePaulineEpistle = await makeMultilingualTextWithId(
 	'01E56160-5D85-4DF8-A162-1D1380E030D5',
@@ -335,7 +335,7 @@ export const textTheReadingOfThePaulineEpistle = await makeMultilingualTextWithI
 
 export const chapterTheReadingOfThePaulineEpistle = registerNode<Basenode>({
 	id: 'BC58164A-3F61-45FC-ADF6-AA86D889216C',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReadingOfThePaulineEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -358,7 +358,7 @@ export const textThePrayerDuringTheReadingOfThePaulineEpistle = await makeMultil
 
 export const sectionThePrayerDuringTheReadingOfThePaulineEpistle = registerNode<Basenode>({
 	id: 'C0148872-6C20-449B-9106-976798ABAEF9',
-	users: [chapterTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerDuringTheReadingOfThePaulineEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -381,7 +381,7 @@ export const textTheIntroductionToThePaulineEpistle = await makeMultilingualText
 
 export const sectionTheIntroductionToThePaulineEpistle = registerNode<Basenode>({
 	id: '14E73616-8736-48DB-9FE6-986C18741D23',
-	users: [chapterTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntroductionToThePaulineEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -410,7 +410,7 @@ textThePaulineEpistle.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E2
 
 export const sectionThePaulineEpistle = registerNode<Basenode>({
 	id: 'EEDA48B3-2DF2-4EDE-97B3-4BF2837F481B',
-	users: [chapterTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePaulineEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -433,7 +433,7 @@ export const textTheConclusionOfThePaulineEpistle = await makeMultilingualTextWi
 
 export const sectionTheConclusionOfThePaulineEpistle = registerNode<Basenode>({
 	id: '27290A36-DF30-4C7F-9ED0-88B8FA216C37',
-	users: [chapterTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheConclusionOfThePaulineEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -458,7 +458,7 @@ export const textAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolit
 export const sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
 	registerNode<Basenode>({
 		id: '37CA7988-1C4F-4004-B926-95AA070A3DC9',
-		users: [chapterTheReadingOfThePaulineEpistle.id],
+		users: [],
 		type: NodeType.Section,
 		value: textAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
 		valueType: ContentType.MultilingualText,
@@ -483,7 +483,7 @@ export const textASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetr
 export const sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
 	registerNode<Basenode>({
 		id: 'A8018E92-FAE6-4FE5-992D-EC8F09BF7B15',
-		users: [chapterTheReadingOfThePaulineEpistle.id],
+		users: [],
 		type: NodeType.Section,
 		value: textASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
 		valueType: ContentType.MultilingualText,
@@ -508,7 +508,7 @@ export const textAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetro
 export const sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
 	registerNode<Basenode>({
 		id: '069D8700-F9FB-45B4-8EC9-C573019538A8',
-		users: [chapterTheReadingOfThePaulineEpistle.id],
+		users: [],
 		type: NodeType.Section,
 		value: textAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
 		valueType: ContentType.MultilingualText,
@@ -533,7 +533,7 @@ export const textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePrese
 export const sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
 	registerNode<Basenode>({
 		id: '00E759E4-B38C-4CEA-AAD6-592DD6B7EE51',
-		users: [chapterTheReadingOfThePaulineEpistle.id],
+		users: [],
 		type: NodeType.Section,
 		value:
 			textTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
@@ -559,7 +559,7 @@ export const textAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetro
 export const sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop =
 	registerNode<Basenode>({
 		id: 'E38667E9-8298-40A5-83B6-84E9B97F8DD5',
-		users: [chapterTheReadingOfThePaulineEpistle.id],
+		users: [],
 		type: NodeType.Section,
 		value: textAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id,
 		valueType: ContentType.MultilingualText,
@@ -582,28 +582,28 @@ export const textTheTranslationOfTheReading = await makeMultilingualTextWithId(
 
 export const sectionTheTranslationOfTheReading = registerNode<Basenode>({
 	id: '2331943B-C5FD-4BED-A544-6C5E52777E33',
-	users: [chapterTheReadingOfThePaulineEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheTranslationOfTheReading.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfThePaulineEpistle.children = [
-	[sectionTheResponseOfThePeopleWeWorshipYouOChrist.id],
-	[sectionThePrayerDuringTheReadingOfThePaulineEpistle.id],
-	[sectionTheIntroductionToThePaulineEpistle.id],
-	[sectionThePaulineEpistle.id],
-	[sectionTheConclusionOfThePaulineEpistle.id],
-	[sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
-	[sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
-	[sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
+setChildren(chapterTheReadingOfThePaulineEpistle, [
+	[sectionTheResponseOfThePeopleWeWorshipYouOChrist],
+	[sectionThePrayerDuringTheReadingOfThePaulineEpistle],
+	[sectionTheIntroductionToThePaulineEpistle],
+	[sectionThePaulineEpistle],
+	[sectionTheConclusionOfThePaulineEpistle],
+	[sectionAResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop],
+	[sectionASecondResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop],
+	[sectionAThirdResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop],
 	[
-		sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id
+		sectionTheHymnOfTheVirtuesAFourthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop
 	],
-	[sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop.id],
-	[sectionTheTranslationOfTheReading.id]
-];
+	[sectionAFifthResponseToThePaulineEpistleInThePresenceOfAPatriarchMetropolitanOrBishop],
+	[sectionTheTranslationOfTheReading]
+]);
 
 export const textTheHymnsBeforeTheReadingOfTheCatholicEpistle = await makeMultilingualTextWithId(
 	'1CF2A816-478F-4B1C-8803-2104E6949563',
@@ -621,7 +621,7 @@ export const textTheHymnsBeforeTheReadingOfTheCatholicEpistle = await makeMultil
 
 export const chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle = registerNode<Basenode>({
 	id: '10864F1C-E864-4716-90AE-D3F0839ABD4B',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheHymnsBeforeTheReadingOfTheCatholicEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -655,7 +655,7 @@ textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.texts.german.status =
 
 export const sectionTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth = registerNode<Basenode>({
 	id: 'F3A9F6C1-DA76-40C7-89BC-C7B1A61EB8B2',
-	users: [chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.id,
 	valueType: ContentType.MultilingualText,
@@ -676,17 +676,17 @@ export const textTheHymnPerfectIsTheBlessing = await makeMultilingualTextWithIdW
 
 export const sectionTheHymnPerfectIsTheBlessing = registerNode<Basenode>({
 	id: 'D3E730EC-2FB0-4B37-9E53-5B668A6992BA',
-	users: [chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnPerfectIsTheBlessing.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.children = [
-	[sectionTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth.id],
-	[sectionTheHymnPerfectIsTheBlessing.id]
-];
+setChildren(chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle, [
+	[sectionTheHymnTrulyTrulyYourNamesAreGlorifiedOnEarth],
+	[sectionTheHymnPerfectIsTheBlessing]
+]);
 
 export const textTheReadingOfTheCatholicEpistle = await makeMultilingualTextWithId(
 	'051B09E7-688D-46E4-812D-CBBF19309DD0',
@@ -704,7 +704,7 @@ export const textTheReadingOfTheCatholicEpistle = await makeMultilingualTextWith
 
 export const chapterTheReadingOfTheCatholicEpistle = registerNode<Basenode>({
 	id: '3C7F3577-DDB5-4542-81FE-3FF6E0903399',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReadingOfTheCatholicEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -727,7 +727,7 @@ export const textThePrayerDuringTheReadingOfTheCatholicEpistle = await makeMulti
 
 export const sectionThePrayerDuringTheReadingOfTheCatholicEpistle = registerNode<Basenode>({
 	id: '3B30EDD9-ABEF-4A2D-B4D1-EDC2C8F2F2EC',
-	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerDuringTheReadingOfTheCatholicEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -750,7 +750,7 @@ export const textTheLitanyForTheOblationsSilent = await makeMultilingualTextWith
 
 export const sectionTheLitanyForTheOblationsSilent = registerNode<Basenode>({
 	id: 'CED39BE2-BDC0-4D07-8033-D274AD4C7D6C',
-	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheLitanyForTheOblationsSilent.id,
 	valueType: ContentType.MultilingualText,
@@ -773,7 +773,7 @@ export const textTheIntroductionToTheCatholicEpistle = await makeMultilingualTex
 
 export const sectionTheIntroductionToTheCatholicEpistle = registerNode<Basenode>({
 	id: '94B09D98-F0C7-40AB-99B0-7F9F4C1D85F6',
-	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntroductionToTheCatholicEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -802,7 +802,7 @@ textTheCatholicEpistle.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E
 
 export const sectionTheCatholicEpistle = registerNode<Basenode>({
 	id: 'BC026463-CEB8-4F88-82BC-27BFFD1118CE',
-	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheCatholicEpistle.id,
 	valueType: ContentType.MultilingualText,
@@ -825,21 +825,21 @@ export const textTheConclusionOfTheCatholicEpistle = await makeMultilingualTextW
 
 export const sectionTheConclusionOfTheCatholicEpistle = registerNode<Basenode>({
 	id: '18EDA3E1-C635-42EA-AF22-7D148E4F12F2',
-	users: [chapterTheReadingOfTheCatholicEpistle.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheConclusionOfTheCatholicEpistle.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfTheCatholicEpistle.children = [
-	[sectionThePrayerDuringTheReadingOfTheCatholicEpistle.id],
-	[sectionTheLitanyForTheOblationsSilent.id],
-	[sectionTheIntroductionToTheCatholicEpistle.id],
-	[sectionTheCatholicEpistle.id],
-	[sectionTheConclusionOfTheCatholicEpistle.id],
-	[sectionTheTranslationOfTheReading.id]
-];
+setChildren(chapterTheReadingOfTheCatholicEpistle, [
+	[sectionThePrayerDuringTheReadingOfTheCatholicEpistle],
+	[sectionTheLitanyForTheOblationsSilent],
+	[sectionTheIntroductionToTheCatholicEpistle],
+	[sectionTheCatholicEpistle],
+	[sectionTheConclusionOfTheCatholicEpistle],
+	[sectionTheTranslationOfTheReading]
+]);
 
 export const textTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles =
 	await makeMultilingualTextWithId(
@@ -859,42 +859,42 @@ export const textTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApos
 export const chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles =
 	registerNode<Basenode>({
 		id: '4783EE40-F229-46D0-B4F2-11897530FAB1',
-		users: [partTheLiturgyOfTheWord.id],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.id,
 		valueType: ContentType.MultilingualText,
 		children: []
 	});
 
-chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.children = [
-	[sectionTheBlessingOfTheIncenseAtAnotherOffering.id],
-	[sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheApostles.id],
-	[sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar.id],
-	[sectionTheOfferingOfIncenseInTheHolyOfHolies.id],
-	[sectionTheOfferingOfIncenseInAllFourDirections.id],
-	[sectionTheOfferingOfIncenseForTheGospel.id],
-	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
-	[sectionTheOfferingOfIncenseForThePatriarch.id],
-	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
-	[sectionTheOfferingOfIncenseForTheBishop.id],
-	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheApostles.id],
-	[sectionTheOfferingOfIncenseForTheCrucifiedLord.id],
-	[sectionTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles.id],
-	[sectionTheOfferingOfIncenseInAllFourDirections.id],
-	[sectionTheOfferingOfIncenseForTheGospel.id],
-	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints.id],
-	[sectionTheOfferingOfIncenseForThePatriarch.id],
-	[sectionTheOfferingOfIncenseForTheMetropolitan.id],
-	[sectionTheOfferingOfIncenseForTheBishop.id],
+setChildren(chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles, [
+	[sectionTheBlessingOfTheIncenseAtAnotherOffering],
+	[sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheApostles],
+	[sectionTheOfferingOfIncenseDuringTheCirclingOfTheAltar],
+	[sectionTheOfferingOfIncenseInTheHolyOfHolies],
+	[sectionTheOfferingOfIncenseInAllFourDirections],
+	[sectionTheOfferingOfIncenseForTheGospel],
+	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints],
+	[sectionTheOfferingOfIncenseForThePatriarch],
+	[sectionTheOfferingOfIncenseForTheMetropolitan],
+	[sectionTheOfferingOfIncenseForTheBishop],
+	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy],
+	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy],
+	[sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheApostles],
+	[sectionTheOfferingOfIncenseForTheCrucifiedLord],
+	[sectionTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles],
+	[sectionTheOfferingOfIncenseInAllFourDirections],
+	[sectionTheOfferingOfIncenseForTheGospel],
+	[sectionTheOfferingOfIncenseForTheRelicsOfTheSaints],
+	[sectionTheOfferingOfIncenseForThePatriarch],
+	[sectionTheOfferingOfIncenseForTheMetropolitan],
+	[sectionTheOfferingOfIncenseForTheBishop],
 	[
-		sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies.id
+		sectionTheOfferingOfIncenseForAllTheHegumensAndPriestsDuringTheLiturgyAtTheThresholdOfTheHolyOfHolies
 	],
-	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy.id],
-	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy.id],
-	[sectionTheConclusionOfTheOfferingOfIncense.id]
-];
+	[sectionTheOfferingOfIncenseForTheHegumenDuringTheLiturgy],
+	[sectionTheOfferingOfIncenseForThePriestDuringTheLiturgy],
+	[sectionTheConclusionOfTheOfferingOfIncense]
+]);
 
 export const textTheHymnsBeforeTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWithId(
 	'D44921B0-A6A6-4833-9B43-5C2D7C169F41',
@@ -912,7 +912,7 @@ export const textTheHymnsBeforeTheReadingOfTheActsOfTheApostles = await makeMult
 
 export const chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
 	id: '214059F7-F8B5-4925-8721-A083D90ADD8F',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -935,7 +935,7 @@ export const textAHymnForTheActsOfTheApostles = await makeMultilingualTextWithId
 
 export const sectionAHymnForTheActsOfTheApostles = registerNode<Basenode>({
 	id: 'AD2E054F-09FE-43B8-9ED4-8D78C59247A0',
-	users: [chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textAHymnForTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -958,7 +958,7 @@ export const textASecondHymnForTheActsOfTheApostles = await makeMultilingualText
 
 export const sectionASecondHymnForTheActsOfTheApostles = registerNode<Basenode>({
 	id: '44F8B168-3F68-402E-A724-06B3938067E7',
-	users: [chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textASecondHymnForTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -981,20 +981,20 @@ export const textAThirdHymnForTheActsOfTheApostles = await makeMultilingualTextW
 
 export const sectionAThirdHymnForTheActsOfTheApostles = registerNode<Basenode>({
 	id: '03FBBAA3-AB1F-4683-A5DA-3FAF462763F1',
-	users: [chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textAThirdHymnForTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.children = [
+setChildren(chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles, [
 	[
-		sectionAHymnForTheActsOfTheApostles.id,
-		sectionASecondHymnForTheActsOfTheApostles.id,
-		sectionAThirdHymnForTheActsOfTheApostles.id
+		sectionAHymnForTheActsOfTheApostles,
+		sectionASecondHymnForTheActsOfTheApostles,
+		sectionAThirdHymnForTheActsOfTheApostles
 	]
-];
+]);
 
 export const textTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWithId(
 	'27E82086-53D1-4E19-9DBA-0B1384A17C82',
@@ -1012,7 +1012,7 @@ export const textTheReadingOfTheActsOfTheApostles = await makeMultilingualTextWi
 
 export const chapterTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
 	id: '28EB6F10-A98A-4A5F-A7AB-CAEAF82DB4F9',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReadingOfTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -1034,7 +1034,7 @@ export const textTheResponseOfThePeopleBlessedAreYouIndeed =
 
 export const sectionTheResponseOfThePeopleBlessedAreYouIndeed = registerNode<Basenode>({
 	id: '358D212F-22A1-4911-BDBD-30DD3FE8B306',
-	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheResponseOfThePeopleBlessedAreYouIndeed.id,
 	valueType: ContentType.MultilingualText,
@@ -1057,7 +1057,7 @@ export const textThePrayerDuringTheReadingOfTheActsOfTheApostles = await makeMul
 
 export const sectionThePrayerDuringTheReadingOfTheActsOfTheApostles = registerNode<Basenode>({
 	id: '38007AD2-9E59-40CD-B630-92E74A8C9ED0',
-	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerDuringTheReadingOfTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -1080,7 +1080,7 @@ export const textTheIntroductionToTheActsOfTheApostles = await makeMultilingualT
 
 export const sectionTheIntroductionToTheActsOfTheApostles = registerNode<Basenode>({
 	id: 'BE1048EC-F31E-4DFC-824A-5D3FCD9A9430',
-	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntroductionToTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -1109,7 +1109,7 @@ textTheActsOfTheApostles.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A8
 
 export const sectionTheActsOfTheApostles = registerNode<Basenode>({
 	id: '597DDB9B-A34D-476A-B1B5-FD9D6856779C',
-	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
@@ -1132,21 +1132,21 @@ export const textTheConclusionOfTheActsOfTheApostles = await makeMultilingualTex
 
 export const sectionTheConclusionOfTheActsOfTheApostles = registerNode<Basenode>({
 	id: '58DBA3B6-28FB-4255-A42F-5EEB18BC4E67',
-	users: [chapterTheReadingOfTheActsOfTheApostles.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheConclusionOfTheActsOfTheApostles.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfTheActsOfTheApostles.children = [
-	[sectionTheResponseOfThePeopleBlessedAreYouIndeed.id],
-	[sectionThePrayerDuringTheReadingOfTheActsOfTheApostles.id],
-	[sectionTheIntroductionToTheActsOfTheApostles.id],
-	[sectionTheActsOfTheApostles.id],
-	[sectionTheConclusionOfTheActsOfTheApostles.id],
-	[sectionTheTranslationOfTheReading.id]
-];
+setChildren(chapterTheReadingOfTheActsOfTheApostles, [
+	[sectionTheResponseOfThePeopleBlessedAreYouIndeed],
+	[sectionThePrayerDuringTheReadingOfTheActsOfTheApostles],
+	[sectionTheIntroductionToTheActsOfTheApostles],
+	[sectionTheActsOfTheApostles],
+	[sectionTheConclusionOfTheActsOfTheApostles],
+	[sectionTheTranslationOfTheReading]
+]);
 
 export const textTheReadingOfTheSynaxarium = await makeMultilingualTextWithId(
 	'697AB302-39F5-44DF-8E1E-C81ED90A853B',
@@ -1164,7 +1164,7 @@ export const textTheReadingOfTheSynaxarium = await makeMultilingualTextWithId(
 
 export const chapterTheReadingOfTheSynaxarium = registerNode<Basenode>({
 	id: 'B20376F1-8F53-4B8B-847B-4EFFF45545FF',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReadingOfTheSynaxarium.id,
 	valueType: ContentType.MultilingualText,
@@ -1187,7 +1187,7 @@ export const textTheIntroductionToTheSynaxarium = await makeMultilingualTextWith
 
 export const sectionTheIntroductionToTheSynaxarium = registerNode<Basenode>({
 	id: 'E814F182-D89C-4F21-85D8-1C2C7735D917',
-	users: [chapterTheReadingOfTheSynaxarium.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntroductionToTheSynaxarium.id,
 	valueType: ContentType.MultilingualText,
@@ -1216,18 +1216,18 @@ textTheSynaxarium.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 
 export const sectionTheSynaxarium = registerNode<Basenode>({
 	id: '8F789384-97C2-4D69-9206-96F6ED980BA3',
-	users: [chapterTheReadingOfTheSynaxarium.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheSynaxarium.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfTheSynaxarium.children = [
-	[sectionTheIntroductionToTheSynaxarium.id],
-	[sectionTheSynaxarium.id],
-	[sectionTheTranslationOfTheReading.id]
-];
+setChildren(chapterTheReadingOfTheSynaxarium, [
+	[sectionTheIntroductionToTheSynaxarium],
+	[sectionTheSynaxarium],
+	[sectionTheTranslationOfTheReading]
+]);
 
 export const textThePrayerBeforeTheReadingOfThePsalmAndTheGospel = await makeMultilingualTextWithId(
 	'F21905A1-F544-4CDF-A30E-01FCF962869B',
@@ -1245,7 +1245,7 @@ export const textThePrayerBeforeTheReadingOfThePsalmAndTheGospel = await makeMul
 
 export const chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel = registerNode<Basenode>({
 	id: 'A2E52040-E76D-4D3B-8603-2AC88F24205B',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1274,7 +1274,7 @@ textTheTrisagion.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A81E24';
 
 export const sectionTheTrisagion = registerNode<Basenode>({
 	id: '4CD7914D-C9B4-4856-9F58-4F7E293E846C',
-	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheTrisagion.id,
 	valueType: ContentType.MultilingualText,
@@ -1297,7 +1297,7 @@ export const textALitanyForTheGospel = await makeMultilingualTextWithId(
 
 export const sectionALitanyForTheGospel = registerNode<Basenode>({
 	id: '5C6CAB9D-E5E9-4D35-B97E-00037781270D',
-	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textALitanyForTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1320,7 +1320,7 @@ export const textAnotherLitanyForTheGospel = await makeMultilingualTextWithId(
 
 export const sectionAnotherLitanyForTheGospel = registerNode<Basenode>({
 	id: '4F0C95BF-9B98-49F3-9889-26A212F2A6FE',
-	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textAnotherLitanyForTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1343,20 +1343,20 @@ export const textTheProcessionOfTheGospel = await makeMultilingualTextWithId(
 
 export const sectionTheProcessionOfTheGospel = registerNode<Basenode>({
 	id: 'E2204B8A-B95B-4D61-A344-F3C3D65A7594',
-	users: [chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheProcessionOfTheGospel.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.children = [
-	[sectionTheTrisagion.id],
-	[sectionTheCallToPrayer.id],
-	[sectionALitanyForTheGospel.id],
-	[sectionAnotherLitanyForTheGospel.id],
-	[sectionTheProcessionOfTheGospel.id]
-];
+setChildren(chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel, [
+	[sectionTheTrisagion],
+	[sectionTheCallToPrayer],
+	[sectionALitanyForTheGospel],
+	[sectionAnotherLitanyForTheGospel],
+	[sectionTheProcessionOfTheGospel]
+]);
 
 export const textTheReadingOfThePsalm = await makeMultilingualTextWithId(
 	'B70ECBE8-7A2A-4516-B0BE-2DEAF0B891FD',
@@ -1374,7 +1374,7 @@ export const textTheReadingOfThePsalm = await makeMultilingualTextWithId(
 
 export const chapterTheReadingOfThePsalm = registerNode<Basenode>({
 	id: '661054FA-6F50-4F43-A987-4A742695F2BF',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReadingOfThePsalm.id,
 	valueType: ContentType.MultilingualText,
@@ -1397,7 +1397,7 @@ export const textTheIntroductionToThePsalm = await makeMultilingualTextWithId(
 
 export const sectionTheIntroductionToThePsalm = registerNode<Basenode>({
 	id: 'FBE90A41-B392-4D78-8D85-776003A33AFA',
-	users: [chapterTheReadingOfThePsalm.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntroductionToThePsalm.id,
 	valueType: ContentType.MultilingualText,
@@ -1420,7 +1420,7 @@ export const textThePsalm = await makeMultilingualTextWithId(
 
 export const sectionThePsalm = registerNode<Basenode>({
 	id: '66920905-5BEF-4579-B9FF-A1C9411D9A57',
-	users: [chapterTheReadingOfThePsalm.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePsalm.id,
 	valueType: ContentType.MultilingualText,
@@ -1445,7 +1445,7 @@ export const textThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop =
 export const sectionThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop =
 	registerNode<Basenode>({
 		id: '0D4CEF87-9EE7-4884-AAFF-281D5D097A1E',
-		users: [chapterTheReadingOfThePsalm.id],
+		users: [],
 		type: NodeType.Section,
 		value: textThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop.id,
 		valueType: ContentType.MultilingualText,
@@ -1468,19 +1468,19 @@ export const textTheResponseOfThePsalm = await makeMultilingualTextWithId(
 
 export const sectionTheResponseOfThePsalm = registerNode<Basenode>({
 	id: 'ED3F2806-5252-4A5D-8AEB-9846EB4927B4',
-	users: [chapterTheReadingOfThePsalm.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheResponseOfThePsalm.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfThePsalm.children = [
-	[sectionTheIntroductionToThePsalm.id],
-	[sectionThePsalm.id],
-	[sectionThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop.id],
-	[sectionTheResponseOfThePsalm.id]
-];
+setChildren(chapterTheReadingOfThePsalm, [
+	[sectionTheIntroductionToThePsalm],
+	[sectionThePsalm],
+	[sectionThePsalmTrailerInThePresenceOfAPatriarchMetropolitanOrBishop],
+	[sectionTheResponseOfThePsalm]
+]);
 
 export const textTheReadingOfTheGospel = await makeMultilingualTextWithId(
 	'D9DC3BC2-72DF-4384-814C-5AF64389595D',
@@ -1498,7 +1498,7 @@ export const textTheReadingOfTheGospel = await makeMultilingualTextWithId(
 
 export const chapterTheReadingOfTheGospel = registerNode<Basenode>({
 	id: '98E6CE08-CEA0-4203-9119-40F6EF53EFB6',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheReadingOfTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1521,7 +1521,7 @@ export const textTheIntroductionToTheGospel = await makeMultilingualTextWithId(
 
 export const sectionTheIntroductionToTheGospel = registerNode<Basenode>({
 	id: '2D8D7B6C-D88F-4E9F-B7EF-868CC7C66E43',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheIntroductionToTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1544,7 +1544,7 @@ export const textTheGospel = await makeMultilingualTextWithId(
 
 export const sectionTheGospel = registerNode<Basenode>({
 	id: '9F015FAF-C04C-49D9-BC9C-E96CFB8B840A',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1567,7 +1567,7 @@ export const textTheConclusionOfTheGospel = await makeMultilingualTextWithId(
 
 export const sectionTheConclusionOfTheGospel = registerNode<Basenode>({
 	id: '4DA02236-B0C6-4E0C-9C4A-1E7C82688A2D',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheConclusionOfTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1590,7 +1590,7 @@ export const textThePrayerAfterTheGospel = await makeMultilingualTextWithId(
 
 export const sectionThePrayerAfterTheGospel = registerNode<Basenode>({
 	id: '0122E32E-97F9-4E2D-9965-2E34A5E4E0B2',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerAfterTheGospel.id,
 	valueType: ContentType.MultilingualText,
@@ -1614,7 +1614,7 @@ export const textTheProcessionForThePresentationOfChristInTheTemple =
 
 export const sectionTheProcessionForThePresentationOfChristInTheTemple = registerNode<Basenode>({
 	id: '80F1364A-415F-4AAD-9EB0-B5615D58EC49',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheProcessionForThePresentationOfChristInTheTemple.id,
 	valueType: ContentType.MultilingualText,
@@ -1637,7 +1637,7 @@ export const textTheSermon = await makeMultilingualTextWithId(
 
 export const sectionTheSermon = registerNode<Basenode>({
 	id: '98131F7A-B802-42DF-9976-0D1B39D4F3C6',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheSermon.id,
 	valueType: ContentType.MultilingualText,
@@ -1660,7 +1660,7 @@ export const textThePrayerOfTheVeil = await makeMultilingualTextWithId(
 
 export const sectionThePrayerOfTheVeil = registerNode<Basenode>({
 	id: '07878A41-A3AE-44FF-8AB0-FA6F82CEF74E',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerOfTheVeil.id,
 	valueType: ContentType.MultilingualText,
@@ -1683,32 +1683,24 @@ export const textTheResponseOfTheGospel = await makeMultilingualTextWithId(
 
 export const sectionTheResponseOfTheGospel = registerNode<Basenode>({
 	id: '8ED11F0A-D324-4BE3-9CED-6AED37D8D093',
-	users: [chapterTheReadingOfTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheResponseOfTheGospel.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheReadingOfTheGospel.children = [
-	[sectionTheIntroductionToTheGospel.id],
-	[sectionTheGospel.id],
-	[sectionTheConclusionOfTheGospel.id],
-	[sectionThePrayerAfterTheGospel.id],
-	[sectionTheTranslationOfTheReading.id],
-	[sectionTheProcessionForThePresentationOfChristInTheTemple.id],
-	[sectionTheSermon.id],
-	[sectionThePrayerOfTheVeil.id],
-	[sectionTheResponseOfTheGospel.id]
-];
-
-sectionTheTranslationOfTheReading.users = [
-	chapterTheReadingOfThePaulineEpistle.id,
-	chapterTheReadingOfTheCatholicEpistle.id,
-	chapterTheReadingOfTheActsOfTheApostles.id,
-	chapterTheReadingOfTheSynaxarium.id,
-	chapterTheReadingOfTheGospel.id
-];
+setChildren(chapterTheReadingOfTheGospel, [
+	[sectionTheIntroductionToTheGospel],
+	[sectionTheGospel],
+	[sectionTheConclusionOfTheGospel],
+	[sectionThePrayerAfterTheGospel],
+	[sectionTheTranslationOfTheReading],
+	[sectionTheProcessionForThePresentationOfChristInTheTemple],
+	[sectionTheSermon],
+	[sectionThePrayerOfTheVeil],
+	[sectionTheResponseOfTheGospel]
+]);
 
 export const textTheThreeLitanies = await makeMultilingualTextWithId(
 	'79041FDF-DC80-4428-9568-F23BE8F54A63',
@@ -1726,7 +1718,7 @@ export const textTheThreeLitanies = await makeMultilingualTextWithId(
 
 export const chapterTheThreeLitanies = registerNode<Basenode>({
 	id: 'FFD43B78-9B2F-49E1-8E51-FE0E1C181934',
-	users: [partTheLiturgyOfTheWord.id],
+	users: [],
 	type: NodeType.Chapter,
 	value: textTheThreeLitanies.id,
 	valueType: ContentType.MultilingualText,
@@ -1749,7 +1741,7 @@ export const textTheLitanyForThePeaceOfTheChurch = await makeMultilingualTextWit
 
 export const sectionTheLitanyForThePeaceOfTheChurch = registerNode<Basenode>({
 	id: 'D2FEA924-46D6-4D06-90A9-93FF296C6C69',
-	users: [chapterTheThreeLitanies.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheLitanyForThePeaceOfTheChurch.id,
 	valueType: ContentType.MultilingualText,
@@ -1772,7 +1764,7 @@ export const textTheLitanyForThePatriarchMetropolitanAndBishop = await makeMulti
 
 export const sectionTheLitanyForThePatriarchMetropolitanAndBishop = registerNode<Basenode>({
 	id: '0430F416-98B5-4027-8DD4-C48F1999300D',
-	users: [chapterTheThreeLitanies.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheLitanyForThePatriarchMetropolitanAndBishop.id,
 	valueType: ContentType.MultilingualText,
@@ -1795,7 +1787,7 @@ export const textTheLitanyForTheAssemblies = await makeMultilingualTextWithId(
 
 export const sectionTheLitanyForTheAssemblies = registerNode<Basenode>({
 	id: '486F8458-1E0B-44F7-81EE-7F83104047D5',
-	users: [chapterTheThreeLitanies.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheLitanyForTheAssemblies.id,
 	valueType: ContentType.MultilingualText,
@@ -1826,68 +1818,68 @@ textThePrayerForTheBlessingOfHisPeople.texts.german.status = '4ACF926E-370D-4D90
 
 export const sectionThePrayerForTheBlessingOfHisPeople = registerNode<Basenode>({
 	id: '56DCA24E-F140-4B7E-AB67-D6ACDBC48AB1',
-	users: [chapterTheThreeLitanies.id],
+	users: [],
 	type: NodeType.Section,
 	value: textThePrayerForTheBlessingOfHisPeople.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheThreeLitanies.children = [
-	[sectionTheCallToPrayer.id],
-	[sectionTheLitanyForThePeaceOfTheChurch.id],
+setChildren(chapterTheThreeLitanies, [
+	[sectionTheCallToPrayer],
+	[sectionTheLitanyForThePeaceOfTheChurch],
 	[
-		sectionTheLitanyForThePatriarchMetropolitanAndBishop.id,
-		sectionTheLitanyForADepartedPatriarch.id,
-		sectionTheLitanyForADepartedMetropolitan.id,
-		sectionTheLitanyForADepartedBishop.id
+		sectionTheLitanyForThePatriarchMetropolitanAndBishop,
+		sectionTheLitanyForADepartedPatriarch,
+		sectionTheLitanyForADepartedMetropolitan,
+		sectionTheLitanyForADepartedBishop
 	],
-	[sectionTheLitanyForTheAssemblies.id],
-	[sectionThePrayerForTheBlessingOfHisPeople.id]
-];
+	[sectionTheLitanyForTheAssemblies],
+	[sectionThePrayerForTheBlessingOfHisPeople]
+]);
 
-partTheLiturgyOfTheWord.children = [
-	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle.id],
-	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle.id],
-	[chapterTheReadingOfThePaulineEpistle.id],
-	[chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle.id],
-	[chapterTheReadingOfTheCatholicEpistle.id],
-	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles.id],
-	[chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles.id],
-	[chapterTheReadingOfTheActsOfTheApostles.id],
-	[chapterTheReadingOfTheSynaxarium.id],
-	[chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+setChildren(partTheLiturgyOfTheWord, [
+	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle],
+	[chapterTheHymnsBeforeTheReadingOfThePaulineEpistle],
+	[chapterTheReadingOfThePaulineEpistle],
+	[chapterTheHymnsBeforeTheReadingOfTheCatholicEpistle],
+	[chapterTheReadingOfTheCatholicEpistle],
+	[chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles],
+	[chapterTheHymnsBeforeTheReadingOfTheActsOfTheApostles],
+	[chapterTheReadingOfTheActsOfTheApostles],
+	[chapterTheReadingOfTheSynaxarium],
+	[chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel],
 	[
-		chapterTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id
+		chapterTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel
 	],
-	[chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheEntryOfChristIntoEgyptBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.id],
+	[chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheParamounOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheEntryOfChristIntoEgyptBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel],
 	[
-		chapterTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadingOfThePsalmAndTheGospel.id
+		chapterTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadingOfThePsalmAndTheGospel
 	],
-	[chapterTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheAscensionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel.id],
-	[chapterTheReadingOfThePsalm.id],
-	[chapterTheReadingOfTheGospel.id],
-	[chapterTheThreeLitanies.id]
-];
+	[chapterTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheGreatFastBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheSaturdayOfTheApocalypseBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheSundayOfThomasBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheAscensionOfChristBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheHymnsOnTheOrdinaryDaysBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterThePrayerBeforeTheReadingOfThePsalmAndTheGospel],
+	[chapterTheReadingOfThePsalm],
+	[chapterTheReadingOfTheGospel],
+	[chapterTheThreeLitanies]
+]);

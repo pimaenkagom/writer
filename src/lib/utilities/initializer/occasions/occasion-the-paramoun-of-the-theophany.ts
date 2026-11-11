@@ -33,10 +33,7 @@ textTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.t
 export const chapterTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '1080F975-EEBA-4723-BFA3-5D571D0F882F',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheParamounOfTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

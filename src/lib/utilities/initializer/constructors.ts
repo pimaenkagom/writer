@@ -5,7 +5,7 @@ import type { NodeType } from '$lib/models/node-type.model';
 import { multilingualTexts } from '$lib/states/multilingual-text.svelte';
 import { getCollectionForNodeType } from '$lib/states/nodes.svelte';
 import { generateId } from '$lib/utilities/generator/id';
-import { registerText } from '$lib/utilities/initializer/registry';
+import { pendingNodes, registerText } from '$lib/utilities/initializer/registry';
 
 export async function makeMultilingualTextWithId(
 	id: string,
@@ -220,6 +220,25 @@ export async function makeNode(
 	multilingualText: MultilingualText
 ): Promise<Basenode> {
 	return await makeNodeWithId(generateId(), nodeType, multilingualText);
+}
+
+/**
+ * Sets a seed node's children (one inner array per slot) and keeps the
+ * children's `users` in sync: the parent is added to every new child and
+ * removed from children it no longer lists. This is the only place where
+ * `users` is maintained for seed data.
+ */
+export function setChildren(parent: Basenode, children: Basenode[][]): void {
+	for (const oldChildId of parent.children.flat()) {
+		const oldChild = pendingNodes.find((node) => node.id === oldChildId);
+		if (oldChild) oldChild.users = oldChild.users.filter((id) => id !== parent.id);
+	}
+
+	parent.children = children.map((slot) => slot.map((child) => child.id));
+
+	for (const child of children.flat()) {
+		if (!child.users.includes(parent.id)) child.users.push(parent.id);
+	}
 }
 
 export async function addChildnode(node: Basenode, childNodeRow: Basenode[]) {

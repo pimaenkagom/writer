@@ -1,21 +1,24 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { makeMultilingualTextWithIdWithoutGreek } from '$lib/utilities/initializer/constructors';
+import {
+	makeMultilingualTextWithIdWithoutGreek,
+	setChildren
+} from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionAPrayerOfReconciliation } from '$lib/utilities/initializer/sections-the-liturgy-according-to-basil';
 import { emptyText } from '$lib/utilities/initializer/shared/texts-empty';
 
 export const paragraphInPrayerOfReconciliation = registerNode<Basenode>({
 	id: 'E06742AE-0B8A-4770-BD1A-564F2A7BEFB4',
-	users: [sectionAPrayerOfReconciliation.id],
+	users: [],
 	type: NodeType.Paragraph,
 	value: emptyText.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-sectionAPrayerOfReconciliation.children = [[paragraphInPrayerOfReconciliation.id]];
+setChildren(sectionAPrayerOfReconciliation, [[paragraphInPrayerOfReconciliation]]);
 
 export const textGodTheGreatTheEternal = await makeMultilingualTextWithIdWithoutGreek(
 	'4F96A5C1-4C73-4A85-9B2B-9EB5EE784CF7',
@@ -31,11 +34,11 @@ export const textGodTheGreatTheEternal = await makeMultilingualTextWithIdWithout
 
 export const clauseGodTheGreatTheEternal = registerNode<Basenode>({
 	id: 'B728B32F-4FD3-4DE4-A3BA-735EFA7CD044',
-	users: [paragraphInPrayerOfReconciliation.id],
+	users: [],
 	type: NodeType.Clause,
 	value: textGodTheGreatTheEternal.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-paragraphInPrayerOfReconciliation.children = [[clauseGodTheGreatTheEternal.id]];
+setChildren(paragraphInPrayerOfReconciliation, [[clauseGodTheGreatTheEternal]]);

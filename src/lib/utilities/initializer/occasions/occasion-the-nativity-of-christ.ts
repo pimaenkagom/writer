@@ -3,7 +3,8 @@ import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import {
 	makeMultilingualTextWithId,
-	makeMultilingualTextWithIdWithoutGreek
+	makeMultilingualTextWithIdWithoutGreek,
+	setChildren
 } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 import { sectionTheHymnAStarRoseInTheEast } from '$lib/utilities/initializer/shared/section-hymn-a-star-rose-in-the-east';
@@ -29,10 +30,7 @@ textTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.texts.e
 export const chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '51F4A34A-B5AD-4798-8A0B-95C6CE9462AE',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,
@@ -56,7 +54,7 @@ export const textTheHymnTodayTheVirginGivesBirthToTheTranscendentOne =
 
 export const sectionTheHymnTodayTheVirginGivesBirthToTheTranscendentOne = registerNode<Basenode>({
 	id: 'BF9FA182-670D-42DE-8275-8C5C156F63E6',
-	users: [chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnTodayTheVirginGivesBirthToTheTranscendentOne.id,
 	valueType: ContentType.MultilingualText,
@@ -86,7 +84,7 @@ textTheHymnYourNativityChristOurGod.texts.german.status = '4ACF926E-370D-4D90-B6
 
 export const sectionTheHymnYourNativityChristOurGod = registerNode<Basenode>({
 	id: 'D56299E2-298E-4292-94B9-453735CE2559',
-	users: [chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnYourNativityChristOurGod.id,
 	valueType: ContentType.MultilingualText,
@@ -117,7 +115,7 @@ textTheHymnTheVirginalBirthAndTheSpiritualBirthPangs.texts.german.status =
 
 export const sectionTheHymnTheVirginalBirthAndTheSpiritualBirthPangs = registerNode<Basenode>({
 	id: 'D11BE3BF-74C2-4BBB-94F7-EAAA8ECE9114',
-	users: [chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnTheVirginalBirthAndTheSpiritualBirthPangs.id,
 	valueType: ContentType.MultilingualText,
@@ -146,7 +144,7 @@ textTheHymnAWondrousBirth.texts.german.status = '4ACF926E-370D-4D90-B642-530FA1A
 
 export const sectionTheHymnAWondrousBirth = registerNode<Basenode>({
 	id: '73F4BC1A-951D-47F1-B524-D06378331B90',
-	users: [chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnAWondrousBirth.id,
 	valueType: ContentType.MultilingualText,
@@ -176,18 +174,18 @@ textTheParalexForTheNativityOfChrist.texts.german.status = '4ACF926E-370D-4D90-B
 
 export const sectionTheParalexForTheNativityOfChrist = registerNode<Basenode>({
 	id: '5EAFFDFE-4A9E-47CA-950B-2A7BF3330DCD',
-	users: [chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheParalexForTheNativityOfChrist.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.children = [
-	[sectionTheHymnTodayTheVirginGivesBirthToTheTranscendentOne.id],
-	[sectionTheHymnYourNativityChristOurGod.id],
-	[sectionTheHymnTheVirginalBirthAndTheSpiritualBirthPangs.id],
-	[sectionTheHymnAWondrousBirth.id],
-	[sectionTheHymnAStarRoseInTheEast.id],
-	[sectionTheParalexForTheNativityOfChrist.id]
-];
+setChildren(chapterTheHymnsForTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel, [
+	[sectionTheHymnTodayTheVirginGivesBirthToTheTranscendentOne],
+	[sectionTheHymnYourNativityChristOurGod],
+	[sectionTheHymnTheVirginalBirthAndTheSpiritualBirthPangs],
+	[sectionTheHymnAWondrousBirth],
+	[sectionTheHymnAStarRoseInTheEast],
+	[sectionTheParalexForTheNativityOfChrist]
+]);

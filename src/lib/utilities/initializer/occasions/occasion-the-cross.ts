@@ -33,10 +33,7 @@ textTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.texts.german.statu
 export const chapterTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'BEBB69AC-2CA5-4AC0-97C6-9935505CEFF4',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheCrossBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

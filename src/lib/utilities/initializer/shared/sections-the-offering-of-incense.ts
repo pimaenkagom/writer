@@ -20,10 +20,7 @@ export const textTheBlessingOfTheIncenseAtTheFirstOffering = await makeMultiling
 
 export const sectionTheBlessingOfTheIncenseAtTheFirstOffering = registerNode<Basenode>({
 	id: 'B56E022F-4BE4-4C67-9126-F3BBBF5407BA',
-	users: [
-		// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle
-		'88392033-583A-4D33-85D9-E14FA390B632'
-	],
+	users: [],
 	type: NodeType.Section,
 	value: textTheBlessingOfTheIncenseAtTheFirstOffering.id,
 	valueType: ContentType.MultilingualText,
@@ -48,10 +45,7 @@ export const textThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpis
 export const sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle =
 	registerNode<Basenode>({
 		id: '8E28C457-ED1D-4E18-A5F0-D843114F6785',
-		users: [
-			// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle
-			'88392033-583A-4D33-85D9-E14FA390B632'
-		],
+		users: [],
 		type: NodeType.Section,
 		value: textThePrayerOfTheOfferingOfIncenseDuringTheReadingOfThePaulineEpistle.id,
 		valueType: ContentType.MultilingualText,
@@ -319,10 +313,7 @@ export const textTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpi
 export const sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle =
 	registerNode<Basenode>({
 		id: 'DB0A75E0-FC56-44F0-A9E2-1EF6BBAED64E',
-		users: [
-			// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfThePaulineEpistle
-			'88392033-583A-4D33-85D9-E14FA390B632'
-		],
+		users: [],
 		type: NodeType.Section,
 		value: textTheOfferingOfIncenseForThePeopleDuringTheReadingOfThePaulineEpistle.id,
 		valueType: ContentType.MultilingualText,
@@ -440,10 +431,7 @@ export const textTheBlessingOfTheIncenseAtAnotherOffering = await makeMultilingu
 
 export const sectionTheBlessingOfTheIncenseAtAnotherOffering = registerNode<Basenode>({
 	id: '017BFC88-B039-4658-90BC-AD1F4D4937A3',
-	users: [
-		// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles
-		'4783EE40-F229-46D0-B4F2-11897530FAB1'
-	],
+	users: [],
 	type: NodeType.Section,
 	value: textTheBlessingOfTheIncenseAtAnotherOffering.id,
 	valueType: ContentType.MultilingualText,
@@ -468,10 +456,7 @@ export const textThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheAp
 export const sectionThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheApostles =
 	registerNode<Basenode>({
 		id: 'FCB945DF-5022-4DDE-945A-CCFB8B0B14ED',
-		users: [
-			// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles
-			'4783EE40-F229-46D0-B4F2-11897530FAB1'
-		],
+		users: [],
 		type: NodeType.Section,
 		value: textThePrayerOfTheOfferingOfIncenseDuringTheReadingOfTheActsOfTheApostles.id,
 		valueType: ContentType.MultilingualText,
@@ -496,10 +481,7 @@ export const textTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheA
 export const sectionTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheApostles =
 	registerNode<Basenode>({
 		id: 'B6A2FCA8-86CE-443D-9F63-F5B2F2CAAFCE',
-		users: [
-			// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles
-			'4783EE40-F229-46D0-B4F2-11897530FAB1'
-		],
+		users: [],
 		type: NodeType.Section,
 		value: textTheOfferingOfIncenseForThePeopleDuringTheReadingOfTheActsOfTheApostles.id,
 		valueType: ContentType.MultilingualText,
@@ -524,10 +506,7 @@ export const textTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReading
 export const sectionTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles =
 	registerNode<Basenode>({
 		id: '805B4CBA-1B61-4997-9DD4-C09E6673E38B',
-		users: [
-			// chapterTheOfferingOfIncenseBeforeAndDuringTheReadingOfTheActsOfTheApostles
-			'4783EE40-F229-46D0-B4F2-11897530FAB1'
-		],
+		users: [],
 		type: NodeType.Section,
 		value:
 			textTheOfferingOfIncenseForTheConfessionOfThePeopleDuringTheReadingOfTheActsOfTheApostles.id,

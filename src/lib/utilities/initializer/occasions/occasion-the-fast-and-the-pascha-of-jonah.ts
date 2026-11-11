@@ -33,10 +33,7 @@ textTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel.
 export const chapterTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '04EC8381-F855-411E-8D3C-ABB240B56B2C',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheFastAndThePaschaOfJonahBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

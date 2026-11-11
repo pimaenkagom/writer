@@ -33,10 +33,7 @@ textTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel.texts.german
 export const chapterTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '9D8D0C24-1227-48BB-A63B-FCE802D3F8BE',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForMaundyThursdayBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

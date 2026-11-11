@@ -33,10 +33,7 @@ textTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGosp
 export const chapterTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'AC191194-4C0C-4D4B-A23A-7AF5695310FD',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheEntryOfChristIntoJerusalemBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

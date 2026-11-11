@@ -33,10 +33,7 @@ textTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePs
 export const chapterTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '2A73284B-17A4-4C33-9351-FCAE2EF7F317',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value:
 			textTheHymnsForTheFastBeforeTheFeastOfTheNativityOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,

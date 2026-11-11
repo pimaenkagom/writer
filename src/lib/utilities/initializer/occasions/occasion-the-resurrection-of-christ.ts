@@ -33,10 +33,7 @@ textTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel.tex
 export const chapterTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '612D7EAE-0554-4797-919A-A29F3A169CEC',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheResurrectionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

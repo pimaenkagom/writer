@@ -26,18 +26,25 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   ones with `python -c "import uuid; print(str(uuid.uuid4()).upper())"`.
 - A node's `users: id[]` field is **not** a Firebase user list — it holds the
   id(s) of the node's parent(s) in the tree (see `generator/nodes.ts`, which
-  passes the parent's own id down as `users` when creating children). Set it
-  to `[parentNode.id]`.
+  passes the parent's own id down as `users` when creating children). In seed
+  data **`users` is never written by hand**: every node literal has
+  `users: []`, and `setChildren(...)` (see below) fills it in. Never assign
+  `x.users = ...` or put ids into a `users` literal.
+- **After every change to the seed data, run**
+  `npx vitest run tests/lib/utilities/initializer` (`seed-tree.test.ts`). It
+  checks for duplicate node ids, `children` entries pointing to missing nodes
+  and `users` arrays that don't match the parents listing the node in
+  `children`. Fix any failure before reporting the change as done.
 - Parent → child links go through the parent's `children: id[][]` (each
   entry is one slot, itself an array of alternative/sibling ids at that
-  position). When a child is defined in the same file as its parent, just
-  reference the child's exported const directly. When parent and child live
-  in different files and each needs the other's id (parent needs child's id
-  for `children`, child needs parent's id for `users`), importing both ways
-  creates a circular import that crashes (TDZ). Resolve it by having only
-  one file import the other's export; the other side references the known
-  id as a literal UUID string with a one-line comment naming which constant
-  it belongs to.
+  position). **Always set them with
+  `setChildren(parent, [[childA], [childB, childC]])`** from
+  `constructors.ts`, passing the node objects (not `.id`). It writes the ids
+  into `parent.children` and adds `parent.id` to every child's `users` (and
+  removes it from children no longer listed), so the link exists in exactly
+  one place. Never assign `parent.children = ...` directly. Only the
+  parent's file imports the child, never the other way round, so no circular
+  imports and no literal UUIDs are needed.
 - When a **new top-level Part file** needs to become a sibling under a Book
   that already has other Part-file siblings (e.g. `part-the-*.ts` files
   under `bookTheLiturgyAccordingToBasil`), don't have the new Part file
@@ -47,10 +54,10 @@ Seed content lives under `src/lib/utilities/initializer/`. The pattern:
   alphabetically by the formatter/linter and will drop siblings whose
   side-effect import now runs later. Instead, follow the pattern already
   used for `part-the-reception-of-a-hierarch.ts`: the new Part file only
-  defines its own text/node (`users: [book.id]`, nothing else); the file
+  defines its own text/node (`users: []`, nothing else); the file
   that "owns" the Book's `children` (currently
   `sections-the-liturgy-according-to-basil.ts`) explicitly imports every
-  sibling Part's exported const and lists them all in one reassignment.
+  sibling Part's exported const and lists them all in one `setChildren` call.
   This is order-independent because ES module imports guarantee the
   imported module finishes evaluating first, regardless of
   `initializer.ts`'s own import order.

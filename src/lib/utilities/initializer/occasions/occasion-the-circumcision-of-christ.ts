@@ -33,10 +33,7 @@ textTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel.tex
 export const chapterTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '0F6279FF-E209-47EB-AD83-8778B8E0F11E',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheCircumcisionOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

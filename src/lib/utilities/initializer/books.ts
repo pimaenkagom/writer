@@ -1,7 +1,7 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import { makeMultilingualTextWithId, setChildren } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 
 export const textTheLiturgicalLibraryOfTheCopticOrthodoxChurch = await makeMultilingualTextWithId(
@@ -43,14 +43,14 @@ export const textTheLiturgicalDay = await makeMultilingualTextWithId(
 
 export const collectionTheLiturgicalDay = registerNode<Basenode>({
 	id: 'F6EA0608-C55F-4C6C-94BB-8724FA327848',
-	users: [libraryTheLiturgicalLibraryOfTheCopticOrthodoxChurch.id],
+	users: [],
 	type: NodeType.Collection,
 	value: textTheLiturgicalDay.id,
 	valueType: ContentType.MultilingualText,
 	children: [[]]
 });
 
-libraryTheLiturgicalLibraryOfTheCopticOrthodoxChurch.children = [[collectionTheLiturgicalDay.id]];
+setChildren(libraryTheLiturgicalLibraryOfTheCopticOrthodoxChurch, [[collectionTheLiturgicalDay]]);
 
 export const textTheLiturgyAccordingToBasil = await makeMultilingualTextWithId(
 	'8E10B61C-D144-4184-A8A1-2538D81E86AA',
@@ -68,7 +68,7 @@ export const textTheLiturgyAccordingToBasil = await makeMultilingualTextWithId(
 
 export const bookTheLiturgyAccordingToBasil = registerNode<Basenode>({
 	id: 'B574C51E-DBCC-4A91-BF37-81747CE222EA',
-	users: [collectionTheLiturgicalDay.id],
+	users: [],
 	type: NodeType.Book,
 	value: textTheLiturgyAccordingToBasil.id,
 	valueType: ContentType.MultilingualText,
@@ -91,7 +91,7 @@ export const textTheLiturgyAccordingToGregory = await makeMultilingualTextWithId
 
 export const bookTheLiturgyAccordingToGregory = registerNode<Basenode>({
 	id: 'BEDEE816-771A-438C-BB15-E8E8BFDB6FF4',
-	users: [collectionTheLiturgicalDay.id],
+	users: [],
 	type: NodeType.Book,
 	value: textTheLiturgyAccordingToGregory.id,
 	valueType: ContentType.MultilingualText,
@@ -114,17 +114,13 @@ export const textTheLiturgyAccordingToCyril = await makeMultilingualTextWithId(
 
 export const bookTheLiturgyAccordingToCyril = registerNode<Basenode>({
 	id: '38E4A273-D423-4B87-B6CB-4C31E94669F3',
-	users: [collectionTheLiturgicalDay.id],
+	users: [],
 	type: NodeType.Book,
 	value: textTheLiturgyAccordingToCyril.id,
 	valueType: ContentType.MultilingualText,
 	children: [[]]
 });
 
-collectionTheLiturgicalDay.children = [
-	[
-		bookTheLiturgyAccordingToBasil.id,
-		bookTheLiturgyAccordingToGregory.id,
-		bookTheLiturgyAccordingToCyril.id
-	]
-];
+setChildren(collectionTheLiturgicalDay, [
+	[bookTheLiturgyAccordingToBasil, bookTheLiturgyAccordingToGregory, bookTheLiturgyAccordingToCyril]
+]);

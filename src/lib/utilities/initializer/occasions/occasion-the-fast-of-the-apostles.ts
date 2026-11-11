@@ -33,10 +33,7 @@ textTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel.texts.
 export const chapterTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '923AAE30-0A58-412B-8DCA-931DD9464DAB',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheFastOfTheApostlesBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

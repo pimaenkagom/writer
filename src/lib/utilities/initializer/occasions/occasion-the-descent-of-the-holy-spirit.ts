@@ -33,10 +33,7 @@ textTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel.t
 export const chapterTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'DEA6F4A0-7927-4F61-BD5C-6126674B5FDD',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheDescentOfTheHolySpiritBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

@@ -33,10 +33,7 @@ textTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.texts.german.s
 export const chapterTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'E89F3825-3526-4789-A938-2C582AF7EAE7',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheTheophanyBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

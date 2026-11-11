@@ -1,7 +1,7 @@
 import type { Basenode } from '$lib/models/basenode.model';
 import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
-import { makeMultilingualTextWithId } from '$lib/utilities/initializer/constructors';
+import { makeMultilingualTextWithId, setChildren } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 
 export const textTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel =
@@ -22,10 +22,7 @@ export const textTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospe
 export const chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'D9EFBFFD-0F99-4407-93CB-03C465AAF624',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,
@@ -55,13 +52,13 @@ textTheParalexForTheMonthOfKoiak.texts.german.status = '4ACF926E-370D-4D90-B642-
 
 export const sectionTheParalexForTheMonthOfKoiak = registerNode<Basenode>({
 	id: '1FB415C5-899C-46CA-A136-7F9CFEA8A167',
-	users: [chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheParalexForTheMonthOfKoiak.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel.children = [
-	[sectionTheParalexForTheMonthOfKoiak.id]
-];
+setChildren(chapterTheHymnsForTheMonthOfKoiakBeforeTheReadingOfThePsalmAndTheGospel, [
+	[sectionTheParalexForTheMonthOfKoiak]
+]);

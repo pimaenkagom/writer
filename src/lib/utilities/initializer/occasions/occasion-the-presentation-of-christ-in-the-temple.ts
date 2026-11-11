@@ -33,10 +33,7 @@ textTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTh
 export const chapterTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '9545A1B2-EF2A-411A-976D-5B38004C981B',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value:
 			textTheHymnsForThePresentationOfChristInTheTempleBeforeTheReadingOfThePsalmAndTheGospel.id,

@@ -33,10 +33,7 @@ textTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.texts.ger
 export const chapterTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '5584764C-090C-45DA-BBB3-7648D969D83C',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheCrownOfTheYearBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

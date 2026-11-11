@@ -3,7 +3,8 @@ import { ContentType } from '$lib/models/content-type.model';
 import { NodeType } from '$lib/models/node-type.model';
 import {
 	makeMultilingualTextWithId,
-	makeMultilingualTextWithIdWithoutGreek
+	makeMultilingualTextWithIdWithoutGreek,
+	setChildren
 } from '$lib/utilities/initializer/constructors';
 import { registerNode } from '$lib/utilities/initializer/registry';
 
@@ -25,10 +26,7 @@ export const textTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAnd
 export const chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'C1534998-5747-4F49-A025-1DAB7BB67DD3',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,
@@ -54,7 +52,7 @@ textTheHymnTheCounselThatExistedFromEternity.texts.coptic.status =
 
 export const sectionTheHymnTheCounselThatExistedFromEternity = registerNode<Basenode>({
 	id: '9424F5D4-EB0A-4C8A-8EB9-4BD5C9C8F664',
-	users: [chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnTheCounselThatExistedFromEternity.id,
 	valueType: ContentType.MultilingualText,
@@ -75,7 +73,7 @@ export const textTheHymnTheAnnunciationOfGabriel = await makeMultilingualTextWit
 
 export const sectionTheHymnTheAnnunciationOfGabriel = registerNode<Basenode>({
 	id: '6E065761-765B-4366-BFCE-89D11136B27D',
-	users: [chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheHymnTheAnnunciationOfGabriel.id,
 	valueType: ContentType.MultilingualText,
@@ -109,15 +107,15 @@ textTheParalexForTheAnnunciationOfChrist.texts.german.status =
 
 export const sectionTheParalexForTheAnnunciationOfChrist = registerNode<Basenode>({
 	id: '384C1672-6DD8-426E-8F96-211605770D52',
-	users: [chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id],
+	users: [],
 	type: NodeType.Section,
 	value: textTheParalexForTheAnnunciationOfChrist.id,
 	valueType: ContentType.MultilingualText,
 	children: []
 });
 
-chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel.children = [
-	[sectionTheHymnTheCounselThatExistedFromEternity.id],
-	[sectionTheHymnTheAnnunciationOfGabriel.id],
-	[sectionTheParalexForTheAnnunciationOfChrist.id]
-];
+setChildren(chapterTheHymnsForTheAnnunciationOfChristBeforeTheReadingOfThePsalmAndTheGospel, [
+	[sectionTheHymnTheCounselThatExistedFromEternity],
+	[sectionTheHymnTheAnnunciationOfGabriel],
+	[sectionTheParalexForTheAnnunciationOfChrist]
+]);

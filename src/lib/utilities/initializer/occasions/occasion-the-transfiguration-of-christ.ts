@@ -33,10 +33,7 @@ textTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel.
 export const chapterTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'F1FEEB83-F2AA-4A97-8910-80F4C98D2DC6',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheTransfigurationOfChristBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

@@ -33,10 +33,7 @@ textTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel.texts.
 export const chapterTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: '2A8BF2F7-2414-49CF-A5FD-A84E77D4312E',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value: textTheHymnsForTheSaturdayOfLazarusBeforeTheReadingOfThePsalmAndTheGospel.id,
 		valueType: ContentType.MultilingualText,

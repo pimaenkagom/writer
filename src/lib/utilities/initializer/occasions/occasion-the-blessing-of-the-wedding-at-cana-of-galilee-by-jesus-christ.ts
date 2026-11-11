@@ -33,10 +33,7 @@ textTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadi
 export const chapterTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadingOfThePsalmAndTheGospel =
 	registerNode<Basenode>({
 		id: 'DE8BBBCD-A3C6-4761-A1A9-C75B7936BE6C',
-		users: [
-			// partTheLiturgyOfTheWord
-			'CB4D723B-ACB1-4AFB-8C27-AB545C5E7B69'
-		],
+		users: [],
 		type: NodeType.Chapter,
 		value:
 			textTheHymnsForTheBlessingOfTheWeddingAtCanaOfGalileeByJesusChristBeforeTheReadingOfThePsalmAndTheGospel.id,
